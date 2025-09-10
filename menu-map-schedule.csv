@@ -1,0 +1,22 @@
+Task ID,Task Name,Description,Start Date,End Date,Duration (days),Dependencies,Responsible Member,Milestone
+T001,Team Setup,Assign roles and responsibilities, set up GitHub repository with proper structure,2025-09-15,2025-09-17,3,,Alfonso,Yes
+T002,Project Plan Draft,Document project constraints risks milestones and overall schedule,2025-09-18,2025-09-24,7,T001,Andre,Yes
+T003,Use Case Development - Eve,Eve writes 3 use cases including 1 security/misuse case,2025-09-25,2025-10-01,7,T002,Eve,Yes
+T004,Use Case Development - Alex,Alex writes 3 use cases including 1 security/misuse case,2025-09-25,2025-10-01,7,T002,Alex,Yes
+T005,Use Case Development - Alfonso,Alfonso writes 3 use cases including 1 security/misuse case,2025-09-25,2025-10-01,7,T002,Alfonso,Yes
+T006,Use Case Development - Andre,Andre writes 3 use cases including 1 security/misuse case,2025-09-25,2025-10-01,7,T002,Andre,Yes
+T007,Use Case Review and Consolidation,Review all use cases and consolidate into final set,2025-10-02,2025-10-03,2,"T003,T004,T005,T006",Eve,No
+T008,UML Use Case Diagrams,Create comprehensive use case diagrams based on consolidated use cases,2025-10-06,2025-10-10,5,T007,Andre,Yes
+T009,UML Class Diagram,Design and create class diagram showing system architecture,2025-10-11,2025-10-15,5,T008,Andre,Yes
+T010,UML Sequence Diagrams,Create sequence diagrams for key use case scenarios,2025-10-16,2025-10-20,5,T009,Andre,Yes
+T011,SRD Section 1-2 Draft,Write Introduction and Overall Description sections,2025-10-21,2025-10-24,4,T002,Alex,No
+T012,SRD Section 3 Draft,Write System Features section based on use cases,2025-10-25,2025-10-28,4,T007,Alfonso,No
+T013,SRD Section 4-5 Draft,Write External Interface and Non-functional Requirements,2025-10-29,2025-11-01,4,T010,Eve,No
+T014,SRD Section 6 Draft,Write Other Requirements and appendices,2025-11-02,2025-11-05,4,T010,Andre,No
+T015,SRD Draft Compilation,Merge all SRD sections into comprehensive draft document,2025-11-06,2025-11-08,3,"T011,T012,T013,T014",Andre,Yes
+T016,Internal Review - Content,Group review of SRD content for accuracy and completeness,2025-11-09,2025-11-12,4,T015,Alfonso,No
+T017,Internal Review - Diagrams,Review and validate all UML diagrams for consistency,2025-11-13,2025-11-14,2,T016,Andre,No
+T018,Revisions and Updates,Implement feedback and fix identified issues,2025-11-15,2025-11-19,5,"T016,T017",All Team,No
+T019,Final SRD Preparation,Finalize SRD document with all corrections and formatting,2025-11-20,2025-11-22,3,T018,Andre,No
+T020,Presentation Preparation,Create final presentation slides and materials,2025-11-23,2025-11-26,4,T019,All Team,No
+T021,Final Submission,Deliver final SRD document and presentation,2025-11-27,2025-11-27,1,"T019,T020",All Team,Yes
