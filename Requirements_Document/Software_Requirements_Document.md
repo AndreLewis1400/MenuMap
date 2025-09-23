@@ -2,7 +2,8 @@
 ## MenuMap Application
 
 **Team:** Team 9  
-**Document Editor & Diagram Coordinator:** Andre Lewis  
+**Project Lead:** Alfonso Oramas Jr.  
+**Document Editor & UML Diagrams Coordinator:** Andre Lewis  
 **Date:** [Current Date]  
 **Version:** 1.0  
 
