@@ -1,8 +1,8 @@
 # MenuMap Project - Group Leader Summary
 ## For Alfonso Oramas Jr. - CEN4010 Software Engineering
 
-**From:** Andre Lewis  
-**To:** Alfonso Oramas Jr. (Group Leader)  
+**From:** Andre Lewis (UML Diagrams Coordinator)  
+**To:** Alfonso Oramas Jr. (Project Lead)  
 **Date:** [Current Date]  
 **Subject:** MenuMap Project Information & Deliverables  
 
@@ -128,14 +128,18 @@ I've created all the documentation you requested in a Google/Word document forma
 ## 👥 Team Structure & Roles
 
 ### **Current Team Status**
-- **Andre Lewis**: Document Editor & Diagram Coordinator
-- **Team Members**: [To be updated with actual team member names]
+- **Alfonso Oramas Jr.**: Project Lead
+- **Andre Lewis**: UML Diagrams Coordinator & Document Editor
+- **Eve**: Team Member
+- **Alex**: Team Member
+- **Kamal**: Team Member
 
 ### **Responsibilities Completed**
-- ✅ Requirements analysis and documentation
-- ✅ Use case creation and documentation
-- ✅ UML design specifications
-- ✅ Project overview and presentation materials
+- **Alfonso Oramas Jr.**: Project coordination and presentation leadership
+- **Andre Lewis**: ✅ Requirements analysis and documentation, ✅ Use case creation and documentation, ✅ UML design specifications, ✅ Project overview and presentation materials
+- **Eve**: [Responsibilities to be assigned]
+- **Alex**: [Responsibilities to be assigned]
+- **Kamal**: [Responsibilities to be assigned]
 
 ---
 
@@ -194,7 +198,7 @@ I've created all the documentation you requested in a Google/Word document forma
 ## 📞 Contact Information
 
 **Andre Lewis**  
-**Role**: Document Editor & Diagram Coordinator  
+**Role**: UML Diagrams Coordinator & Document Editor  
 **Contact**: [Your contact information]  
 **GitHub**: AndreLewis1400  
 

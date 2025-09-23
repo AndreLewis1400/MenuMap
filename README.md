@@ -23,7 +23,8 @@ Create a user-friendly platform that bridges the gap between restaurants and cus
 | **Project Name** | MenuMap |
 | **Course** | CEN4010 Software Engineering |
 | **Team** | Team 9 |
-| **Project Lead** | Andre Lewis |
+| **Project Lead** | Alfonso Oramas Jr. |
+| **UML Diagrams Coordinator** | Andre Lewis |
 | **Repository** | [AndreLewis1400/MenuMap](https://github.com/AndreLewis1400/MenuMap) |
 | **Documentation Status** | ✅ Complete |
 | **UML Diagrams** | ✅ Complete |
@@ -130,14 +131,18 @@ This project includes **3 comprehensive use cases** as required for CEN4010:
 ## 👥 Team Structure
 
 ### **Team 9 Members**
-- **Andre Lewis**: Document Editor & Diagram Coordinator
-- **Team Members**: [To be updated with actual team member names and roles]
+- **Alfonso Oramas Jr.**: Project Lead
+- **Andre Lewis**: UML Diagrams Coordinator & Document Editor
+- **Eve**: Team Member
+- **Alex**: Team Member
+- **Kamal**: Team Member
 
 ### **Responsibilities**
-- Requirements analysis and documentation
-- UML diagram creation and maintenance
-- System design and architecture
-- Presentation preparation and delivery
+- **Alfonso Oramas Jr.**: Project coordination, presentation leadership, overall project management
+- **Andre Lewis**: UML diagram creation and maintenance, documentation, system design
+- **Eve**: [Role to be assigned]
+- **Alex**: [Role to be assigned]
+- **Kamal**: [Role to be assigned]
 
 ---
 
