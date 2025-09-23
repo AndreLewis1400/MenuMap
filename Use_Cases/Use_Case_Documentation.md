@@ -3,7 +3,8 @@
 
 **Project:** MenuMap Application  
 **Team:** Team 9  
-**Document Author:** Andre Lewis  
+**Project Lead:** Alfonso Oramas Jr.  
+**Document Author:** Andre Lewis (UML Diagrams Coordinator)  
 **Date:** [Current Date]  
 **Version:** 1.0  
 
