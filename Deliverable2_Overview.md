@@ -3,8 +3,12 @@
 
 **Project:** MenuMap Application  
 **Team:** Team 9  
+**Team Leader:** Alexandra Cozar  
 **Software Architecture & Design Lead:** Andre Lewis  
-**Date:** [Current Date]  
+**Modeler:** Alfonso Oramas  
+**Minute Taker:** Kamal Ayoub  
+**Team Member:** Evelio Gonzalez (TBD)  
+**Date:** October 19, 2025  
 **Version:** 1.0  
 
 ---

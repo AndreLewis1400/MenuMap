@@ -1,8 +1,12 @@
 # MenuMap Deliverable 2 - Design Phase
 ## CEN4010 Software Engineering - Team 9
 
+**Team Leader:** Alexandra Cozar  
 **Software Architecture & Design Lead:** Andre Lewis  
-**Date:** [Current Date]  
+**Modeler:** Alfonso Oramas  
+**Minute Taker:** Kamal Ayoub  
+**Team Member:** Evelio Gonzalez (TBD)  
+**Date:** October 19, 2025  
 **Status:** In Progress  
 
 ---
@@ -111,10 +115,11 @@ Deliverable2_Design/
 ## 🔗 **Integration with Team**
 
 ### **How This Works with Other Roles:**
-- **Alex (Leader)**: You provide technical architecture for project coordination
-- **Alfonso (Modeler)**: You work together on data models and system design
-- **Eve**: Can focus on documentation and testing based on your architecture
-- **Unknown member (Minute Taker)**: Documents your design decisions
+- **Alexandra Cozar (Team Leader)**: Provides project coordination and overall team management
+- **Alfonso Oramas (Modeler)**: Works together on data models and system design
+- **Kamal Ayoub (Minute Taker)**: Documents design decisions and team meetings
+- **Evelio Gonzalez (Team Member)**: TBD - will be assigned specific responsibilities
+- **Andre Lewis (Software Architecture & Design Lead)**: Provides technical architecture and design
 
 ### **What You Can Share with Team:**
 - Complete architectural design
