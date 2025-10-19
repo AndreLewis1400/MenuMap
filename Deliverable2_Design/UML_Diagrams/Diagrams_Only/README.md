@@ -10,16 +10,15 @@ This folder contains all essential UML diagrams for the MenuMap project Delivera
 ### ✅ Class Diagrams  
 - **MenuMap_Class_Diagram.PNG** - System class diagram with key classes and relationships
 
-### ✅ Sequence Diagrams
-- **User_Login_Sequence.PNG** - User login process
-- **Menu_Verification_Sequence.PNG** - Menu verification process
-- **Spam_Detection_Sequence.PNG** - Spam protection system
-- **Password_Reset_Sequence.PNG** - Secure password reset
-
-### ✅ Activity/Flow Diagrams
-- **User_Registration_Flow.PNG** - User registration process
-- **Menu_Search_Flow.PNG** - Menu browsing and search
-- **Favorites_Management_Flow.PNG** - Favorites management
+### ✅ Sequence Diagrams (UC Numbering Convention)
+- **UC001_Browse_Restaurant_Menus_Sequence.PNG** - Browse restaurant menus
+- **UC002_Manage_Favorites_Sequence.PNG** - Manage favorites
+- **UC003_Secure_Password_Reset_Sequence.PNG** - Secure password reset
+- **UC004_Registration_Login_Sequence.PNG** - Registration and login
+- **UC005_Menu_Verification_System_Sequence.PNG** - Menu verification system
+- **UC006_Spam_Protection_System_Sequence.PNG** - Spam protection system
+- **UC007_Menu_Management_Sequence.PNG** - Menu management
+- **User_Login_Authentication_Sequence.PNG** - User login authentication
 
 ### ✅ Component Diagrams
 - **MenuMap_Component_Diagram.PNG** - System architecture and components
