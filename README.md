@@ -1,6 +1,10 @@
 # MenuMap Application
 ## CEN4010 Software Engineering - Team 9
 
+[![Project Status](https://img.shields.io/badge/Status-Deliverable%202%20Complete-green.svg)](https://github.com/AndreLewis1400/MenuMap)
+[![Course](https://img.shields.io/badge/Course-CEN4010%20Software%20Engineering-green.svg)](https://github.com/AndreLewis1400/MenuMap)
+[![Team](https://img.shields.io/badge/Team-Team%209-orange.svg)](https://github.com/AndreLewis1400/MenuMap)
+
 **Project:** MenuMap Application  
 **Team:** Team 9  
 **Software Architecture & Design Lead:** Andre Lewis  
@@ -12,9 +16,34 @@
 
 ## 🎯 Project Overview
 
-MenuMap is a comprehensive restaurant menu browsing and management system designed to connect users with restaurant menus while providing restaurant owners with tools to manage their digital presence.
+MenuMap is a comprehensive restaurant menu browsing and management system designed to connect users with restaurant menus while providing restaurant owners with tools to manage their digital presence. Think of it as a "Google Maps for restaurant menus" - a centralized platform where food enthusiasts can discover new restaurants, browse detailed menus, save their favorites, and verify menu information accuracy.
 
-### **Key Features:**
+### **Mission Statement**
+Create a user-friendly platform that bridges the gap between restaurants and customers by providing accurate, up-to-date menu information in an easily accessible format.
+
+---
+
+## 📋 Project Information
+
+| Field | Details |
+|-------|---------|
+| **Project Name** | MenuMap |
+| **Course** | CEN4010 Software Engineering |
+| **Team** | Team 9 |
+| **Software Architecture & Design Lead** | Andre Lewis |
+| **Repository** | [AndreLewis1400/MenuMap](https://github.com/AndreLewis1400/MenuMap) |
+| **Documentation Status** | ✅ Complete |
+| **UML Diagrams** | ✅ Complete |
+| **Use Cases** | ✅ Complete (7 use cases) |
+| **Deliverable 1** | ✅ Complete |
+| **Deliverable 2** | ✅ Complete |
+
+---
+
+## 🚀 Core Features
+
+### **7 Comprehensive Use Cases:**
+
 - **UC-001**: Browse Restaurant Menus
 - **UC-002**: Manage Favorites
 - **UC-003**: Secure Password Reset
@@ -23,13 +52,41 @@ MenuMap is a comprehensive restaurant menu browsing and management system design
 - **UC-006**: Spam Protection System
 - **UC-007**: Menu Management
 
+### 🔍 **Menu Discovery & Browsing**
+- Browse restaurant menus by location, cuisine type, or restaurant name
+- View detailed menu items with descriptions, prices, and nutritional information
+- Advanced search functionality with filters (price range, dietary restrictions, ratings)
+
+### ⭐ **Favorites Management**
+- Save favorite restaurants and specific menu items
+- Organize favorites into custom categories
+- Quick access to saved items for easy reordering
+
+### ✅ **Content Verification System (UC-005)**
+- Automated verification of menu information accuracy
+- Flag suspicious or inconsistent data
+- Community-driven verification process
+- Restaurant owner verification capabilities
+
+### 🛡️ **Spam Protection System (UC-006)**
+- Advanced spam detection algorithms
+- Rate limiting for submissions
+- Blacklist management for known spam sources
+- User reporting system for suspicious content
+
+### 🔒 **Security Features**
+- Secure user authentication and authorization
+- Password reset functionality with email verification
+- Data encryption and privacy protection
+- Audit trails for all user actions
+
 ---
 
 ## 📁 Project Structure
 
 ```
 MenuMap_Project/
-├── README.md                           # This file
+├── README.md                           # This file - Project overview
 ├── Deliverable1_Requirements/          # Requirements and Analysis
 │   ├── Software_Requirements_Document.md
 │   ├── Use_Cases/
@@ -91,7 +148,7 @@ MenuMap_Project/
 - React 18+
 
 ### **Installation**
-1. Clone the repository
+1. Clone the repository: `git clone https://github.com/AndreLewis1400/MenuMap.git`
 2. Set up the database
 3. Configure environment variables
 4. Run the application
@@ -105,33 +162,33 @@ MenuMap_Project/
 
 ## 📊 Deliverables
 
-### **Deliverable 1: Requirements & Analysis**
+### **Deliverable 1: Requirements & Analysis** ✅ Complete
 - ✅ Software Requirements Document
 - ✅ Use Case Specifications (7 use cases)
 - ✅ UML Use Case Diagram
 - ✅ Requirements Analysis
 
-### **Deliverable 2: Design & Architecture**
+### **Deliverable 2: Design & Architecture** ✅ Complete
 - ✅ Software Architecture Design
 - ✅ Detailed Design Specifications
 - ✅ UML Diagrams (7 sequence diagrams)
 - ✅ Design Patterns Implementation
-- ✅ OCL Statements
+- ✅ OCL Statements (100+ constraints)
 - ✅ Comprehensive Documentation
 
 ---
 
 ## 🎯 Use Cases
 
-| Use Case | Description | Status |
-|----------|-------------|--------|
-| UC-001 | Browse Restaurant Menus | ✅ Complete |
-| UC-002 | Manage Favorites | ✅ Complete |
-| UC-003 | Secure Password Reset | ✅ Complete |
-| UC-004 | Registration & Login | ✅ Complete |
-| UC-005 | Menu Verification System | ✅ Complete |
-| UC-006 | Spam Protection System | ✅ Complete |
-| UC-007 | Menu Management | ✅ Complete |
+| Use Case | Description | Status | Complexity |
+|----------|-------------|--------|------------|
+| UC-001 | Browse Restaurant Menus | ✅ Complete | Medium |
+| UC-002 | Manage Favorites | ✅ Complete | Medium |
+| UC-003 | Secure Password Reset | ✅ Complete | High |
+| UC-004 | Registration & Login | ✅ Complete | Medium |
+| UC-005 | Menu Verification System | ✅ Complete | High |
+| UC-006 | Spam Protection System | ✅ Complete | High |
+| UC-007 | Menu Management | ✅ Complete | Medium |
 
 ---
 
@@ -152,24 +209,34 @@ MenuMap_Project/
 - **Database**: PostgreSQL with Redis caching
 - **Security**: Spring Security with JWT
 
+### **System Requirements**
+- **Performance**: Page loads within 3 seconds
+- **Scalability**: Support 1,000 concurrent users
+- **Availability**: 99.9% uptime
+- **Security**: OWASP security guidelines compliance
+- **Usability**: WCAG 2.1 AA accessibility compliance
+
 ---
 
 ## 📈 Project Status
 
-### **Completed**
+### **Completed** ✅
 - ✅ Requirements Analysis
-- ✅ Use Case Specifications
+- ✅ Use Case Specifications (7 use cases)
 - ✅ Software Architecture Design
 - ✅ Detailed Design
-- ✅ UML Modeling
+- ✅ UML Modeling (7 sequence diagrams)
 - ✅ Design Patterns
 - ✅ Security Design
-- ✅ Documentation
+- ✅ OCL Statements (100+ constraints)
+- ✅ Comprehensive Documentation
+- ✅ Meeting Diary
+- ✅ Final Review & Validation
 
-### **In Progress**
+### **In Progress** 🔄
 - 🔄 Implementation (Ready to begin)
 
-### **Planned**
+### **Planned** ⏳
 - ⏳ Testing
 - ⏳ Deployment
 - ⏳ User Acceptance Testing
@@ -178,20 +245,76 @@ MenuMap_Project/
 
 ## 👥 Team
 
+### **Team 9 Members**
 - **Andre Lewis**: Software Architecture & Design Lead
-- **Alex**: Project Leader
-- **Alfonso**: Modeler
-- **Eve**: Documentation & Testing
-- **Unknown Member**: Minute Taker
+- **Alfonso Oramas Jr.**: Project Lead
+- **Alex**: Team Member
+- **Eve**: Team Member
+- **Kamal**: Team Member
+
+### **Responsibilities**
+- **Andre Lewis**: UML diagram creation, system design, architecture, documentation
+- **Alfonso Oramas Jr.**: Project coordination, presentation leadership
+- **Alex**: [Role to be assigned]
+- **Eve**: [Role to be assigned]
+- **Kamal**: [Role to be assigned]
 
 ---
 
-## 📞 Contact
+## 🔒 Security & Compliance
 
-For questions or contributions, please contact:
-- **Andre Lewis**: Software Architecture & Design Lead
-- **Repository**: AndreLewis1400/MenuMap
+### **Security Features**
+- **Data Protection**: GDPR and CCPA compliance
+- **Authentication**: Secure user login and session management
+- **Authorization**: Role-based access control
+- **Audit Trail**: Comprehensive logging of user actions
+- **Encryption**: Industry-standard encryption algorithms
+
+### **Misuse Case Prevention**
+- **Password Reset Security**: Multi-layer verification to prevent account takeover
+- **Spam Protection**: Advanced algorithms to detect and prevent malicious content
+- **Rate Limiting**: Prevents brute force attacks
+- **Content Verification**: Ensures menu information accuracy
 
 ---
 
-*This project represents a comprehensive software engineering effort demonstrating professional-grade architecture, design, and documentation practices.*
+## 📈 Success Metrics
+
+### **Technical Metrics**
+- System performance benchmarks
+- Security compliance scores
+- Code quality metrics
+- Test coverage percentages
+
+### **User Experience Metrics**
+- User satisfaction ratings
+- Feature adoption rates
+- System usability scores
+- Accessibility compliance
+
+---
+
+## 📞 Contact & Support
+
+**Project Repository**: [AndreLewis1400/MenuMap](https://github.com/AndreLewis1400/MenuMap)  
+**Course**: CEN4010 Software Engineering  
+**Team**: Team 9  
+**Software Architecture & Design Lead**: Andre Lewis  
+
+---
+
+## 📄 License
+
+This project is developed for educational purposes as part of the CEN4010 Software Engineering course. All documentation and code are created by Team 9 members.
+
+---
+
+## 🙏 Acknowledgments
+
+- **Course Instructor**: [Instructor Name]
+- **Team 9 Members**: [Team Member Names]
+- **CEN4010 Software Engineering Course**: Florida International University
+
+---
+
+*This repository contains all documentation, use cases, UML diagrams, and design specifications for the MenuMap application developed by Team 9 for CEN4010 Software Engineering. Both Deliverable 1 and Deliverable 2 are complete with professional-grade architecture, design, and documentation.*
