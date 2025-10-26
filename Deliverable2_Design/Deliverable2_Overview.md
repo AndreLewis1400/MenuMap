@@ -25,21 +25,22 @@ Based on the deliverable 2 requirements, we will implement the following 7 use c
 3. **UC-003: Secure Password Reset** (Security Use Case)
 
 ### **Additional Use Cases (4 to be defined)**
-4. **UC-004: User Registration & Login** (Normal Use Case)
-5. **UC-005: Menu Verification System** (Security Use Case - TM901)
-6. **UC-006: Spam Protection System** (Security Use Case - TM902)
+4. **UC-004: User Registration** (Normal Use Case)
+5. **UC-005: User Login** (Normal Use Case)
+6. **UC-006: User Logout** (Normal Use Case)
 7. **UC-007: Restaurant Owner Menu Management** (Normal Use Case)
 
 ---
 
 ## 🏗️ Architectural Patterns Selected
 
-### **Primary Pattern: Layered Architecture**
+### **Primary Pattern: 3-Tier Architecture**
 **Reasons for Selection:**
-1. **Separation of Concerns**: Clear separation between presentation, business logic, and data layers
-2. **Maintainability**: Easy to modify individual layers without affecting others
-3. **Scalability**: Each layer can be scaled independently
-4. **Team Development**: Different team members can work on different layers
+1. **Clear Separation**: Distinct separation between Presentation, Business Logic, and Data tiers
+2. **Scalability**: Each tier can be scaled independently based on demand
+3. **Maintainability**: Changes in one tier don't affect others
+4. **Team Development**: Different teams can work on different tiers
+5. **Technology Flexibility**: Each tier can use optimal technologies
 
 ### **Secondary Pattern: Model-View-Controller (MVC)**
 **Reasons for Selection:**
@@ -47,6 +48,11 @@ Based on the deliverable 2 requirements, we will implement the following 7 use c
 2. **Reusability**: Business logic can be reused across different interfaces
 3. **Testing**: Each component can be tested independently
 4. **Industry Standard**: Well-established pattern with extensive tooling support
+
+### **3-Tier Architecture Overview:**
+- **Tier 1 (Presentation)**: Web Interface, Mobile Interface, API Interface
+- **Tier 2 (Business Logic)**: Use Case Controllers, Business Services, Security Services
+- **Tier 3 (Data)**: Database, Cache Layer, File Storage
 
 ---
 
