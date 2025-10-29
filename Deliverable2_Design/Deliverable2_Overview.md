@@ -84,7 +84,23 @@ Deliverable2_Design/
 
 ---
 
-## 🎯 Next Steps
+## 👥 Team 9 Members - Deliverable 2
+
+### **Team Roles**
+- **Alexandra Cozar**: Team Leader
+- **Kamal Ayoub**: Minute Taker
+- **Alfonso Oramas**: Modeler
+- **Evelio Gonzalez**: TBD
+- **Andre Lewis**: Software Architecture & Design Lead
+
+### **Responsibilities**
+- **Alexandra Cozar**: Project coordination, team leadership, presentation management
+- **Kamal Ayoub**: Meeting minutes, documentation tracking, progress monitoring
+- **Alfonso Oramas**: UML modeling, diagram creation, system architecture
+- **Evelio Gonzalez**: [Role to be determined]
+- **Andre Lewis**: Software architecture design, technical documentation, system design
+
+---
 
 1. **Create Package Diagram** - Define major subsystems
 2. **Design Subsystem Decomposition** - Detail each subsystem

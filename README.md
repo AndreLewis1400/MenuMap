@@ -242,19 +242,19 @@ MenuMap_Project/
 
 ## 👥 Team
 
-### **Team 9 Members**
+### **Team 9 Members - Deliverable 2**
+- **Alexandra Cozar**: Team Leader
+- **Kamal Ayoub**: Minute Taker
+- **Alfonso Oramas**: Modeler
+- **Evelio Gonzalez**: TBD
 - **Andre Lewis**: Software Architecture & Design Lead
-- **Alfonso Oramas Jr.**: Project Lead
-- **Alex**: Team Member
-- **Eve**: Team Member
-- **Kamal**: Team Member
 
 ### **Responsibilities**
-- **Andre Lewis**: UML diagram creation, system design, architecture, documentation
-- **Alfonso Oramas Jr.**: Project coordination, presentation leadership
-- **Alex**: [Role to be assigned]
-- **Eve**: [Role to be assigned]
-- **Kamal**: [Role to be assigned]
+- **Alexandra Cozar**: Project coordination, team leadership, presentation management
+- **Kamal Ayoub**: Meeting minutes, documentation tracking, progress monitoring
+- **Alfonso Oramas**: UML modeling, diagram creation, system architecture
+- **Evelio Gonzalez**: [Role to be determined]
+- **Andre Lewis**: Software architecture design, technical documentation, system design
 
 ---
 
