@@ -154,27 +154,102 @@ MenuMap serves as a digital bridge between restaurants and customers, providing 
 
 ## 🔧 Detailed Design
 
-### **Class Structure Overview**
+### **1. Component Selection**
 
-The system implements a comprehensive object-oriented design with clear class hierarchies and relationships:
+#### **Presentation Tier Components**
+- **Frontend Framework**: React 18+ with TypeScript
+- **UI Library**: Material-UI for consistent design
+- **State Management**: Redux Toolkit for global state
+- **Routing**: React Router for navigation
+- **HTTP Client**: Axios for API communication
 
-#### **Boundary Classes (Presentation Layer)**
-- **WebInterface**: Primary web interface
-- **MobileInterface**: Mobile application interface
-- **APIInterface**: RESTful API interface
+#### **Business Logic Tier Components**
+- **Backend Framework**: Spring Boot 2.7+ with Java 11
+- **Security**: Spring Security with JWT tokens
+- **Validation**: Bean Validation (JSR-303)
+- **Caching**: Redis for session and data caching
+- **Message Queue**: RabbitMQ for asynchronous processing
 
-#### **Control Classes (Business Logic Layer)**
-- **AuthenticationController**: Handles user authentication
-- **MenuController**: Manages menu operations
-- **UserController**: Manages user accounts
-- **RestaurantController**: Manages restaurant operations
+#### **Data Tier Components**
+- **Primary Database**: PostgreSQL 13+ for ACID compliance
+- **Search Engine**: Elasticsearch for menu search
+- **File Storage**: AWS S3 for menu images
+- **Backup**: Automated daily backups
 
-#### **Entity Classes (Data Layer)**
-- **User**: User account information
-- **Menu**: Restaurant menu data
-- **MenuItem**: Individual menu items
-- **Restaurant**: Restaurant information
-- **Favorite**: User favorites
+### **2. Service Specification**
+
+#### **Authentication Service**
+```java
+public interface AuthenticationService {
+    UserDTO login(String email, String password);
+    void logout(String sessionToken);
+    UserDTO register(UserRegistrationDTO userData);
+    void resetPassword(String email);
+    boolean validateToken(String token);
+}
+```
+
+#### **Menu Management Service**
+```java
+public interface MenuService {
+    List<MenuDTO> getMenusByRestaurant(Long restaurantId);
+    MenuDTO createMenu(MenuCreationDTO menuData);
+    MenuDTO updateMenu(Long menuId, MenuUpdateDTO menuData);
+    void deleteMenu(Long menuId);
+    List<MenuDTO> searchMenus(SearchCriteria criteria);
+}
+```
+
+#### **User Management Service**
+```java
+public interface UserService {
+    UserDTO getUserProfile(Long userId);
+    UserDTO updateProfile(Long userId, ProfileUpdateDTO profileData);
+    List<FavoriteDTO> getUserFavorites(Long userId);
+    void addFavorite(Long userId, Long menuItemId);
+    void removeFavorite(Long userId, Long menuItemId);
+}
+```
+
+### **3. Restructuring**
+
+#### **Original Design Issues**
+- Monolithic structure with tight coupling
+- No clear separation of concerns
+- Difficult to scale individual components
+
+#### **Restructuring Decisions**
+- **Microservices Architecture**: Split into authentication, menu, and user services
+- **API Gateway**: Centralized routing and authentication
+- **Database Per Service**: Each service owns its data
+- **Event-Driven Communication**: Services communicate via events
+
+#### **Refactoring Benefits**
+- Independent deployment and scaling
+- Technology diversity per service
+- Fault isolation
+- Team autonomy
+
+### **4. Optimization**
+
+#### **Performance Optimizations**
+- **Database Indexing**: Optimized queries with proper indexes
+- **Caching Strategy**: Multi-level caching (Redis + CDN)
+- **Connection Pooling**: HikariCP for database connections
+- **Lazy Loading**: Load data only when needed
+- **Pagination**: Limit result sets for large queries
+
+#### **Scalability Optimizations**
+- **Horizontal Scaling**: Load balancers for multiple instances
+- **Database Sharding**: Partition data by restaurant ID
+- **CDN Integration**: CloudFront for static content
+- **Auto-scaling**: AWS Auto Scaling Groups
+
+#### **Security Optimizations**
+- **Rate Limiting**: Prevent brute force attacks
+- **Input Validation**: Sanitize all user inputs
+- **SQL Injection Prevention**: Parameterized queries
+- **XSS Protection**: Content Security Policy headers
 
 ### **Key Design Principles**
 
