@@ -47,10 +47,10 @@ Create a user-friendly platform that bridges the gap between restaurants and cus
 - **UC-001**: Browse Restaurant Menus
 - **UC-002**: Manage Favorites
 - **UC-003**: Secure Password Reset
-- **UC-004**: Registration & Login
-- **UC-005**: Menu Verification System
-- **UC-006**: Spam Protection System
-- **UC-007**: Menu Management
+- **UC-004**: User Login
+- **UC-005**: User Registration
+- **UC-006**: User Logout
+- **UC-007**: Restaurant Owner Menu Management
 
 ### 🔍 **Menu Discovery & Browsing**
 - Browse restaurant menus by location, cuisine type, or restaurant name
@@ -182,10 +182,10 @@ MenuMap_Project/
 | UC-001 | Browse Restaurant Menus | ✅ Complete | Medium |
 | UC-002 | Manage Favorites | ✅ Complete | Medium |
 | UC-003 | Secure Password Reset | ✅ Complete | High |
-| UC-004 | Registration & Login | ✅ Complete | Medium |
-| UC-005 | Menu Verification System | ✅ Complete | High |
-| UC-006 | Spam Protection System | ✅ Complete | High |
-| UC-007 | Menu Management | ✅ Complete | Medium |
+| UC-004 | User Login | ✅ Complete | Medium |
+| UC-005 | User Registration | ✅ Complete | Medium |
+| UC-006 | User Logout | ✅ Complete | Low |
+| UC-007 | Restaurant Owner Menu Management | ✅ Complete | Medium |
 
 ---
 
