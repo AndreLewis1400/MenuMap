@@ -13,8 +13,8 @@
 - UC-001: Browse Restaurant Menus
 - UC-002: Manage Favorites
 - UC-003: Secure Password Reset
-- UC-004: User Registration
-- UC-005: User Login
+- UC-004: User Login
+- UC-005: User Registration
 - UC-006: User Logout
 - UC-007: Restaurant Owner Menu Management
 
