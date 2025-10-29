@@ -104,35 +104,32 @@ MenuMap_Project/
 │   └── Documentation/
 │       ├── Requirements_Analysis.md
 │       └── Use_Case_Specifications.md
-└── Deliverable2_Design/                # Design and Architecture
-    ├── Architecture/
+└── Deliverable2_Design/                # Design and Architecture (CLEAN)
+    ├── README.md                        # Clean overview
+    ├── PRIMARY_SECONDARY_COMPONENTS.md  # Clear primary/secondary explanation
+    ├── Architecture/                    # 4 essential files
     │   ├── Package_Diagram.md
     │   ├── Subsystem_Decomposition.md
     │   ├── Hardware_Software_Mapping.md
     │   └── Security_Management.md
-    ├── UML_Diagrams/
+    ├── UML_Diagrams/                    # Essential diagrams only
     │   ├── Use_Case_Diagram.md
-    │   ├── Architecture_Package_Diagram.md
-    │   ├── Minimal_Class_Diagram.md
-    │   ├── Detailed_Class_Diagram.md
-    │   ├── State_Machine_Diagram.md
-    │   ├── Sequence_Diagrams.md
     │   ├── UC-001-Browse_Restaurant_Menus_Sequence.md
     │   ├── UC-002-Manage_Favorites_Sequence.md
-    │   ├── UC-003-Secure_Password_Reset_Sequence.md
-    │   ├── UC-004-Registration_Login_Sequence.md
-    │   ├── UC-005-Menu_Verification_System_Sequence.md
-    │   ├── UC-006-Spam_Protection_System_Sequence.md
-    │   └── UC-007-Menu_Management_Sequence.md
-    ├── Design_Patterns/
+    │   ├── UC-006-User_Logout_Sequence.md
+    │   └── Diagrams_Only/               # PNG files
+    │       ├── Model_Static_Menu_map_3_tier.PNG
+    │       ├── Package_MM_Client_MM_Client_Class_Dia.PNG
+    │       ├── Package_MM_Logic_MM_Logic_Class_Dia.PNG
+    │       └── Package_MM_DataStore_MM_Data_Store_Dia.PNG
+    ├── Design_Patterns/                 # 3 pattern files
     │   ├── Observer_Pattern.md
     │   ├── Factory_Pattern.md
     │   └── Strategy_Pattern.md
-    └── Documentation/
+    └── Documentation/                   # 3 doc files
         ├── Design_Document.md
         ├── Meeting_Diary.md
-        ├── OCL_Statements.md
-        └── Final_Review_Validation.md
+        └── OCL_Statements.md
 ```
 
 ---
@@ -195,7 +192,7 @@ MenuMap_Project/
 ## 🏗️ Architecture
 
 ### **Architectural Patterns**
-- **Primary**: Layered Architecture
+- **Primary**: 3-Tier Architecture (MM_Client, MM_Logic, MM_DataStore)
 - **Secondary**: Model-View-Controller (MVC)
 
 ### **Design Patterns**
