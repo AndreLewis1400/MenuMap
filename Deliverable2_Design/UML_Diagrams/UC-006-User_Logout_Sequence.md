@@ -30,13 +30,13 @@ A logged-in user wants to securely log out of the MenuMap application and end th
 ## 🎯 **Lifelines (Participants) - Command Pattern Implementation**
 
 ```
-User | LogoutForm | API | Logout_CMD | UserManager_CMD | UserDAO | Database
+User | LogoutForm | API | Logout_CMD | UserManager_CMD | UserRepository | Database
 ```
 
 **Tier Mapping:**
 - **MM_Client (Presentation):** LogoutForm
 - **MM_Logic (Business Logic):** API, Logout_CMD, UserManager_CMD
-- **MM_DataStore (Data):** UserDAO, Database
+- **MM_DataStore (Data):** UserRepository, Database
 
 **Pattern Roles:**
 - **Invoker:** API
@@ -52,10 +52,10 @@ User -> LogoutForm: Click "Logout" button
 LogoutForm -> API: logoutRequest(sessionToken)
 API -> Logout_CMD: execute(sessionToken)
 Logout_CMD -> UserManager_CMD: invalidateSession(sessionToken)
-UserManager_CMD -> UserDAO: deleteSession(sessionToken)
-UserDAO -> Database: DELETE FROM sessions WHERE token=?
-Database -> UserDAO: return success
-UserDAO -> UserManager_CMD: return success
+UserManager_CMD -> UserRepository: deleteSession(sessionToken)
+UserRepository -> Database: DELETE FROM sessions WHERE token=?
+Database -> UserRepository: return success
+UserRepository -> UserManager_CMD: return success
 UserManager_CMD -> UserManager_CMD: clearUserCache(userId)
 UserManager_CMD -> Logout_CMD: return logoutSuccess
 Logout_CMD -> API: return logoutSuccess

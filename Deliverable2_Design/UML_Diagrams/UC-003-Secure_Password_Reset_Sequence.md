@@ -12,13 +12,13 @@
 ## 🎯 **Lifelines (Participants) - 3-Tier Architecture**
 
 ```
-User | PasswordResetForm | UserManager_CMD | UserDAO | EmailService | Database
+User | PasswordResetForm | UserManager_CMD | UserRepository | EmailService | Database
 ```
 
 **Tier Mapping:**
 - **MM_Client (Presentation):** PasswordResetForm
 - **MM_Logic (Business Logic):** UserManager_CMD, EmailService
-- **MM_DataStore (Data):** UserDAO, Database
+- **MM_DataStore (Data):** UserRepository, Database
 
 ---
 
@@ -28,17 +28,17 @@ User | PasswordResetForm | UserManager_CMD | UserDAO | EmailService | Database
 ```
 User -> PasswordResetForm: Enter email address
 PasswordResetForm -> UserManager_CMD: requestPasswordReset(email)
-UserManager_CMD -> UserDAO: findUserByEmail(email)
-UserDAO -> Database: SELECT * FROM users WHERE email=?
-Database -> UserDAO: return userData
-UserDAO -> UserManager_CMD: return userData
+UserManager_CMD -> UserRepository: findUserByEmail(email)
+UserRepository -> Database: SELECT * FROM users WHERE email=?
+Database -> UserRepository: return userData
+UserRepository -> UserManager_CMD: return userData
 
 alt User Exists
     UserManager_CMD -> UserManager_CMD: generateResetToken()
-    UserManager_CMD -> UserDAO: saveResetToken(userId, resetToken, expiryTime)
-    UserDAO -> Database: UPDATE users SET resetToken=?, tokenExpiry=? WHERE userId=?
-    Database -> UserDAO: return success
-    UserDAO -> UserManager_CMD: return success
+    UserManager_CMD -> UserRepository: saveResetToken(userId, resetToken, expiryTime)
+    UserRepository -> Database: UPDATE users SET resetToken=?, tokenExpiry=? WHERE userId=?
+    Database -> UserRepository: return success
+    UserRepository -> UserManager_CMD: return success
     
     UserManager_CMD -> EmailService: sendPasswordResetEmail(email, resetToken)
     EmailService -> EmailService: sendEmail(email, resetLink)
@@ -56,10 +56,10 @@ end
 ```
 User -> PasswordResetForm: Click reset link (token)
 PasswordResetForm -> UserManager_CMD: validateResetToken(token)
-UserManager_CMD -> UserDAO: findUserByResetToken(token)
-UserDAO -> Database: SELECT * FROM users WHERE resetToken=? AND tokenExpiry > NOW()
-Database -> UserDAO: return userData or null
-UserDAO -> UserManager_CMD: return userData
+UserManager_CMD -> UserRepository: findUserByResetToken(token)
+UserRepository -> Database: SELECT * FROM users WHERE resetToken=? AND tokenExpiry > NOW()
+Database -> UserRepository: return userData or null
+UserRepository -> UserManager_CMD: return userData
 
 alt Valid Token
     PasswordResetForm -> User: Display password reset form
@@ -67,10 +67,10 @@ alt Valid Token
     PasswordResetForm -> UserManager_CMD: resetPassword(token, newPassword)
     UserManager_CMD -> UserManager_CMD: validatePassword(newPassword)
     UserManager_CMD -> UserManager_CMD: hashPassword(newPassword)
-    UserManager_CMD -> UserDAO: updatePassword(userId, hashedPassword)
-    UserDAO -> Database: UPDATE users SET password=?, resetToken=NULL, tokenExpiry=NULL WHERE userId=?
-    Database -> UserDAO: return success
-    UserDAO -> UserManager_CMD: return success
+    UserManager_CMD -> UserRepository: updatePassword(userId, hashedPassword)
+    UserRepository -> Database: UPDATE users SET password=?, resetToken=NULL, tokenExpiry=NULL WHERE userId=?
+    Database -> UserRepository: return success
+    UserRepository -> UserManager_CMD: return success
     
     UserManager_CMD -> EmailService: sendPasswordChangedConfirmation(email)
     EmailService -> UserManager_CMD: return emailSent
@@ -89,10 +89,10 @@ end
 
 ### A1: Token Expired
 ```
-UserManager_CMD -> UserDAO: findUserByResetToken(token)
-UserDAO -> Database: SELECT * FROM users WHERE resetToken=? AND tokenExpiry > NOW()
-Database -> UserDAO: return null (expired)
-UserDAO -> UserManager_CMD: return null
+UserManager_CMD -> UserRepository: findUserByResetToken(token)
+UserRepository -> Database: SELECT * FROM users WHERE resetToken=? AND tokenExpiry > NOW()
+Database -> UserRepository: return null (expired)
+UserRepository -> UserManager_CMD: return null
 UserManager_CMD -> PasswordResetForm: return "Token expired"
 PasswordResetForm -> User: display "Link expired, request new reset"
 ```
