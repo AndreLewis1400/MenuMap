@@ -13,13 +13,13 @@
 ## 🎯 **Lifelines (Participants) - Command Pattern Implementation**
 
 ```
-User | LoginForm | API | Login_CMD | UserManager_CMD | UserDAO | Database
+User | LoginForm | API | Login_CMD | UserManager_CMD | UserRepository | Database
 ```
 
 **Tier Mapping:**
 - **MM_Client (Presentation):** LoginForm
 - **MM_Logic (Business Logic):** API, Login_CMD, UserManager_CMD
-- **MM_DataStore (Data):** UserDAO, Database
+- **MM_DataStore (Data):** UserRepository, Database
 
 **Pattern Roles:**
 - **Invoker:** API
@@ -35,19 +35,19 @@ User -> LoginForm: Enter username/password
 LoginForm -> API: loginRequest(username, password)
 API -> Login_CMD: execute(username, password)
 Login_CMD -> UserManager_CMD: validateCredentials(username, password)
-UserManager_CMD -> UserDAO: queryUser(username)
-UserDAO -> Database: SELECT * FROM users WHERE username=?
-Database -> UserDAO: return userData
-UserDAO -> UserManager_CMD: return userData
+UserManager_CMD -> UserRepository: queryUser(username)
+UserRepository -> Database: SELECT * FROM users WHERE username=?
+Database -> UserRepository: return userData
+UserRepository -> UserManager_CMD: return userData
 UserManager_CMD -> UserManager_CMD: hashPassword(password)
 UserManager_CMD -> UserManager_CMD: comparePasswords(storedHash, inputHash)
 
 alt Valid Credentials
     UserManager_CMD -> UserManager_CMD: generateSessionToken()
-    UserManager_CMD -> UserDAO: saveSession(userId, sessionToken)
-    UserDAO -> Database: INSERT INTO sessions (userId, token)
-    Database -> UserDAO: return success
-    UserDAO -> UserManager_CMD: return success
+    UserManager_CMD -> UserRepository: saveSession(userId, sessionToken)
+    UserRepository -> Database: INSERT INTO sessions (userId, token)
+    Database -> UserRepository: return success
+    UserRepository -> UserManager_CMD: return success
     UserManager_CMD -> Login_CMD: return sessionToken
     Login_CMD -> API: return sessionToken
     API -> LoginForm: return success + sessionToken
@@ -66,17 +66,25 @@ end
 
 ### A1: Account Locked
 ```
-UserManager -> UserDatabase: checkAccountStatus(username)
-UserDatabase -> UserManager: return "LOCKED"
-UserManager -> LoginForm: return "Account locked"
+UserManager_CMD -> UserRepository: checkAccountStatus(username)
+UserRepository -> Database: SELECT accountStatus FROM users WHERE username=?
+Database -> UserRepository: return "LOCKED"
+UserRepository -> UserManager_CMD: return "LOCKED"
+UserManager_CMD -> Login_CMD: return "Account locked"
+Login_CMD -> API: return "Account locked"
+API -> LoginForm: return "Account locked"
 LoginForm -> User: display "Account locked - contact support"
 ```
 
 ### A2: Password Reset Required
 ```
-UserManager -> UserDatabase: checkPasswordExpiry(username)
-UserDatabase -> UserManager: return "EXPIRED"
-UserManager -> LoginForm: return "Password expired"
+UserManager_CMD -> UserRepository: checkPasswordExpiry(username)
+UserRepository -> Database: SELECT passwordExpiry FROM users WHERE username=?
+Database -> UserRepository: return "EXPIRED"
+UserRepository -> UserManager_CMD: return "EXPIRED"
+UserManager_CMD -> Login_CMD: return "Password expired"
+Login_CMD -> API: return "Password expired"
+API -> LoginForm: return "Password expired"
 LoginForm -> User: redirect to Password Reset
 ```
 

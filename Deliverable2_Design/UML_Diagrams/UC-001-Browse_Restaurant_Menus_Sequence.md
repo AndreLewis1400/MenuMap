@@ -10,13 +10,13 @@
 ## 🎯 **Lifelines (Participants) - 3-Tier Architecture**
 
 ```
-User | WebInterface | MenuManager | MenuDAO | Database
+User | WebInterface | MenuManager | MenuRepository | Database
 ```
 
 **Tier Mapping:**
 - **MM_Client (Presentation):** WebInterface
 - **MM_Logic (Business Logic):** MenuManager
-- **MM_DataStore (Data):** MenuDAO, Database
+- **MM_DataStore (Data):** MenuRepository, Database
 
 ---
 
@@ -26,14 +26,14 @@ User | WebInterface | MenuManager | MenuDAO | Database
 ```
 1. User -> WebInterface: enter search criteria
 2. WebInterface -> MenuManager: searchMenus(query, filters)
-3. MenuManager -> MenuDAO: findRestaurants(criteria)
-4. MenuDAO -> Database: queryRestaurants(criteria)
-5. Database -> MenuDAO: return restaurantList
-6. MenuDAO -> MenuManager: return restaurantList
-7. MenuManager -> MenuDAO: getMenus(restaurantIDs)
-8. MenuDAO -> Database: queryMenus(restaurantIDs)
-9. Database -> MenuDAO: return menuList
-10. MenuDAO -> MenuManager: return menuList
+3. MenuManager -> MenuRepository: findRestaurants(criteria)
+4. MenuRepository -> Database: queryRestaurants(criteria)
+5. Database -> MenuRepository: return restaurantList
+6. MenuRepository -> MenuManager: return restaurantList
+7. MenuManager -> MenuRepository: getMenus(restaurantIDs)
+8. MenuRepository -> Database: queryMenus(restaurantIDs)
+9. Database -> MenuRepository: return menuList
+10. MenuRepository -> MenuManager: return menuList
 11. MenuManager -> WebInterface: return searchResults
 12. WebInterface -> User: display restaurant list
 ```
@@ -42,10 +42,10 @@ User | WebInterface | MenuManager | MenuDAO | Database
 ```
 13. User -> WebInterface: select restaurant
 14. WebInterface -> MenuManager: getMenuDetails(restaurantID)
-15. MenuManager -> MenuDAO: getMenu(restaurantID)
-16. MenuDAO -> Database: queryMenu(restaurantID)
-17. Database -> MenuDAO: return menu
-18. MenuDAO -> MenuManager: return menuDetails
+15. MenuManager -> MenuRepository: getMenu(restaurantID)
+16. MenuRepository -> Database: queryMenu(restaurantID)
+17. Database -> MenuRepository: return menu
+18. MenuRepository -> MenuManager: return menuDetails
 19. MenuManager -> WebInterface: return menuDetails
 20. WebInterface -> User: display menu
 ```
@@ -57,16 +57,18 @@ User | WebInterface | MenuManager | MenuDAO | Database
 ### **Alt Frame 1: No Results Found**
 ```
 alt No Results Found
-    Database -> MenuController: return emptyList
-    MenuController -> WebInterface: return noResults
+    Database -> MenuRepository: return emptyList
+    MenuRepository -> MenuManager: return emptyList
+    MenuManager -> WebInterface: return noResults
     WebInterface -> User: display "No results found"
 ```
 
 ### **Alt Frame 2: Menu Unavailable**
 ```
 alt Menu Unavailable
-    Database -> MenuController: return error
-    MenuController -> WebInterface: return menuUnavailable
+    Database -> MenuRepository: return error
+    MenuRepository -> MenuManager: return error
+    MenuManager -> WebInterface: return menuUnavailable
     WebInterface -> User: display "Menu unavailable"
 ```
 
@@ -76,7 +78,7 @@ alt Menu Unavailable
 
 ### **Lifeline Order (Left to Right):**
 ```
-User | WebInterface | MenuManager | MenuDAO | Database
+User | WebInterface | MenuManager | MenuRepository | Database
 ```
 
 ### **Message Types:**

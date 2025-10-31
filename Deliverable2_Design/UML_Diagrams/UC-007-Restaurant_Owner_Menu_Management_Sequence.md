@@ -13,7 +13,7 @@
 ## 🎯 **Lifelines (Participants) - Observer Pattern Implementation**
 
 ```
-RestaurantOwner | MenuForm | MenuManager | UserManager_CMD | MenuDAO | Database
+RestaurantOwner | MenuForm | MenuManager | UserManager_CMD | MenuRepository | Database
                        |          |
                   FavoriteObserver | NotificationObserver
 ```
@@ -21,7 +21,7 @@ RestaurantOwner | MenuForm | MenuManager | UserManager_CMD | MenuDAO | Database
 **Tier Mapping:**
 - **MM_Client (Presentation):** MenuForm
 - **MM_Logic (Business Logic):** MenuManager (Subject), FavoriteObserver, NotificationObserver
-- **MM_DataStore (Data):** MenuDAO, Database
+- **MM_DataStore (Data):** MenuRepository, Database
 
 **Pattern Roles:**
 - **Subject:** MenuManager
@@ -34,32 +34,32 @@ RestaurantOwner | MenuForm | MenuManager | UserManager_CMD | MenuDAO | Database
 ```
 RestaurantOwner -> MenuForm: Update menu item (itemId, newPrice)
 MenuForm -> MenuManager: updateMenuItem(itemId, newPrice)
-MenuManager -> MenuDAO: getMenuItem(itemId)
-MenuDAO -> Database: SELECT * FROM menu_items WHERE id=?
-Database -> MenuDAO: return menuItem
-MenuDAO -> MenuManager: return menuItem
-MenuManager -> MenuDAO: updateMenuItem(itemId, newPrice)
-MenuDAO -> Database: UPDATE menu_items SET price=? WHERE id=?
-Database -> MenuDAO: return success
-MenuDAO -> MenuManager: return success
+MenuManager -> MenuRepository: getMenuItem(itemId)
+MenuRepository -> Database: SELECT * FROM menu_items WHERE id=?
+Database -> MenuRepository: return menuItem
+MenuRepository -> MenuManager: return menuItem
+MenuManager -> MenuRepository: updateMenuItem(itemId, newPrice)
+MenuRepository -> Database: UPDATE menu_items SET price=? WHERE id=?
+Database -> MenuRepository: return success
+MenuRepository -> MenuManager: return success
 
 // Observer Pattern: Notify all observers of menu change
 MenuManager -> MenuManager: notifyObservers(menuChangeEvent)
 
 MenuManager -> FavoriteObserver: update(menuChangeEvent)
 FavoriteObserver -> FavoriteObserver: updateUserFavorites(itemId, newPrice)
-FavoriteObserver -> MenuDAO: updateFavoritePrice(itemId, newPrice)
-MenuDAO -> Database: UPDATE favorites SET price=? WHERE itemId=?
-Database -> MenuDAO: return success
-MenuDAO -> FavoriteObserver: return success
+FavoriteObserver -> MenuRepository: updateFavoritePrice(itemId, newPrice)
+MenuRepository -> Database: UPDATE favorites SET price=? WHERE itemId=?
+Database -> MenuRepository: return success
+MenuRepository -> FavoriteObserver: return success
 
 MenuManager -> NotificationObserver: update(menuChangeEvent)
 NotificationObserver -> NotificationObserver: sendMenuUpdateNotifications(itemId)
 NotificationObserver -> UserManager_CMD: getUsersWithFavorite(itemId)
-UserManager_CMD -> MenuDAO: SELECT userId FROM favorites WHERE itemId=?
-MenuDAO -> Database: SELECT userId FROM favorites WHERE itemId=?
-Database -> MenuDAO: return userIds
-MenuDAO -> UserManager_CMD: return userIds
+UserManager_CMD -> MenuRepository: SELECT userId FROM favorites WHERE itemId=?
+MenuRepository -> Database: SELECT userId FROM favorites WHERE itemId=?
+Database -> MenuRepository: return userIds
+MenuRepository -> UserManager_CMD: return userIds
 UserManager_CMD -> NotificationObserver: return userIds
 NotificationObserver -> NotificationObserver: sendNotification(userIds, "Menu item updated")
 
@@ -75,10 +75,10 @@ MenuForm -> RestaurantOwner: display "Menu updated successfully"
 ```
 RestaurantOwner -> MenuForm: Create new menu item
 MenuForm -> MenuManager: createMenuItem(menuData)
-MenuManager -> MenuDAO: createMenuItem(menuData)
-MenuDAO -> Database: INSERT INTO menu_items (...)
-Database -> MenuDAO: return newItemId
-MenuDAO -> MenuManager: return newItemId
+MenuManager -> MenuRepository: createMenuItem(menuData)
+MenuRepository -> Database: INSERT INTO menu_items (...)
+Database -> MenuRepository: return newItemId
+MenuRepository -> MenuManager: return newItemId
 MenuManager -> MenuManager: notifyObservers(newItemEvent)
 MenuManager -> FavoriteObserver: update(newItemEvent)
 MenuManager -> NotificationObserver: update(newItemEvent)
@@ -91,11 +91,11 @@ RestaurantOwner -> MenuForm: Delete menu item
 MenuForm -> MenuManager: deleteMenuItem(itemId)
 MenuManager -> MenuManager: notifyObservers(deleteEvent)
 MenuManager -> FavoriteObserver: update(deleteEvent)
-FavoriteObserver -> MenuDAO: removeFromFavorites(itemId)
-MenuDAO -> Database: DELETE FROM favorites WHERE itemId=?
-MenuManager -> MenuDAO: deleteMenuItem(itemId)
-MenuDAO -> Database: DELETE FROM menu_items WHERE id=?
-Database -> MenuDAO: return success
+FavoriteObserver -> MenuRepository: removeFromFavorites(itemId)
+MenuRepository -> Database: DELETE FROM favorites WHERE itemId=?
+MenuManager -> MenuRepository: deleteMenuItem(itemId)
+MenuRepository -> Database: DELETE FROM menu_items WHERE id=?
+Database -> MenuRepository: return success
 MenuManager -> MenuForm: return success
 ```
 
