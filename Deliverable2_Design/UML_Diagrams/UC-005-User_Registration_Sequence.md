@@ -5,29 +5,58 @@
 **Goal:** Create new user account with secure credentials  
 **Precondition:** User is not already registered  
 
+**Design Pattern:** Factory Pattern  
+**3-Tier Architecture:** MM_Client → MM_Logic → MM_DataStore
+
 ---
 
-## Sequence Flow
+## 🎯 **Lifelines (Participants) - Factory Pattern Implementation**
 
 ```
-User -> RegistrationForm: Enter registration details
-RegistrationForm -> UserManager: validateRegistrationData(formData)
-UserManager -> ValidationService: validateEmail(email)
-ValidationService -> UserManager: return emailValid
-UserManager -> ValidationService: validatePassword(password)
-ValidationService -> UserManager: return passwordValid
+User | RegistrationForm | UserManager_CMD | UserDAO | Database
+```
+
+**Tier Mapping:**
+- **MM_Client (Presentation):** RegistrationForm
+- **MM_Logic (Business Logic):** UserManager_CMD (Factory)
+- **MM_DataStore (Data):** UserDAO, Database
+
+**Pattern Roles:**
+- **Factory:** UserManager_CMD
+- **Products:** RegularUser, PremiumUser, RestaurantOwner
+
+---
+
+## Sequence Flow - Factory Pattern
+
+```
+User -> RegistrationForm: Enter registration details (userType, email, password)
+RegistrationForm -> UserManager_CMD: validateRegistrationData(formData)
+UserManager_CMD -> UserDAO: checkEmailExists(email)
+UserDAO -> Database: SELECT email FROM users WHERE email=?
+Database -> UserDAO: return null (email doesn't exist)
+UserDAO -> UserManager_CMD: return emailAvailable
 
 alt Valid Registration Data
-    UserManager -> SecurityService: hashPassword(password)
-    SecurityService -> UserManager: return hashedPassword
-    UserManager -> UserDatabase: createUser(userData, hashedPassword)
-    UserDatabase -> UserManager: return userId
-    UserManager -> EmailService: sendVerificationEmail(email, userId)
-    EmailService -> UserManager: return emailSent
-    UserManager -> RegistrationForm: return success
+    UserManager_CMD -> UserManager_CMD: hashPassword(password)
+    UserManager_CMD -> UserManager_CMD: createUser(userType, userData, hashedPassword)
+    
+    alt userType == "RegularUser"
+        UserManager_CMD -> UserManager_CMD: createRegularUser(userData)
+    else userType == "PremiumUser"
+        UserManager_CMD -> UserManager_CMD: createPremiumUser(userData)
+    else userType == "RestaurantOwner"
+        UserManager_CMD -> UserManager_CMD: createRestaurantOwner(userData)
+    end
+    
+    UserManager_CMD -> UserDAO: saveUser(newUser)
+    UserDAO -> Database: INSERT INTO users (email, password, userType, ...)
+    Database -> UserDAO: return userId
+    UserDAO -> UserManager_CMD: return userId
+    UserManager_CMD -> RegistrationForm: return success + userId
     RegistrationForm -> User: display "Check email for verification"
 else Invalid Data
-    UserManager -> RegistrationForm: return validationErrors
+    UserManager_CMD -> RegistrationForm: return validationErrors
     RegistrationForm -> User: display error messages
 end
 ```
