@@ -13,13 +13,13 @@
 ## 🎯 **Lifelines (Participants) - Factory Pattern Implementation**
 
 ```
-User | RegistrationForm | UserManager_CMD | UserDAO | Database
+User | RegistrationForm | UserManager_CMD | UserRepository | Database
 ```
 
 **Tier Mapping:**
 - **MM_Client (Presentation):** RegistrationForm
 - **MM_Logic (Business Logic):** UserManager_CMD (Factory)
-- **MM_DataStore (Data):** UserDAO, Database
+- **MM_DataStore (Data):** UserRepository, Database
 
 **Pattern Roles:**
 - **Factory:** UserManager_CMD
@@ -32,10 +32,10 @@ User | RegistrationForm | UserManager_CMD | UserDAO | Database
 ```
 User -> RegistrationForm: Enter registration details (userType, email, password)
 RegistrationForm -> UserManager_CMD: validateRegistrationData(formData)
-UserManager_CMD -> UserDAO: checkEmailExists(email)
-UserDAO -> Database: SELECT email FROM users WHERE email=?
-Database -> UserDAO: return null (email doesn't exist)
-UserDAO -> UserManager_CMD: return emailAvailable
+UserManager_CMD -> UserRepository: checkEmailExists(email)
+UserRepository -> Database: SELECT email FROM users WHERE email=?
+Database -> UserRepository: return null (email doesn't exist)
+UserRepository -> UserManager_CMD: return emailAvailable
 
 alt Valid Registration Data
     UserManager_CMD -> UserManager_CMD: hashPassword(password)
@@ -49,10 +49,10 @@ alt Valid Registration Data
         UserManager_CMD -> UserManager_CMD: createRestaurantOwner(userData)
     end
     
-    UserManager_CMD -> UserDAO: saveUser(newUser)
-    UserDAO -> Database: INSERT INTO users (email, password, userType, ...)
-    Database -> UserDAO: return userId
-    UserDAO -> UserManager_CMD: return userId
+    UserManager_CMD -> UserRepository: saveUser(newUser)
+    UserRepository -> Database: INSERT INTO users (email, password, userType, ...)
+    Database -> UserRepository: return userId
+    UserRepository -> UserManager_CMD: return userId
     UserManager_CMD -> RegistrationForm: return success + userId
     RegistrationForm -> User: display "Check email for verification"
 else Invalid Data
