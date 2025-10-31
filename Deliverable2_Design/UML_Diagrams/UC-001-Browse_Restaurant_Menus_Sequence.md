@@ -7,36 +7,47 @@
 
 ---
 
-## 🎯 **Lifelines (Participants)**
+## 🎯 **Lifelines (Participants) - 3-Tier Architecture**
 
 ```
-User | WebInterface | MenuController | Database | Restaurant | Menu
+User | WebInterface | MenuManager | MenuDAO | Database
 ```
+
+**Tier Mapping:**
+- **MM_Client (Presentation):** WebInterface
+- **MM_Logic (Business Logic):** MenuManager
+- **MM_DataStore (Data):** MenuDAO, Database
 
 ---
 
-## 📋 **Message Flow (Step by Step)**
+## 📋 **Message Flow (Step by Step) - Corrected for 3-Tier**
 
 ### **Phase 1: Menu Search**
 ```
 1. User -> WebInterface: enter search criteria
-2. WebInterface -> MenuController: searchMenus(query, filters)
-3. MenuController -> Database: findRestaurants(criteria)
-4. Database -> MenuController: return restaurantList
-5. MenuController -> Database: getMenus(restaurantIDs)
-6. Database -> MenuController: return menuList
-7. MenuController -> WebInterface: return searchResults
-8. WebInterface -> User: display restaurant list
+2. WebInterface -> MenuManager: searchMenus(query, filters)
+3. MenuManager -> MenuDAO: findRestaurants(criteria)
+4. MenuDAO -> Database: queryRestaurants(criteria)
+5. Database -> MenuDAO: return restaurantList
+6. MenuDAO -> MenuManager: return restaurantList
+7. MenuManager -> MenuDAO: getMenus(restaurantIDs)
+8. MenuDAO -> Database: queryMenus(restaurantIDs)
+9. Database -> MenuDAO: return menuList
+10. MenuDAO -> MenuManager: return menuList
+11. MenuManager -> WebInterface: return searchResults
+12. WebInterface -> User: display restaurant list
 ```
 
 ### **Phase 2: Menu Selection**
 ```
-9. User -> WebInterface: select restaurant
-10. WebInterface -> MenuController: getMenuDetails(restaurantID)
-11. MenuController -> Database: getMenu(restaurantID)
-12. Database -> MenuController: return menu
-13. MenuController -> WebInterface: return menuDetails
-14. WebInterface -> User: display menu
+13. User -> WebInterface: select restaurant
+14. WebInterface -> MenuManager: getMenuDetails(restaurantID)
+15. MenuManager -> MenuDAO: getMenu(restaurantID)
+16. MenuDAO -> Database: queryMenu(restaurantID)
+17. Database -> MenuDAO: return menu
+18. MenuDAO -> MenuManager: return menuDetails
+19. MenuManager -> WebInterface: return menuDetails
+20. WebInterface -> User: display menu
 ```
 
 ---
@@ -65,7 +76,7 @@ alt Menu Unavailable
 
 ### **Lifeline Order (Left to Right):**
 ```
-User | WebInterface | MenuController | Database | Restaurant | Menu
+User | WebInterface | MenuManager | MenuDAO | Database
 ```
 
 ### **Message Types:**

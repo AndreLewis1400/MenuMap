@@ -27,38 +27,41 @@ A logged-in user wants to securely log out of the MenuMap application and end th
 
 ---
 
-## 🔄 Sequence Diagram
+## 🎯 **Lifelines (Participants) - Command Pattern Implementation**
 
 ```
-┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   WebInterface  │    │ Authentication  │    │ SecurityService │    │   Database      │
-│                 │    │ Controller      │    │                 │    │                 │
-└─────────────────┘    └─────────────────┘    └─────────────────┘    └─────────────────┘
-         │                       │                       │                       │
-         │ 1. User clicks        │                       │                       │
-         │    "Logout" button    │                       │                       │
-         ├──────────────────────▶│                       │                       │
-         │                       │                       │                       │
-         │                       │ 2. logoutUser()      │                       │
-         │                       ├──────────────────────▶│                       │
-         │                       │                       │                       │
-         │                       │                       │ 3. invalidateSession()│
-         │                       │                       ├──────────────────────▶│
-         │                       │                       │                       │
-         │                       │                       │ 4. Session invalidated│
-         │                       │                       │◀──────────────────────┤
-         │                       │                       │                       │
-         │                       │ 5. logoutSuccess()    │                       │
-         │                       │◀──────────────────────┤                       │
-         │                       │                       │                       │
-         │ 6. redirectToLogin()   │                       │                       │
-         │◀──────────────────────┤                       │                       │
-         │                       │                       │                       │
-         │ 7. Clear session data │                       │                       │
-         │    and redirect       │                       │                       │
-         │                       │                       │                       │
-         │ 8. Display login page │                       │                       │
-         │                       │                       │                       │
+User | LogoutForm | API | Logout_CMD | UserManager_CMD | UserDAO | Database
+```
+
+**Tier Mapping:**
+- **MM_Client (Presentation):** LogoutForm
+- **MM_Logic (Business Logic):** API, Logout_CMD, UserManager_CMD
+- **MM_DataStore (Data):** UserDAO, Database
+
+**Pattern Roles:**
+- **Invoker:** API
+- **Command:** Logout_CMD
+- **Receiver:** UserManager_CMD
+
+---
+
+## 🔄 Sequence Flow - Command Pattern
+
+```
+User -> LogoutForm: Click "Logout" button
+LogoutForm -> API: logoutRequest(sessionToken)
+API -> Logout_CMD: execute(sessionToken)
+Logout_CMD -> UserManager_CMD: invalidateSession(sessionToken)
+UserManager_CMD -> UserDAO: deleteSession(sessionToken)
+UserDAO -> Database: DELETE FROM sessions WHERE token=?
+Database -> UserDAO: return success
+UserDAO -> UserManager_CMD: return success
+UserManager_CMD -> UserManager_CMD: clearUserCache(userId)
+UserManager_CMD -> Logout_CMD: return logoutSuccess
+Logout_CMD -> API: return logoutSuccess
+API -> LogoutForm: return success
+LogoutForm -> LogoutForm: clearSessionData()
+LogoutForm -> User: redirect to Login page
 ```
 
 ---
