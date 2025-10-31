@@ -5,27 +5,57 @@
 **Goal:** Authenticate user and establish secure session  
 **Precondition:** User has valid account credentials  
 
+**Design Pattern:** Command Pattern  
+**3-Tier Architecture:** MM_Client → MM_Logic → MM_DataStore
+
 ---
 
-## Sequence Flow
+## 🎯 **Lifelines (Participants) - Command Pattern Implementation**
+
+```
+User | LoginForm | API | Login_CMD | UserManager_CMD | UserDAO | Database
+```
+
+**Tier Mapping:**
+- **MM_Client (Presentation):** LoginForm
+- **MM_Logic (Business Logic):** API, Login_CMD, UserManager_CMD
+- **MM_DataStore (Data):** UserDAO, Database
+
+**Pattern Roles:**
+- **Invoker:** API
+- **Command:** Login_CMD
+- **Receiver:** UserManager_CMD
+
+---
+
+## Sequence Flow - Command Pattern
 
 ```
 User -> LoginForm: Enter username/password
-LoginForm -> UserManager: validateCredentials(username, password)
-UserManager -> UserDatabase: queryUser(username)
-UserDatabase -> UserManager: return userData
-UserManager -> SecurityService: hashPassword(password)
-SecurityService -> UserManager: return hashedPassword
-UserManager -> UserManager: comparePasswords(storedHash, inputHash)
+LoginForm -> API: loginRequest(username, password)
+API -> Login_CMD: execute(username, password)
+Login_CMD -> UserManager_CMD: validateCredentials(username, password)
+UserManager_CMD -> UserDAO: queryUser(username)
+UserDAO -> Database: SELECT * FROM users WHERE username=?
+Database -> UserDAO: return userData
+UserDAO -> UserManager_CMD: return userData
+UserManager_CMD -> UserManager_CMD: hashPassword(password)
+UserManager_CMD -> UserManager_CMD: comparePasswords(storedHash, inputHash)
 
 alt Valid Credentials
-    UserManager -> SessionManager: createSession(userId)
-    SessionManager -> SessionManager: generateSessionToken()
-    SessionManager -> UserManager: return sessionToken
-    UserManager -> LoginForm: return success + sessionToken
+    UserManager_CMD -> UserManager_CMD: generateSessionToken()
+    UserManager_CMD -> UserDAO: saveSession(userId, sessionToken)
+    UserDAO -> Database: INSERT INTO sessions (userId, token)
+    Database -> UserDAO: return success
+    UserDAO -> UserManager_CMD: return success
+    UserManager_CMD -> Login_CMD: return sessionToken
+    Login_CMD -> API: return sessionToken
+    API -> LoginForm: return success + sessionToken
     LoginForm -> User: redirect to Dashboard
 else Invalid Credentials
-    UserManager -> LoginForm: return error message
+    UserManager_CMD -> Login_CMD: return error
+    Login_CMD -> API: return error
+    API -> LoginForm: return "Invalid credentials"
     LoginForm -> User: display "Invalid credentials"
 end
 ```

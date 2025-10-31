@@ -7,49 +7,70 @@
 
 ---
 
-## 🎯 **Lifelines (Participants)**
+## 🎯 **Lifelines (Participants) - 3-Tier Architecture**
 
 ```
-User | WebInterface | UserController | AuthenticationService | Database | Favorite
+User | FavoritesForm | UserManager_CMD | UserDAO | Database
 ```
+
+**Tier Mapping:**
+- **MM_Client (Presentation):** FavoritesForm
+- **MM_Logic (Business Logic):** UserManager_CMD
+- **MM_DataStore (Data):** UserDAO, Database
 
 ---
 
-## 📋 **Message Flow (Step by Step)**
+## 📋 **Message Flow (Step by Step) - Corrected for 3-Tier**
 
 ### **Phase 1: View Favorites**
 ```
-1. User -> WebInterface: request favorites page
-2. WebInterface -> AuthenticationService: validateSession(sessionToken)
-3. AuthenticationService -> Database: verifySession(sessionToken)
-4. Database -> AuthenticationService: return userID
-5. AuthenticationService -> WebInterface: return userID
+1. User -> FavoritesForm: request favorites page
+2. FavoritesForm -> UserManager_CMD: getUserFavorites(sessionToken)
+3. UserManager_CMD -> UserDAO: validateSession(sessionToken)
+4. UserDAO -> Database: SELECT userId FROM sessions WHERE token=?
+5. Database -> UserDAO: return userId
+6. UserDAO -> UserManager_CMD: return userId
 
-6. WebInterface -> UserController: getUserFavorites(userID)
-7. UserController -> Database: getFavorites(userID)
-8. Database -> UserController: return favoritesList
-9. UserController -> WebInterface: return favorites
-10. WebInterface -> User: display favorites
+7. UserManager_CMD -> UserDAO: getFavorites(userId)
+8. UserDAO -> Database: SELECT * FROM favorites WHERE userId=?
+9. Database -> UserDAO: return favoritesList
+10. UserDAO -> UserManager_CMD: return favoritesList
+11. UserManager_CMD -> FavoritesForm: return favorites
+12. FavoritesForm -> User: display favorites
 ```
 
 ### **Phase 2: Add to Favorites**
 ```
-11. User -> WebInterface: add to favorites
-12. WebInterface -> UserController: addToFavorites(userID, itemID)
-13. UserController -> Database: saveFavorite(userID, itemID)
-14. Database -> UserController: return success
-15. UserController -> WebInterface: return confirmation
-16. WebInterface -> User: display "Added to favorites"
+13. User -> FavoritesForm: add to favorites (itemId)
+14. FavoritesForm -> UserManager_CMD: addToFavorites(sessionToken, itemId)
+15. UserManager_CMD -> UserDAO: validateSession(sessionToken)
+16. UserDAO -> Database: SELECT userId FROM sessions WHERE token=?
+17. Database -> UserDAO: return userId
+18. UserDAO -> UserManager_CMD: return userId
+
+19. UserManager_CMD -> UserDAO: saveFavorite(userId, itemId)
+20. UserDAO -> Database: INSERT INTO favorites (userId, itemId)
+21. Database -> UserDAO: return success
+22. UserDAO -> UserManager_CMD: return success
+23. UserManager_CMD -> FavoritesForm: return confirmation
+24. FavoritesForm -> User: display "Added to favorites"
 ```
 
 ### **Phase 3: Remove from Favorites**
 ```
-17. User -> WebInterface: remove from favorites
-18. WebInterface -> UserController: removeFromFavorites(userID, itemID)
-19. UserController -> Database: deleteFavorite(userID, itemID)
-20. Database -> UserController: return success
-21. UserController -> WebInterface: return confirmation
-22. WebInterface -> User: display "Removed from favorites"
+25. User -> FavoritesForm: remove from favorites (itemId)
+26. FavoritesForm -> UserManager_CMD: removeFromFavorites(sessionToken, itemId)
+27. UserManager_CMD -> UserDAO: validateSession(sessionToken)
+28. UserDAO -> Database: SELECT userId FROM sessions WHERE token=?
+29. Database -> UserDAO: return userId
+30. UserDAO -> UserManager_CMD: return userId
+
+31. UserManager_CMD -> UserDAO: deleteFavorite(userId, itemId)
+32. UserDAO -> Database: DELETE FROM favorites WHERE userId=? AND itemId=?
+33. Database -> UserDAO: return success
+34. UserDAO -> UserManager_CMD: return success
+35. UserManager_CMD -> FavoritesForm: return confirmation
+36. FavoritesForm -> User: display "Removed from favorites"
 ```
 
 ---
@@ -77,7 +98,7 @@ alt Favorites Limit Reached
 
 ### **Lifeline Order (Left to Right):**
 ```
-User | WebInterface | UserController | AuthenticationService | Database | Favorite
+User | FavoritesForm | UserManager_CMD | UserDAO | Database
 ```
 
 ### **Message Types:**
