@@ -25,7 +25,7 @@ Based on the deliverable 2 requirements, we will implement the following 7 use c
 3. **UC-003: Secure Password Reset** (Security Use Case)
 
 ### **Additional Use Cases (4 to be defined)**
-4. **UC-004: User Registration** (Normal Use Case)
+4. **UC-004: Registration** (Normal Use Case)
 5. **UC-005: User Login** (Normal Use Case)
 6. **UC-006: User Logout** (Normal Use Case)
 7. **UC-007: Restaurant Owner Menu Management** (Normal Use Case)
