@@ -1,4 +1,4 @@
-# UC-005: User Login Sequence Diagram
+# UC-004: User Login Sequence Diagram
 
 ## Use Case: User Login
 **Actor:** Registered User  
