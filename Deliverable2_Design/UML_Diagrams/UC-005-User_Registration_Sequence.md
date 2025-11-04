@@ -1,4 +1,4 @@
-# UC-004: User Registration Sequence Diagram
+# UC-005: User Registration Sequence Diagram
 
 ## Use Case: User Registration
 **Actor:** Guest User  
