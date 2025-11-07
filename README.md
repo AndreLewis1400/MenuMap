@@ -1,24 +1,17 @@
 # MenuMap Application
 ## CEN4010 Software Engineering - Team 9
 
-[![Project Status](https://img.shields.io/badge/Status-Deliverable%202%20Complete-green.svg)](https://github.com/AndreLewis1400/MenuMap)
+[![Project Status](https://img.shields.io/badge/Status-In%20Development-blue.svg)](https://github.com/AndreLewis1400/MenuMap)
 [![Course](https://img.shields.io/badge/Course-CEN4010%20Software%20Engineering-green.svg)](https://github.com/AndreLewis1400/MenuMap)
 [![Team](https://img.shields.io/badge/Team-Team%209-orange.svg)](https://github.com/AndreLewis1400/MenuMap)
 
-**Project:** MenuMap Application  
-**Team:** Team 9  
-**Software Architecture & Design Lead:** Andre Lewis  
-**Repository:** AndreLewis1400/MenuMap  
-**Date:** [Current Date]  
-**Version:** 1.0  
-
 ---
 
-## 🎯 Project Overview
+## 🍽️ Project Overview
 
-MenuMap is a comprehensive restaurant menu browsing and management system designed to connect users with restaurant menus while providing restaurant owners with tools to manage their digital presence. Think of it as a "Google Maps for restaurant menus" - a centralized platform where food enthusiasts can discover new restaurants, browse detailed menus, save their favorites, and verify menu information accuracy.
+**MenuMap** is a comprehensive restaurant discovery and menu management application designed to help users find, explore, and manage restaurant menus and meal information. Think of it as a "Google Maps for restaurant menus" - a centralized platform where food enthusiasts can discover new restaurants, browse detailed menus, save their favorites, and verify menu information accuracy.
 
-### **Mission Statement**
+### 🎯 Mission Statement
 Create a user-friendly platform that bridges the gap between restaurants and customers by providing accurate, up-to-date menu information in an easily accessible format.
 
 ---
@@ -30,27 +23,15 @@ Create a user-friendly platform that bridges the gap between restaurants and cus
 | **Project Name** | MenuMap |
 | **Course** | CEN4010 Software Engineering |
 | **Team** | Team 9 |
-| **Software Architecture & Design Lead** | Andre Lewis |
+| **Project Lead** | Andre Lewis |
 | **Repository** | [AndreLewis1400/MenuMap](https://github.com/AndreLewis1400/MenuMap) |
 | **Documentation Status** | ✅ Complete |
 | **UML Diagrams** | ✅ Complete |
-| **Use Cases** | ✅ Complete (7 use cases) |
-| **Deliverable 1** | ✅ Complete |
-| **Deliverable 2** | ✅ Complete |
+| **Use Cases** | ✅ Complete |
 
 ---
 
 ## 🚀 Core Features
-
-### **7 Comprehensive Use Cases:**
-
-- **UC-001**: Browse Restaurant Menus
-- **UC-002**: Manage Favorites
-- **UC-003**: Secure Password Reset
-- **UC-004**: User Login
-- **UC-005**: User Registration
-- **UC-006**: User Logout
-- **UC-007**: Restaurant Owner Menu Management
 
 ### 🔍 **Menu Discovery & Browsing**
 - Browse restaurant menus by location, cuisine type, or restaurant name
@@ -62,13 +43,13 @@ Create a user-friendly platform that bridges the gap between restaurants and cus
 - Organize favorites into custom categories
 - Quick access to saved items for easy reordering
 
-### ✅ **Content Verification System (UC-005)**
+### ✅ **Content Verification System (TM901)**
 - Automated verification of menu information accuracy
 - Flag suspicious or inconsistent data
 - Community-driven verification process
 - Restaurant owner verification capabilities
 
-### 🛡️ **Spam Protection System (UC-006)**
+### 🛡️ **Spam Protection System (TM902)**
 - Advanced spam detection algorithms
 - Rate limiting for submissions
 - Blacklist management for known spam sources
@@ -82,142 +63,60 @@ Create a user-friendly platform that bridges the gap between restaurants and cus
 
 ---
 
-## 📁 Project Structure
+## 📚 Documentation Structure
 
 ```
 MenuMap_Project/
 ├── README.md                           # This file - Project overview
-├── Deliverable1_Requirements/          # Requirements and Analysis
-│   ├── Software_Requirements_Document.md
-│   ├── Use_Cases/
-│   │   ├── UC-001-Browse_Restaurant_Menus.md
-│   │   ├── UC-002-Manage_Favorites.md
-│   │   ├── UC-003-Secure_Password_Reset.md
-│   │   ├── UC-004-Registration_Login.md
-│   │   ├── UC-005-Menu_Verification_System.md
-│   │   ├── UC-006-Spam_Protection_System.md
-│   │   └── UC-007-Menu_Management.md
-│   ├── UML_Diagrams/
-│   │   ├── Use_Case_Diagram.md
-│   │   ├── Class_Diagram.md
-│   │   └── Sequence_Diagrams.md
-│   └── Documentation/
-│       ├── Requirements_Analysis.md
-│       └── Use_Case_Specifications.md
-└── Deliverable2_Design/                # Design and Architecture (CLEAN)
-    ├── README.md                        # Clean overview
-    ├── PRIMARY_SECONDARY_COMPONENTS.md  # Clear primary/secondary explanation
-    ├── Architecture/                    # 4 essential files
-    │   ├── Package_Diagram.md
-    │   ├── Subsystem_Decomposition.md
-    │   ├── Hardware_Software_Mapping.md
-    │   └── Security_Management.md
-    ├── UML_Diagrams/                    # Essential diagrams only
-    │   ├── Use_Case_Diagram.md
-    │   ├── UC-001-Browse_Restaurant_Menus_Sequence.md
-    │   ├── UC-002-Manage_Favorites_Sequence.md
-    │   ├── UC-003-Secure_Password_Reset_Sequence.md
-    │   ├── UC-004-User_Login_Sequence.md
-    │   ├── UC-005-User_Registration_Sequence.md
-    │   ├── UC-006-User_Logout_Sequence.md
-    │   ├── UC-007-Restaurant_Owner_Menu_Management_Sequence.md
-    │   └── Diagrams_Only/               # PNG files
-    │       ├── Model_Static_Model_Static_Menu_Map_3_Tier.PNG
-    │       ├── Model_UseCase_MenuMap_UseCase_Diagram.PNG
-    │       ├── Package_MM_Clent_MM_Client_Class_Dia.PNG
-    │       ├── Package_MM_Logic_MM_Logic_Class_Dia.PNG
-    │       ├── Package_MM_DataStore_MM_Data_Store_Dia.PNG
-    │       ├── State_Machine_UserAuthentication_StateMachine_MM_State_Machine_Dia.PNG
-    │       ├── UC-001-Browse_Restaurant_Menus_Sequence.PNG
-    │       ├── UC-002-Manage_Favorites_Sequence.PNG
-    │       ├── UC-003-Secure_Password_Reset_Sequence.PNG
-    │       ├── UC-004-Registration_Sequence.PNG
-    │       ├── UC-005-User_Login.PNG
-    │       ├── UC-006-User_Logout_Sequence.PNG
-    │       └── UC-007-Menu_Management_Sequence.PNG
-    ├── Design_Patterns/                 # 3 pattern files
-    │   ├── Observer_Pattern.md
-    │   ├── Factory_Pattern.md
-    │   └── Strategy_Pattern.md
-    └── Documentation/                   # 3 doc files
-        ├── Design_Document.md
-        ├── Meeting_Diary.md
-        └── OCL_Statements.md
+├── MenuMap_Project_Overview.md         # Comprehensive project overview
+├── Requirements_Document/
+│   └── Software_Requirements_Document.md  # Complete SRD
+├── Use_Cases/
+│   ├── Use_Case_Documentation.md       # 3 detailed use cases
+│   └── Use_Case_Diagrams.md           # Visual use case diagrams
+├── UML_Design/
+│   ├── Use_Case_Diagram_Specification.md
+│   ├── Class_Diagram_Specification.md
+│   ├── Sequence_Diagram_Specifications.md
+│   └── Step_by_Step_Papyrus_Instructions.md
+└── SUBMISSION_CHECKLIST.md            # Project completion checklist
 ```
 
 ---
 
-## 🚀 Getting Started
+## 🎯 Required Use Cases
 
-### **Prerequisites**
-- Java 11+
-- Spring Boot 2.7+
-- PostgreSQL 13+
-- Redis 6+
-- Node.js 16+
-- React 18+
+This project includes **3 comprehensive use cases** as required for CEN4010:
 
-### **Installation**
-1. Clone the repository: `git clone https://github.com/AndreLewis1400/MenuMap.git`
-2. Set up the database
-3. Configure environment variables
-4. Run the application
+### 1. **UC-001: Browse Restaurant Menus** (Normal Use Case)
+- **Description**: Users search and browse restaurant menus
+- **Actors**: User, Restaurant Owner, MenuMap System
+- **Priority**: High
+- **Complexity**: Medium
 
-### **Development**
-- Follow the design specifications in Deliverable2_Design/
-- Use the UML diagrams for implementation guidance
-- Follow the OCL constraints for business rules
+### 2. **UC-002: Manage Favorites** (Normal Use Case)
+- **Description**: Registered users save and organize favorite restaurants and meals
+- **Actors**: Registered User, MenuMap System
+- **Priority**: High
+- **Complexity**: Medium
 
----
-
-## 📊 Deliverables
-
-### **Deliverable 1: Requirements & Analysis** ✅ Complete
-- ✅ Software Requirements Document
-- ✅ Use Case Specifications (7 use cases)
-- ✅ UML Use Case Diagram
-- ✅ Requirements Analysis
-
-### **Deliverable 2: Design & Architecture** ✅ Complete
-- ✅ Software Architecture Design
-- ✅ Detailed Design Specifications
-- ✅ UML Diagrams (7 sequence diagrams)
-- ✅ Design Patterns Implementation
-- ✅ OCL Statements (100+ constraints)
-- ✅ Comprehensive Documentation
+### 3. **UC-003: Secure Password Reset** (Security Use Case)
+- **Description**: Secure password reset with fraud prevention
+- **Actors**: User, MenuMap System, Email Service
+- **Priority**: High
+- **Complexity**: High
+- **Security Focus**: Prevents misuse cases like account takeover
 
 ---
 
-## 🎯 Use Cases
+## 🏗️ Technical Architecture
 
-| Use Case | Description | Status | Complexity |
-|----------|-------------|--------|------------|
-| UC-001 | Browse Restaurant Menus | ✅ Complete | Medium |
-| UC-002 | Manage Favorites | ✅ Complete | Medium |
-| UC-003 | Secure Password Reset | ✅ Complete | High |
-| UC-004 | User Login | ✅ Complete | Medium |
-| UC-005 | User Registration | ✅ Complete | Medium |
-| UC-006 | User Logout | ✅ Complete | Low |
-| UC-007 | Restaurant Owner Menu Management | ✅ Complete | Medium |
-
----
-
-## 🏗️ Architecture
-
-### **Architectural Patterns**
-- **Primary**: 3-Tier Architecture (MM_Client, MM_Logic, MM_DataStore)
-- **Secondary**: Model-View-Controller (MVC)
-
-### **Design Patterns**
-- **Observer Pattern**: Real-time updates and notifications
-- **Factory Pattern**: Object creation without specifying classes
-- **Strategy Pattern**: Interchangeable algorithms
-
-### **Technology Stack**
-- **Backend**: Java Spring Boot
-- **Frontend**: React with TypeScript
-- **Database**: PostgreSQL with Redis caching
-- **Security**: Spring Security with JWT
+### **Platform & Technology Stack**
+- **Frontend**: HTML5, CSS3, JavaScript (ES6+)
+- **Backend**: Node.js/Python/Java (to be determined)
+- **Database**: MySQL/PostgreSQL
+- **Authentication**: OAuth 2.0, JWT tokens
+- **Security**: HTTPS encryption, secure authentication protocols
 
 ### **System Requirements**
 - **Performance**: Page loads within 3 seconds
@@ -228,46 +127,40 @@ MenuMap_Project/
 
 ---
 
-## 📈 Project Status
+## 👥 Team Structure
 
-### **Completed** ✅
-- ✅ Requirements Analysis
-- ✅ Use Case Specifications (7 use cases)
-- ✅ Software Architecture Design
-- ✅ Detailed Design
-- ✅ UML Modeling (7 sequence diagrams)
-- ✅ Design Patterns
-- ✅ Security Design
-- ✅ OCL Statements (100+ constraints)
-- ✅ Comprehensive Documentation
-- ✅ Meeting Diary
-- ✅ Final Review & Validation
+### **Team 9 Members**
+- **Andre Lewis**: Document Editor & Diagram Coordinator
+- **Team Members**: [To be updated with actual team member names and roles]
 
-### **In Progress** 🔄
-- 🔄 Implementation (Ready to begin)
-
-### **Planned** ⏳
-- ⏳ Testing
-- ⏳ Deployment
-- ⏳ User Acceptance Testing
+### **Responsibilities**
+- Requirements analysis and documentation
+- UML diagram creation and maintenance
+- System design and architecture
+- Presentation preparation and delivery
 
 ---
 
-## 👥 Team
+## 📊 Project Status
 
-### **Team 9 Members - Deliverable 2**
-- **Alexandra Cozar**: Team Leader
-- **Kamal Ayoub**: Minute Taker
-- **Alfonso Oramas**: Modeler
-- **Evelio Gonzalez**: TBD
-- **Andre Lewis**: Software Architecture & Design Lead
+### ✅ **Completed Deliverables**
+- [x] Software Requirements Document (SRD)
+- [x] Use Case Documentation (3 use cases)
+- [x] Use Case Diagrams (Individual diagrams for each use case)
+- [x] UML Design Specifications
+- [x] Project Overview Documentation
+- [x] GitHub Repository Setup
 
-### **Responsibilities**
-- **Alexandra Cozar**: Project coordination, team leadership, presentation management
-- **Kamal Ayoub**: Meeting minutes, documentation tracking, progress monitoring
-- **Alfonso Oramas**: UML modeling, diagram creation, system architecture
-- **Evelio Gonzalez**: [Role to be determined]
-- **Andre Lewis**: Software architecture design, technical documentation, system design
+### 🔄 **In Progress**
+- [ ] Eclipse Papyrus UML Diagrams
+- [ ] Presentation Materials
+- [ ] Final Documentation Review
+
+### ⏳ **Upcoming**
+- [ ] Prototype Development
+- [ ] User Interface Design
+- [ ] Database Schema Implementation
+- [ ] Security Implementation
 
 ---
 
@@ -304,12 +197,27 @@ MenuMap_Project/
 
 ---
 
+## 🚀 Getting Started
+
+### **For Team Members**
+1. Clone the repository: `git clone https://github.com/AndreLewis1400/MenuMap.git`
+2. Review the documentation in the `Requirements_Document/` folder
+3. Check the `Use_Cases/` folder for detailed use case information
+4. Follow the UML design specifications in the `UML_Design/` folder
+
+### **For Stakeholders**
+1. Read the `MenuMap_Project_Overview.md` for comprehensive project information
+2. Review the `Software_Requirements_Document.md` for technical specifications
+3. Check the use case documentation for feature details
+
+---
+
 ## 📞 Contact & Support
 
 **Project Repository**: [AndreLewis1400/MenuMap](https://github.com/AndreLewis1400/MenuMap)  
 **Course**: CEN4010 Software Engineering  
 **Team**: Team 9  
-**Software Architecture & Design Lead**: Andre Lewis  
+**Project Lead**: Andre Lewis  
 
 ---
 
@@ -327,4 +235,4 @@ This project is developed for educational purposes as part of the CEN4010 Softwa
 
 ---
 
-*This repository contains all documentation, use cases, UML diagrams, and design specifications for the MenuMap application developed by Team 9 for CEN4010 Software Engineering. Both Deliverable 1 and Deliverable 2 are complete with professional-grade architecture, design, and documentation.*
+*This repository contains all documentation, use cases, and design specifications for the MenuMap application developed by Team 9 for CEN4010 Software Engineering.*
