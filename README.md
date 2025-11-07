@@ -116,12 +116,25 @@ MenuMap_Project/
     │   ├── Use_Case_Diagram.md
     │   ├── UC-001-Browse_Restaurant_Menus_Sequence.md
     │   ├── UC-002-Manage_Favorites_Sequence.md
+    │   ├── UC-003-Secure_Password_Reset_Sequence.md
+    │   ├── UC-004-User_Login_Sequence.md
+    │   ├── UC-005-User_Registration_Sequence.md
     │   ├── UC-006-User_Logout_Sequence.md
+    │   ├── UC-007-Restaurant_Owner_Menu_Management_Sequence.md
     │   └── Diagrams_Only/               # PNG files
-    │       ├── Model_Static_Menu_map_3_tier.PNG
-    │       ├── Package_MM_Client_MM_Client_Class_Dia.PNG
+    │       ├── Model_Static_Model_Static_Menu_Map_3_Tier.PNG
+    │       ├── Model_UseCase_MenuMap_UseCase_Diagram.PNG
+    │       ├── Package_MM_Clent_MM_Client_Class_Dia.PNG
     │       ├── Package_MM_Logic_MM_Logic_Class_Dia.PNG
-    │       └── Package_MM_DataStore_MM_Data_Store_Dia.PNG
+    │       ├── Package_MM_DataStore_MM_Data_Store_Dia.PNG
+    │       ├── State_Machine_UserAuthentication_StateMachine_MM_State_Machine_Dia.PNG
+    │       ├── UC-001-Browse_Restaurant_Menus_Sequence.PNG
+    │       ├── UC-002-Manage_Favorites_Sequence.PNG
+    │       ├── UC-003-Secure_Password_Reset_Sequence.PNG
+    │       ├── UC-004-Registration_Sequence.PNG
+    │       ├── UC-005-User_Login.PNG
+    │       ├── UC-006-User_Logout_Sequence.PNG
+    │       └── UC-007-Menu_Management_Sequence.PNG
     ├── Design_Patterns/                 # 3 pattern files
     │   ├── Observer_Pattern.md
     │   ├── Factory_Pattern.md
