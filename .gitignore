@@ -1,0 +1,26 @@
+# Exclude grading and evaluation files
+**/*grading*.md
+**/*GRADING*.md
+**/*evaluation*.md
+**/*EVALUATION*.md
+**/*teammate*.md
+**/*TEAMMATE*.md
+**/*score*.md
+**/*SCORE*.md
+**/*GradeSheet*.docx
+**/*GradeSheet*.pdf
+**/*grade*.docx
+**/*grade*.pdf
+
+# Specific grading files
+Deliverable2_Design/COMPREHENSIVE_TEAMMATE_GRADING.md
+Deliverable2_Design/FINAL_GRADING_SHEET.md
+Deliverable2_Design/TEAMMATE_EVALUATION_GUIDE.md
+Deliverable2_Design/SCORE_BREAKDOWN.md
+
+# Personal assessment files (not for team)
+Deliverable2_Design/FINAL_ASSESSMENT.md
+Deliverable2_Design/FINAL_VERIFIED_ASSESSMENT.md
+Deliverable2_Design/YOUR_SECTIONS_REVIEW.md
+Deliverable2_Design/GOOGLE_DOC_UPDATE_GUIDE.md
+
