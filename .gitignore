@@ -11,6 +11,8 @@
 **/*GradeSheet*.pdf
 **/*grade*.docx
 **/*grade*.pdf
+**/GradeSheet*.docx
+**/GradeSheet*.pdf
 
 # Specific grading files
 Deliverable2_Design/COMPREHENSIVE_TEAMMATE_GRADING.md
