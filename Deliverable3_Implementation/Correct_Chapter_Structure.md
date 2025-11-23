@@ -231,7 +231,7 @@
 
 #### **11.3. Appendix C - User Interface Designs** (1 point)
 - UI mockups and designs
-- **Assigned to:** Kamal Ayoub
+- **Assigned to:** Evelio Gonzalez
 
 #### **11.4. Appendix D - Detailed Class Diagrams** (3 points)
 - Class diagrams showing attributes and methods for each class
@@ -246,7 +246,7 @@
 
 ## 📖 User's Guide (Separate Document) (8 points total)
 
-**Assigned to:** Kamal Ayoub (Primary - includes screenshots)
+**Assigned to:** Kamal Ayoub (Primary) + Evelio Gonzalez (Screenshots)
 
 ### **1. Introduction** (1 point)
 - Brief description of the system
@@ -297,10 +297,9 @@
 - Chapter 8: Glossary
 - Chapter 10: References
 - Appendix B: All Use Cases
-- Appendix C: User Interface Designs
 - Appendix G: Diary
-- User's Guide (Primary - includes screenshots)
-- **Total Points:** ~36 points
+- User's Guide (Primary)
+- **Total Points:** ~35 points
 
 ### **Andre Lewis**
 - Chapter 5: Software Architecture
@@ -317,6 +316,11 @@
 - Appendix D: Detailed Class Diagrams
 - Support: Chapter 6 (Design)
 - **Total Points:** 3 points
+
+### **Evelio Gonzalez**
+- Appendix C: User Interface Designs
+- Support: User's Guide (Screenshots)
+- **Total Points:** 1 point
 
 ### **All Team Members**
 - Chapter 7: Test Cases (each writes 3 test cases)
