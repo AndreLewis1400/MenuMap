@@ -45,41 +45,6 @@
 
 ---
 
-### **Evelio Gonzalez - Frontend Developer**
-
-**Primary Responsibilities:**
-- React frontend development
-- UI/UX implementation
-- Component creation
-- State management
-- Form validation
-
-**Specific Tasks:**
-1. **Week 1:**
-   - Set up React project
-   - Create login form component
-   - Create registration form component
-   - Implement routing
-
-2. **Week 2:**
-   - Create restaurant search/browse UI
-   - Create menu item display components
-   - Create password reset forms
-   - Create logout button
-
-3. **Week 3:**
-   - Create favorites management UI
-   - Create add/remove favorite components
-   - Create menu management admin UI
-   - Create restaurant owner dashboard
-
-4. **Week 4:**
-   - Frontend unit testing
-   - UI polish and refinement
-   - Integration with backend
-
-**Estimated Time:** 35-45 hours
-
 ---
 
 ### **Alfonso Oramas - Database Modeler**
@@ -197,13 +162,13 @@
 
 | Use Case | Frontend | Backend | Database | Testing | Documentation |
 |----------|----------|---------|----------|---------|---------------|
-| UC-001: Browse Menus | Evelio | Andre | Alfonso | Alexandra | Kamal |
-| UC-002: Manage Favorites | Evelio | Andre | Alfonso | Alexandra | Kamal |
-| UC-003: Password Reset | Evelio | Andre | Alfonso | Alexandra | Kamal |
-| UC-004: User Login | Evelio | Andre | Alfonso | Alexandra | Kamal |
-| UC-005: User Registration | Evelio | Andre | Alfonso | Alexandra | Kamal |
-| UC-006: User Logout | Evelio | Andre | - | Alexandra | Kamal |
-| UC-007: Menu Management | Evelio | Andre | Alfonso | Alexandra | Kamal |
+| UC-001: Browse Menus | Kamal | Andre | Alfonso | Alexandra | - |
+| UC-002: Manage Favorites | Kamal | Andre | Alfonso | Alexandra | - |
+| UC-003: Password Reset | Kamal | Andre | Alfonso | Alexandra | - |
+| UC-004: User Login | Kamal | Andre | Alfonso | Alexandra | - |
+| UC-005: User Registration | Kamal | Andre | Alfonso | Alexandra | - |
+| UC-006: User Logout | Kamal | Andre | - | Alexandra | - |
+| UC-007: Menu Management | Kamal | Andre | Alfonso | Alexandra | - |
 
 ---
 
