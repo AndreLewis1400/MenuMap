@@ -180,12 +180,6 @@
 - ✅ Design patterns (3 patterns)
 - ✅ Backend unit tests
 
-### **Evelio Gonzalez**
-- ✅ React frontend application
-- ✅ All UI components
-- ✅ State management
-- ✅ Frontend unit tests
-
 ### **Alfonso Oramas**
 - ✅ Database schema
 - ✅ Migration scripts
