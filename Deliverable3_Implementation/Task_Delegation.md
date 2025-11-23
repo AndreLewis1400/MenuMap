@@ -406,22 +406,22 @@ This document outlines the implementation tasks for MenuMap Deliverable 3. All t
 ### **Week 1: Foundation Setup**
 - ✅ Database schema design and setup (Alfonso)
 - ✅ Backend project setup (Andre)
-- ✅ Frontend project setup (Evelio)
+- ✅ Frontend project setup (Kamal - if implementing)
 - ✅ Basic authentication (Andre)
-- ✅ User registration (Andre + Evelio)
-- ✅ User login (Andre + Evelio)
+- ✅ User registration (Andre + Kamal - if implementing)
+- ✅ User login (Andre + Kamal - if implementing)
 
 ### **Week 2: Core Features**
 - ✅ Browse Restaurant Menus (All)
-- ✅ User logout (Andre + Evelio)
+- ✅ User logout (Andre + Kamal - if implementing)
 - ✅ Password reset backend (Andre)
-- ✅ Password reset frontend (Evelio)
+- ✅ Password reset frontend (Kamal - if implementing)
 
 ### **Week 3: Advanced Features**
 - ✅ Manage Favorites (All)
 - ✅ Design pattern implementation (Andre)
 - ✅ Menu Management backend (Andre)
-- ✅ Menu Management frontend (Evelio)
+- ✅ Menu Management frontend (Kamal - if implementing)
 
 ### **Week 4: Testing & Documentation**
 - ✅ All testing (Alexandra + Team)
