@@ -1,4 +1,4 @@
-# MenuMap Deliverable 3 - Implementation
+# MenuMap Deliverable 3 - Final Systems Document
 ## CEN4010 Software Engineering - Team 9
 
 **Group Lead:** Andre Lewis  
@@ -10,7 +10,7 @@
 
 ## 📋 Quick Overview
 
-This folder contains all documentation and resources for Deliverable 3 (Implementation) of the MenuMap project.
+This folder contains all documentation and resources for Deliverable 3 (Final Systems Document) of the MenuMap project. This is a comprehensive document that combines requirements, design, and testing documentation.
 
 ### **Key Documents:**
 - **[Task_Delegation_By_Chapters.md](./Task_Delegation_By_Chapters.md)** - ⭐ **Chapter-based task breakdown (RECOMMENDED)**
@@ -20,17 +20,19 @@ This folder contains all documentation and resources for Deliverable 3 (Implemen
 
 ---
 
-## 🎯 Implementation Goals
+## 🎯 Document Goals
 
-Implement all 7 use cases from Deliverable 2:
+Create a comprehensive Final Systems Document covering:
 
-1. **UC-001:** Browse Restaurant Menus
-2. **UC-002:** Manage Favorites
-3. **UC-003:** Secure Password Reset
-4. **UC-004:** User Login
-5. **UC-005:** User Registration
-6. **UC-006:** User Logout
-7. **UC-007:** Restaurant Owner Menu Management
+1. **Introduction & System Overview**
+2. **Current System Analysis**
+3. **Project Plan**
+4. **System Requirements** (all 7 use cases)
+5. **Software Architecture**
+6. **Detailed Design**
+7. **Testing Process** (test cases from all team members)
+8. **Glossary, References, Appendices**
+9. **User's Guide** (separate document)
 
 ---
 
@@ -38,20 +40,19 @@ Implement all 7 use cases from Deliverable 2:
 
 | Team Member | Primary Focus |
 |------------|---------------|
-| **Andre Lewis** | Backend API, Business Logic, Design Patterns |
-| **Evelio Gonzalez** | Frontend Components, UI/UX |
-| **Alfonso Oramas** | Database Schema, Data Layer |
-| **Alexandra Cozar** | Integration, Testing, Project Coordination |
-| **Kamal Ayoub** | Documentation, Meeting Minutes, Progress Tracking |
+| **Andre Lewis** | Software Architecture, Detailed Design |
+| **Alfonso Oramas** | Class Diagrams, Database Design |
+| **Alexandra Cozar** | Project Plan, Testing Process, Integration |
+| **Kamal Ayoub** | Documentation, Requirements, User's Guide |
 
 ---
 
 ## 📅 Timeline
 
-- **Week 1:** Foundation Setup (Database, Backend, Frontend, Auth)
-- **Week 2:** Core Features (Browse Menus, Logout, Password Reset)
-- **Week 3:** Advanced Features (Favorites, Menu Management, Design Patterns)
-- **Week 4:** Testing, Documentation, Final Integration
+- **Week 1:** Cover/TOC, Chapters 1-4 (Introduction, Current System, Project Plan, Requirements)
+- **Week 2:** Chapters 5-6 (Software Architecture, Detailed Design), Appendix D
+- **Week 3:** Chapter 7 (Testing Process - all team members write test cases)
+- **Week 4:** Chapters 8-11 (Glossary, Signature, References, Appendices), User's Guide
 
 ---
 
