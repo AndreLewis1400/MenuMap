@@ -282,7 +282,7 @@
 | **9. Signature Page** | All | - | 1 |
 | **10. References** | Kamal Ayoub | - | 1 |
 | **11. Appendix** | Various | - | 8 |
-| **User's Guide** | Kamal Ayoub | Evelio | 8 |
+| **User's Guide** | Kamal Ayoub | - | 8 |
 | **TOTAL** | | | **75 points** |
 
 ---

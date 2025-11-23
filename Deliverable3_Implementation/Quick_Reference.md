@@ -21,20 +21,6 @@
 
 ---
 
-### **Evelio Gonzalez** (Frontend Developer)
-**Priority Tasks:**
-1. Set up React frontend (Week 1)
-2. Create login/registration UI (Week 1-2)
-3. Build browse menus interface (Week 2)
-4. Build favorites management UI (Week 3)
-5. Build menu management admin UI (Week 3-4)
-
-**Key Deliverables:**
-- React components for all features
-- UI/UX implementation
-- Form validation
-- State management
-
 ---
 
 ### **Alfonso Oramas** (Database/Modeler)
@@ -88,43 +74,43 @@
 ## 📋 Use Case Implementation Checklist
 
 ### **UC-001: Browse Restaurant Menus**
-- [ ] Frontend: Search & filter components (Evelio)
+- [ ] Frontend: Search & filter components (Kamal - if implementing)
 - [ ] Backend: Restaurant & menu APIs (Andre)
 - [ ] Database: Restaurant & menu schema (Alfonso)
 - [ ] Testing: Integration tests (Alexandra)
 
 ### **UC-002: Manage Favorites**
-- [ ] Frontend: Favorites UI (Evelio)
+- [ ] Frontend: Favorites UI (Kamal - if implementing)
 - [ ] Backend: Favorites API (Andre)
 - [ ] Database: Favorites schema (Alfonso)
 - [ ] Documentation: User guide (Kamal)
 
 ### **UC-003: Secure Password Reset**
 - [ ] Backend: Password reset service (Andre)
-- [ ] Frontend: Reset forms (Evelio)
+- [ ] Frontend: Reset forms (Kamal - if implementing)
 - [ ] Database: Token schema (Alfonso)
 - [ ] Testing: Security tests (Alexandra)
 
 ### **UC-004: User Login**
 - [ ] Backend: Auth service (Andre)
-- [ ] Frontend: Login form (Evelio)
+- [ ] Frontend: Login form (Kamal - if implementing)
 - [ ] Database: User schema (Alfonso)
 - [ ] Testing: Auth tests (Alexandra)
 
 ### **UC-005: User Registration**
 - [ ] Backend: Registration API (Andre)
-- [ ] Frontend: Registration form (Evelio)
+- [ ] Frontend: Registration form (Kamal - if implementing)
 - [ ] Database: User schema (Alfonso)
 - [ ] Documentation: Registration guide (Kamal)
 
 ### **UC-006: User Logout**
 - [ ] Backend: Logout endpoint (Andre)
-- [ ] Frontend: Logout component (Evelio)
+- [ ] Frontend: Logout component (Kamal - if implementing)
 - [ ] Testing: Logout tests (Alexandra)
 
 ### **UC-007: Menu Management**
 - [ ] Backend: Menu management API (Andre)
-- [ ] Frontend: Admin UI (Evelio)
+- [ ] Frontend: Admin UI (Kamal - if implementing)
 - [ ] Database: Owner schema (Alfonso)
 - [ ] Testing: Authorization tests (Alexandra)
 
@@ -133,7 +119,7 @@
 ## 🏗️ Architecture Components
 
 ### **Tier 1: MM_Client (Frontend)**
-- **Owner:** Evelio Gonzalez
+- **Owner:** Kamal Ayoub (if implementing)
 - **Tech:** React + TypeScript
 - **Status:** [ ] Not Started
 

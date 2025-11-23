@@ -22,7 +22,6 @@ This document outlines the implementation tasks for MenuMap Deliverable 3. All t
 | **Alexandra Cozar** | Team Leader | Project coordination, integration, testing oversight |
 | **Kamal Ayoub** | Minute Taker | Documentation, progress tracking, meeting coordination |
 | **Alfonso Oramas** | Modeler | Database implementation, data layer, models |
-| **Evelio Gonzalez** | Developer | Frontend implementation, UI/UX |
 | **Andre Lewis** | Software Architecture & Design Lead | Backend logic, architecture implementation, code review |
 
 ---
@@ -32,7 +31,7 @@ This document outlines the implementation tasks for MenuMap Deliverable 3. All t
 ### **UC-001: Browse Restaurant Menus**
 
 #### **Task Breakdown:**
-1. **Frontend Components** (Evelio Gonzalez)
+1. **Frontend Components** (Kamal Ayoub - if implementing)
    - Search bar component
    - Restaurant list/grid view component
    - Menu item detail modal/component
@@ -69,7 +68,7 @@ This document outlines the implementation tasks for MenuMap Deliverable 3. All t
 ### **UC-002: Manage Favorites**
 
 #### **Task Breakdown:**
-1. **Frontend Components** (Evelio Gonzalez)
+1. **Frontend Components** (Kamal Ayoub - if implementing)
    - Favorites list component
    - Add/remove favorite button component
    - Favorites organization/category component
@@ -111,7 +110,7 @@ This document outlines the implementation tasks for MenuMap Deliverable 3. All t
    - **Deliverable:** Secure password reset service
    - **Deadline:** Week 2-3
 
-2. **Frontend Components** (Evelio Gonzalez)
+2. **Frontend Components** (Kamal Ayoub - if implementing)
    - Password reset request form
    - Password reset confirmation form
    - Email verification UI
@@ -146,7 +145,7 @@ This document outlines the implementation tasks for MenuMap Deliverable 3. All t
    - **Deliverable:** Authentication service with JWT
    - **Deadline:** Week 1-2
 
-2. **Frontend Components** (Evelio Gonzalez)
+2. **Frontend Components** (Kamal Ayoub - if implementing)
    - Login form component
    - Form validation
    - Error handling UI
@@ -181,7 +180,7 @@ This document outlines the implementation tasks for MenuMap Deliverable 3. All t
    - **Deliverable:** Registration API with validation
    - **Deadline:** Week 1-2
 
-2. **Frontend Components** (Evelio Gonzalez)
+2. **Frontend Components** (Kamal Ayoub - if implementing)
    - Registration form component
    - Multi-step registration (if needed)
    - Form validation UI
@@ -214,7 +213,7 @@ This document outlines the implementation tasks for MenuMap Deliverable 3. All t
    - **Deliverable:** Logout API endpoint
    - **Deadline:** Week 2
 
-2. **Frontend Components** (Evelio Gonzalez)
+2. **Frontend Components** (Kamal Ayoub - if implementing)
    - Logout button/component
    - Session cleanup on frontend
    - Redirect after logout
@@ -240,7 +239,7 @@ This document outlines the implementation tasks for MenuMap Deliverable 3. All t
    - **Deliverable:** Menu management API with authorization
    - **Deadline:** Week 3-4
 
-2. **Frontend Admin Components** (Evelio Gonzalez)
+2. **Frontend Admin Components** (Kamal Ayoub - if implementing)
    - Menu item form (add/edit)
    - Menu item list with actions
    - Restaurant owner dashboard
@@ -268,7 +267,7 @@ This document outlines the implementation tasks for MenuMap Deliverable 3. All t
 ### **3-Tier Architecture Setup**
 
 #### **Tier 1: MM_Client (Presentation Layer)**
-**Assigned to:** Evelio Gonzalez
+**Assigned to:** Kamal Ayoub (if implementing)
 - React application setup
 - Component library structure
 - Routing setup
@@ -354,7 +353,7 @@ This document outlines the implementation tasks for MenuMap Deliverable 3. All t
 
 1. **Unit Testing**
    - Backend service unit tests (Andre Lewis)
-   - Frontend component unit tests (Evelio Gonzalez)
+   - Frontend component unit tests (Kamal Ayoub - if implementing)
    - Database query tests (Alfonso Oramas)
    - **Target:** 80% code coverage
    - **Deadline:** Week 4**
@@ -442,7 +441,7 @@ This document outlines the implementation tasks for MenuMap Deliverable 3. All t
 - Code review and architecture decisions
 - **Estimated Hours:** 40-50 hours
 
-### **Evelio Gonzalez (Frontend Developer)**
+### **Kamal Ayoub (Documentation & UI - if implementing)**
 - All frontend components
 - UI/UX implementation
 - State management
