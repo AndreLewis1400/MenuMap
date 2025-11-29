@@ -400,24 +400,24 @@ Based on CEN4010 requirements, each test case includes:
 **Purpose:** Verify that a user can successfully browse and view a restaurant menu with all items displayed correctly.
 
 **Test Setup:**
-1. User is on MenuMap homepage (may be logged in or not, depending on system design)
+1. User "janedoe" is on MenuMap homepage (may be logged in or not, depending on system design)
 2. Restaurant "Joe's Pizza" (ID: 101) exists in database (see Table 2)
-3. Restaurant has menu items in database (see Table 3: items 1001, 1002, 1003)
+3. Restaurant "Joe's Pizza" has menu items in database (see Table 3: items 1001, 1002, 1003)
 4. Database is accessible and responsive
 
 **Test Input:**
-1. User navigates to MenuMap application
-2. User enters restaurant name in search field: `Joe's Pizza`
-3. User clicks "Search" button
+1. User "janedoe" navigates to MenuMap application
+2. User "janedoe" enters restaurant name in search field: `Joe's Pizza`
+3. User "janedoe" clicks "Search" button
 4. System displays search results
-5. User selects "Joe's Pizza" from results
-6. User clicks "View Menu" button
+5. User "janedoe" selects "Joe's Pizza" from results
+6. User "janedoe" clicks "View Menu" button
 
 **Expected Output:**
 1. Search returns matching restaurant: "Joe's Pizza"
-2. Restaurant details are displayed correctly
-3. Menu loads successfully from database
-4. Menu displays all items for restaurant ID 101:
+2. Restaurant "Joe's Pizza" details are displayed correctly
+3. Menu for restaurant "Joe's Pizza" loads successfully from database
+4. Menu for restaurant "Joe's Pizza" displays all items for restaurant ID 101:
    - Margherita Pizza - $12.99 (Entree)
    - Pepperoni Pizza - $14.99 (Entree)
    - Caesar Salad - $8.99 (Appetizer)
@@ -427,8 +427,8 @@ Based on CEN4010 requirements, each test case includes:
 8. Response time is acceptable (< 2 seconds)
 
 **Postconditions:**
-- Menu is displayed to user
-- User can continue browsing or navigate away
+- Menu for restaurant "Joe's Pizza" is displayed to user "janedoe"
+- User "janedoe" can continue browsing or navigate away
 - No data is modified in database
 
 ---
@@ -440,29 +440,29 @@ Based on CEN4010 requirements, each test case includes:
 **Purpose:** Verify that user can filter menu items by category successfully.
 
 **Test Setup:**
-1. User is viewing "Joe's Pizza" menu (see TC-001-01 setup)
-2. Menu has items in multiple categories (see Table 3)
+1. User "janedoe" is viewing "Joe's Pizza" menu (see TC-001-01 setup)
+2. Restaurant "Joe's Pizza" menu has items in multiple categories (see Table 3)
 
 **Test Input:**
-1. User is viewing "Joe's Pizza" menu
-2. User clicks on "Appetizers" filter button
+1. User "janedoe" is viewing "Joe's Pizza" menu
+2. User "janedoe" clicks on "Appetizers" filter button
 3. System filters menu items
-4. User clicks on "Entrees" filter button
+4. User "janedoe" clicks on "Entrees" filter button
 5. System updates displayed items
-6. User clears filter
+6. User "janedoe" clears filter
 7. System displays all items
 
 **Expected Output:**
-1. When "Appetizers" selected: Only Caesar Salad is displayed
-2. When "Entrees" selected: Only Margherita Pizza and Pepperoni Pizza are displayed
-3. When filter cleared: All 3 items are displayed
-4. Menu updates dynamically without page reload (if applicable)
+1. When "Appetizers" selected: Only Caesar Salad is displayed for restaurant "Joe's Pizza"
+2. When "Entrees" selected: Only Margherita Pizza and Pepperoni Pizza are displayed for restaurant "Joe's Pizza"
+3. When filter cleared: All 3 items are displayed for restaurant "Joe's Pizza"
+4. Menu for restaurant "Joe's Pizza" updates dynamically without page reload (if applicable)
 5. No items are lost or duplicated
 6. Filter state is maintained correctly
 
 **Postconditions:**
-- Menu display reflects selected filter
-- User can continue filtering or viewing full menu
+- Menu display for restaurant "Joe's Pizza" reflects selected filter
+- User "janedoe" can continue filtering or viewing full menu for restaurant "Joe's Pizza"
 
 ---
 
@@ -475,28 +475,28 @@ Based on CEN4010 requirements, each test case includes:
 **Purpose:** Verify that system handles search for non-existent restaurant gracefully.
 
 **Test Setup:**
-1. User is on MenuMap homepage
+1. User "janedoe" is on MenuMap homepage
 2. Restaurant "NonExistent" (ID: 999) does NOT exist in database
 3. Database is accessible
 
 **Test Input:**
-1. User navigates to MenuMap application
-2. User enters restaurant name in search field: `NonExistent Restaurant`
-3. User clicks "Search" button
+1. User "janedoe" navigates to MenuMap application
+2. User "janedoe" enters restaurant name in search field: `NonExistent Restaurant`
+3. User "janedoe" clicks "Search" button
 4. System searches database
 
 **Expected Output:**
 1. System queries database for matching restaurants
-2. System finds no matching results
+2. System finds no matching results for "NonExistent Restaurant"
 3. Message displays: "No restaurants found matching your search. Please try a different search term."
 4. Search results page shows empty state with helpful message
-5. User can try a new search
-6. No error stack trace or technical details shown to user
+5. User "janedoe" can try a new search
+6. No error stack trace or technical details shown to user "janedoe"
 7. System remains stable and responsive
 
 **Postconditions:**
-- User is on search results page
-- User can perform new search
+- User "janedoe" is on search results page
+- User "janedoe" can perform new search
 - No data corruption or system errors
 
 ---
@@ -509,29 +509,29 @@ Based on CEN4010 requirements, each test case includes:
 
 **Test Setup:**
 1. Restaurant "Burger Palace" (ID: 102) exists in database (see Table 2)
-2. Restaurant has NO menu items in database (remove items 1004, 1005 for this test)
-3. User is on MenuMap application
+2. Restaurant "Burger Palace" has NO menu items in database (remove items 1004, 1005 for this test)
+3. User "janedoe" is on MenuMap application
 
 **Test Input:**
-1. User searches for restaurant: `Burger Palace`
-2. User finds restaurant in search results
-3. User clicks "View Menu" button
-4. System attempts to retrieve menu
+1. User "janedoe" searches for restaurant: `Burger Palace`
+2. User "janedoe" finds restaurant "Burger Palace" in search results
+3. User "janedoe" clicks "View Menu" button
+4. System attempts to retrieve menu for restaurant "Burger Palace"
 
 **Expected Output:**
-1. System finds restaurant successfully
-2. System queries for menu items
-3. System finds no menu items for restaurant ID 102
+1. System finds restaurant "Burger Palace" successfully
+2. System queries for menu items for restaurant "Burger Palace"
+3. System finds no menu items for restaurant "Burger Palace" (ID: 102)
 4. Message displays: "This restaurant has not added menu items yet. Please check back later."
-5. Restaurant information is displayed (name, address, etc.)
-6. Menu section shows empty state message
+5. Restaurant "Burger Palace" information is displayed (name, address, etc.)
+6. Menu section for restaurant "Burger Palace" shows empty state message
 7. No error messages or crashes
-8. User can navigate back or contact restaurant
+8. User "janedoe" can navigate back or contact restaurant "Burger Palace"
 
 **Postconditions:**
-- User sees empty menu state
+- User "janedoe" sees empty menu state for restaurant "Burger Palace"
 - System handles gracefully without errors
-- Restaurant information is still accessible
+- Restaurant "Burger Palace" information is still accessible
 
 ---
 
@@ -542,14 +542,14 @@ Based on CEN4010 requirements, each test case includes:
 **Purpose:** Verify that system handles database unavailability when browsing menus.
 
 **Test Setup:**
-1. User is on MenuMap application
+1. User "janedoe" is on MenuMap application
 2. Database server is down or unreachable
 3. Restaurant "Joe's Pizza" exists in database
 
 **Test Input:**
-1. User searches for restaurant: `Joe's Pizza`
-2. User selects restaurant from results
-3. User clicks "View Menu" button
+1. User "janedoe" searches for restaurant: `Joe's Pizza`
+2. User "janedoe" selects restaurant "Joe's Pizza" from results
+3. User "janedoe" clicks "View Menu" button
 4. System attempts database connection
 
 **Expected Output:**
@@ -557,14 +557,14 @@ Based on CEN4010 requirements, each test case includes:
 2. Database connection fails
 3. User-friendly error message displays: "We're having trouble loading the menu. Please try again in a moment."
 4. Error is logged for administrators with technical details
-5. User can retry the operation
+5. User "janedoe" can retry the operation for restaurant "Joe's Pizza"
 6. System does not crash or show technical error details
-7. User can navigate to other parts of application
+7. User "janedoe" can navigate to other parts of application
 
 **Postconditions:**
 - Error is handled gracefully
 - System remains functional for other operations
-- User can attempt operation again later
+- User "janedoe" can attempt operation again later for restaurant "Joe's Pizza"
 
 ---
 
@@ -575,13 +575,13 @@ Based on CEN4010 requirements, each test case includes:
 **Purpose:** Verify that system prevents SQL injection attacks in search field.
 
 **Test Setup:**
-1. User is on MenuMap homepage
+1. User "janedoe" is on MenuMap homepage
 2. Database is accessible
 
 **Test Input:**
-1. User navigates to MenuMap application
-2. User enters malicious input in search field: `'; DROP TABLE restaurants; --`
-3. User clicks "Search" button
+1. User "janedoe" navigates to MenuMap application
+2. User "janedoe" enters malicious input in search field: `'; DROP TABLE restaurants; --`
+3. User "janedoe" clicks "Search" button
 4. System processes input
 
 **Expected Output:**
@@ -597,6 +597,7 @@ Based on CEN4010 requirements, each test case includes:
 - Database security maintained
 - No data loss
 - System remains secure
+- User "janedoe" can retry with valid search term
 
 ---
 
@@ -613,24 +614,24 @@ Based on CEN4010 requirements, each test case includes:
 4. System timeout threshold: 30 seconds
 
 **Test Input:**
-1. User searches for restaurant: `Joe's Pizza`
-2. User selects restaurant
-3. User clicks "View Menu" button
-4. System attempts to load menu
+1. User "janedoe" searches for restaurant: `Joe's Pizza`
+2. User "janedoe" selects restaurant "Joe's Pizza"
+3. User "janedoe" clicks "View Menu" button
+4. System attempts to load menu for restaurant "Joe's Pizza"
 5. Request exceeds timeout threshold
 
 **Expected Output:**
-1. System attempts to load menu
+1. System attempts to load menu for restaurant "Joe's Pizza"
 2. Request exceeds 30-second timeout
 3. Timeout message displays: "The request took too long. Please try again."
-4. User can retry the operation
+4. User "janedoe" can retry the operation for restaurant "Joe's Pizza"
 5. System cancels the request
 6. No partial data is displayed
 7. System remains responsive
 
 **Postconditions:**
-- User can retry or navigate away
-- System handles timeout gracefully
+- User "janedoe" can retry or navigate away
+- System handles timeout gracefully for restaurant "Joe's Pizza"
 - No partial state corruption
 
 ---
@@ -643,28 +644,28 @@ Based on CEN4010 requirements, each test case includes:
 
 **Test Setup:**
 1. Restaurant "Closed Restaurant" (ID: 103) exists in database (see Table 2)
-2. Restaurant status is "Inactive"
-3. Restaurant may or may not have menu items
+2. Restaurant "Closed Restaurant" status is "Inactive"
+3. Restaurant "Closed Restaurant" may or may not have menu items
 
 **Test Input:**
-1. User searches for restaurant: `Closed Restaurant`
-2. User finds restaurant in results (if inactive restaurants are shown)
-3. User clicks "View Menu" button
-4. System processes request
+1. User "janedoe" searches for restaurant: `Closed Restaurant`
+2. User "janedoe" finds restaurant "Closed Restaurant" in results (if inactive restaurants are shown)
+3. User "janedoe" clicks "View Menu" button
+4. System processes request for restaurant "Closed Restaurant"
 
 **Expected Output:**
-1. System checks restaurant status
-2. System detects restaurant is inactive
+1. System checks restaurant "Closed Restaurant" status
+2. System detects restaurant "Closed Restaurant" is inactive
 3. Message displays: "This restaurant is currently closed or inactive. Menu is not available."
-4. Restaurant information may be shown with inactive status
-5. Menu is not displayed (or shown as unavailable)
-6. User can search for other restaurants
+4. Restaurant "Closed Restaurant" information may be shown with inactive status
+5. Menu for restaurant "Closed Restaurant" is not displayed (or shown as unavailable)
+6. User "janedoe" can search for other restaurants
 7. No error messages or crashes
 
 **Postconditions:**
-- User sees inactive restaurant message
+- User "janedoe" sees inactive restaurant message for restaurant "Closed Restaurant"
 - System handles gracefully
-- User can continue browsing
+- User "janedoe" can continue browsing
 
 ---
 
