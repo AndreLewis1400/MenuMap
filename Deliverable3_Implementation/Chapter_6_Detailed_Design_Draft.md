@@ -346,3 +346,5 @@ The classes are related through:
 
 **Note**: This content should be integrated into the Final Systems Document Word file. Coordinate with Alfonso Oramas for Section 6.4 to ensure detailed class diagrams are consistent with Appendix D.
 
+
+
