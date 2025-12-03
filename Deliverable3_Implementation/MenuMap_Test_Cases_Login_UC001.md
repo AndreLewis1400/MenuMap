@@ -12,8 +12,6 @@ Based on CEN4010 requirements, each test case includes:
 - **Test Input**: Step-by-step actions
 - **Expected Output**: Expected results
 
-**Note on Postconditions:** Postconditions are not required for these test cases. The expected output section already describes the system state after test execution, making separate postconditions redundant. The test setup and expected output provide sufficient information to understand the test scenario and verify results.
-
 ---
 
 ## 🔐 **UC-005: User Login**
