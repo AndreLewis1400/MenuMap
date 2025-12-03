@@ -16,19 +16,6 @@ Based on CEN4010 requirements, each test case includes:
 
 ## 🔐 **UC-005: User Login**
 
-### **Database State Tables**
-
-#### **Table 1: Users Table (Before Test Execution)**
-
-| User ID | Password (Hashed) | Email | First Name | Last Name | Account Status | Email Verified |
-|---------|-------------------|-------|------------|-----------|----------------|----------------|
-| johndoe | $2a$10$hashed123 | johndoe@example.com | John | Doe | Active | Yes |
-| janedoe | $2a$10$hashed456 | janedoe@example.com | Jane | Doe | Active | Yes |
-| lockeduser | $2a$10$hashed789 | locked@example.com | Locked | User | Locked | Yes |
-| unverified | $2a$10$hashed000 | unverified@example.com | Unverified | User | Active | No |
-
----
-
 ## 🌞 **UC-005: User Login - SUNNY DAY SCENARIOS**
 
 ### **TC-005-01: Successful Login (Sunny Day)**
@@ -37,8 +24,14 @@ Based on CEN4010 requirements, each test case includes:
 
 **Purpose:** Verify that user "johndoe" can successfully log into the MenuMap system with correct credentials.
 
+#### **Table TC-005-01: Users Table (Before Test Execution)**
+
+| User ID | Password (Hashed) | Email | First Name | Last Name | Account Status | Email Verified |
+|---------|-------------------|-------|------------|-----------|----------------|----------------|
+| johndoe | $2a$10$hashed123 | johndoe@example.com | John | Doe | Active | Yes |
+
 **Test Setup:**
-1. User "johndoe" exists in database (see Table 1)
+1. User "johndoe" exists in database (see Table TC-005-01)
 2. User "johndoe" account is active
 3. User "johndoe" email is verified
 4. MenuMap login page is accessible
@@ -67,8 +60,14 @@ Based on CEN4010 requirements, each test case includes:
 
 **Purpose:** Verify that user "johndoe" can log in using their User ID instead of email.
 
+#### **Table TC-005-02: Users Table (Before Test Execution)**
+
+| User ID | Password (Hashed) | Email | First Name | Last Name | Account Status | Email Verified |
+|---------|-------------------|-------|------------|-----------|----------------|----------------|
+| johndoe | $2a$10$hashed123 | johndoe@example.com | John | Doe | Active | Yes |
+
 **Test Setup:**
-1. User "johndoe" exists in database (see Table 1)
+1. User "johndoe" exists in database (see Table TC-005-02)
 2. User "johndoe" account is active and verified
 3. MenuMap login page is accessible
 
@@ -96,8 +95,14 @@ Based on CEN4010 requirements, each test case includes:
 
 **Purpose:** Verify that system rejects login attempt for user "johndoe" with incorrect password.
 
+#### **Table TC-005-03: Users Table (Before Test Execution)**
+
+| User ID | Password (Hashed) | Email | First Name | Last Name | Account Status | Email Verified |
+|---------|-------------------|-------|------------|-----------|----------------|----------------|
+| johndoe | $2a$10$hashed123 | johndoe@example.com | John | Doe | Active | Yes |
+
 **Test Setup:**
-1. User "johndoe" exists in database (see Table 1)
+1. User "johndoe" exists in database (see Table TC-005-03)
 2. User "johndoe" account is active and verified
 3. MenuMap login page is accessible
 
@@ -125,8 +130,14 @@ Based on CEN4010 requirements, each test case includes:
 
 **Purpose:** Verify that system handles login attempt with non-existent email/user ID.
 
+#### **Table TC-005-04: Users Table (Before Test Execution)**
+
+| User ID | Password (Hashed) | Email | First Name | Last Name | Account Status | Email Verified |
+|---------|-------------------|-------|------------|-----------|----------------|----------------|
+| (No users exist) | | | | | | |
+
 **Test Setup:**
-1. Email "nonexistent@example.com" does NOT exist in database
+1. Email "nonexistent@example.com" does NOT exist in database (see Table TC-005-04)
 2. MenuMap login page is accessible
 
 **Test Input:**
@@ -151,6 +162,12 @@ Based on CEN4010 requirements, each test case includes:
 **Test Case ID:** SystemTest-005-UC005 (rainy day scenario)
 
 **Purpose:** Verify that system validates required fields before processing login.
+
+#### **Table TC-005-05: Users Table (Before Test Execution)**
+
+| User ID | Password (Hashed) | Email | First Name | Last Name | Account Status | Email Verified |
+|---------|-------------------|-------|------------|-----------|----------------|----------------|
+| (Not applicable - no database query) | | | | | | |
 
 **Test Setup:**
 1. MenuMap login page is accessible
@@ -179,8 +196,14 @@ Based on CEN4010 requirements, each test case includes:
 
 **Purpose:** Verify that system prevents login for locked account "lockeduser".
 
+#### **Table TC-005-06: Users Table (Before Test Execution)**
+
+| User ID | Password (Hashed) | Email | First Name | Last Name | Account Status | Email Verified |
+|---------|-------------------|-------|------------|-----------|----------------|----------------|
+| lockeduser | $2a$10$hashed789 | locked@example.com | Locked | User | Locked | Yes |
+
 **Test Setup:**
-1. User "lockeduser" exists in database (see Table 1)
+1. User "lockeduser" exists in database (see Table TC-005-06)
 2. User "lockeduser" account status is "Locked"
 3. MenuMap login page is accessible
 
@@ -208,8 +231,14 @@ Based on CEN4010 requirements, each test case includes:
 
 **Purpose:** Verify that system handles login attempt for unverified email account "unverified".
 
+#### **Table TC-005-07: Users Table (Before Test Execution)**
+
+| User ID | Password (Hashed) | Email | First Name | Last Name | Account Status | Email Verified |
+|---------|-------------------|-------|------------|-----------|----------------|----------------|
+| unverified | $2a$10$hashed000 | unverified@example.com | Unverified | User | Active | No |
+
 **Test Setup:**
-1. User "unverified" exists in database (see Table 1)
+1. User "unverified" exists in database (see Table TC-005-07)
 2. User "unverified" account is active but email is NOT verified
 3. MenuMap login page is accessible
 
@@ -236,6 +265,12 @@ Based on CEN4010 requirements, each test case includes:
 **Test Case ID:** SystemTest-008-UC005 (rainy day scenario)
 
 **Purpose:** Verify that system prevents SQL injection attacks in login fields.
+
+#### **Table TC-005-08: Users Table (Before Test Execution)**
+
+| User ID | Password (Hashed) | Email | First Name | Last Name | Account Status | Email Verified |
+|---------|-------------------|-------|------------|-----------|----------------|----------------|
+| (Not applicable - security test) | | | | | | |
 
 **Test Setup:**
 1. MenuMap login page is accessible
@@ -265,8 +300,14 @@ Based on CEN4010 requirements, each test case includes:
 
 **Purpose:** Verify that system handles database unavailability during login for user "johndoe".
 
+#### **Table TC-005-09: Users Table (Before Test Execution)**
+
+| User ID | Password (Hashed) | Email | First Name | Last Name | Account Status | Email Verified |
+|---------|-------------------|-------|------------|-----------|----------------|----------------|
+| johndoe | $2a$10$hashed123 | johndoe@example.com | John | Doe | Active | Yes |
+
 **Test Setup:**
-1. User "johndoe" exists in database
+1. User "johndoe" exists in database (see Table TC-005-09)
 2. Database server is down or unreachable
 3. MenuMap login page is accessible
 
@@ -294,8 +335,14 @@ Based on CEN4010 requirements, each test case includes:
 
 **Purpose:** Verify that system locks account "johndoe" after multiple failed login attempts.
 
+#### **Table TC-005-10: Users Table (Before Test Execution)**
+
+| User ID | Password (Hashed) | Email | First Name | Last Name | Account Status | Email Verified |
+|---------|-------------------|-------|------------|-----------|----------------|----------------|
+| johndoe | $2a$10$hashed123 | johndoe@example.com | John | Doe | Active | Yes |
+
 **Test Setup:**
-1. User "johndoe" exists in database (see Table 1)
+1. User "johndoe" exists in database (see Table TC-005-10)
 2. User "johndoe" account is currently active
 3. MenuMap login page is accessible
 4. System has lockout policy: 5 failed attempts = account locked
@@ -321,30 +368,6 @@ Based on CEN4010 requirements, each test case includes:
 
 ## 🍽️ **UC-001: Browse Restaurant Menus**
 
-### **Database State Tables**
-
-#### **Table 2: Restaurants Table (Before Test Execution)**
-
-| Restaurant ID | Restaurant Name | Address | Phone | Status | Owner User ID |
-|---------------|-----------------|---------|-------|--------|---------------|
-| 101 | Joe's Pizza | 123 Main St, Miami, FL | 305-555-0101 | Active | johndoe |
-| 102 | Burger Palace | 456 Oak Ave, Miami, FL | 305-555-0102 | Active | janedoe |
-| 103 | Closed Restaurant | 789 Pine Rd, Miami, FL | 305-555-0103 | Inactive | lockeduser |
-| 999 | NonExistent | N/A | N/A | N/A | N/A |
-
-#### **Table 3: Menu Items Table (Before Test Execution)**
-
-| Menu Item ID | Restaurant ID | Item Name | Description | Price | Category | Available |
-|--------------|---------------|-----------|-------------|-------|----------|-----------|
-| 1001 | 101 | Margherita Pizza | Classic tomato and mozzarella | $12.99 | Entree | Yes |
-| 1002 | 101 | Pepperoni Pizza | Pepperoni and cheese | $14.99 | Entree | Yes |
-| 1003 | 101 | Caesar Salad | Fresh romaine with Caesar dressing | $8.99 | Appetizer | Yes |
-| 1004 | 102 | Classic Burger | Beef patty with lettuce and tomato | $9.99 | Entree | Yes |
-| 1005 | 102 | French Fries | Crispy golden fries | $3.99 | Side | Yes |
-| 1006 | 103 | Old Menu Item | Item from closed restaurant | $5.99 | Entree | No |
-
----
-
 ## 🌞 **UC-001: Browse Restaurant Menus - SUNNY DAY SCENARIOS**
 
 ### **TC-001-01: Successful Menu Browse (Sunny Day)**
@@ -353,10 +376,24 @@ Based on CEN4010 requirements, each test case includes:
 
 **Purpose:** Verify that a user can successfully browse and view a restaurant menu with all items displayed correctly.
 
+#### **Table TC-001-01: Restaurants Table (Before Test Execution)**
+
+| Restaurant ID | Restaurant Name | Address | Phone | Status | Owner User ID |
+|---------------|-----------------|---------|-------|--------|---------------|
+| 101 | Joe's Pizza | 123 Main St, Miami, FL | 305-555-0101 | Active | johndoe |
+
+#### **Table TC-001-01: Menu Items Table (Before Test Execution)**
+
+| Menu Item ID | Restaurant ID | Item Name | Description | Price | Category | Available |
+|--------------|---------------|-----------|-------------|-------|----------|-----------|
+| 1001 | 101 | Margherita Pizza | Classic tomato and mozzarella | $12.99 | Entree | Yes |
+| 1002 | 101 | Pepperoni Pizza | Pepperoni and cheese | $14.99 | Entree | Yes |
+| 1003 | 101 | Caesar Salad | Fresh romaine with Caesar dressing | $8.99 | Appetizer | Yes |
+
 **Test Setup:**
 1. User "janedoe" is on MenuMap homepage (may be logged in or not, depending on system design)
-2. Restaurant "Joe's Pizza" (ID: 101) exists in database (see Table 2)
-3. Restaurant "Joe's Pizza" has menu items in database (see Table 3: items 1001, 1002, 1003)
+2. Restaurant "Joe's Pizza" (ID: 101) exists in database (see Table TC-001-01: Restaurants)
+3. Restaurant "Joe's Pizza" has menu items in database (see Table TC-001-01: Menu Items)
 4. Database is accessible and responsive
 
 **Test Input:**
@@ -388,9 +425,23 @@ Based on CEN4010 requirements, each test case includes:
 
 **Purpose:** Verify that user can filter menu items by category successfully.
 
+#### **Table TC-001-02: Restaurants Table (Before Test Execution)**
+
+| Restaurant ID | Restaurant Name | Address | Phone | Status | Owner User ID |
+|---------------|-----------------|---------|-------|--------|---------------|
+| 101 | Joe's Pizza | 123 Main St, Miami, FL | 305-555-0101 | Active | johndoe |
+
+#### **Table TC-001-02: Menu Items Table (Before Test Execution)**
+
+| Menu Item ID | Restaurant ID | Item Name | Description | Price | Category | Available |
+|--------------|---------------|-----------|-------------|-------|----------|-----------|
+| 1001 | 101 | Margherita Pizza | Classic tomato and mozzarella | $12.99 | Entree | Yes |
+| 1002 | 101 | Pepperoni Pizza | Pepperoni and cheese | $14.99 | Entree | Yes |
+| 1003 | 101 | Caesar Salad | Fresh romaine with Caesar dressing | $8.99 | Appetizer | Yes |
+
 **Test Setup:**
 1. User "janedoe" is viewing "Joe's Pizza" menu (see TC-001-01 setup)
-2. Restaurant "Joe's Pizza" menu has items in multiple categories (see Table 3)
+2. Restaurant "Joe's Pizza" menu has items in multiple categories (see Table TC-001-02: Menu Items)
 
 **Test Input:**
 1. User "janedoe" is viewing "Joe's Pizza" menu
@@ -419,9 +470,15 @@ Based on CEN4010 requirements, each test case includes:
 
 **Purpose:** Verify that system handles search for non-existent restaurant gracefully.
 
+#### **Table TC-001-03: Restaurants Table (Before Test Execution)**
+
+| Restaurant ID | Restaurant Name | Address | Phone | Status | Owner User ID |
+|---------------|-----------------|---------|-------|--------|---------------|
+| (No restaurants exist) | | | | | |
+
 **Test Setup:**
 1. User "janedoe" is on MenuMap homepage
-2. Restaurant "NonExistent" (ID: 999) does NOT exist in database
+2. Restaurant "NonExistent" (ID: 999) does NOT exist in database (see Table TC-001-03)
 3. Database is accessible
 
 **Test Input:**
@@ -447,9 +504,21 @@ Based on CEN4010 requirements, each test case includes:
 
 **Purpose:** Verify that system handles restaurant with no menu items gracefully.
 
+#### **Table TC-001-04: Restaurants Table (Before Test Execution)**
+
+| Restaurant ID | Restaurant Name | Address | Phone | Status | Owner User ID |
+|---------------|-----------------|---------|-------|--------|---------------|
+| 102 | Burger Palace | 456 Oak Ave, Miami, FL | 305-555-0102 | Active | janedoe |
+
+#### **Table TC-001-04: Menu Items Table (Before Test Execution)**
+
+| Menu Item ID | Restaurant ID | Item Name | Description | Price | Category | Available |
+|--------------|---------------|-----------|-------------|-------|----------|-----------|
+| (No menu items exist for restaurant 102) | | | | | | |
+
 **Test Setup:**
-1. Restaurant "Burger Palace" (ID: 102) exists in database (see Table 2)
-2. Restaurant "Burger Palace" has NO menu items in database (remove items 1004, 1005 for this test)
+1. Restaurant "Burger Palace" (ID: 102) exists in database (see Table TC-001-04: Restaurants)
+2. Restaurant "Burger Palace" has NO menu items in database (see Table TC-001-04: Menu Items)
 3. User "janedoe" is on MenuMap application
 
 **Test Input:**
@@ -476,10 +545,24 @@ Based on CEN4010 requirements, each test case includes:
 
 **Purpose:** Verify that system handles database unavailability when browsing menus.
 
+#### **Table TC-001-05: Restaurants Table (Before Test Execution)**
+
+| Restaurant ID | Restaurant Name | Address | Phone | Status | Owner User ID |
+|---------------|-----------------|---------|-------|--------|---------------|
+| 101 | Joe's Pizza | 123 Main St, Miami, FL | 305-555-0101 | Active | johndoe |
+
+#### **Table TC-001-05: Menu Items Table (Before Test Execution)**
+
+| Menu Item ID | Restaurant ID | Item Name | Description | Price | Category | Available |
+|--------------|---------------|-----------|-------------|-------|----------|-----------|
+| 1001 | 101 | Margherita Pizza | Classic tomato and mozzarella | $12.99 | Entree | Yes |
+| 1002 | 101 | Pepperoni Pizza | Pepperoni and cheese | $14.99 | Entree | Yes |
+| 1003 | 101 | Caesar Salad | Fresh romaine with Caesar dressing | $8.99 | Appetizer | Yes |
+
 **Test Setup:**
 1. User "janedoe" is on MenuMap application
 2. Database server is down or unreachable
-3. Restaurant "Joe's Pizza" exists in database
+3. Restaurant "Joe's Pizza" exists in database (see Table TC-001-05: Restaurants)
 
 **Test Input:**
 1. User "janedoe" searches for restaurant: `Joe's Pizza`
@@ -503,6 +586,12 @@ Based on CEN4010 requirements, each test case includes:
 **Test Case ID:** SystemTest-016-UC001 (rainy day scenario)
 
 **Purpose:** Verify that system prevents SQL injection attacks in search field.
+
+#### **Table TC-001-06: Restaurants Table (Before Test Execution)**
+
+| Restaurant ID | Restaurant Name | Address | Phone | Status | Owner User ID |
+|---------------|-----------------|---------|-------|--------|---------------|
+| (Not applicable - security test) | | | | | |
 
 **Test Setup:**
 1. User "janedoe" is on MenuMap homepage
@@ -531,8 +620,22 @@ Based on CEN4010 requirements, each test case includes:
 
 **Purpose:** Verify that system handles timeout when menu loading takes too long.
 
+#### **Table TC-001-07: Restaurants Table (Before Test Execution)**
+
+| Restaurant ID | Restaurant Name | Address | Phone | Status | Owner User ID |
+|---------------|-----------------|---------|-------|--------|---------------|
+| 101 | Joe's Pizza | 123 Main St, Miami, FL | 305-555-0101 | Active | johndoe |
+
+#### **Table TC-001-07: Menu Items Table (Before Test Execution)**
+
+| Menu Item ID | Restaurant ID | Item Name | Description | Price | Category | Available |
+|--------------|---------------|-----------|-------------|-------|----------|-----------|
+| 1001 | 101 | Margherita Pizza | Classic tomato and mozzarella | $12.99 | Entree | Yes |
+| 1002 | 101 | Pepperoni Pizza | Pepperoni and cheese | $14.99 | Entree | Yes |
+| 1003 | 101 | Caesar Salad | Fresh romaine with Caesar dressing | $8.99 | Appetizer | Yes |
+
 **Test Setup:**
-1. Restaurant "Joe's Pizza" exists in database
+1. Restaurant "Joe's Pizza" exists in database (see Table TC-001-07: Restaurants)
 2. Database is slow or under heavy load
 3. Network connection is slow
 4. System timeout threshold: 30 seconds
@@ -561,10 +664,22 @@ Based on CEN4010 requirements, each test case includes:
 
 **Purpose:** Verify that system handles viewing menu for inactive/closed restaurant.
 
+#### **Table TC-001-08: Restaurants Table (Before Test Execution)**
+
+| Restaurant ID | Restaurant Name | Address | Phone | Status | Owner User ID |
+|---------------|-----------------|---------|-------|--------|---------------|
+| 103 | Closed Restaurant | 789 Pine Rd, Miami, FL | 305-555-0103 | Inactive | lockeduser |
+
+#### **Table TC-001-08: Menu Items Table (Before Test Execution)**
+
+| Menu Item ID | Restaurant ID | Item Name | Description | Price | Category | Available |
+|--------------|---------------|-----------|-------------|-------|----------|-----------|
+| 1006 | 103 | Old Menu Item | Item from closed restaurant | $5.99 | Entree | No |
+
 **Test Setup:**
-1. Restaurant "Closed Restaurant" (ID: 103) exists in database (see Table 2)
+1. Restaurant "Closed Restaurant" (ID: 103) exists in database (see Table TC-001-08: Restaurants)
 2. Restaurant "Closed Restaurant" status is "Inactive"
-3. Restaurant "Closed Restaurant" may or may not have menu items
+3. Restaurant "Closed Restaurant" may have menu items (see Table TC-001-08: Menu Items)
 
 **Test Input:**
 1. User "janedoe" searches for restaurant: `Closed Restaurant`
@@ -599,7 +714,7 @@ Based on CEN4010 requirements, each test case includes:
 - **Total Test Cases:** 18
 - **Sunny Day:** 4 test cases
 - **Rainy Day:** 14 test cases
-- **All test cases include database state tables**
+- **Each test case includes its own database state table(s)**
 
 ---
 
@@ -608,7 +723,7 @@ Based on CEN4010 requirements, each test case includes:
 ### **Before Testing:**
 - [ ] Test environment is set up
 - [ ] Database is accessible
-- [ ] Test data is prepared (see Tables 1, 2, 3)
+- [ ] Test data is prepared (see individual test case tables)
 - [ ] Test accounts are created
 - [ ] Test restaurants and menu items are created
 
@@ -630,7 +745,7 @@ Based on CEN4010 requirements, each test case includes:
 ## 📝 **Notes for Deliverable 3 Submission**
 
 1. **Format:** These test cases follow the CEN4010 format shown in lecture examples
-2. **Database Tables:** Include database state tables before each test case section
+2. **Database Tables:** Each test case includes its own database state table(s) before the Test Setup section
 3. **Documentation:** Include this test case document in your Final Document
 4. **Implementation Evidence:** Reference code snippets that handle each scenario
 5. **No Papyrus Required:** Test cases are written documentation, not diagrams
