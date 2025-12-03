@@ -110,10 +110,10 @@ All files are in: `Deliverable3_Implementation/`
 **Required Sections:**
 1. Test Case ID
 2. Purpose
-3. Test Setup (with database table references)
-4. Test Input (numbered steps)
-5. Expected Output
-6. Postconditions
+3. Database State Table(s) (individual table for each test case)
+4. Test Setup (with database table references)
+5. Test Input (numbered steps)
+6. Expected Output
 
 **Reference:** See `MenuMap_Test_Cases_Login_UC001.md` for complete examples
 
@@ -134,4 +134,9 @@ All files are in: `Deliverable3_Implementation/`
 
 **Last Updated:** [Current Date]  
 **Next Action:** Send WhatsApp message to Alexandra Cozar
+
+
+
+
+
 
