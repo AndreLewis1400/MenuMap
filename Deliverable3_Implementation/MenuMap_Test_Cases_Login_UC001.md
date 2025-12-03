@@ -12,6 +12,8 @@ Based on CEN4010 requirements, each test case includes:
 - **Test Input**: Step-by-step actions
 - **Expected Output**: Expected results
 
+**Note on Postconditions:** Postconditions are not required for these test cases. The expected output section already describes the system state after test execution, making separate postconditions redundant. The test setup and expected output provide sufficient information to understand the test scenario and verify results.
+
 ---
 
 ## 🔐 **UC-005: User Login**
@@ -35,34 +37,29 @@ Based on CEN4010 requirements, each test case includes:
 
 **Test Case ID:** SystemTest-001-UC005 (sunny day scenario)
 
-**Purpose:** Verify that a valid user can successfully log into the MenuMap system with correct credentials.
+**Purpose:** Verify that user "johndoe" can successfully log into the MenuMap system with correct credentials.
 
 **Test Setup:**
 1. User "johndoe" exists in database (see Table 1)
-2. User account is active
-3. User email is verified
+2. User "johndoe" account is active
+3. User "johndoe" email is verified
 4. MenuMap login page is accessible
 5. Database is accessible and responsive
 
 **Test Input:**
-1. User navigates to MenuMap login page
-2. User enters the following data:
+1. User "johndoe" navigates to MenuMap login page
+2. User "johndoe" enters the following data:
    a. Email/User ID: `johndoe@example.com`
    b. Password: `SecurePass123!`
-3. User clicks "Login" button
+3. User "johndoe" clicks "Login" button
 
 **Expected Output:**
 1. System validates credentials successfully
-2. System creates user session
-3. User is redirected to MenuMap homepage/dashboard
+2. System creates user session for user "johndoe"
+3. User "johndoe" is redirected to MenuMap homepage/dashboard
 4. Welcome message displays: "Welcome, John Doe"
-5. User is authenticated and can access protected features
+5. User "johndoe" is authenticated and can access protected features
 6. No error messages displayed
-
-**Postconditions:**
-- User session is created in database
-- User is logged in and authenticated
-- User can navigate to other pages
 
 ---
 
@@ -70,30 +67,26 @@ Based on CEN4010 requirements, each test case includes:
 
 **Test Case ID:** SystemTest-002-UC005 (sunny day scenario)
 
-**Purpose:** Verify that a user can log in using their User ID instead of email.
+**Purpose:** Verify that user "johndoe" can log in using their User ID instead of email.
 
 **Test Setup:**
 1. User "johndoe" exists in database (see Table 1)
-2. User account is active and verified
+2. User "johndoe" account is active and verified
 3. MenuMap login page is accessible
 
 **Test Input:**
-1. User navigates to MenuMap login page
-2. User enters the following data:
+1. User "johndoe" navigates to MenuMap login page
+2. User "johndoe" enters the following data:
    a. Email/User ID: `johndoe`
    b. Password: `SecurePass123!`
-3. User clicks "Login" button
+3. User "johndoe" clicks "Login" button
 
 **Expected Output:**
 1. System accepts User ID as valid identifier
 2. System validates credentials successfully
-3. User is redirected to homepage
+3. User "johndoe" is redirected to homepage
 4. Welcome message displays: "Welcome, John Doe"
 5. No error messages displayed
-
-**Postconditions:**
-- User is successfully logged in
-- Session is created
 
 ---
 
@@ -103,33 +96,28 @@ Based on CEN4010 requirements, each test case includes:
 
 **Test Case ID:** SystemTest-003-UC005 (rainy day scenario)
 
-**Purpose:** Verify that system rejects login attempt with incorrect password.
+**Purpose:** Verify that system rejects login attempt for user "johndoe" with incorrect password.
 
 **Test Setup:**
 1. User "johndoe" exists in database (see Table 1)
-2. User account is active and verified
+2. User "johndoe" account is active and verified
 3. MenuMap login page is accessible
 
 **Test Input:**
-1. User navigates to MenuMap login page
-2. User enters the following data:
+1. User "johndoe" navigates to MenuMap login page
+2. User "johndoe" enters the following data:
    a. Email/User ID: `johndoe@example.com`
    b. Password: `WrongPassword123`
-3. User clicks "Login" button
+3. User "johndoe" clicks "Login" button
 
 **Expected Output:**
 1. System validates credentials
-2. System detects password mismatch
+2. System detects password mismatch for user "johndoe"
 3. Error message displays: "Invalid email or password. Please try again."
-4. User remains on login page
+4. User "johndoe" remains on login page
 5. Password field is cleared (for security)
-6. User can retry login
-7. No session is created
-
-**Postconditions:**
-- User is NOT logged in
-- No session created
-- User can attempt login again
+6. User "johndoe" can retry login
+7. No session is created for user "johndoe"
 
 ---
 
@@ -144,23 +132,19 @@ Based on CEN4010 requirements, each test case includes:
 2. MenuMap login page is accessible
 
 **Test Input:**
-1. User navigates to MenuMap login page
-2. User enters the following data:
+1. Test user navigates to MenuMap login page
+2. Test user enters the following data:
    a. Email/User ID: `nonexistent@example.com`
    b. Password: `AnyPassword123`
-3. User clicks "Login" button
+3. Test user clicks "Login" button
 
 **Expected Output:**
 1. System searches for user in database
 2. System finds no matching user
 3. Error message displays: "Invalid email or password. Please try again."
    (Note: Generic message for security - doesn't reveal if email exists)
-4. User remains on login page
+4. Test user remains on login page
 5. No session is created
-
-**Postconditions:**
-- No user session created
-- User can retry with correct credentials
 
 ---
 
@@ -174,22 +158,18 @@ Based on CEN4010 requirements, each test case includes:
 1. MenuMap login page is accessible
 
 **Test Input:**
-1. User navigates to MenuMap login page
-2. User leaves email field empty: `""`
-3. User enters password: `SecurePass123!`
-4. User clicks "Login" button
+1. Test user navigates to MenuMap login page
+2. Test user leaves email field empty: `""`
+3. Test user enters password: `SecurePass123!`
+4. Test user clicks "Login" button
 
 **Expected Output:**
 1. System validates input before processing
 2. Error message displays: "Required field missing input value" or "Please enter your email"
 3. Email field is highlighted or marked with error
-4. User remains on login page
+4. Test user remains on login page
 5. No login attempt is processed
 6. No database query is executed
-
-**Postconditions:**
-- No login attempt processed
-- User can fill in required fields and retry
 
 **Additional Test:** Repeat with empty password field, empty both fields
 
@@ -199,33 +179,28 @@ Based on CEN4010 requirements, each test case includes:
 
 **Test Case ID:** SystemTest-006-UC005 (rainy day scenario)
 
-**Purpose:** Verify that system prevents login for locked accounts.
+**Purpose:** Verify that system prevents login for locked account "lockeduser".
 
 **Test Setup:**
 1. User "lockeduser" exists in database (see Table 1)
-2. User account status is "Locked"
+2. User "lockeduser" account status is "Locked"
 3. MenuMap login page is accessible
 
 **Test Input:**
-1. User navigates to MenuMap login page
-2. User enters the following data:
+1. User "lockeduser" navigates to MenuMap login page
+2. User "lockeduser" enters the following data:
    a. Email/User ID: `locked@example.com`
    b. Password: `CorrectPassword123`
-3. User clicks "Login" button
+3. User "lockeduser" clicks "Login" button
 
 **Expected Output:**
 1. System validates credentials (may be correct)
-2. System checks account status
-3. System detects account is locked
+2. System checks account status for user "lockeduser"
+3. System detects account "lockeduser" is locked
 4. Error message displays: "Your account has been locked. Please contact support."
-5. User remains on login page
-6. No session is created
-7. User cannot proceed with login
-
-**Postconditions:**
-- No session created
-- Account remains locked
-- User must contact support
+5. User "lockeduser" remains on login page
+6. No session is created for user "lockeduser"
+7. User "lockeduser" cannot proceed with login
 
 ---
 
@@ -233,32 +208,28 @@ Based on CEN4010 requirements, each test case includes:
 
 **Test Case ID:** SystemTest-007-UC005 (rainy day scenario)
 
-**Purpose:** Verify that system handles login attempt for unverified email accounts.
+**Purpose:** Verify that system handles login attempt for unverified email account "unverified".
 
 **Test Setup:**
 1. User "unverified" exists in database (see Table 1)
-2. User account is active but email is NOT verified
+2. User "unverified" account is active but email is NOT verified
 3. MenuMap login page is accessible
 
 **Test Input:**
-1. User navigates to MenuMap login page
-2. User enters the following data:
+1. User "unverified" navigates to MenuMap login page
+2. User "unverified" enters the following data:
    a. Email/User ID: `unverified@example.com`
    b. Password: `CorrectPassword123`
-3. User clicks "Login" button
+3. User "unverified" clicks "Login" button
 
 **Expected Output:**
-1. System validates credentials successfully
-2. System checks email verification status
-3. System detects email is not verified
+1. System validates credentials successfully for user "unverified"
+2. System checks email verification status for user "unverified"
+3. System detects email is not verified for user "unverified"
 4. Warning message displays: "Please verify your email address before logging in. Check your inbox for verification link."
 5. Option to resend verification email is provided
-6. User may be redirected to verification page or remain on login
-7. Limited session may be created (depends on system design)
-
-**Postconditions:**
-- User may have limited access or no access
-- Verification reminder is shown
+6. User "unverified" may be redirected to verification page or remain on login
+7. Limited session may be created for user "unverified" (depends on system design)
 
 ---
 
@@ -273,11 +244,11 @@ Based on CEN4010 requirements, each test case includes:
 2. Database is accessible
 
 **Test Input:**
-1. User navigates to MenuMap login page
-2. User enters the following data:
+1. Attacker navigates to MenuMap login page
+2. Attacker enters the following data:
    a. Email/User ID: `admin' OR '1'='1`
    b. Password: `anything' OR '1'='1`
-3. User clicks "Login" button
+3. Attacker clicks "Login" button
 
 **Expected Output:**
 1. System sanitizes/escapes input
@@ -288,18 +259,13 @@ Based on CEN4010 requirements, each test case includes:
 6. Database security is maintained
 7. No unauthorized access granted
 
-**Postconditions:**
-- No security breach
-- System remains secure
-- Invalid login attempt logged (if logging enabled)
-
 ---
 
 ### **TC-005-09: Database Connection Error**
 
 **Test Case ID:** SystemTest-009-UC005 (rainy day scenario)
 
-**Purpose:** Verify that system handles database unavailability during login.
+**Purpose:** Verify that system handles database unavailability during login for user "johndoe".
 
 **Test Setup:**
 1. User "johndoe" exists in database
@@ -307,25 +273,20 @@ Based on CEN4010 requirements, each test case includes:
 3. MenuMap login page is accessible
 
 **Test Input:**
-1. User navigates to MenuMap login page
-2. User enters the following data:
+1. User "johndoe" navigates to MenuMap login page
+2. User "johndoe" enters the following data:
    a. Email/User ID: `johndoe@example.com`
    b. Password: `SecurePass123!`
-3. User clicks "Login" button
+3. User "johndoe" clicks "Login" button
 
 **Expected Output:**
 1. System attempts database connection
 2. Database connection fails
 3. User-friendly error message displays: "We're experiencing technical difficulties. Please try again in a few moments."
 4. Error is logged for administrators
-5. User remains on login page
-6. No session is created
+5. User "johndoe" remains on login page
+6. No session is created for user "johndoe"
 7. System remains stable
-
-**Postconditions:**
-- No session created
-- Error is logged
-- User can retry when database is available
 
 ---
 
@@ -333,35 +294,30 @@ Based on CEN4010 requirements, each test case includes:
 
 **Test Case ID:** SystemTest-010-UC005 (rainy day scenario)
 
-**Purpose:** Verify that system locks account after multiple failed login attempts.
+**Purpose:** Verify that system locks account "johndoe" after multiple failed login attempts.
 
 **Test Setup:**
 1. User "johndoe" exists in database (see Table 1)
-2. Account is currently active
+2. User "johndoe" account is currently active
 3. MenuMap login page is accessible
 4. System has lockout policy: 5 failed attempts = account locked
 
 **Test Input:**
-1. User navigates to MenuMap login page
-2. User attempts login 5 times with incorrect password:
+1. User "johndoe" navigates to MenuMap login page
+2. User "johndoe" attempts login 5 times with incorrect password:
    - Attempt 1: Email: `johndoe@example.com`, Password: `Wrong1`
    - Attempt 2: Email: `johndoe@example.com`, Password: `Wrong2`
    - Attempt 3: Email: `johndoe@example.com`, Password: `Wrong3`
    - Attempt 4: Email: `johndoe@example.com`, Password: `Wrong4`
    - Attempt 5: Email: `johndoe@example.com`, Password: `Wrong5`
-3. User clicks "Login" button for each attempt
+3. User "johndoe" clicks "Login" button for each attempt
 
 **Expected Output:**
 - Attempts 1-4: Error message: "Invalid email or password. X attempts remaining."
 - Attempt 5: Error message: "Your account has been locked due to multiple failed login attempts. Please contact support."
-- Account status in database changes to "Locked"
-- No session is created
-- User cannot proceed with login
-
-**Postconditions:**
-- Account is locked in database
-- User must contact support to unlock
-- Failed attempts are logged
+- User "johndoe" account status in database changes to "Locked"
+- No session is created for user "johndoe"
+- User "johndoe" cannot proceed with login
 
 ---
 
@@ -426,11 +382,6 @@ Based on CEN4010 requirements, each test case includes:
 7. No error messages displayed
 8. Response time is acceptable (< 2 seconds)
 
-**Postconditions:**
-- Menu for restaurant "Joe's Pizza" is displayed to user "janedoe"
-- User "janedoe" can continue browsing or navigate away
-- No data is modified in database
-
 ---
 
 ### **TC-001-02: Browse Menu with Filters**
@@ -459,10 +410,6 @@ Based on CEN4010 requirements, each test case includes:
 4. Menu for restaurant "Joe's Pizza" updates dynamically without page reload (if applicable)
 5. No items are lost or duplicated
 6. Filter state is maintained correctly
-
-**Postconditions:**
-- Menu display for restaurant "Joe's Pizza" reflects selected filter
-- User "janedoe" can continue filtering or viewing full menu for restaurant "Joe's Pizza"
 
 ---
 
@@ -494,11 +441,6 @@ Based on CEN4010 requirements, each test case includes:
 6. No error stack trace or technical details shown to user "janedoe"
 7. System remains stable and responsive
 
-**Postconditions:**
-- User "janedoe" is on search results page
-- User "janedoe" can perform new search
-- No data corruption or system errors
-
 ---
 
 ### **TC-001-04: Menu Not Available (Empty Menu)**
@@ -528,11 +470,6 @@ Based on CEN4010 requirements, each test case includes:
 7. No error messages or crashes
 8. User "janedoe" can navigate back or contact restaurant "Burger Palace"
 
-**Postconditions:**
-- User "janedoe" sees empty menu state for restaurant "Burger Palace"
-- System handles gracefully without errors
-- Restaurant "Burger Palace" information is still accessible
-
 ---
 
 ### **TC-001-05: Database Connection Error**
@@ -561,11 +498,6 @@ Based on CEN4010 requirements, each test case includes:
 6. System does not crash or show technical error details
 7. User "janedoe" can navigate to other parts of application
 
-**Postconditions:**
-- Error is handled gracefully
-- System remains functional for other operations
-- User "janedoe" can attempt operation again later for restaurant "Joe's Pizza"
-
 ---
 
 ### **TC-001-06: Invalid Search Input (SQL Injection)**
@@ -592,12 +524,6 @@ Based on CEN4010 requirements, each test case includes:
 5. No SQL commands are executed
 6. Database tables remain intact
 7. No security vulnerabilities exploited
-
-**Postconditions:**
-- Database security maintained
-- No data loss
-- System remains secure
-- User "janedoe" can retry with valid search term
 
 ---
 
@@ -629,11 +555,6 @@ Based on CEN4010 requirements, each test case includes:
 6. No partial data is displayed
 7. System remains responsive
 
-**Postconditions:**
-- User "janedoe" can retry or navigate away
-- System handles timeout gracefully for restaurant "Joe's Pizza"
-- No partial state corruption
-
 ---
 
 ### **TC-001-08: Restaurant Inactive/Closed**
@@ -661,11 +582,6 @@ Based on CEN4010 requirements, each test case includes:
 5. Menu for restaurant "Closed Restaurant" is not displayed (or shown as unavailable)
 6. User "janedoe" can search for other restaurants
 7. No error messages or crashes
-
-**Postconditions:**
-- User "janedoe" sees inactive restaurant message for restaurant "Closed Restaurant"
-- System handles gracefully
-- User "janedoe" can continue browsing
 
 ---
 
