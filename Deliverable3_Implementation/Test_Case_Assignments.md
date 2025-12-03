@@ -104,12 +104,12 @@ Each test case must include:
 3. **Test Setup:** Preconditions including database state (reference tables)
 4. **Test Input:** Step-by-step actions (numbered)
 5. **Expected Output:** Expected results
-6. **Postconditions:** System state after test
 
 ### **Database State Tables Required:**
-- All test cases must reference database state tables in Section 7.1.2
+- Each test case must include its own database state table(s) before the Test Setup section
 - Tables should show data before test execution
-- Format: Table 1, Table 2, etc.
+- Format: Table TC-XXX-XX (e.g., Table TC-005-01, Table TC-001-01)
+- Each test case has its own table(s) - not shared tables
 
 ---
 
@@ -146,7 +146,7 @@ All test cases will be compiled into the Final Document Chapter 7.1.3:
 - [ ] Include database state tables
 - [ ] Write 2 sunny day scenarios (successful paths)
 - [ ] Write 1 rainy day scenario (error/edge case)
-- [ ] Include all required sections (ID, Purpose, Setup, Input, Output, Postconditions)
+- [ ] Include all required sections (ID, Purpose, Setup, Input, Expected Output)
 
 ### **Before Submission:**
 - [ ] Review test cases for completeness
@@ -186,4 +186,9 @@ All test cases will be compiled into the Final Document Chapter 7.1.3:
 
 **Last Updated:** [Current Date]  
 **Updated By:** Andre Lewis (Group Lead)
+
+
+
+
+
 

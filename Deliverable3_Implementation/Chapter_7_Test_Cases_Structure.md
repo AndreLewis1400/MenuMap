@@ -181,11 +181,7 @@ Numbered list of step-by-step actions:
 - What should happen
 - Expected system behavior
 - Expected user feedback
-
-### **6. Postconditions**
-- System state after test
-- Data changes (if any)
-- User state
+- System state after test execution
 
 ---
 
@@ -196,8 +192,8 @@ Numbered list of step-by-step actions:
 - Quick reference table
 
 ### **Section 7.1.2: Test Criteria and Procedures**
-- Contains all database state tables
-- Test cases reference these tables (e.g., "see Table 1")
+- Each test case includes its own database state table(s)
+- Test cases reference their specific tables (e.g., "see Table TC-005-01")
 
 ---
 
@@ -207,7 +203,7 @@ Before finalizing Chapter 7.1.3:
 
 - [ ] All team members have submitted their test cases
 - [ ] All test cases follow `SystemTest-XXX-UCXXX` format
-- [ ] All test cases include required sections (ID, Purpose, Setup, Input, Output, Postconditions)
+- [ ] All test cases include required sections (ID, Purpose, Setup, Input, Expected Output)
 - [ ] Database state tables are referenced correctly
 - [ ] Test cases are organized by use case
 - [ ] Test Case IDs are sequential and unique
@@ -243,4 +239,9 @@ When compiling into Final Document:
 ---
 
 **This structure ensures all test cases are properly organized and ready for inclusion in the Final Systems Document Chapter 7.1.3.**
+
+
+
+
+
 
