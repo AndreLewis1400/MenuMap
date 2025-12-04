@@ -228,23 +228,42 @@ The system implements the following primary use cases:
 
 ## 5.1 Architectural Overview
 
-MenuMap is designed using a **3-tier architecture** that separates concerns into distinct layers, promoting maintainability, scalability, and testability.
+MenuMap is designed using a **3-tier architecture** that separates concerns into distinct layers. The system is decomposed into three major subsystems: **Subsystem 1 (MM_Client - Presentation Tier)**, **Subsystem 2 (MM_Logic - Business Logic Tier)**, and **Subsystem 3 (MM_DataStore - Data Tier)**.
 
 ## 5.2 Architecture Layers
 
-### 5.2.1 Presentation Tier
+### 5.2.1 Subsystem 1: Presentation Tier (MM_Client)
 
-The Presentation Tier is responsible for user interface and user interaction handling. This tier includes:
-- **Controllers**: Handle HTTP requests and responses
+**Subsystem 1 is the client** and is responsible for user interface and user interaction handling. This subsystem implements the **Model-View-Controller (MVC) pattern** within the client layer.
+
+**MVC Pattern Implementation in Subsystem 1:**
+
+The MVC pattern is implemented exclusively within Subsystem 1 (MM_Client):
+
+- **Model**: Represents data and business logic at the presentation level. The Model in the client handles data representation and coordinates with the Business Logic Tier.
+- **View**: Displays data to users. Views include web pages, forms, and interactive UI components such as:
+  - LoginForm
+  - Dashboard
+  - MenuBrowser
+  - UserProfile
+  - RestaurantOwnerPanel
+- **Controller**: Handles user input and coordinates between Model and View. Controllers process HTTP requests and responses, including:
+  - `MenuController`: Handles menu browsing requests
+  - `UserController`: Manages authentication and user management
+  - `RestaurantController`: Handles restaurant-related operations
+
+**Key Components:**
+- **Controllers**: Handle HTTP requests and responses, coordinate with business logic layer
 - **Views**: Render user interface components
 - **Client-side validation**: Immediate feedback for user inputs
 
-**Key Components:**
-- `MenuController`: Handles menu browsing requests
-- `UserController`: Manages authentication and user management
-- `RestaurantController`: Handles restaurant-related operations
+**Figure 5.1: Presentation Layer Class Diagram**
 
-### 5.2.2 Business Logic Tier
+[Insert diagram: `Package_MM_Client_MM_Client_Class_Dia.PNG`]
+
+**Caption:** The Presentation Layer Class Diagram shows the client-side components including Controllers and Views implementing the MVC pattern within Subsystem 1.
+
+### 5.2.2 Subsystem 2: Business Logic Tier (MM_Logic)
 
 The Business Logic Tier contains the core business rules and validation logic. This tier:
 - Implements business rules and validation
@@ -257,59 +276,73 @@ The Business Logic Tier contains the core business rules and validation logic. T
 - `RestaurantService`: Restaurant management logic
 - `VerificationService`: Menu verification processes
 
-### 5.2.3 Data Tier
+**Figure 5.2: Business Logic Layer Class Diagram**
+
+[Insert diagram: `Package_MM_Logic_MM_Logic_Class_Dia.PNG`]
+
+**Caption:** The Business Logic Layer Class Diagram illustrates service classes that implement core business rules, validation, and processing logic.
+
+### 5.2.3 Subsystem 3: Data Tier (MM_DataStore)
 
 The Data Tier manages all database operations and data persistence. This tier includes:
-- **Data Access Objects (DAOs)**: Encapsulate database operations
+- **Repositories**: Encapsulate database operations
 - **Database**: Stores all system data
 
 **Key Components:**
-- `MenuDAO`: Database operations for menus
-- `UserDAO`: Database operations for users
-- `RestaurantDAO`: Database operations for restaurants
+- `MenuRepository`: Database operations for menus
+- `UserRepository`: Database operations for users
+- `RestaurantRepository`: Database operations for restaurants
+
+**Figure 5.3: Data Access Layer Class Diagram**
+
+[Insert diagram: `Package_MM_DataStore_MM_Data_Store_Dia.PNG`]
+
+**Caption:** The Data Access Layer Class Diagram shows repositories and data models that manage database operations and data persistence.
+
+**Figure 5.4: 3-Tier Architecture Diagram**
+
+[Insert diagram: `Model_Static_Menu_Map_3_Tier.PNG` or `Model_Static_Model_Static_Menu_Map_3_Tier.PNG`]
+
+**Caption:** The complete 3-tier architecture diagram shows the overall system structure with Subsystem 1 (MM_Client), Subsystem 2 (MM_Logic), and Subsystem 3 (MM_DataStore).
 
 ## 5.3 Design Patterns
 
 ### 5.3.1 MVC Pattern
 
-The system implements the Model-View-Controller pattern:
-- **Model**: Represents data and business logic
+The MVC pattern is implemented **only within Subsystem 1 (MM_Client)**. The pattern separates presentation logic from business logic:
+- **Model**: Represents data and business logic at the presentation level
 - **View**: Displays data to users
 - **Controller**: Handles user input and coordinates between Model and View
 
-### 5.3.2 Data Access Object (DAO) Pattern
-
-DAOs abstract database operations, providing a clean interface for data access while hiding database implementation details.
-
-## 5.4 System Components
-
-### 5.4.1 User Management Component
-
-Handles user registration, authentication, and session management.
-
-### 5.4.2 Menu Management Component
-
-Manages restaurant menus, including creation, updates, and retrieval.
-
-### 5.4.3 Search Component
-
-Provides restaurant and menu search functionality.
-
-## 5.5 Database Design
+## 5.4 Database Design
 
 The system uses a relational database with the following primary entities:
 - **Users**: User accounts and authentication information
 - **Restaurants**: Restaurant information and details
 - **Menu Items**: Individual menu items with descriptions and prices
 - **Sessions**: User session management
+- **Access Control**: Access control permissions for CRUD operations
 
-## 5.6 Security Architecture
+## 5.5 Access Control
 
-Security measures implemented:
-- Password hashing using secure algorithms
-- Input validation and sanitization
-- SQL injection prevention through parameterized queries
-- Session management for authenticated users
+The system implements access control through an access control table that manages permissions for Create, Read, Update, and Delete (CRUD) operations.
+
+### Access Control Table
+
+| Resource | Role | Create | Read | Update | Delete |
+|----------|------|--------|------|--------|--------|
+| Menu Items | Customer | No | Yes | No | No |
+| Menu Items | Restaurant Owner | Yes | Yes | Yes | Yes |
+| Menu Items | Administrator | Yes | Yes | Yes | Yes |
+| Restaurants | Customer | No | Yes | No | No |
+| Restaurants | Restaurant Owner | No | Yes | Yes | No |
+| Restaurants | Administrator | Yes | Yes | Yes | Yes |
+| Users | Customer | No | Yes (own) | Yes (own) | No |
+| Users | Restaurant Owner | No | Yes (own) | Yes (own) | No |
+| Users | Administrator | Yes | Yes | Yes | Yes |
+| Menu Verification | Customer | No | No | No | No |
+| Menu Verification | Restaurant Owner | No | No | No | No |
+| Menu Verification | Administrator | Yes | Yes | Yes | Yes |
 
 ---
 
@@ -355,14 +388,14 @@ This chapter provides detailed design specifications for all system components, 
 
 ### 6.2.3 Data Access Layer Classes
 
-#### MenuDAO
+#### MenuRepository
 - **Purpose**: Database operations for menu data
 - **Key Methods**:
   - `findMenuByRestaurantId(restaurantId)`: Queries database for menu
   - `saveMenu(menuData)`: Persists menu data
   - `updateMenu(menuId, menuData)`: Updates existing menu
 
-#### UserDAO
+#### UserRepository
 - **Purpose**: Database operations for user data
 - **Key Methods**:
   - `findUserByEmail(email)`: Retrieves user by email
@@ -373,9 +406,9 @@ This chapter provides detailed design specifications for all system components, 
 
 The system uses sequence diagrams to illustrate interactions between components. Key interactions include:
 
-1. **Menu Browsing Flow**: User → MenuController → MenuService → MenuDAO → Database
-2. **User Login Flow**: User → UserController → UserService → UserDAO → Database
-3. **User Registration Flow**: User → UserController → UserService → UserDAO → Database
+1. **Menu Browsing Flow**: User → MenuController → MenuService → MenuRepository → Database
+2. **User Login Flow**: User → UserController → UserService → UserRepository → Database
+3. **User Registration Flow**: User → UserController → UserService → UserRepository → Database
 
 ## 6.4 Detailed Class Design
 
@@ -395,12 +428,11 @@ The detailed class design includes:
 
 ### 7.1.1 Test Identification and Objective
 
-The testing process for MenuMap follows a comprehensive approach to ensure system reliability, functionality, and security. Testing objectives include:
+The testing process for MenuMap follows a comprehensive approach to ensure system reliability and functionality. Testing objectives include:
 
 1. **Functional Testing**: Verify that all use cases and requirements are correctly implemented
-2. **Security Testing**: Ensure system security measures are effective
-3. **Error Handling Testing**: Validate system behavior under error conditions
-4. **Performance Testing**: Confirm system meets performance requirements
+2. **Error Handling Testing**: Validate system behavior under error conditions
+3. **Performance Testing**: Confirm system meets performance requirements
 
 **Test Coverage:**
 - **Total Test Cases**: 33 test cases across multiple use cases
@@ -750,11 +782,9 @@ The MenuMap system is **fully functional** and ready for deployment. All core fe
 
 ## 9.1 Technical Lessons
 
-1. **Architecture Benefits**: The 3-tier architecture provided clear separation of concerns, making development and testing more manageable.
+1. **Testing Importance**: Comprehensive testing, including both success and failure scenarios, identified issues early and improved system reliability.
 
-2. **Testing Importance**: Comprehensive testing, including both success and failure scenarios, identified issues early and improved system reliability.
-
-3. **Security First**: Implementing security measures from the beginning is more effective than adding them later.
+2. **Design Patterns**: Implementing MVC pattern within the client subsystem provided clear separation of concerns and improved maintainability.
 
 ## 9.2 Process Lessons
 
@@ -1007,9 +1037,7 @@ The MenuMap project demonstrates the successful application of software engineer
 
 **3-Tier Architecture**: Software architecture pattern dividing application into three logical layers: Presentation, Business Logic, and Data.
 
-**DAO (Data Access Object)**: Design pattern providing abstract interface to database operations.
-
-**MVC (Model-View-Controller)**: Design pattern separating application into Model (data), View (presentation), and Controller (logic).
+**MVC (Model-View-Controller)**: Design pattern separating application into Model (data), View (presentation), and Controller (logic). Implemented within Subsystem 1 (MM_Client).
 
 **Sunny Day Scenario**: Test scenario where operations complete successfully under normal conditions.
 
@@ -1075,14 +1103,14 @@ This appendix contains detailed UML class diagrams for the MenuMap system, organ
 
 [Insert diagram: `Package_MM_DataStore_MM_Data_Store_Dia.PNG`]
 
-**Caption:** The Data Access Layer Class Diagram shows Data Access Objects (DAOs) and data models that manage database operations and data persistence.
+**Caption:** The Data Access Layer Class Diagram shows repositories and data models that manage database operations and data persistence.
 
 **Key Classes:**
-- **MenuDAO**: Database operations for menu data
+- **MenuRepository**: Database operations for menu data
   - Methods: `findMenuByRestaurantId(restaurantId)`, `saveMenu(menuData)`, `updateMenu(menuId, menuData)`, `deleteMenu(menuId)`
-- **UserDAO**: Database operations for user data
+- **UserRepository**: Database operations for user data
   - Methods: `findUserByEmail(email)`, `findUserById(userId)`, `saveUser(userData)`, `updateUser(userId, userData)`
-- **RestaurantDAO**: Database operations for restaurant data
+- **RestaurantRepository**: Database operations for restaurant data
   - Methods: `findRestaurantById(id)`, `findRestaurantsByName(name)`, `saveRestaurant(data)`, `updateRestaurant(id, data)`
 
 **Data Models:**
@@ -1092,7 +1120,6 @@ This appendix contains detailed UML class diagrams for the MenuMap system, organ
 - **Session**: Represents user session with attributes (sessionId, userId, startTime, expiryTime, active)
 
 **Design Patterns Used:**
-- **DAO Pattern**: Abstracts database access operations
 - **Repository Pattern**: Encapsulates data access logic
 
 ### D.4 Complete System Architecture Diagram
@@ -1110,8 +1137,8 @@ This appendix contains detailed UML class diagrams for the MenuMap system, organ
 
 **Key Relationships:**
 - Controllers in Presentation Tier use Services from Business Logic Tier
-- Services in Business Logic Tier use DAOs from Data Tier
-- DAOs in Data Tier interact with Database
+- Services in Business Logic Tier use Repositories from Data Tier
+- Repositories in Data Tier interact with Database
 - Data Models represent entities across all tiers
 
 **Architectural Patterns:**
