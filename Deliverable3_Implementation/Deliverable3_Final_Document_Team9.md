@@ -305,16 +305,7 @@ The Data Tier manages all database operations and data persistence. This tier in
 
 **Caption:** The complete 3-tier architecture diagram shows the overall system structure with Subsystem 1 (MM_Client), Subsystem 2 (MM_Logic), and Subsystem 3 (MM_DataStore).
 
-## 5.3 Design Patterns
-
-### 5.3.1 MVC Pattern
-
-The MVC pattern is implemented **only within Subsystem 1 (MM_Client)**. The pattern separates presentation logic from business logic:
-- **Model**: Represents data and business logic at the presentation level
-- **View**: Displays data to users
-- **Controller**: Handles user input and coordinates between Model and View
-
-## 5.4 Database Design
+## 5.3 Database Design
 
 The system uses a relational database with the following primary entities:
 - **Users**: User accounts and authentication information
@@ -323,7 +314,7 @@ The system uses a relational database with the following primary entities:
 - **Sessions**: User session management
 - **Access Control**: Access control permissions for CRUD operations
 
-## 5.5 Access Control
+## 5.4 Access Control
 
 The system implements access control through an access control table that manages permissions for Create, Read, Update, and Delete (CRUD) operations.
 
@@ -358,51 +349,42 @@ This chapter provides detailed design specifications for all system components, 
 
 #### MenuController
 - **Purpose**: Handles HTTP requests for menu browsing operations
-- **Key Methods**:
-  - `viewMenu(restaurantId)`: Retrieves and displays menu for a restaurant
-  - `searchRestaurants(query)`: Searches for restaurants by name
-  - `filterMenuItems(category)`: Filters menu items by category
 
 #### UserController
 - **Purpose**: Manages user authentication and registration
-- **Key Methods**:
-  - `login(email, password)`: Authenticates user and creates session
-  - `register(userData)`: Creates new user account
-  - `logout()`: Terminates user session
 
 ### 6.2.2 Business Logic Layer Classes
 
 #### MenuService
 - **Purpose**: Implements business logic for menu operations
-- **Key Methods**:
-  - `getMenuByRestaurantId(restaurantId)`: Retrieves menu with business rule validation
-  - `validateMenuData(menuData)`: Validates menu item data
-  - `applyMenuFilters(items, category)`: Applies category filters
 
 #### UserService
 - **Purpose**: Handles user authentication and management logic
-- **Key Methods**:
-  - `authenticateUser(email, password)`: Validates user credentials
-  - `createUser(userData)`: Creates new user with validation
-  - `hashPassword(password)`: Securely hashes passwords
 
 ### 6.2.3 Data Access Layer Classes
 
 #### MenuRepository
 - **Purpose**: Database operations for menu data
-- **Key Methods**:
-  - `findMenuByRestaurantId(restaurantId)`: Queries database for menu
-  - `saveMenu(menuData)`: Persists menu data
-  - `updateMenu(menuId, menuData)`: Updates existing menu
 
 #### UserRepository
 - **Purpose**: Database operations for user data
-- **Key Methods**:
-  - `findUserByEmail(email)`: Retrieves user by email
-  - `saveUser(userData)`: Persists new user
-  - `updateUser(userId, userData)`: Updates user information
 
-## 6.3 Sequence Diagrams
+## 6.3 Design Patterns
+
+The system incorporates the following design patterns:
+
+### 6.3.1 MVC Pattern
+
+The MVC (Model-View-Controller) pattern is implemented **only within Subsystem 1 (MM_Client)**. The pattern separates presentation logic from business logic:
+- **Model**: Represents data and business logic at the presentation level
+- **View**: Displays data to users
+- **Controller**: Handles user input and coordinates between Model and View
+
+### 6.3.2 Repository Pattern
+
+The Repository pattern is used in the Data Access Layer (MM_DataStore) to provide a consistent interface for data access operations, abstracting database implementation details.
+
+## 6.4 Sequence Diagrams
 
 The system uses sequence diagrams to illustrate interactions between components. Key interactions include:
 
@@ -410,13 +392,12 @@ The system uses sequence diagrams to illustrate interactions between components.
 2. **User Login Flow**: User → UserController → UserService → UserRepository → Database
 3. **User Registration Flow**: User → UserController → UserService → UserRepository → Database
 
-## 6.4 Detailed Class Design
+## 6.5 Detailed Class Design
 
 [This section should coordinate with Appendix D: Detailed Class Diagrams]
 
 The detailed class design includes:
 - Complete class definitions with attributes and methods
-- Relationships between classes (associations, inheritance)
 - Interface definitions
 - Data transfer objects (DTOs)
 
@@ -1053,7 +1034,7 @@ The MenuMap project demonstrates the successful application of software engineer
 
 ## Appendix D: Detailed Class Diagrams
 
-This appendix contains detailed UML class diagrams for the MenuMap system, organized by architectural layer. All diagrams follow the 3-tier architecture pattern and illustrate the relationships between classes, their attributes, and methods.
+This appendix contains detailed UML class diagrams for the MenuMap system, organized by architectural layer. All diagrams follow the 3-tier architecture pattern and illustrate classes, their attributes, and methods.
 
 ### D.1 Presentation Layer Class Diagram
 
