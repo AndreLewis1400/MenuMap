@@ -408,13 +408,13 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 - **Rainy Day Scenarios**: 24 test cases (error handling and edge cases)
 
 **Use Cases Tested:**
-- UC-001: Browse Restaurant Menus (8 test cases)
-- UC-002: [Restaurant Owner Menu Management] (3 test cases)
-- UC-003: [Menu Item Management] (3 test cases)
-- UC-004: User Registration (10 test cases)
-- UC-005: User Login (10 test cases)
-- UC-006: [Menu Verification] (3 test cases)
-- UC-007: [Restaurant Management] (3 test cases)
+- UC-001: Browse Restaurant Menus (8 test cases) - Completed by Andre
+- UC-002: Restaurant Owner Menu Management (3 test cases) - To be completed by Alexandra
+- UC-003: Secure Password Reset (3 test cases) - To be completed by Kamal
+- UC-004: User Registration (10 test cases) - To be completed by Kamal
+- UC-005: User Login (10 test cases) - Completed by Andre
+- UC-006: Menu Verification (3 test cases) - To be completed by Alexandra
+- UC-007: Restaurant Management (3 test cases) - To be completed by Alfonso
 
 ### 7.1.2 Test Criteria and Procedures
 
@@ -611,210 +611,71 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 
 #### UC-002: Restaurant Owner Menu Management
 
-**TC-002-01: Create Menu Item (Sunny Day)**
-- **Test Case ID**: SystemTest-019-UC002
-- **Purpose**: Verify restaurant owner can create menu items
-- **Test Setup**: Restaurant owner is logged in
-- **Test Input**: Owner enters menu item details
-- **Expected Output**: Menu item created successfully
-- **Result**: ✅ PASS
+**Note:** Test cases for UC-002 will be completed by Alexandra. This section will be updated with detailed test cases including database state tables, test setup, test input, and expected output following the CEN4010 format.
 
-**TC-002-02: Update Menu Item (Sunny Day)**
-- **Test Case ID**: SystemTest-020-UC002
-- **Purpose**: Verify restaurant owner can update menu items
-- **Test Setup**: Menu item exists
-- **Test Input**: Owner modifies menu item details
-- **Expected Output**: Menu item updated successfully
-- **Result**: ✅ PASS
+**Expected Test Cases:**
+- TC-002-01: Create Menu Item (Sunny Day)
+- TC-002-02: Update Menu Item (Sunny Day)
+- TC-002-03: Unauthorized Access (Rainy Day)
 
-**TC-002-03: Unauthorized Access (Rainy Day)**
-- **Test Case ID**: SystemTest-021-UC002
-- **Purpose**: Verify non-owners cannot modify menus
-- **Test Setup**: Regular user is logged in
-- **Test Input**: User attempts to modify menu
-- **Expected Output**: Access denied message
-- **Result**: ✅ PASS
+#### UC-003: Secure Password Reset
 
-#### UC-003: Menu Item Management
+**Note:** Test cases for UC-003 will be completed by Kamal. This section will be updated with detailed test cases including database state tables, test setup, test input, and expected output following the CEN4010 format.
 
-**TC-003-01: Delete Menu Item (Sunny Day)**
-- **Test Case ID**: SystemTest-022-UC003
-- **Purpose**: Verify restaurant owner can delete menu items
-- **Test Setup**: Menu item exists, owner is logged in
-- **Test Input**: Owner deletes menu item
-- **Expected Output**: Menu item removed successfully
-- **Result**: ✅ PASS
-
-**TC-003-02: Invalid Menu Item Data (Rainy Day)**
-- **Test Case ID**: SystemTest-023-UC003
-- **Purpose**: Verify system validates menu item data
-- **Test Setup**: Owner attempts to create menu item
-- **Test Input**: Owner enters invalid data (negative price)
-- **Expected Output**: Validation error displayed
-- **Result**: ✅ PASS
-
-**TC-003-03: Menu Item Not Found (Rainy Day)**
-- **Test Case ID**: SystemTest-024-UC003
-- **Purpose**: Verify system handles non-existent menu items
-- **Test Setup**: Menu item does not exist
-- **Test Input**: Owner attempts to update non-existent item
-- **Expected Output**: Error message displayed
-- **Result**: ✅ PASS
+**Expected Test Cases:**
+- TC-003-01: Successful Password Reset (Sunny Day)
+- TC-003-02: Expired Token (Rainy Day)
+- TC-003-03: Invalid Email (Rainy Day)
 
 #### UC-004: User Registration
 
-**TC-004-01: Successful Registration (Sunny Day)**
-- **Test Case ID**: SystemTest-025-UC004
-- **Purpose**: Verify new user can register successfully
-- **Test Setup**: Email is not registered
-- **Test Input**: User enters valid registration data
-- **Expected Output**: Account created, confirmation email sent
-- **Result**: ✅ PASS
+**Note:** Test cases for UC-004 will be completed by Kamal. This section will be updated with detailed test cases including database state tables, test setup, test input, and expected output following the CEN4010 format.
 
-**TC-004-02: Email Already Exists (Rainy Day)**
-- **Test Case ID**: SystemTest-026-UC004
-- **Purpose**: Verify system prevents duplicate emails
-- **Test Setup**: Email already exists in database
-- **Test Input**: User attempts to register with existing email
-- **Expected Output**: Error message displayed
-- **Result**: ✅ PASS
-
-**TC-004-03: Weak Password (Rainy Day)**
-- **Test Case ID**: SystemTest-027-UC004
-- **Purpose**: Verify system enforces password requirements
-- **Test Setup**: User is on registration page
-- **Test Input**: User enters weak password
-- **Expected Output**: Password requirements message
-- **Result**: ✅ PASS
-
-**TC-004-04: Password Mismatch (Rainy Day)**
-- **Test Case ID**: SystemTest-028-UC004
-- **Purpose**: Verify system validates password confirmation
-- **Test Setup**: User is on registration page
-- **Test Input**: Password and confirmation do not match
-- **Expected Output**: Mismatch error displayed
-- **Result**: ✅ PASS
-
-**TC-004-05: Invalid Email Format (Rainy Day)**
-- **Test Case ID**: SystemTest-029-UC004
-- **Purpose**: Verify system validates email format
-- **Test Setup**: User is on registration page
-- **Test Input**: User enters invalid email format
-- **Expected Output**: Email format error
-- **Result**: ✅ PASS
-
-**TC-004-06: Missing Required Fields (Rainy Day)**
-- **Test Case ID**: SystemTest-030-UC004
-- **Purpose**: Verify system validates required fields
-- **Test Setup**: User is on registration page
-- **Test Input**: User leaves required fields empty
-- **Expected Output**: Required field errors displayed
-- **Result**: ✅ PASS
-
-**TC-004-07: Database Error During Registration (Rainy Day)**
-- **Test Case ID**: SystemTest-031-UC004
-- **Purpose**: Verify system handles database errors
-- **Test Setup**: Database is experiencing issues
-- **Test Input**: User attempts to register
-- **Expected Output**: User-friendly error message
-- **Result**: ✅ PASS
-
-**TC-004-08: Registration Timeout (Rainy Day)**
-- **Test Case ID**: SystemTest-032-UC004
-- **Purpose**: Verify system handles timeout scenarios
-- **Test Setup**: Database is slow
-- **Test Input**: User attempts to register
-- **Expected Output**: Timeout message, user can retry
-- **Result**: ✅ PASS
-
-**TC-004-09: SQL Injection in Registration (Rainy Day)**
-- **Test Case ID**: SystemTest-033-UC004
-- **Purpose**: Verify system prevents SQL injection
-- **Test Setup**: User is on registration page
-- **Test Input**: User enters SQL injection in fields
-- **Expected Output**: Input sanitized, no SQL executed
-- **Result**: ✅ PASS
-
-**TC-004-10: Registration with All Optional Fields (Sunny Day)**
-- **Test Case ID**: SystemTest-034-UC004
-- **Purpose**: Verify system handles optional fields
-- **Test Setup**: User is on registration page
-- **Test Input**: User fills all optional fields
-- **Expected Output**: Registration successful with all data saved
-- **Result**: ✅ PASS
+**Expected Test Cases:**
+- TC-004-01: Successful Registration (Sunny Day)
+- TC-004-02 through TC-004-10: Various rainy day scenarios (email exists, weak password, invalid data, etc.)
 
 #### UC-006: Menu Verification
 
-**TC-006-01: Verify Menu (Sunny Day)**
-- **Test Case ID**: SystemTest-035-UC006
-- **Purpose**: Verify menu verification process
-- **Test Setup**: Menu exists and needs verification
-- **Test Input**: Verification process initiated
-- **Expected Output**: Menu verified successfully
-- **Result**: ✅ PASS
+**Note:** Test cases for UC-006 will be completed by Alexandra. This section will be updated with detailed test cases including database state tables, test setup, test input, and expected output following the CEN4010 format.
 
-**TC-006-02: Verification Failure (Rainy Day)**
-- **Test Case ID**: SystemTest-036-UC006
-- **Purpose**: Verify system handles verification failures
-- **Test Setup**: Menu fails verification criteria
-- **Test Input**: Verification process executed
-- **Expected Output**: Verification failure message with reasons
-- **Result**: ✅ PASS
-
-**TC-006-03: Unauthorized Verification (Rainy Day)**
-- **Test Case ID**: SystemTest-037-UC006
-- **Purpose**: Verify only authorized users can verify menus
-- **Test Setup**: Regular user attempts verification
-- **Test Input**: User attempts to verify menu
-- **Expected Output**: Access denied message
-- **Result**: ✅ PASS
+**Expected Test Cases:**
+- TC-006-01: Verify Menu (Sunny Day)
+- TC-006-02: Verification Failure (Rainy Day)
+- TC-006-03: Unauthorized Verification (Rainy Day)
 
 #### UC-007: Restaurant Management
 
-**TC-007-01: Create Restaurant (Sunny Day)**
-- **Test Case ID**: SystemTest-038-UC007
-- **Purpose**: Verify restaurant owner can create restaurant
-- **Test Setup**: Owner is logged in
-- **Test Input**: Owner enters restaurant details
-- **Expected Output**: Restaurant created successfully
-- **Result**: ✅ PASS
+**Note:** Test cases for UC-007 will be completed by Alfonso. This section will be updated with detailed test cases including database state tables, test setup, test input, and expected output following the CEN4010 format.
 
-**TC-007-02: Update Restaurant Information (Sunny Day)**
-- **Test Case ID**: SystemTest-039-UC007
-- **Purpose**: Verify restaurant owner can update restaurant info
-- **Test Setup**: Restaurant exists, owner is logged in
-- **Test Input**: Owner modifies restaurant details
-- **Expected Output**: Restaurant updated successfully
-- **Result**: ✅ PASS
-
-**TC-007-03: Invalid Restaurant Data (Rainy Day)**
-- **Test Case ID**: SystemTest-040-UC007
-- **Purpose**: Verify system validates restaurant data
-- **Test Setup**: Owner attempts to create restaurant
-- **Test Input**: Owner enters invalid data
-- **Expected Output**: Validation errors displayed
-- **Result**: ✅ PASS
+**Expected Test Cases:**
+- TC-007-01: Create Restaurant (Sunny Day)
+- TC-007-02: Update Restaurant Information (Sunny Day)
+- TC-007-03: Invalid Restaurant Data (Rainy Day)
 
 ## 7.2 Test Results Summary
 
-**Overall Test Results:**
-- **Total Test Cases**: 33
-- **Passed**: 33
+**Overall Test Results (Andre's Test Cases):**
+- **Total Test Cases Completed**: 18 (UC-001 and UC-005)
+- **Passed**: 18
 - **Failed**: 0
 - **Pass Rate**: 100%
 
+**Note:** Additional test cases for UC-002, UC-003, UC-004, UC-006, and UC-007 will be completed by team members and added to this summary.
+
 **Test Coverage by Use Case:**
-- UC-001: 8/8 tests passed (100%)
-- UC-002: 3/3 tests passed (100%)
-- UC-003: 3/3 tests passed (100%)
-- UC-004: 10/10 tests passed (100%)
-- UC-005: 10/10 tests passed (100%)
-- UC-006: 3/3 tests passed (100%)
-- UC-007: 3/3 tests passed (100%)
+- UC-001: 8/8 tests passed (100%) - Completed by Andre
+- UC-002: To be completed by Alexandra
+- UC-003: To be completed by Kamal
+- UC-004: To be completed by Kamal
+- UC-005: 10/10 tests passed (100%) - Completed by Andre
+- UC-006: To be completed by Alexandra
+- UC-007: To be completed by Alfonso
 
 **Test Coverage by Scenario Type:**
-- Sunny Day Scenarios: 9/9 passed (100%)
-- Rainy Day Scenarios: 24/24 passed (100%)
+- Sunny Day Scenarios: 2/2 passed (100%) - Andre's test cases
+- Rainy Day Scenarios: 16/16 passed (100%) - Andre's test cases
+- Additional test cases to be completed by team members
 
 ## 7.3 Test Execution Environment
 
