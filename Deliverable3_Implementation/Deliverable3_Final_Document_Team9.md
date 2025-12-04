@@ -113,61 +113,7 @@ The system follows **MVC (Model-View-Controller)** design patterns to ensure sep
 
 # Chapter 3: Project Plan
 
-## 3.1 Project Scope
-
-The MenuMap project scope includes the development of a complete web-based application for restaurant menu management and browsing. The system supports multiple user roles including restaurant owners and customers.
-
-## 3.2 Project Objectives
-
-1. Develop a functional menu management system
-2. Implement user authentication and authorization
-3. Create an intuitive user interface for menu browsing
-4. Ensure system reliability through comprehensive testing
-5. Document all system components and processes
-
-## 3.3 Project Timeline
-
-The project was executed over the Fall 2024 semester with the following major milestones:
-
-### Phase 1: Requirements and Design (Weeks 1-5)
-- **Deliverable 1**: Requirements and Design (Completed)
-  - Software Requirements Document (SRD) completed
-  - Use case documentation finalized
-  - Initial project planning and team coordination
-  - Presentation 1 delivered
-
-### Phase 2: Detailed Design (Weeks 6-10)
-- **Deliverable 2**: Detailed Design and UML Diagrams (Completed)
-  - 3-tier architecture design finalized
-  - UML diagrams created (Use Case, Class, Sequence, State Machine)
-  - Design patterns identified and documented
-  - Design Document completed
-
-### Phase 3: Implementation and Testing (Weeks 11-15)
-- **Deliverable 3**: Implementation and Testing (Current)
-  - System implementation completed
-  - Comprehensive testing (33 test cases)
-  - Final documentation prepared
-  - Presentation 3 prepared
-
-## 3.4 Resource Allocation
-
-Team members were assigned specific responsibilities:
-- **Andre Lewis (Team Lead)**: Overall project coordination, Chapters 5-6, UC-001 and UC-005 test cases
-- **Alexandra**: Chapter 3, Chapter 7, Appendix A, UC-002 and UC-006 test cases
-- **Alfonso**: Appendix D, UC-007 test cases
-- **Kamal**: UC-003 and UC-005 Registration test cases
-- **All Team**: Chapters 1, 2, 4, 8, 9, 10, Appendices B, C, G
-
-## 3.5 Risk Management
-
-Potential risks identified and mitigation strategies:
-- **Risk**: Team member availability and communication
-  - **Mitigation**: Regular team meetings, clear task assignments, documentation
-- **Risk**: Technical complexity
-  - **Mitigation**: Incremental development, thorough testing, code reviews
-- **Risk**: Timeline constraints
-  - **Mitigation**: Early start, prioritized features, efficient task distribution
+**Note:** This chapter is the responsibility of Alexandra. Content will be provided separately.
 
 ---
 
@@ -415,19 +361,18 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 2. **Error Handling Testing**: Validate system behavior under error conditions
 3. **Performance Testing**: Confirm system meets performance requirements
 
-**Test Coverage:**
-- **Total Test Cases**: 33 test cases across multiple use cases
-- **Sunny Day Scenarios**: 9 test cases (successful operations)
-- **Rainy Day Scenarios**: 24 test cases (error handling and edge cases)
+**Test Coverage (Andre's Test Cases):**
+- **Total Test Cases Completed**: 18 test cases (UC-001 and UC-005)
+- **Sunny Day Scenarios**: 2 test cases (successful operations)
+- **Rainy Day Scenarios**: 16 test cases (error handling and edge cases)
 
-**Use Cases Tested:**
+**Note:** Additional test cases for other use cases are the responsibility of other team members.
+
+**Use Cases Tested (Andre's Responsibilities):**
 - UC-001: Browse Restaurant Menus (8 test cases) - Completed by Andre
-- UC-002: Restaurant Owner Menu Management (3 test cases) - To be completed by Alexandra
-- UC-003: Secure Password Reset (3 test cases) - To be completed by Kamal
-- UC-004: User Registration (10 test cases) - To be completed by Kamal
 - UC-005: User Login (10 test cases) - Completed by Andre
-- UC-006: Menu Verification (3 test cases) - To be completed by Alexandra
-- UC-007: Restaurant Management (3 test cases) - To be completed by Alfonso
+
+**Note:** Test cases for UC-002, UC-003, UC-004, UC-006, and UC-007 are the responsibility of other team members and will be provided separately.
 
 ### 7.1.2 Test Criteria and Procedures
 
@@ -624,47 +569,23 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 
 #### UC-002: Restaurant Owner Menu Management
 
-**Note:** Test cases for UC-002 will be completed by Alexandra. This section will be updated with detailed test cases including database state tables, test setup, test input, and expected output following the CEN4010 format.
-
-**Expected Test Cases:**
-- TC-002-01: Create Menu Item (Sunny Day)
-- TC-002-02: Update Menu Item (Sunny Day)
-- TC-002-03: Unauthorized Access (Rainy Day)
+**Note:** Test cases for UC-002 are the responsibility of Alexandra. Content will be provided separately.
 
 #### UC-003: Secure Password Reset
 
-**Note:** Test cases for UC-003 will be completed by Kamal. This section will be updated with detailed test cases including database state tables, test setup, test input, and expected output following the CEN4010 format.
-
-**Expected Test Cases:**
-- TC-003-01: Successful Password Reset (Sunny Day)
-- TC-003-02: Expired Token (Rainy Day)
-- TC-003-03: Invalid Email (Rainy Day)
+**Note:** Test cases for UC-003 are the responsibility of Kamal. Content will be provided separately.
 
 #### UC-004: User Registration
 
-**Note:** Test cases for UC-004 will be completed by Kamal. This section will be updated with detailed test cases including database state tables, test setup, test input, and expected output following the CEN4010 format.
-
-**Expected Test Cases:**
-- TC-004-01: Successful Registration (Sunny Day)
-- TC-004-02 through TC-004-10: Various rainy day scenarios (email exists, weak password, invalid data, etc.)
+**Note:** Test cases for UC-004 are the responsibility of Kamal. Content will be provided separately.
 
 #### UC-006: Menu Verification
 
-**Note:** Test cases for UC-006 will be completed by Alexandra. This section will be updated with detailed test cases including database state tables, test setup, test input, and expected output following the CEN4010 format.
-
-**Expected Test Cases:**
-- TC-006-01: Verify Menu (Sunny Day)
-- TC-006-02: Verification Failure (Rainy Day)
-- TC-006-03: Unauthorized Verification (Rainy Day)
+**Note:** Test cases for UC-006 are the responsibility of Alexandra. Content will be provided separately.
 
 #### UC-007: Restaurant Management
 
-**Note:** Test cases for UC-007 will be completed by Alfonso. This section will be updated with detailed test cases including database state tables, test setup, test input, and expected output following the CEN4010 format.
-
-**Expected Test Cases:**
-- TC-007-01: Create Restaurant (Sunny Day)
-- TC-007-02: Update Restaurant Information (Sunny Day)
-- TC-007-03: Invalid Restaurant Data (Rainy Day)
+**Note:** Test cases for UC-007 are the responsibility of Alfonso. Content will be provided separately.
 
 ## 7.2 Test Results Summary
 
@@ -674,21 +595,15 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 - **Failed**: 0
 - **Pass Rate**: 100%
 
-**Note:** Additional test cases for UC-002, UC-003, UC-004, UC-006, and UC-007 will be completed by team members and added to this summary.
-
-**Test Coverage by Use Case:**
+**Test Coverage by Use Case (Andre's Responsibilities):**
 - UC-001: 8/8 tests passed (100%) - Completed by Andre
-- UC-002: To be completed by Alexandra
-- UC-003: To be completed by Kamal
-- UC-004: To be completed by Kamal
 - UC-005: 10/10 tests passed (100%) - Completed by Andre
-- UC-006: To be completed by Alexandra
-- UC-007: To be completed by Alfonso
 
-**Test Coverage by Scenario Type:**
-- Sunny Day Scenarios: 2/2 passed (100%) - Andre's test cases
-- Rainy Day Scenarios: 16/16 passed (100%) - Andre's test cases
-- Additional test cases to be completed by team members
+**Test Coverage by Scenario Type (Andre's Test Cases):**
+- Sunny Day Scenarios: 2/2 passed (100%)
+- Rainy Day Scenarios: 16/16 passed (100%)
+
+**Note:** Test results for UC-002, UC-003, UC-004, UC-006, and UC-007 are the responsibility of other team members and will be provided separately.
 
 ## 7.3 Test Execution Environment
 
@@ -836,79 +751,7 @@ The MenuMap project demonstrates the successful application of software engineer
 
 ## Appendix A: Project Schedule
 
-### Project Timeline
-
-| Phase | Start Date | End Date | Status | Deliverables |
-|-------|-----------|----------|--------|--------------|
-| Requirements Analysis | Week 1 | Week 3 | ✅ Completed | SRD, Use Cases, Presentation 1 |
-| System Design | Week 4 | Week 7 | ✅ Completed | Architecture Design |
-| Detailed Design | Week 8 | Week 10 | ✅ Completed | UML Diagrams, Design Document |
-| Implementation | Week 11 | Week 13 | ✅ Completed | System Implementation |
-| Testing | Week 13 | Week 14 | ✅ Completed | Test Cases, Test Results |
-| Documentation | Week 14 | Week 15 | ✅ Completed | Final Document, Presentation 3 |
-
-### Detailed Schedule
-
-#### Weeks 1-3: Requirements Phase
-- **Week 1**: Project kickoff, team formation, initial requirements gathering
-- **Week 2**: Use case development, requirements documentation
-- **Week 3**: Requirements review, Presentation 1 preparation, Deliverable 1 submission
-
-#### Weeks 4-7: Design Phase
-- **Week 4**: Architecture design, 3-tier architecture planning
-- **Week 5**: System design, component identification
-- **Week 6**: UML diagram creation (Use Case, Class diagrams)
-- **Week 7**: Sequence diagrams, design patterns identification
-
-#### Weeks 8-10: Detailed Design Phase
-- **Week 8**: Detailed class design, state machine diagrams
-- **Week 9**: Design document completion, diagram finalization
-- **Week 10**: Design review, Deliverable 2 submission
-
-#### Weeks 11-13: Implementation Phase
-- **Week 11**: Presentation layer implementation
-- **Week 12**: Business logic and data layer implementation
-- **Week 13**: Integration, initial testing
-
-#### Weeks 14-15: Testing and Documentation Phase
-- **Week 14**: Comprehensive testing, test case execution
-- **Week 15**: Final documentation, Presentation 3 preparation, Deliverable 3 submission
-
-### Milestones
-
-- **Milestone 1**: Requirements and Design Document (Deliverable 1) - ✅ Completed (Week 3)
-- **Milestone 2**: Detailed Design and UML Diagrams (Deliverable 2) - ✅ Completed (Week 10)
-- **Milestone 3**: Implementation and Testing (Deliverable 3) - ✅ Completed (Week 15)
-
-### Team Member Contributions
-
-- **Andre Lewis (Team Lead)**: 
-  - Overall project coordination and management
-  - Architecture design (Chapters 5-6)
-  - UC-001 and UC-005 test cases (18 test cases)
-  - Implementation oversight
-  - Final document integration
-
-- **Alexandra**: 
-  - Project planning (Chapter 3)
-  - Testing process documentation (Chapter 7)
-  - Project schedule (Appendix A)
-  - UC-002 and UC-006 test cases (6 test cases)
-
-- **Alfonso**: 
-  - Detailed class diagrams (Appendix D)
-  - UC-007 test cases (3 test cases)
-  - Restaurant management features
-
-- **Kamal**: 
-  - UC-003 test cases (3 test cases)
-  - UC-004 Registration test cases (10 test cases)
-  - Menu management features
-
-- **All Team Members**: 
-  - Collaborative work on Chapters 1, 2, 4, 8, 9, 10
-  - Appendices B, C, G
-  - Code reviews and quality assurance
+**Note:** This appendix is the responsibility of Alexandra. Content will be provided separately.
 
 ---
 
@@ -1034,98 +877,7 @@ The MenuMap project demonstrates the successful application of software engineer
 
 ## Appendix D: Detailed Class Diagrams
 
-This appendix contains detailed UML class diagrams for the MenuMap system, organized by architectural layer. All diagrams follow the 3-tier architecture pattern and illustrate classes, their attributes, and methods.
-
-### D.1 Presentation Layer Class Diagram
-
-**Figure D.1: Presentation Layer Class Diagram**
-
-[Insert diagram: `Package_MM_Client_MM_Client_Class_Dia.PNG`]
-
-**Caption:** The Presentation Layer Class Diagram shows the client-side components including Controllers and Views. This layer handles all user interface interactions and HTTP request/response processing.
-
-**Key Classes:**
-- **MenuController**: Handles menu browsing requests, search operations, and menu display
-  - Methods: `viewMenu(restaurantId)`, `searchRestaurants(query)`, `filterMenuItems(category)`
-- **UserController**: Manages user authentication, registration, and session handling
-  - Methods: `login(email, password)`, `register(userData)`, `logout()`, `getUserProfile()`
-- **RestaurantController**: Handles restaurant-related operations
-  - Methods: `getRestaurantDetails(id)`, `updateRestaurantInfo(data)`, `getRestaurantList()`
-
-**Design Patterns Used:**
-- **MVC Pattern**: Controllers separate business logic from presentation
-- **Front Controller Pattern**: Centralized request handling
-
-### D.2 Business Logic Layer Class Diagram
-
-**Figure D.2: Business Logic Layer Class Diagram**
-
-[Insert diagram: `Package_MM_Logic_MM_Logic_Class_Dia.PNG`]
-
-**Caption:** The Business Logic Layer Class Diagram illustrates service classes that implement core business rules, validation, and processing logic.
-
-**Key Classes:**
-- **MenuService**: Implements menu-related business logic
-  - Methods: `getMenuByRestaurantId(restaurantId)`, `validateMenuData(menuData)`, `applyMenuFilters(items, category)`
-- **UserService**: Handles user authentication and management logic
-  - Methods: `authenticateUser(email, password)`, `createUser(userData)`, `hashPassword(password)`, `validateUserInput(data)`
-- **RestaurantService**: Manages restaurant business logic
-  - Methods: `getRestaurantById(id)`, `validateRestaurantData(data)`, `processRestaurantUpdate(data)`
-- **VerificationService**: Handles menu verification processes
-  - Methods: `verifyMenu(menuId)`, `checkMenuAccuracy(data)`, `flagInconsistencies(menuData)`
-
-**Design Patterns Used:**
-- **Service Layer Pattern**: Encapsulates business logic
-- **Strategy Pattern**: Different validation strategies for different data types
-
-### D.3 Data Access Layer Class Diagram
-
-**Figure D.3: Data Access Layer Class Diagram**
-
-[Insert diagram: `Package_MM_DataStore_MM_Data_Store_Dia.PNG`]
-
-**Caption:** The Data Access Layer Class Diagram shows repositories and data models that manage database operations and data persistence.
-
-**Key Classes:**
-- **MenuRepository**: Database operations for menu data
-  - Methods: `findMenuByRestaurantId(restaurantId)`, `saveMenu(menuData)`, `updateMenu(menuId, menuData)`, `deleteMenu(menuId)`
-- **UserRepository**: Database operations for user data
-  - Methods: `findUserByEmail(email)`, `findUserById(userId)`, `saveUser(userData)`, `updateUser(userId, userData)`
-- **RestaurantRepository**: Database operations for restaurant data
-  - Methods: `findRestaurantById(id)`, `findRestaurantsByName(name)`, `saveRestaurant(data)`, `updateRestaurant(id, data)`
-
-**Data Models:**
-- **User**: Represents user entity with attributes (userId, email, password, firstName, lastName, accountStatus, emailVerified)
-- **Restaurant**: Represents restaurant entity with attributes (restaurantId, name, address, phone, status, ownerUserId)
-- **MenuItem**: Represents menu item entity with attributes (menuItemId, restaurantId, itemName, description, price, category, available)
-- **Session**: Represents user session with attributes (sessionId, userId, startTime, expiryTime, active)
-
-**Design Patterns Used:**
-- **Repository Pattern**: Encapsulates data access logic
-
-### D.4 Complete System Architecture Diagram
-
-**Figure D.4: 3-Tier Architecture Diagram**
-
-[Insert diagram: `Model_Static_Menu_Map_3_Tier.PNG` or `Model_Static_Model_Static_Menu_Map_3_Tier.PNG`]
-
-**Caption:** The complete 3-tier architecture diagram shows the overall system structure, illustrating how the Presentation, Business Logic, and Data tiers interact.
-
-**Architecture Layers:**
-1. **Presentation Tier (MM_Client)**: User interface and interaction layer
-2. **Business Logic Tier (MM_Logic)**: Core business rules and processing layer
-3. **Data Tier (MM_DataStore)**: Data persistence and access layer
-
-**Key Relationships:**
-- Controllers in Presentation Tier use Services from Business Logic Tier
-- Services in Business Logic Tier use Repositories from Data Tier
-- Repositories in Data Tier interact with Database
-- Data Models represent entities across all tiers
-
-**Architectural Patterns:**
-- **3-Tier Architecture**: Clear separation of concerns across three distinct layers
-- **Layered Architecture**: Each layer depends only on the layer below it
-- **MVC Pattern**: Model-View-Controller separation within Presentation Tier
+**Note:** This appendix is the responsibility of Alfonso. Content will be provided separately.
 
 ---
 
