@@ -16,21 +16,9 @@
 - Kamal
 
 **Roles for Three Phases:**
-- **Deliverable 1 (Requirements)**: 
-  - Andre: Project coordination, SRD oversight
-  - Alexandra: Requirements gathering, use case development
-  - Kamal: Use cases UC-003, UC-004
-  - Alfonso: Use case UC-007
-- **Deliverable 2 (Design)**: 
-  - Andre: Architecture design, design coordination
-  - Alexandra: Design documentation, design patterns
-  - Kamal: Sequence diagrams UC-003, UC-004
-  - Alfonso: All UML diagrams (Use Case, Class, Sequence, State Machine)
-- **Deliverable 3 (Implementation)**: 
-  - Andre: Chapters 5-6, UC-001 & UC-005 test cases
-  - Alexandra: Chapter 3, Chapter 7, Appendix A, UC-002 & UC-006 test cases
-  - Kamal: UC-003 & UC-004 test cases
-  - Alfonso: Appendix D, UC-007 test cases
+- **D1 (Requirements)**: Andre (Coord), Alexandra (Requirements), Kamal (UC-003/004), Alfonso (UC-007)
+- **D2 (Design)**: Andre (Architecture), Alexandra (Design Docs), Kamal (Seq Diagrams), Alfonso (All UML Diagrams)
+- **D3 (Implementation)**: Andre (Ch. 5-6, Tests), Alexandra (Ch. 3/7, Tests), Kamal (Tests), Alfonso (App. D, Tests)
 
 **CEN 4010 - Software Engineering**
 **Florida International University**
