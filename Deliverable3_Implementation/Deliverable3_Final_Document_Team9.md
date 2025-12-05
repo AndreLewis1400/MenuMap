@@ -184,9 +184,13 @@ The system implements the following primary use cases:
 
 # Chapter 5: Software Architecture
 
-## 5.1 Architectural Overview
+This chapter describes the software architecture of the MenuMap system. The architecture is designed to support a scalable, maintainable, and secure platform for restaurant menu browsing and management. The system follows a layered architecture pattern with clear separation of concerns, enabling independent development, testing, and deployment of components. The architectural decisions presented here reflect the implementation of the system and address the requirements outlined in Chapter 4.
+
+## 5.1 Overview
 
 MenuMap is designed using a **3-tier architecture** that separates concerns into distinct layers. The system is decomposed into three major subsystems: **Subsystem 1 (MM_Client - Presentation Tier)**, **Subsystem 2 (MM_Logic - Business Logic Tier)**, and **Subsystem 3 (MM_DataStore - Data Tier)**.
+
+The 3-tier architecture provides clear separation between user interface components, business logic, and data persistence. This design ensures that the system can handle the expected load, maintain data integrity, and provide a secure environment for users and restaurant owners. Each tier has distinct responsibilities and communicates with adjacent tiers through well-defined interfaces.
 
 ## 5.2 Architecture Layers
 
