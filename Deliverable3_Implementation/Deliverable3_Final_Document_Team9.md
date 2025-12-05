@@ -9,11 +9,51 @@
 
 **Document Owner: Andre Lewis (Team Lead / Group Lead)**
 
-**Andre's Responsibilities as Group Lead:**
-- **Primary Content**: Chapters 5 and 6 (Software Architecture and Detailed Design)
-- **Test Cases**: UC-001 (Browse Restaurant Menus) - 8 test cases, UC-005 (User Login) - 10 test cases (18 total)
-- **Overall Coordination**: Project coordination, team management, and final document integration
-- **Document Structure**: Maintains complete document structure with placeholders for team members' sections
+---
+
+## ✅ **Andre's Completed Responsibilities as Group Lead**
+
+### **Primary Content (Chapters)**
+
+#### **Chapter 5: Software Architecture** ✅ COMPLETE
+- **Section 5.1**: Architectural Overview
+- **Section 5.2**: Architecture Layers (3 subsystems)
+  - Subsystem 1: Presentation Tier (MM_Client) with MVC pattern
+  - Subsystem 2: Business Logic Tier (MM_Logic)
+  - Subsystem 3: Data Tier (MM_DataStore)
+- **Section 5.3**: Database Design
+- **Section 5.4**: Access Control (CRUD permissions table)
+- **Diagrams**: 4 placeholders ready (Figures 5.1-5.4)
+
+#### **Chapter 6: Detailed Design** ✅ COMPLETE
+- **Section 6.1**: System Design Overview
+- **Section 6.2**: Class Design (all three layers)
+- **Section 6.3**: Design Patterns (MVC and Repository)
+- **Section 6.4**: Sequence Diagrams (UC-001 and UC-005 with message flows)
+- **Section 6.5**: Detailed Class Design
+- **Diagrams**: 2 sequence diagram placeholders (Figures 6.1-6.2)
+
+### **Test Cases (Chapter 7)**
+
+#### **UC-001: Browse Restaurant Menus** ✅ COMPLETE
+- **8 Test Cases**: TC-001-01 through TC-001-08
+- **Sunny Day Scenarios**: 2 test cases (successful operations)
+- **Rainy Day Scenarios**: 6 test cases (error handling and edge cases)
+
+#### **UC-005: User Login** ✅ COMPLETE
+- **10 Test Cases**: TC-005-01 through TC-005-10
+- **Sunny Day Scenarios**: 2 test cases (successful login)
+- **Rainy Day Scenarios**: 8 test cases (error handling and security)
+
+**Total Test Cases Completed: 18 test cases**
+
+### **Additional Responsibilities** ✅ COMPLETE
+- **Project Coordination**: Overall project coordination and team management
+- **Final Document Integration**: Maintains complete document structure
+- **Document Structure Maintenance**: Ensures all sections are properly organized
+- **Team Management**: Coordinates with team members for their sections
+
+---
 
 **Note:** This document shows the complete structure with Andre's sections complete. Other team members' sections (Chapter 3, Chapter 7 test cases for UC-002, UC-003, UC-004, UC-006, UC-007, Appendix A, Appendix D) are marked as placeholders and will be integrated by the group lead during final document compilation.
 
