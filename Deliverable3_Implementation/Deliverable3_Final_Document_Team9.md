@@ -232,84 +232,7 @@ MenuMap is designed using a **3-tier architecture** that separates concerns into
 
 The 3-tier architecture provides clear separation between user interface components, business logic, and data persistence. This design ensures that the system can handle the expected load, maintain data integrity, and provide a secure environment for users and restaurant owners. Each tier has distinct responsibilities and communicates with adjacent tiers through well-defined interfaces.
 
-## 5.2 Subsystem Decomposition
-
-The MenuMap system is decomposed into three major subsystems, each corresponding to a tier in the 3-tier architecture. Each subsystem has distinct responsibilities and communicates with other subsystems through well-defined interfaces.
-
-### 5.2.1 Subsystem 1: Presentation Tier (MM_Client)
-
-**Subsystem 1 is the client** and is responsible for user interface and user interaction handling. This subsystem implements the **Model-View-Controller (MVC) pattern** within the client layer.
-
-**MVC Pattern Implementation in Subsystem 1:**
-
-The MVC pattern is implemented exclusively within Subsystem 1 (MM_Client):
-
-- **Model**: Represents data and business logic at the presentation level. The Model in the client handles data representation and coordinates with the Business Logic Tier.
-- **View**: Displays data to users. Views include web pages, forms, and interactive UI components such as:
-  - LoginForm
-  - Dashboard
-  - MenuBrowser
-  - UserProfile
-  - RestaurantOwnerPanel
-- **Controller**: Handles user input and coordinates between Model and View. Controllers process HTTP requests and responses, including:
-- `MenuController`: Handles menu browsing requests
-- `UserController`: Manages authentication and user management
-- `RestaurantController`: Handles restaurant-related operations
-
-**Key Components:**
-- **Controllers**: Handle HTTP requests and responses, coordinate with business logic layer
-- **Views**: Render user interface components
-- **Client-side validation**: Immediate feedback for user inputs
-
-**Figure 5.1: Presentation Layer Class Diagram**
-
-[Insert diagram: `Package_MM_Client_MM_Client_Class_Dia.PNG`]
-
-**Caption:** The Presentation Layer Class Diagram shows the client-side components including Controllers and Views implementing the MVC pattern within Subsystem 1.
-
-### 5.2.2 Subsystem 2: Business Logic Tier (MM_Logic)
-
-The Business Logic Tier contains the core business rules and validation logic. This tier:
-- Implements business rules and validation
-- Processes data before storage or retrieval
-- Coordinates between presentation and data tiers
-
-**Key Components:**
-- `MenuService`: Business logic for menu operations
-- `UserService`: Authentication and user management logic
-- `RestaurantService`: Restaurant management logic
-- `VerificationService`: Menu verification processes
-
-**Figure 5.2: Business Logic Layer Class Diagram**
-
-[Insert diagram: `Package_MM_Logic_MM_Logic_Class_Dia.PNG`]
-
-**Caption:** The Business Logic Layer Class Diagram illustrates service classes that implement core business rules, validation, and processing logic.
-
-### 5.2.3 Subsystem 3: Data Tier (MM_DataStore)
-
-The Data Tier manages all database operations and data persistence. This tier includes:
-- **Repositories**: Encapsulate database operations
-- **Database**: Stores all system data
-
-**Key Components:**
-- `MenuRepository`: Database operations for menus
-- `UserRepository`: Database operations for users
-- `RestaurantRepository`: Database operations for restaurants
-
-**Figure 5.3: Data Access Layer Class Diagram**
-
-[Insert diagram: `Package_MM_DataStore_MM_Data_Store_Dia.PNG`]
-
-**Caption:** The Data Access Layer Class Diagram shows repositories and data models that manage database operations and data persistence.
-
-**Figure 5.4: 3-Tier Architecture Diagram**
-
-[Insert diagram: `Model_Static_Menu_Map_3_Tier.PNG` or `Model_Static_Model_Static_Menu_Map_3_Tier.PNG`]
-
-**Caption:** The complete 3-tier architecture diagram shows the overall system structure with Subsystem 1 (MM_Client), Subsystem 2 (MM_Logic), and Subsystem 3 (MM_DataStore).
-
-## 5.3 Hardware and Software Mapping
+## 5.2 Hardware and Software Mapping
 
 The MenuMap system is deployed as a web-based application using modern web technologies. The system follows a traditional web application deployment model with clear separation between client and server components.
 
@@ -370,6 +293,83 @@ The MenuMap system is deployed as a web-based application using modern web techn
 - Relational database (MySQL/PostgreSQL)
 - Runs on database server
 - Stores all persistent data
+
+## 5.3 Subsystem Decomposition
+
+The MenuMap system is decomposed into three major subsystems, each corresponding to a tier in the 3-tier architecture. Each subsystem has distinct responsibilities and communicates with other subsystems through well-defined interfaces.
+
+### 5.3.1 Subsystem 1: Presentation Tier (MM_Client)
+
+**Subsystem 1 is the client** and is responsible for user interface and user interaction handling. This subsystem implements the **Model-View-Controller (MVC) pattern** within the client layer.
+
+**MVC Pattern Implementation in Subsystem 1:**
+
+The MVC pattern is implemented exclusively within Subsystem 1 (MM_Client):
+
+- **Model**: Represents data and business logic at the presentation level. The Model in the client handles data representation and coordinates with the Business Logic Tier.
+- **View**: Displays data to users. Views include web pages, forms, and interactive UI components such as:
+  - LoginForm
+  - Dashboard
+  - MenuBrowser
+  - UserProfile
+  - RestaurantOwnerPanel
+- **Controller**: Handles user input and coordinates between Model and View. Controllers process HTTP requests and responses, including:
+- `MenuController`: Handles menu browsing requests
+- `UserController`: Manages authentication and user management
+- `RestaurantController`: Handles restaurant-related operations
+
+**Key Components:**
+- **Controllers**: Handle HTTP requests and responses, coordinate with business logic layer
+- **Views**: Render user interface components
+- **Client-side validation**: Immediate feedback for user inputs
+
+**Figure 5.1: Presentation Layer Class Diagram**
+
+[Insert diagram: `Package_MM_Client_MM_Client_Class_Dia.PNG`]
+
+**Caption:** The Presentation Layer Class Diagram shows the client-side components including Controllers and Views implementing the MVC pattern within Subsystem 1.
+
+### 5.3.2 Subsystem 2: Business Logic Tier (MM_Logic)
+
+The Business Logic Tier contains the core business rules and validation logic. This tier:
+- Implements business rules and validation
+- Processes data before storage or retrieval
+- Coordinates between presentation and data tiers
+
+**Key Components:**
+- `MenuService`: Business logic for menu operations
+- `UserService`: Authentication and user management logic
+- `RestaurantService`: Restaurant management logic
+- `VerificationService`: Menu verification processes
+
+**Figure 5.2: Business Logic Layer Class Diagram**
+
+[Insert diagram: `Package_MM_Logic_MM_Logic_Class_Dia.PNG`]
+
+**Caption:** The Business Logic Layer Class Diagram illustrates service classes that implement core business rules, validation, and processing logic.
+
+### 5.3.3 Subsystem 3: Data Tier (MM_DataStore)
+
+The Data Tier manages all database operations and data persistence. This tier includes:
+- **Repositories**: Encapsulate database operations
+- **Database**: Stores all system data
+
+**Key Components:**
+- `MenuRepository`: Database operations for menus
+- `UserRepository`: Database operations for users
+- `RestaurantRepository`: Database operations for restaurants
+
+**Figure 5.3: Data Access Layer Class Diagram**
+
+[Insert diagram: `Package_MM_DataStore_MM_Data_Store_Dia.PNG`]
+
+**Caption:** The Data Access Layer Class Diagram shows repositories and data models that manage database operations and data persistence.
+
+**Figure 5.4: 3-Tier Architecture Diagram**
+
+[Insert diagram: `Model_Static_Menu_Map_3_Tier.PNG` or `Model_Static_Model_Static_Menu_Map_3_Tier.PNG`]
+
+**Caption:** The complete 3-tier architecture diagram shows the overall system structure with Subsystem 1 (MM_Client), Subsystem 2 (MM_Logic), and Subsystem 3 (MM_DataStore).
 
 ## 5.4 Persistent Data Management
 
