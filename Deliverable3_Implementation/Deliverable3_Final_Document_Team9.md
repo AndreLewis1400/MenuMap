@@ -206,9 +206,9 @@ The MVC pattern is implemented exclusively within Subsystem 1 (MM_Client):
   - UserProfile
   - RestaurantOwnerPanel
 - **Controller**: Handles user input and coordinates between Model and View. Controllers process HTTP requests and responses, including:
-  - `MenuController`: Handles menu browsing requests
-  - `UserController`: Manages authentication and user management
-  - `RestaurantController`: Handles restaurant-related operations
+- `MenuController`: Handles menu browsing requests
+- `UserController`: Manages authentication and user management
+- `RestaurantController`: Handles restaurant-related operations
 
 **Key Components:**
 - **Controllers**: Handle HTTP requests and responses, coordinate with business logic layer
@@ -349,6 +349,58 @@ The system uses sequence diagrams to illustrate interactions between components.
 1. **Menu Browsing Flow**: User → MenuController → MenuService → MenuRepository → Database
 2. **User Login Flow**: User → UserController → UserService → UserRepository → Database
 3. **User Registration Flow**: User → UserController → UserService → UserRepository → Database
+
+### UC-001: Browse Restaurant Menus
+
+**Figure 6.1: UC-001 Sequence Diagram**
+
+[Insert diagram: `UC-001-Browse_Restaurant_Menus_Sequence.PNG`]
+
+**Caption:** Sequence Diagram for UC-001: Browse Restaurant Menus showing interaction between User, MenuController, MenuService, MenuRepository, and Database.
+
+**Lifelines:**
+- User (Actor)
+- MenuController (Presentation Layer)
+- MenuService (Business Logic Layer)
+- MenuRepository (Data Access Layer)
+- Database (External System)
+
+**Message Flow:**
+1. User → MenuController: viewMenu(restaurantId)
+2. MenuController → MenuService: getMenuByRestaurantId(restaurantId)
+3. MenuService → MenuRepository: findMenuByRestaurantId(restaurantId)
+4. MenuRepository → Database: SELECT query
+5. Database → MenuRepository: ResultSet
+6. MenuRepository → MenuService: Menu entity
+7. MenuService → MenuController: MenuDTO
+8. MenuController → User: displayMenu(menuData)
+
+### UC-005: User Login
+
+**Figure 6.2: UC-005 Sequence Diagram**
+
+[Insert diagram: `UC-005-User_Login.PNG`]
+
+**Caption:** Sequence Diagram for UC-005: User Login showing authentication flow through all three tiers.
+
+**Lifelines:**
+- User (Actor)
+- UserController (Presentation Layer)
+- UserService (Business Logic Layer)
+- UserRepository (Data Access Layer)
+- Database (External System)
+
+**Message Flow:**
+1. User → UserController: login(email, password)
+2. UserController → UserService: authenticateUser(email, password)
+3. UserService → UserRepository: findUserByEmail(email)
+4. UserRepository → Database: SELECT query
+5. Database → UserRepository: User entity
+6. UserRepository → UserService: User entity
+7. UserService → UserService: validatePassword(password, hashedPassword)
+8. UserService → UserService: createSession(userId)
+9. UserService → UserController: SessionDTO
+10. UserController → User: redirectToDashboard()
 
 ## 6.5 Detailed Class Design
 
