@@ -232,7 +232,9 @@ MenuMap is designed using a **3-tier architecture** that separates concerns into
 
 The 3-tier architecture provides clear separation between user interface components, business logic, and data persistence. This design ensures that the system can handle the expected load, maintain data integrity, and provide a secure environment for users and restaurant owners. Each tier has distinct responsibilities and communicates with adjacent tiers through well-defined interfaces.
 
-## 5.2 Architecture Layers
+## 5.2 Subsystem Decomposition
+
+The MenuMap system is decomposed into three major subsystems, each corresponding to a tier in the 3-tier architecture. Each subsystem has distinct responsibilities and communicates with other subsystems through well-defined interfaces.
 
 ### 5.2.1 Subsystem 1: Presentation Tier (MM_Client)
 
@@ -307,7 +309,73 @@ The Data Tier manages all database operations and data persistence. This tier in
 
 **Caption:** The complete 3-tier architecture diagram shows the overall system structure with Subsystem 1 (MM_Client), Subsystem 2 (MM_Logic), and Subsystem 3 (MM_DataStore).
 
-## 5.3 Database Design
+## 5.3 Hardware and Software Mapping
+
+The MenuMap system is deployed as a web-based application using modern web technologies. The system follows a traditional web application deployment model with clear separation between client and server components.
+
+### Hardware Infrastructure
+
+**Web Server:**
+- Application server hosting the web application
+- Handles HTTP requests and responses
+- Manages application lifecycle
+
+**Database Server:**
+- Relational database management system (PostgreSQL or MySQL)
+- Stores all persistent data
+- Handles data queries and transactions
+
+**Client Devices:**
+- Web browsers (Chrome, Firefox, Safari, Edge)
+- Desktop and mobile devices
+- Responsive design for various screen sizes
+
+### Software Technology Stack
+
+**Frontend Technologies:**
+- HTML5: Structure and content
+- CSS3: Styling and layout
+- JavaScript: Client-side interactivity
+- Web Framework: React, Angular, or Vue.js (if applicable)
+
+**Backend Technologies:**
+- Node.js/Express.js or Java: Primary programming language
+- Web Framework: Spring Boot, Java EE, or Express.js
+- Application Server: Tomcat, Jetty, or Node.js server
+- Build Tool: Maven, Gradle, or npm
+
+**Database Technologies:**
+- Primary Database: MySQL 8.0+ or PostgreSQL 12+
+- Connection Pooling: HikariCP or similar
+- ORM: Hibernate, JPA, or Sequelize
+
+### Software Component Mapping
+
+**Presentation Layer (MM_Client):**
+- Deployed as web application on application server
+- Serves HTML, CSS, JavaScript to client browsers
+- Handles user interface rendering and interactions
+
+**Business Logic Layer (MM_Logic):**
+- Service classes and controllers
+- Deployed on application server
+- Processes business logic and coordinates operations
+
+**Data Access Layer (MM_DataStore):**
+- Repositories and data access objects
+- Deployed on application server
+- Connects to database server for data operations
+
+**Database:**
+- Relational database (MySQL/PostgreSQL)
+- Runs on database server
+- Stores all persistent data
+
+## 5.4 Persistent Data Management
+
+The MenuMap system uses a **relational database** (PostgreSQL or MySQL) as the primary database for persistent data storage.
+
+### Database Design
 
 The system uses a relational database (PostgreSQL or MySQL) with the following primary entities:
 
@@ -336,7 +404,49 @@ The system uses a relational database (PostgreSQL or MySQL) with the following p
   - Defines role-based permissions
   - Manages resource-level access control
 
-## 5.4 Access Control
+### Data Access Patterns
+
+**Repository Pattern:**
+- Consistent interface for data access operations
+- Abstracts database implementation details
+- Provides clean API for business logic layer
+
+**Connection Pooling:**
+- Efficient connection management
+- Reuses database connections
+- Improves performance and resource utilization
+
+**Transaction Management:**
+- Ensures data consistency across operations
+- ACID properties for critical operations
+- Rollback capability for error handling
+
+### Data Storage Strategy
+
+**Storage Architecture:**
+- Primary Storage: Relational database with automated backups
+- Indexing: Database indexes for efficient queries
+- Normalization: Normalized database design to reduce redundancy
+
+**Data Backup and Recovery:**
+- Automated daily backups
+- Backup retention policy
+- Point-in-time recovery capability
+- Backup encryption
+
+**Data Integrity:**
+- Foreign key constraints
+- Check constraints for data validation
+- Unique constraints for data uniqueness
+- Referential integrity enforcement
+
+## 5.5 Access Control and Security Management
+
+The MenuMap system implements comprehensive security measures to protect user data, ensure system integrity, and prevent unauthorized access.
+
+### Access Control
+
+The system implements access control through an access control table that manages permissions for Create, Read, Update, and Delete (CRUD) operations.
 
 The system implements access control through an access control table that manages permissions for Create, Read, Update, and Delete (CRUD) operations.
 
@@ -357,13 +467,42 @@ The system implements access control through an access control table that manage
 | Menu Verification | Restaurant Owner | No | No | No | No |
 | Menu Verification | Administrator | Yes | Yes | Yes | Yes |
 
+### Security Management
+
+**Authentication & Authorization:**
+- User Authentication: Email/password authentication with secure password hashing
+- Session Management: Secure session tokens with expiration
+- Role-Based Access Control (RBAC): Different roles (Customer, Restaurant Owner, Administrator) with appropriate permissions
+- Password Security: BCrypt hashing with appropriate rounds, password complexity requirements
+
+**Data Protection:**
+- Encryption at Rest: Database encryption for sensitive data
+- Encryption in Transit: HTTPS/TLS for all web traffic
+- Password Hashing: One-way hashing (BCrypt) for passwords
+- Sensitive Data: Encrypted storage for sensitive information
+
+**Threat Detection & Prevention:**
+- Input Validation: All user inputs validated and sanitized
+- SQL Injection Prevention: Parameterized queries, no string concatenation
+- XSS Protection: Input sanitization and output encoding
+- CSRF Protection: Token-based protection for state-changing operations
+- Rate Limiting: Prevents brute force attacks
+
+**Security Monitoring:**
+- Audit Logging: Comprehensive logging of security events
+- Failed Login Tracking: Monitors and logs failed login attempts
+- Account Lockout: Automatic account lockout after multiple failed attempts
+- Security Alerts: Notifications for suspicious activities
+
 ---
 
 # Chapter 6: Detailed Design
 
-## 6.1 System Design Overview
+This chapter provides the detailed design of the MenuMap system, describing the internal structure, class relationships, object interactions, and design patterns. The detailed design builds upon the software architecture described in Chapter 5 and provides the implementation-level specifications needed for development and testing.
 
-This chapter provides detailed design specifications for all system components, including class structures, interfaces, and interaction patterns.
+## 6.1 Overview
+
+The MenuMap system is organized into three primary packages corresponding to the three-tier architecture: **MM_Client**, **MM_Logic**, and **MM_DataStore**. Each package contains classes that handle specific responsibilities within their respective tiers. The design follows the three-tier architecture with clear separation of concerns, ensuring that all components work together cohesively to fulfill the system requirements outlined in Chapter 4.
 
 ## 6.2 Class Design
 
@@ -391,22 +530,7 @@ This chapter provides detailed design specifications for all system components, 
 #### UserRepository
 - **Purpose**: Database operations for user data
 
-## 6.3 Design Patterns
-
-The system incorporates the following design patterns:
-
-### 6.3.1 MVC Pattern
-
-The MVC (Model-View-Controller) pattern is implemented **only within Subsystem 1 (MM_Client)**. The pattern separates presentation logic from business logic:
-- **Model**: Represents data and business logic at the presentation level
-- **View**: Displays data to users
-- **Controller**: Handles user input and coordinates between Model and View
-
-### 6.3.2 Repository Pattern
-
-The Repository pattern is used in the Data Access Layer (MM_DataStore) to provide a consistent interface for data access operations, abstracting database implementation details.
-
-## 6.4 Sequence Diagrams
+## 6.3 Object Interaction (Sequence Diagrams)
 
 The system uses sequence diagrams to illustrate interactions between components. Key interactions include:
 
@@ -466,7 +590,7 @@ The system uses sequence diagrams to illustrate interactions between components.
 9. UserService → UserController: SessionDTO
 10. UserController → User: redirectToDashboard()
 
-## 6.5 Detailed Class Design
+## 6.4 Detailed Class Design
 
 This section provides an overview of the detailed class design. Complete class diagrams with all attributes, methods, and relationships are provided in Appendix D: Detailed Class Diagrams.
 
