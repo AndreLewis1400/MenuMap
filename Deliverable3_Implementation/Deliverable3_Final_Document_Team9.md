@@ -265,12 +265,32 @@ The Data Tier manages all database operations and data persistence. This tier in
 
 ## 5.3 Database Design
 
-The system uses a relational database with the following primary entities:
+The system uses a relational database (PostgreSQL or MySQL) with the following primary entities:
+
+### Primary Database Entities
+
 - **Users**: User accounts and authentication information
+  - Stores user credentials, profile data, and account status
+  - Includes email verification status and account lock status
+  
 - **Restaurants**: Restaurant information and details
+  - Contains restaurant name, address, contact information
+  - Links to owner user accounts
+  - Tracks restaurant status (Active/Inactive)
+  
 - **Menu Items**: Individual menu items with descriptions and prices
+  - Associated with specific restaurants
+  - Includes category classification and availability status
+  - Contains pricing and description information
+  
 - **Sessions**: User session management
+  - Tracks active user sessions
+  - Manages session tokens and expiration times
+  - Ensures secure session handling
+  
 - **Access Control**: Access control permissions for CRUD operations
+  - Defines role-based permissions
+  - Manages resource-level access control
 
 ## 5.4 Access Control
 
@@ -404,12 +424,34 @@ The system uses sequence diagrams to illustrate interactions between components.
 
 ## 6.5 Detailed Class Design
 
-[This section should coordinate with Appendix D: Detailed Class Diagrams]
+This section provides an overview of the detailed class design. Complete class diagrams with all attributes, methods, and relationships are provided in Appendix D: Detailed Class Diagrams.
 
-The detailed class design includes:
-- Complete class definitions with attributes and methods
-- Interface definitions
-- Data transfer objects (DTOs)
+### Presentation Layer Classes (MM_Client)
+
+The Presentation Layer classes handle user interface interactions and HTTP request/response processing:
+
+- **MenuController**: Coordinates menu browsing operations, processes user search requests, and manages menu display
+- **UserController**: Handles authentication requests, manages user sessions, and processes registration
+- **RestaurantController**: Manages restaurant-related operations and information display
+
+### Business Logic Layer Classes (MM_Logic)
+
+The Business Logic Layer classes implement core business rules and validation:
+
+- **MenuService**: Implements menu-related business logic, validates menu data, and applies filtering operations
+- **UserService**: Handles user authentication logic, password validation, and user management operations
+- **RestaurantService**: Manages restaurant business logic and data validation
+- **VerificationService**: Processes menu verification workflows and accuracy checks
+
+### Data Access Layer Classes (MM_DataStore)
+
+The Data Access Layer classes manage database operations and data persistence:
+
+- **MenuRepository**: Provides database operations for menu data retrieval and persistence
+- **UserRepository**: Handles user data access operations and authentication data retrieval
+- **RestaurantRepository**: Manages restaurant data operations and queries
+
+**Note:** For complete class definitions including all attributes, methods, visibility modifiers, and relationships, refer to Appendix D: Detailed Class Diagrams.
 
 ---
 
