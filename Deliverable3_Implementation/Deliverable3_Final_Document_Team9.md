@@ -7,14 +7,15 @@
 
 ---
 
-**Document Owner: Andre Lewis (Team Lead)**
+**Document Owner: Andre Lewis (Team Lead / Group Lead)**
 
-**Andre's Primary Responsibilities:**
-- **Chapters 5 and 6**: Software Architecture and Detailed Design
+**Andre's Responsibilities as Group Lead:**
+- **Primary Content**: Chapters 5 and 6 (Software Architecture and Detailed Design)
 - **Test Cases**: UC-001 (Browse Restaurant Menus) - 8 test cases, UC-005 (User Login) - 10 test cases (18 total)
-- **Overall Coordination**: Project coordination and final document integration
+- **Overall Coordination**: Project coordination, team management, and final document integration
+- **Document Structure**: Maintains complete document structure with placeholders for team members' sections
 
-**Note:** This document contains only Andre's sections. Other team members' sections (Chapter 3, Chapter 7 test cases for UC-002, UC-003, UC-004, UC-006, UC-007, Appendix A, Appendix D) are marked as placeholders and will be provided separately by their respective owners.
+**Note:** This document shows the complete structure with Andre's sections complete. Other team members' sections (Chapter 3, Chapter 7 test cases for UC-002, UC-003, UC-004, UC-006, UC-007, Appendix A, Appendix D) are marked as placeholders and will be integrated by the group lead during final document compilation.
 
 ---
 
