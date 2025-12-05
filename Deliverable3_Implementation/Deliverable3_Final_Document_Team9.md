@@ -16,21 +16,37 @@
 ### **Primary Content (Chapters)**
 
 #### **Chapter 5: Software Architecture** ✅ COMPLETE
-- **Section 5.1**: Architectural Overview
-- **Section 5.2**: Architecture Layers (3 subsystems)
-  - Subsystem 1: Presentation Tier (MM_Client) with MVC pattern
-  - Subsystem 2: Business Logic Tier (MM_Logic)
-  - Subsystem 3: Data Tier (MM_DataStore)
-- **Section 5.3**: Database Design
-- **Section 5.4**: Access Control (CRUD permissions table)
+- **Section 5.1**: Overview
+- **Section 5.2**: Hardware and Software Mapping
+  - Hardware Infrastructure
+  - Software Technology Stack
+  - Software Component Mapping
+- **Section 5.3**: Subsystem Decomposition
+  - 5.3.1 Subsystem 1: Presentation Tier (MM_Client) with MVC pattern
+  - 5.3.2 Subsystem 2: Business Logic Tier (MM_Logic)
+  - 5.3.3 Subsystem 3: Data Tier (MM_DataStore)
+- **Section 5.4**: Persistent Data Management
+  - Database Design
+  - Data Access Patterns
+  - Data Storage Strategy
+- **Section 5.5**: Security Management
+  - Access Control (CRUD permissions table)
+  - Security Management (Authentication, Data Protection, Threat Detection, Security Monitoring)
 - **Diagrams**: 4 placeholders ready (Figures 5.1-5.4)
 
 #### **Chapter 6: Detailed Design** ✅ COMPLETE
-- **Section 6.1**: System Design Overview
-- **Section 6.2**: Class Design (all three layers)
-- **Section 6.3**: Design Patterns (MVC and Repository)
-- **Section 6.4**: Sequence Diagrams (UC-001 and UC-005 with message flows)
-- **Section 6.5**: Detailed Class Design
+- **Section 6.1**: Overview
+- **Section 6.2**: Class Design
+  - 6.2.1 Presentation Layer Classes
+  - 6.2.2 Business Logic Layer Classes
+  - 6.2.3 Data Access Layer Classes
+- **Section 6.3**: Object Interaction (Sequence Diagrams)
+  - UC-001: Browse Restaurant Menus (complete with message flow)
+  - UC-005: User Login (complete with message flow)
+- **Section 6.4**: Detailed Class Design
+  - Presentation Layer Classes overview
+  - Business Logic Layer Classes overview
+  - Data Access Layer Classes overview
 - **Diagrams**: 2 sequence diagram placeholders (Figures 6.1-6.2)
 
 ### **Test Cases (Chapter 7)**
