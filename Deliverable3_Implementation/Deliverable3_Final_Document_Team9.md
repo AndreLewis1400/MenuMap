@@ -440,13 +440,11 @@ The system uses a relational database (PostgreSQL or MySQL) with the following p
 - Unique constraints for data uniqueness
 - Referential integrity enforcement
 
-## 5.5 Access Control and Security Management
+## 5.5 Security Management
 
 The MenuMap system implements comprehensive security measures to protect user data, ensure system integrity, and prevent unauthorized access.
 
 ### Access Control
-
-The system implements access control through an access control table that manages permissions for Create, Read, Update, and Delete (CRUD) operations.
 
 The system implements access control through an access control table that manages permissions for Create, Read, Update, and Delete (CRUD) operations.
 
