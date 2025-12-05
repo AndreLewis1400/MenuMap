@@ -712,7 +712,22 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 **TC-001-01: Successful Menu Browse (Sunny Day)**
 - **Test Case ID**: SystemTest-011-UC001
 - **Purpose**: Verify that a user can successfully browse and view a restaurant menu
-- **Test Setup**: Restaurant "Joe's Pizza" exists with menu items in database
+
+**Table TC-001-01: Restaurants Table (Before Test Execution)**
+
+| Restaurant ID | Restaurant Name | Address | Phone | Status | Owner User ID |
+|---------------|-----------------|---------|-------|--------|---------------|
+| 101 | Joe's Pizza | 123 Main St, Miami, FL | 305-555-0101 | Active | johndoe |
+
+**Table TC-001-01: Menu Items Table (Before Test Execution)**
+
+| Menu Item ID | Restaurant ID | Item Name | Description | Price | Category | Available |
+|--------------|---------------|-----------|-------------|-------|----------|-----------|
+| 1001 | 101 | Margherita Pizza | Classic tomato and mozzarella | $12.99 | Entree | Yes |
+| 1002 | 101 | Pepperoni Pizza | Pepperoni and cheese | $14.99 | Entree | Yes |
+| 1003 | 101 | Caesar Salad | Fresh romaine with Caesar dressing | $8.99 | Appetizer | Yes |
+
+- **Test Setup**: Restaurant "Joe's Pizza" exists with menu items in database (see tables above)
 - **Test Input**: User searches for "Joe's Pizza" and views menu
 - **Expected Output**: Menu displays correctly with all items, prices, and descriptions
 - **Result**: ✅ PASS
@@ -720,7 +735,16 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 **TC-001-02: Browse Menu with Filters (Sunny Day)**
 - **Test Case ID**: SystemTest-012-UC001
 - **Purpose**: Verify that user can filter menu items by category
-- **Test Setup**: User is viewing a menu with multiple categories
+
+**Table TC-001-02: Menu Items Table (Before Test Execution)**
+
+| Menu Item ID | Restaurant ID | Item Name | Description | Price | Category | Available |
+|--------------|---------------|-----------|-------------|-------|----------|-----------|
+| 1001 | 101 | Margherita Pizza | Classic tomato and mozzarella | $12.99 | Entree | Yes |
+| 1002 | 101 | Pepperoni Pizza | Pepperoni and cheese | $14.99 | Entree | Yes |
+| 1003 | 101 | Caesar Salad | Fresh romaine with Caesar dressing | $8.99 | Appetizer | Yes |
+
+- **Test Setup**: User is viewing a menu with multiple categories (see table above)
 - **Test Input**: User selects "Appetizers" filter
 - **Expected Output**: Only appetizer items are displayed
 - **Result**: ✅ PASS
@@ -728,7 +752,14 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 **TC-001-03: Restaurant Not Found (Rainy Day)**
 - **Test Case ID**: SystemTest-013-UC001
 - **Purpose**: Verify system handles search for non-existent restaurant
-- **Test Setup**: Restaurant does not exist in database
+
+**Table TC-001-03: Restaurants Table (Before Test Execution)**
+
+| Restaurant ID | Restaurant Name | Address | Phone | Status | Owner User ID |
+|---------------|-----------------|---------|-------|--------|---------------|
+| (No restaurants exist) | | | | | |
+
+- **Test Setup**: Restaurant does not exist in database (see table above)
 - **Test Input**: User searches for "NonExistent Restaurant"
 - **Expected Output**: Appropriate error message displayed
 - **Result**: ✅ PASS
@@ -736,7 +767,20 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 **TC-001-04: Menu Not Available (Rainy Day)**
 - **Test Case ID**: SystemTest-014-UC001
 - **Purpose**: Verify system handles restaurant with no menu items
-- **Test Setup**: Restaurant exists but has no menu items
+
+**Table TC-001-04: Restaurants Table (Before Test Execution)**
+
+| Restaurant ID | Restaurant Name | Address | Phone | Status | Owner User ID |
+|---------------|-----------------|---------|-------|--------|---------------|
+| 102 | Burger Palace | 456 Oak Ave, Miami, FL | 305-555-0102 | Active | janedoe |
+
+**Table TC-001-04: Menu Items Table (Before Test Execution)**
+
+| Menu Item ID | Restaurant ID | Item Name | Description | Price | Category | Available |
+|--------------|---------------|-----------|-------------|-------|----------|-----------|
+| (No menu items exist for restaurant 102) | | | | | | |
+
+- **Test Setup**: Restaurant exists but has no menu items (see tables above)
 - **Test Input**: User attempts to view menu
 - **Expected Output**: Message indicating menu is not available
 - **Result**: ✅ PASS
@@ -744,7 +788,14 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 **TC-001-05: Database Connection Error (Rainy Day)**
 - **Test Case ID**: SystemTest-015-UC001
 - **Purpose**: Verify system handles database unavailability
-- **Test Setup**: Database server is down
+
+**Table TC-001-05: Restaurants Table (Before Test Execution)**
+
+| Restaurant ID | Restaurant Name | Address | Phone | Status | Owner User ID |
+|---------------|-----------------|---------|-------|--------|---------------|
+| 101 | Joe's Pizza | 123 Main St, Miami, FL | 305-555-0101 | Active | johndoe |
+
+- **Test Setup**: Database server is down; restaurant exists in database (see table above)
 - **Test Input**: User attempts to browse menu
 - **Expected Output**: User-friendly error message displayed
 - **Result**: ✅ PASS
@@ -752,6 +803,13 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 **TC-001-06: Invalid Search Input (Rainy Day)**
 - **Test Case ID**: SystemTest-016-UC001
 - **Purpose**: Verify system prevents SQL injection attacks
+
+**Table TC-001-06: Restaurants Table (Before Test Execution)**
+
+| Restaurant ID | Restaurant Name | Address | Phone | Status | Owner User ID |
+|---------------|-----------------|---------|-------|--------|---------------|
+| (Not applicable - security test) | | | | | |
+
 - **Test Setup**: User is on search page
 - **Test Input**: User enters SQL injection attempt: `'; DROP TABLE restaurants; --`
 - **Expected Output**: Input is sanitized, no SQL executed
@@ -760,7 +818,14 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 **TC-001-07: Timeout During Menu Load (Rainy Day)**
 - **Test Case ID**: SystemTest-017-UC001
 - **Purpose**: Verify system handles timeout scenarios
-- **Test Setup**: Database is slow or under heavy load
+
+**Table TC-001-07: Restaurants Table (Before Test Execution)**
+
+| Restaurant ID | Restaurant Name | Address | Phone | Status | Owner User ID |
+|---------------|-----------------|---------|-------|--------|---------------|
+| 101 | Joe's Pizza | 123 Main St, Miami, FL | 305-555-0101 | Active | johndoe |
+
+- **Test Setup**: Database is slow or under heavy load; restaurant exists (see table above)
 - **Test Input**: User attempts to load menu
 - **Expected Output**: Timeout message displayed, user can retry
 - **Result**: ✅ PASS
@@ -768,7 +833,14 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 **TC-001-08: Restaurant Inactive/Closed (Rainy Day)**
 - **Test Case ID**: SystemTest-018-UC001
 - **Purpose**: Verify system handles inactive restaurants
-- **Test Setup**: Restaurant status is "Inactive"
+
+**Table TC-001-08: Restaurants Table (Before Test Execution)**
+
+| Restaurant ID | Restaurant Name | Address | Phone | Status | Owner User ID |
+|---------------|-----------------|---------|-------|--------|---------------|
+| 103 | Closed Restaurant | 789 Pine Rd, Miami, FL | 305-555-0103 | Inactive | lockeduser |
+
+- **Test Setup**: Restaurant status is "Inactive" (see table above)
 - **Test Input**: User attempts to view menu
 - **Expected Output**: Message indicating restaurant is closed
 - **Result**: ✅ PASS
@@ -778,15 +850,35 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 **TC-005-01: Successful Login (Sunny Day)**
 - **Test Case ID**: SystemTest-001-UC005
 - **Purpose**: Verify valid user can successfully log in
-- **Test Setup**: User "johndoe" exists with active account
+
+**Table TC-005-01: Users Table (Before Test Execution)**
+
+| User ID | Password (Hashed) | Email | First Name | Last Name | Account Status | Email Verified |
+|---------|-------------------|-------|------------|-----------|----------------|----------------|
+| johndoe | $2a$10$hashed123 | johndoe@example.com | John | Doe | Active | Yes |
+
+**Table TC-005-01: Sessions Table (After Test Execution)**
+
+| Session ID | User ID | Session Token | Created At | Expires At | Status |
+|------------|---------|---------------|------------|------------|--------|
+| sess001 | johndoe | token_abc123 | 2025-01-15 10:00:00 | 2025-01-15 18:00:00 | Active |
+
+- **Test Setup**: User "johndoe" exists with active account (see Users table above)
 - **Test Input**: User enters correct email and password
-- **Expected Output**: User is authenticated and redirected to homepage
+- **Expected Output**: User is authenticated and redirected to homepage; session created (see Sessions table above)
 - **Result**: ✅ PASS
 
 **TC-005-02: Successful Login with User ID (Sunny Day)**
 - **Test Case ID**: SystemTest-002-UC005
 - **Purpose**: Verify user can log in using User ID
-- **Test Setup**: User exists in database
+
+**Table TC-005-02: Users Table (Before Test Execution)**
+
+| User ID | Password (Hashed) | Email | First Name | Last Name | Account Status | Email Verified |
+|---------|-------------------|-------|------------|-----------|----------------|----------------|
+| johndoe | $2a$10$hashed123 | johndoe@example.com | John | Doe | Active | Yes |
+
+- **Test Setup**: User exists in database (see table above)
 - **Test Input**: User enters User ID instead of email
 - **Expected Output**: Login successful
 - **Result**: ✅ PASS
@@ -794,7 +886,14 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 **TC-005-03: Invalid Password (Rainy Day)**
 - **Test Case ID**: SystemTest-003-UC005
 - **Purpose**: Verify system rejects incorrect password
-- **Test Setup**: User exists with correct password
+
+**Table TC-005-03: Users Table (Before Test Execution)**
+
+| User ID | Password (Hashed) | Email | First Name | Last Name | Account Status | Email Verified |
+|---------|-------------------|-------|------------|-----------|----------------|----------------|
+| johndoe | $2a$10$hashed123 | johndoe@example.com | John | Doe | Active | Yes |
+
+- **Test Setup**: User exists with correct password (see table above)
 - **Test Input**: User enters incorrect password
 - **Expected Output**: Error message displayed, no session created
 - **Result**: ✅ PASS
@@ -802,7 +901,14 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 **TC-005-04: User Not Found (Rainy Day)**
 - **Test Case ID**: SystemTest-004-UC005
 - **Purpose**: Verify system handles non-existent user
-- **Test Setup**: Email does not exist in database
+
+**Table TC-005-04: Users Table (Before Test Execution)**
+
+| User ID | Password (Hashed) | Email | First Name | Last Name | Account Status | Email Verified |
+|---------|-------------------|-------|------------|-----------|----------------|----------------|
+| (No users exist) | | | | | | |
+
+- **Test Setup**: Email does not exist in database (see table above)
 - **Test Input**: User enters non-existent email
 - **Expected Output**: Generic error message (security)
 - **Result**: ✅ PASS
@@ -810,6 +916,13 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 **TC-005-05: Empty Required Fields (Rainy Day)**
 - **Test Case ID**: SystemTest-005-UC005
 - **Purpose**: Verify system validates required fields
+
+**Table TC-005-05: Users Table (Before Test Execution)**
+
+| User ID | Password (Hashed) | Email | First Name | Last Name | Account Status | Email Verified |
+|---------|-------------------|-------|------------|-----------|----------------|----------------|
+| (Not applicable - no database query) | | | | | | |
+
 - **Test Setup**: User is on login page
 - **Test Input**: User leaves email field empty
 - **Expected Output**: Validation error displayed
@@ -818,7 +931,14 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 **TC-005-06: Account Locked (Rainy Day)**
 - **Test Case ID**: SystemTest-006-UC005
 - **Purpose**: Verify system prevents login for locked accounts
-- **Test Setup**: User account status is "Locked"
+
+**Table TC-005-06: Users Table (Before Test Execution)**
+
+| User ID | Password (Hashed) | Email | First Name | Last Name | Account Status | Email Verified |
+|---------|-------------------|-------|------------|-----------|----------------|----------------|
+| lockeduser | $2a$10$hashed789 | locked@example.com | Locked | User | Locked | Yes |
+
+- **Test Setup**: User account status is "Locked" (see table above)
 - **Test Input**: User attempts to log in
 - **Expected Output**: Account locked message displayed
 - **Result**: ✅ PASS
@@ -826,7 +946,14 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 **TC-005-07: Email Not Verified (Rainy Day)**
 - **Test Case ID**: SystemTest-007-UC005
 - **Purpose**: Verify system handles unverified email accounts
-- **Test Setup**: User exists but email is not verified
+
+**Table TC-005-07: Users Table (Before Test Execution)**
+
+| User ID | Password (Hashed) | Email | First Name | Last Name | Account Status | Email Verified |
+|---------|-------------------|-------|------------|-----------|----------------|----------------|
+| unverified | $2a$10$hashed000 | unverified@example.com | Unverified | User | Active | No |
+
+- **Test Setup**: User exists but email is not verified (see table above)
 - **Test Input**: User attempts to log in
 - **Expected Output**: Verification reminder message
 - **Result**: ✅ PASS
@@ -834,6 +961,13 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 **TC-005-08: SQL Injection Attempt (Rainy Day)**
 - **Test Case ID**: SystemTest-008-UC005
 - **Purpose**: Verify system prevents SQL injection
+
+**Table TC-005-08: Users Table (Before Test Execution)**
+
+| User ID | Password (Hashed) | Email | First Name | Last Name | Account Status | Email Verified |
+|---------|-------------------|-------|------------|-----------|----------------|----------------|
+| (Not applicable - security test) | | | | | | |
+
 - **Test Setup**: User is on login page
 - **Test Input**: User enters SQL injection: `admin' OR '1'='1`
 - **Expected Output**: Input sanitized, no SQL executed
@@ -842,7 +976,14 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 **TC-005-09: Database Connection Error (Rainy Day)**
 - **Test Case ID**: SystemTest-009-UC005
 - **Purpose**: Verify system handles database unavailability
-- **Test Setup**: Database server is down
+
+**Table TC-005-09: Users Table (Before Test Execution)**
+
+| User ID | Password (Hashed) | Email | First Name | Last Name | Account Status | Email Verified |
+|---------|-------------------|-------|------------|-----------|----------------|----------------|
+| johndoe | $2a$10$hashed123 | johndoe@example.com | John | Doe | Active | Yes |
+
+- **Test Setup**: Database server is down; user exists (see table above)
 - **Test Input**: User attempts to log in
 - **Expected Output**: User-friendly error message
 - **Result**: ✅ PASS
@@ -850,9 +991,22 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 **TC-005-10: Multiple Failed Login Attempts (Rainy Day)**
 - **Test Case ID**: SystemTest-010-UC005
 - **Purpose**: Verify system locks account after multiple failures
-- **Test Setup**: User account is active
+
+**Table TC-005-10: Users Table (Before Test Execution)**
+
+| User ID | Password (Hashed) | Email | First Name | Last Name | Account Status | Email Verified |
+|---------|-------------------|-------|------------|-----------|----------------|----------------|
+| johndoe | $2a$10$hashed123 | johndoe@example.com | John | Doe | Active | Yes |
+
+**Table TC-005-10: Users Table (After Test Execution)**
+
+| User ID | Password (Hashed) | Email | First Name | Last Name | Account Status | Email Verified |
+|---------|-------------------|-------|------------|-----------|----------------|----------------|
+| johndoe | $2a$10$hashed123 | johndoe@example.com | John | Doe | Locked | Yes |
+
+- **Test Setup**: User account is active (see Users table before)
 - **Test Input**: User attempts login 5 times with wrong password
-- **Expected Output**: Account locked after 5 attempts
+- **Expected Output**: Account locked after 5 attempts (see Users table after - status changed to "Locked")
 - **Result**: ✅ PASS
 
 #### UC-002: Restaurant Owner Menu Management
