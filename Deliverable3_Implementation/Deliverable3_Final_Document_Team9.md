@@ -7,6 +7,17 @@
 
 ---
 
+**Document Owner: Andre Lewis (Team Lead)**
+
+**Andre's Primary Responsibilities:**
+- **Chapters 5 and 6**: Software Architecture and Detailed Design
+- **Test Cases**: UC-001 (Browse Restaurant Menus) - 8 test cases, UC-005 (User Login) - 10 test cases (18 total)
+- **Overall Coordination**: Project coordination and final document integration
+
+**Note:** This document contains only Andre's sections. Other team members' sections (Chapter 3, Chapter 7 test cases for UC-002, UC-003, UC-004, UC-006, UC-007, Appendix A, Appendix D) are marked as placeholders and will be provided separately by their respective owners.
+
+---
+
 **Document Formatting:**
 - Line Spacing: 1.5
 - Chapter Headings: 16pt
