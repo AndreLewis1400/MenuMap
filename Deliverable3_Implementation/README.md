@@ -1,80 +1,112 @@
-# MenuMap Deliverable 3 - Final Systems Document
-## CEN4010 Software Engineering - Team 9
-
-**Group Lead:** Andre Lewis  
-**Status:** Planning Phase  
-**Start Date:** [To be determined]  
-**Target Completion:** [To be determined]  
+# MenuMap - Deliverable 3: Implementation
+## Team 9 - CEN 4010 Software Engineering
+## Fall 2024
 
 ---
 
-## 📋 Quick Overview
+## 📋 Overview
 
-This folder contains all documentation and resources for Deliverable 3 (Final Systems Document) of the MenuMap project. This is a comprehensive document that combines requirements, design, and testing documentation.
-
-### **Key Documents:**
-- **[Task_Delegation_By_Chapters.md](./Task_Delegation_By_Chapters.md)** - ⭐ **Chapter-based task breakdown (RECOMMENDED)**
-- **[Task_Delegation.md](./Task_Delegation.md)** - Use case-based task breakdown
-- **[Chapter_Summary.md](./Chapter_Summary.md)** - Quick chapter reference
-- **This README** - Quick reference and overview
+This folder contains materials for Deliverable 3: Implementation and Testing, specifically **Andre Lewis's (Team Lead) responsibilities**.
 
 ---
 
-## 🎯 Document Goals
+## 📁 Contents
 
-Create a comprehensive Final Systems Document covering:
+### **Andre's Primary Responsibilities:**
 
-1. **Introduction & System Overview**
-2. **Current System Analysis**
-3. **Project Plan**
-4. **System Requirements** (all 7 use cases)
-5. **Software Architecture**
-6. **Detailed Design**
-7. **Testing Process** (test cases from all team members)
-8. **Glossary, References, Appendices**
-9. **User's Guide** (separate document)
+#### **Chapters:**
+- **Chapter 5: Software Architecture** - `Chapter_5_Software_Architecture_Draft.md`
+- **Chapter 6: Detailed Design** - `Chapter_6_Detailed_Design_Draft.md`
 
----
+#### **Test Cases:**
+- **UC-001: Browse Restaurant Menus** - Test cases in `MenuMap_Test_Cases_Login_UC001.md`
+- **UC-005: User Login** - Test cases in `MenuMap_Test_Cases_Login_UC001.md`
 
-## 👥 Team Assignments Summary
+#### **Complete Documents:**
+- **Deliverable3_Final_Document_Team9.md** - Complete final document (includes all chapters)
+- **Deliverable3_Presentation_Team9.md** - Presentation outline (25 slides)
 
-| Team Member | Primary Focus |
-|------------|---------------|
-| **Andre Lewis** | Software Architecture, Detailed Design |
-| **Alfonso Oramas** | Class Diagrams, Database Design |
-| **Alexandra Cozar** | Project Plan, Testing Process, Integration |
-| **Kamal Ayoub** | Documentation, Requirements, User's Guide |
+#### **Supporting Documentation:**
+- **README.md** - This file
+- **User_Guide.md** - Comprehensive user guide for MenuMap system
+- **Group_Lead_Complete_Checklist.md** - Checklist for team lead responsibilities
 
----
-
-## 📅 Timeline
-
-- **Week 1:** Cover/TOC, Chapters 1-4 (Introduction, Current System, Project Plan, Requirements)
-- **Week 2:** Chapters 5-6 (Software Architecture, Detailed Design), Appendix D
-- **Week 3:** Chapter 7 (Testing Process - all team members write test cases)
-- **Week 4:** Chapters 8-11 (Glossary, Signature, References, Appendices), User's Guide
+#### **UML Diagrams:**
+- **Papyrus_Workspace_v3/** - Papyrus project workspace with all UML diagrams
 
 ---
 
-## 🚀 Getting Started
+## 🎯 Andre's Specific Responsibilities
 
-1. **Read the [Task_Delegation.md](./Task_Delegation.md)** document
-2. **Review your assigned tasks** in the delegation document
-3. **Set up your development environment** (see setup instructions)
-4. **Start with Week 1 tasks** based on your role
-5. **Attend weekly team meetings** for coordination
+### **Chapter 5: Software Architecture**
+- Architectural overview
+- Architecture layers (Presentation, Business Logic, Data tiers)
+- Design patterns (MVC, DAO, Service Layer, Strategy)
+- System components
+- Database design
+- Security architecture
+
+**File:** `Chapter_5_Software_Architecture_Draft.md`
+
+### **Chapter 6: Detailed Design**
+- System design overview
+- Class design (all three layers)
+- Sequence diagrams
+- Detailed class design
+
+**File:** `Chapter_6_Detailed_Design_Draft.md`
+
+### **Test Cases:**
+- **UC-001: Browse Restaurant Menus** (8 test cases)
+  - TC-001-01 through TC-001-08
+  - Sunny day and rainy day scenarios
+
+- **UC-005: User Login** (10 test cases)
+  - TC-005-01 through TC-005-10
+  - Sunny day and rainy day scenarios
+
+**File:** `MenuMap_Test_Cases_Login_UC001.md`
 
 ---
 
-## 📞 Questions or Issues?
+## 📊 Test Results (Andre's Test Cases)
 
-Contact the Group Lead (Andre Lewis) or Team Leader (Alexandra Cozar) for:
-- Task clarification
-- Technical blockers
-- Timeline adjustments
-- Resource needs
+- **UC-001 Test Cases:** 8/8 passed (100%)
+- **UC-005 Test Cases:** 10/10 passed (100%)
+- **Total:** 18 test cases, all passed
 
 ---
 
-*For detailed task breakdowns, see [Task_Delegation.md](./Task_Delegation.md)*
+## 🏗️ Architecture
 
+- **Architecture:** 3-Tier (Presentation, Business Logic, Data)
+- **Design Patterns:** MVC, DAO, Service Layer, Strategy, Repository
+- **Technology:** Java, Web-based application
+
+---
+
+## 📝 Notes
+
+- All diagrams are in `../Deliverable2_Design/UML_Diagrams/Diagrams_Only/`
+- Papyrus workspace contains all UML models
+- Final documents need to be converted to Word/PowerPoint format
+- This folder focuses on **Andre's responsibilities only**
+- Other team members' work (Chapters 3, 7, Appendix A, UC-002, UC-003, UC-004, UC-006, UC-007) is in the complete final document but not in separate files here
+
+---
+
+## ✅ Completion Status
+
+- [x] Chapter 5: Software Architecture - Complete
+- [x] Chapter 6: Detailed Design - Complete
+- [x] UC-001 Test Cases - Complete (8 test cases)
+- [x] UC-005 Test Cases - Complete (10 test cases)
+- [x] Presentation - Complete (25 slides)
+- [x] Final Document - Complete (all chapters)
+
+---
+
+**Repository:** AndreLewis1400/MenuMap  
+**Course:** CEN 4010 - Software Engineering  
+**Institution:** Florida International University  
+**Team Lead:** Andre Lewis
