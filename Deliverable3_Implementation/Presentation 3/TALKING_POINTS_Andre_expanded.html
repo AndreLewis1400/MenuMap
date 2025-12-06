@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deliverable 3 Presentation - Talking Points - Andre Lewis</title>
+    <style>
+        @media print {
+            body { margin: 0; }
+            .page-break { page-break-before: always; }
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            font-size: 11pt;
+            line-height: 1.6;
+            max-width: 8.5in;
+            margin: 0.75in auto;
+            padding: 0.5in;
+            color: #333;
+        }
+        h1 {
+            font-size: 18pt;
+            font-weight: bold;
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 14pt;
+            font-weight: bold;
+            color: #34495e;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+        }
+        h3 {
+            font-size: 12pt;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+        .quick-ref {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            border-left: 4px solid #3498db;
+        }
+        .slide-section {
+            background-color: #f8f9fa;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            border-left: 4px solid #e74c3c;
+        }
+        .transition {
+            background-color: #fff3cd;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border-left: 4px solid #ffc107;
+            font-style: italic;
+        }
+        ul, ol {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        strong {
+            color: #2c3e50;
+        }
+        .checklist {
+            background-color: #d4edda;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .tips {
+            background-color: #d1ecf1;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+        .time-mgmt {
+            background-color: #f8d7da;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Deliverable 3 Presentation - Talking Points</h1>
+    <h2>Team 9 - MenuMap System</h2>
+    <h3>Andre Lewis (Team Lead)</h3>
+    <p><strong>Presentation: Today at 4:15pm</strong></p>
+
+    <div class="quick-ref">
+        <h2>🎯 QUICK REFERENCE</h2>
+        <p><strong>Total Time:</strong> 30 minutes (20 min presenting + 10 min Q&A)</p>
+        <p><strong>Alexandra's Slides:</strong> Slides 1-7 (~4-5 minutes)</p>
+        <p><strong>Your Slides:</strong> Slides 9-25 (~15-16 minutes)</p>
+        <p><strong>Your Role:</strong> Main Presenter (Architecture, Design, Testing, Summary)</p>
+    </div>
+
+    <h2>📋 YOUR SLIDE-BY-SLIDE TALKING POINTS</h2>
+
+    <div class="transition">
+        <h3>TRANSITION FROM ALEXANDRA (~10 seconds)</h3>
+        <p><strong>After Alexandra finishes Slide 7 (UC-003 Continued):</strong></p>
+        <p><strong>Your Opening Statement:</strong><br>
+        "Thank you, Alexandra, for presenting our functional requirements. Now I'll take over to present our system architecture, design, and testing. Let me start with our software architecture."</p>
+    </div>
+
+    <div class="slide-section">
+        <h3>SLIDE 9: Software Architecture Diagram (~1.5 minutes)</h3>
+        <p><strong>Point to Diagram:</strong></p>
+        <ul>
+            <li>"This is our Software Architecture Diagram showing the 3-Tier Architecture of MenuMap"</li>
+        </ul>
+        <p><strong>Architectural Style:</strong></p>
+        <ul>
+            <li>"We chose a 3-Tier Architecture as our primary architectural style"</li>
+        </ul>
+        <p><strong>Tier 1: Presentation Layer (MM_Client)</strong></p>
+        <ul>
+            <li>"The presentation layer handles user interactions"</li>
+            <li>"Contains controllers: MenuController, UserController, RestaurantController"</li>
+            <li>"Manages views and user interface components"</li>
+            <li>"Handles HTTP requests and responses"</li>
+        </ul>
+        <p><strong>Tier 2: Business Logic Layer (MM_Logic)</strong></p>
+        <ul>
+            <li>"The business logic layer implements our core functionality"</li>
+            <li>"Contains services: MenuService, UserService, RestaurantService, VerificationService"</li>
+            <li>"Implements business rules and validation"</li>
+            <li>"Processes data before storage or retrieval"</li>
+        </ul>
+        <p><strong>Tier 3: Data Layer (MM_DataStore)</strong></p>
+        <ul>
+            <li>"The data layer manages database operations"</li>
+            <li>"Contains DAOs: MenuDAO, UserDAO, RestaurantDAO"</li>
+            <li>"Contains data models: User, Restaurant, MenuItem, Session"</li>
+            <li>"Handles all database operations"</li>
+        </ul>
+        <p><strong>Architectural Patterns:</strong></p>
+        <ul>
+            <li>"We implemented multiple architectural patterns:
+                <ul>
+                    <li>3-Tier Architecture as our primary pattern</li>
+                    <li>MVC Pattern within the Presentation Tier</li>
+                    <li>Layered Architecture for separation of concerns"</li>
+                </ul>
+            </li>
+        </ul>
+        <p><strong>Transition:</strong> "Let me explain our data management approach."</p>
+        <p><strong>Speaker Flow:</strong></p>
+        <ul>
+            <li>"I start by reminding everyone that this diagram is really about how data flows through MenuMap from the database up to the screen."</li>
+            <li>"I walk left‑to‑right: the Data Access Layer runs parameterized queries, the Business Logic Layer applies rules like filtering by dietary needs and campus location, and the Presentation Layer formats the response for the user."</li>
+            <li>"I use a concrete example: when a student opens MenuMap and taps *View Menu*, this whole pipeline runs behind the scenes so they see accurate, up‑to‑date items for that restaurant."</li>
+            <li>"I close the slide by saying this separation of concerns is what lets us change the UI or the DB schema later without rewriting the whole system."</li>
+        </ul>
+
+    </div>
+
+    <div class="slide-section">
+        <h3>SLIDE 10: Data Management - Part 1 (~1 minute)</h3>
+        <p><strong>Database Type:</strong></p>
+        <ul>
+            <li>"We use a relational database - MySQL or PostgreSQL"</li>
+        </ul>
+        <p><strong>Primary Entities:</strong></p>
+        <p><strong>Users:</strong></p>
+        <ul>
+            <li>"Stores user accounts and authentication information"</li>
+            <li>"Attributes include: userId, email, password (hashed), firstName, lastName, accountStatus, emailVerified"</li>
+        </ul>
+        <p><strong>Restaurants:</strong></p>
+        <ul>
+            <li>"Stores restaurant information and details"</li>
+            <li>"Attributes include: restaurantId, name, address, phone, status, ownerUserId"</li>
+        </ul>
+        <p><strong>MenuItems:</strong></p>
+        <ul>
+            <li>"Stores individual menu items with descriptions and prices"</li>
+            <li>"Attributes include: menuItemId, restaurantId, itemName, description, price, category, available"</li>
+        </ul>
+        <p><strong>Relationships:</strong></p>
+        <ul>
+            <li>"Users to Restaurants: One-to-Many (Owner relationship)"</li>
+            <li>"Restaurants to MenuItems: One-to-Many"</li>
+            <li>"Users to Sessions: One-to-Many"</li>
+        </ul>
+        <p><strong>Transition:</strong> "Now let me explain how we access and secure this data."</p>
+        <p><strong>Speaker Flow:</strong></p>
+        <ul>
+            <li>"On this slide I bridge between data modeling and security by focusing on how we actually reach into the database safely."</li>
+            <li>"I talk about using parameterized queries or ORM methods to avoid SQL injection."</li>
+            <li>"I mention that the application only connects using least‑privilege credentials, so even if someone compromises an app server, they don’t automatically gain full database access."</li>
+            <li>"I wrap up by saying that security and data access are designed together, not as two separate concerns."</li>
+        </ul>
+
+    </div>
+
+    <div class="slide-section">
+        <h3>SLIDE 11: Data Management - Part 2 (~1 minute)</h3>
+        <p><strong>Data Access Objects (DAOs):</strong></p>
+        <p><strong>MenuDAO:</strong></p>
+        <ul>
+            <li>"Handles menu data operations"</li>
+            <li>"Methods: findMenuByRestaurantId(), saveMenu(), updateMenu()"</li>
+        </ul>
+        <p><strong>UserDAO:</strong></p>
+        <ul>
+            <li>"Manages user data operations"</li>
+            <li>"Methods: findUserByEmail(), saveUser(), updateUser()"</li>
+        </ul>
+        <p><strong>RestaurantDAO:</strong></p>
+        <ul>
+            <li>"Handles restaurant data operations"</li>
+            <li>"Methods: findRestaurantById(), saveRestaurant(), updateRestaurant()"</li>
+        </ul>
+        <p><strong>Data Integrity:</strong></p>
+        <ul>
+            <li>"Foreign key constraints for referential integrity"</li>
+            <li>"Transaction management for data consistency"</li>
+            <li>"Validation at service layer before persistence"</li>
+        </ul>
+        <p><strong>Data Security:</strong></p>
+        <ul>
+            <li>"Passwords stored as hashed values using BCrypt"</li>
+            <li>"Sensitive data encrypted in transit using HTTPS"</li>
+            <li>"Parameterized queries to prevent SQL injection"</li>
+        </ul>
+        <p><strong>Transition:</strong> "Now let me discuss our security and privacy measures."</p>
+        <p><strong>Speaker Flow:</strong></p>
+        <ul>
+            <li>"I open this section by reminding everyone that even though MenuMap doesn’t process payments, we still handle personal information such as logins and location‑related data."</li>
+            <li>"I describe how we use secure password hashing, HTTPS, and input validation to protect accounts from common attacks."</li>
+            <li>"I mention that we log security‑relevant events — like failed logins or suspicious activity — so we can audit and respond if something looks wrong."</li>
+            <li>"I end by stressing that security was considered from the start of the project, not bolted on at the end."</li>
+        </ul>
+
+    </div>
+
+    <div class="slide-section">
+        <h3>SLIDE 12: Security/Privacy - Part 1 (~1 minute)</h3>
+        <p><strong>Authentication Mechanisms:</strong></p>
+        <ul>
+            <li>"Email/User ID and password authentication"</li>
+            <li>"Secure password hashing using BCrypt algorithm"</li>
+            <li>"Session management with secure tokens"</li>
+            <li>"Password reset with time-limited tokens"</li>
+        </ul>
+        <p><strong>Access Control:</strong></p>
+        <ul>
+            <li>"We use Role-Based Access Control (RBAC):
+                <ul>
+                    <li>Customer role: Can browse menus and manage favorites</li>
+                    <li>Restaurant Owner role: Can manage own restaurant menus</li>
+                    <li>Administrator role: Can verify menus and manage system</li>
+                </ul>
+            </li>
+            <li>"Authorization checks occur at the service layer"</li>
+            <li>"Unauthorized access attempts are logged"</li>
+        </ul>
+        <p><strong>Session Management:</strong></p>
+        <ul>
+            <li>"Secure session tokens"</li>
+            <li>"Session timeout after inactivity"</li>
+            <li>"Session invalidation on logout"</li>
+            <li>"Protection against session hijacking"</li>
+        </ul>
+        <p><strong>Transition:</strong> "Let me continue with data encryption and privacy protection."</p>
+        <p><strong>Speaker Flow:</strong></p>
+        <ul>
+            <li>"Here I go one level deeper and talk specifically about how sensitive fields are stored and transmitted."</li>
+            <li>"I explain that passwords are hashed, tokens are time‑limited, and any personally identifiable information is only kept as long as needed for the service to function."</li>
+            <li>"I briefly mention access control: only authorized roles can see or modify certain data, such as manager‑only views for editing menus."</li>
+            <li>"I close by tying encryption and access control back to trust — students are more likely to use the app if they know we respect their privacy."</li>
+        </ul>
+
+    </div>
+
+    <div class="slide-section">
+        <h3>SLIDE 13: Security/Privacy - Part 2 (~1 minute)</h3>
+        <p><strong>Data Encryption:</strong></p>
+        <ul>
+            <li>"Passwords: BCrypt hashing (one-way encryption)"</li>
+            <li>"Data in transit: HTTPS/TLS encryption"</li>
+            <li>"Sensitive data: Encrypted at rest in database"</li>
+            <li>"Reset tokens: Cryptographically secure random generation"</li>
+        </ul>
+        <p><strong>Privacy Protection:</strong></p>
+        <ul>
+            <li>"User data access restricted to authorized users"</li>
+            <li>"No information leakage in error messages"</li>
+            <li>"Secure password reset process"</li>
+            <li>"Email verification required for account activation"</li>
+        </ul>
+        <p><strong>Security Measures:</strong></p>
+        <ul>
+            <li>"SQL injection prevention through parameterized queries"</li>
+            <li>"Input validation and sanitization"</li>
+            <li>"XSS (Cross-Site Scripting) prevention"</li>
+            <li>"CSRF (Cross-Site Request Forgery) protection"</li>
+            <li>"Account lockout after multiple failed login attempts"</li>
+        </ul>
+        <p><strong>Transition:</strong> "Now let me show you our class diagrams, starting with the Presentation Layer."</p>
+        <p><strong>Speaker Flow:</strong></p>
+        <ul>
+            <li>"Here I connect what the user sees on screen with the classes behind it."</li>
+            <li>"I walk through a couple of key classes like <code>HomePageView</code>, <code>RestaurantListView</code>, and <code>MenuDetailView</code>, explaining how they interact with controllers rather than talking directly to the database."</li>
+            <li>"I stress that this separation keeps the UI flexible — we can redesign the screens or add a mobile app later without rewriting our business rules."</li>
+            <li>"I transition by telling the audience that the next slides move deeper into the stack, where those business rules and database calls live."</li>
+        </ul>
+
+    </div>
+
+    <div class="slide-section">
+        <h3>SLIDE 14: Minimal Class Diagram - Part 1 (~45 seconds)</h3>
+        <p><strong>Point to Diagram:</strong></p>
+        <ul>
+            <li>"This is our Presentation Layer Class Diagram showing Controllers and Views"</li>
+        </ul>
+        <p><strong>Presentation Layer Classes:</strong></p>
+        <ul>
+            <li><strong>MenuController:</strong> Handles menu browsing requests</li>
+            <li><strong>UserController:</strong> Manages authentication and user management</li>
+            <li><strong>RestaurantController:</strong> Handles restaurant operations</li>
+        </ul>
+        <p><strong>Design Patterns:</strong></p>
+        <ul>
+            <li><strong>MVC Pattern:</strong> Model-View-Controller separation</li>
+            <li><strong>Front Controller Pattern:</strong> Centralized request handling</li>
+        </ul>
+        <p><strong>Transition:</strong> "Now let me show you the Business Logic Layer."</p>
+        <p><strong>Speaker Flow:</strong></p>
+        <ul>
+            <li>"Here I zoom in on the layer in the middle — the part that actually understands MenuMap’s rules."</li>
+            <li>"I point to classes like MenuService and AuthService and explain that they coordinate work between the controllers and repositories instead of letting the controllers talk directly to the database."</li>
+            <li>"I briefly mention example rules: combining multiple restaurant sources, applying dietary filters, and enforcing that only managers can modify menus."</li>
+            <li>"I wrap up by saying that most of our unit tests target this layer because this is where the core behavior lives."</li>
+        </ul>
+
+    </div>
+
+    <div class="slide-section">
+        <h3>SLIDE 15: Minimal Class Diagram - Part 2 (~45 seconds)</h3>
+        <p><strong>Point to Diagram:</strong></p>
+        <ul>
+            <li>"This is our Business Logic Layer Class Diagram showing Service classes"</li>
+        </ul>
+        <p><strong>Business Logic Layer Classes:</strong></p>
+        <ul>
+            <li><strong>MenuService:</strong> Menu business logic and validation</li>
+            <li><strong>UserService:</strong> User authentication and management logic</li>
+            <li><strong>RestaurantService:</strong> Restaurant management logic</li>
+            <li><strong>VerificationService:</strong> Menu verification processes"</li>
+        </ul>
+        <p><strong>Design Patterns:</strong></p>
+        <ul>
+            <li><strong>Service Layer Pattern:</strong> Encapsulates business logic</li>
+            <li><strong>Strategy Pattern:</strong> Different validation strategies</li>
+        </ul>
+        <p><strong>Transition:</strong> "Now let me show you the Data Access Layer."</p>
+        <p><strong>Speaker Flow:</strong></p>
+        <ul>
+            <li>"On this slide I highlight the repository classes and keep the language non‑database‑heavy so everyone can follow."</li>
+            <li>"I explain that each repository hides SQL details behind clear methods like <code>findMenusByRestaurant()</code> or <code>saveFavorite()</code>."</li>
+            <li>"I point out that this makes it much easier to swap the underlying database later — for example, moving from a local PostgreSQL instance to a managed cloud database."</li>
+            <li>"I end by saying this layer is also where we centralize input sanitization and query protection to support security."</li>
+        </ul>
+
+    </div>
+
+    <div class="slide-section">
+        <h3>SLIDE 16: Minimal Class Diagram - Part 3 (~45 seconds)</h3>
+        <p><strong>Point to Diagram:</strong></p>
+        <ul>
+            <li>"This is our Data Access Layer Class Diagram showing DAOs and Data Models"</li>
+        </ul>
+        <p><strong>Data Access Layer Classes:</strong></p>
+        <ul>
+            <li><strong>MenuDAO:</strong> Database operations for menus</li>
+            <li><strong>UserDAO:</strong> Database operations for users</li>
+            <li><strong>RestaurantDAO:</strong> Database operations for restaurants</li>
+        </ul>
+        <p><strong>Data Models:</strong></p>
+        <ul>
+            <li><strong>User:</strong> User entity with authentication data</li>
+            <li><strong>Restaurant:</strong> Restaurant entity with business information</li>
+            <li><strong>MenuItem:</strong> Menu item entity with product details</li>
+        </ul>
+        <p><strong>Design Patterns:</strong></p>
+        <ul>
+            <li><strong>DAO Pattern:</strong> Abstracts database access operations</li>
+            <li><strong>Repository Pattern:</strong> Encapsulates data access logic</li>
+        </ul>
+        <p><strong>Transition:</strong> "Now let me show you how these layers interact in a sequence diagram."</p>
+        <p><strong>Speaker Flow:</strong></p>
+        <ul>
+            <li>"On this slide, I tell the story of one request traveling through the system — almost like following a single menu lookup from start to finish."</li>
+            <li>"I narrate each step: the user taps a button, the controller receives an HTTP request, the service pulls data from multiple repositories, applies rules, and then sends a response back through the controller to the UI."</li>
+            <li>"I highlight where we validate input and handle errors so it’s clear that robustness is part of the design."</li>
+            <li>"I close by pointing out that this same sequence is exactly what we target with our unit and integration tests."</li>
+        </ul>
+
+    </div>
+
+    <div class="slide-section">
+        <h3>SLIDE 17: Sequence Diagram (~1 minute)</h3>
+        <p><strong>Point to Diagram:</strong></p>
+        <ul>
+            <li>"This is our Sequence Diagram for UC-001: Browse Restaurant Menus"</li>
+        </ul>
+        <p><strong>Interaction Flow (8 steps):</strong></p>
+        <ol>
+            <li>"User requests menu view"</li>
+            <li>"MenuController receives request"</li>
+            <li>"MenuController calls MenuService"</li>
+            <li>"MenuService applies business rules"</li>
+            <li>"MenuService calls MenuDAO"</li>
+            <li>"MenuDAO queries Database"</li>
+            <li>"Data flows back through layers"</li>
+            <li>"User receives menu display"</li>
+        </ol>
+        <p><strong>Lifelines:</strong></p>
+        <ul>
+            <li>"User (Actor)"</li>
+            <li>"MenuController (Presentation Layer)"</li>
+            <li>"MenuService (Business Logic Layer)"</li>
+            <li>"MenuDAO (Data Access Layer)"</li>
+            <li>"Database (External System)"</li>
+        </ul>
+        <p><strong>Key Point:</strong></p>
+        <ul>
+            <li>"This demonstrates how our 3-tier architecture separates concerns and allows data to flow cleanly through each layer."</li>
+        </ul>
+        <p><strong>Transition:</strong> "Now let me present our test cases, starting with UC-001."</p>
+        <p><strong>Speaker Flow:</strong></p>
+        <ul>
+            <li>"Here I explain that we turned the *View Menu* use case into concrete test cases so we can repeatedly validate the behavior."</li>
+            <li>"I step through the Sunny Day scenario slowly: the student logs in, selects a restaurant, and the system returns the expected menu items."</li>
+            <li>"I mention the main assertions: correct status code, correct restaurant, and all menu items visible without duplicates."</li>
+            <li>"I foreshadow that we also wrote rainy‑day and edge‑case tests, which appear on the next slides."</li>
+        </ul>
+
+    </div>
+
+    <div class="slide-section">
+        <h3>SLIDE 18: Test Cases - UC-001 Sunny Day (~1 minute)</h3>
+        <p><strong>Test Case Introduction:</strong></p>
+        <ul>
+            <li>"This is our Sunny Day test case for UC-001: Browse Restaurant Menus"</li>
+        </ul>
+        <p><strong>Test Case ID:</strong> SystemTest-011-UC001</p>
+        <p><strong>Purpose:</strong></p>
+        <ul>
+            <li>"This test verifies that a user can successfully browse and view a restaurant menu"</li>
+        </ul>
+        <p><strong>Test Setup:</strong></p>
+        <ul>
+            <li>"Restaurant 'Joe's Pizza' exists with menu items in database"</li>
+        </ul>
+        <p><strong>Data Model (Point to Table):</strong></p>
+        <ul>
+            <li>"Restaurant ID 101: Joe's Pizza (Active)"</li>
+            <li>"Three menu items: Margherita Pizza ($12.99), Pepperoni Pizza ($14.99), Caesar Salad ($8.99)"</li>
+        </ul>
+        <p><strong>Test Steps (4 steps):</strong></p>
+        <ol>
+            <li>"User navigates to MenuMap application"</li>
+            <li>"User searches for 'Joe's Pizza'"</li>
+            <li>"User selects 'Joe's Pizza' from results"</li>
+            <li>"System displays menu with all items"</li>
+        </ol>
+        <p><strong>Expected Output:</strong></p>
+        <ul>
+            <li>"Menu displays correctly with all items, prices, and descriptions"</li>
+            <li>"All menu items visible"</li>
+            <li>"Categories properly organized"</li>
+        </ul>
+        <p><strong>Result:</strong> ✅ PASS - Test passed successfully</p>
+        <p><strong>Transition:</strong> "Now let me show you a rainy day scenario."</p>
+        <p><strong>Speaker Flow:</strong></p>
+        <ul>
+            <li>"I remind the audience that real users don’t always follow the happy path, so we also test what happens when input is missing or invalid."</li>
+            <li>"I briefly describe the rainy‑day test: for example, the user tries to view a menu for a restaurant that is temporarily unavailable or has no active items."</li>
+            <li>"I explain what the system should do — show a friendly message instead of crashing or returning empty data — and what we assert in the test."</li>
+            <li>"I connect this back to user experience: even error paths should feel intentional and helpful to the student."</li>
+        </ul>
+
+    </div>
+
+    <div class="slide-section">
+        <h3>SLIDE 19: Test Cases - UC-001 Rainy Day (~1 minute)</h3>
+        <p><strong>Test Case Introduction:</strong></p>
+        <ul>
+            <li>"This is our Rainy Day test case for UC-001"</li>
+        </ul>
+        <p><strong>Test Case ID:</strong> SystemTest-013-UC001</p>
+        <p><strong>Purpose:</strong></p>
+        <ul>
+            <li>"This test verifies system handles search for non-existent restaurant"</li>
+        </ul>
+        <p><strong>Test Setup:</strong></p>
+        <ul>
+            <li>"Restaurant does not exist in database"</li>
+        </ul>
+        <p><strong>Data Model (Point to Table):</strong></p>
+        <ul>
+            <li>"Before the test, we have two restaurants: Joe's Pizza and Burger Palace, both Active"</li>
+        </ul>
+        <p><strong>Test Steps (3 steps):</strong></p>
+        <ol>
+            <li>"User navigates to MenuMap application"</li>
+            <li>"User searches for 'NonExistent Restaurant'"</li>
+            <li>"System processes search request"</li>
+        </ol>
+        <p><strong>Expected Output:</strong></p>
+        <ul>
+            <li>"Appropriate error message displayed: 'No restaurants found matching your search'"</li>
+            <li>"User-friendly message with no technical details"</li>
+            <li>"User can retry search"</li>
+        </ul>
+        <p><strong>Data Model After Test:</strong></p>
+        <ul>
+            <li>"No changes to database"</li>
+            <li>"No data corruption"</li>
+        </ul>
+        <p><strong>Result:</strong> ✅ PASS - Test passed successfully</p>
+        <div class="transition">
+            <p><strong>TRANSITION TO KAMAL (~10 seconds)</strong></p>
+            <p><strong>Your Statement:</strong><br>
+            "Now I'll hand it over to Kamal to present the test cases for our security use case, UC-003."</p>
+            <p><strong>After Kamal finishes Slide 21:</strong><br>
+            "Thank you, Kamal. Let me present one more test case for UC-001."</p>
+        </div>
+    </div>
+
+    <div class="slide-section">
+        <h3>SLIDE 22: Test Cases - UC-001 Additional (~45 seconds)</h3>
+        <p><strong>Test Case Introduction:</strong></p>
+        <ul>
+            <li>"This is an additional test case for UC-001: Browse Restaurant Menus"</li>
+        </ul>
+        <p><strong>Test Case ID:</strong> SystemTest-012-UC001</p>
+        <p><strong>Purpose:</strong></p>
+        <ul>
+            <li>"This test verifies that user can filter menu items by category"</li>
+        </ul>
+        <p><strong>Test Setup:</strong></p>
+        <ul>
+            <li>"Restaurant exists with menu items in multiple categories"</li>
+        </ul>
+        <p><strong>Data Model (Point to Table):</strong></p>
+        <ul>
+            <li>"Two entrees: Margherita Pizza, Pepperoni Pizza"</li>
+            <li>"Two appetizers: Caesar Salad, Garlic Bread"</li>
+        </ul>
+        <p><strong>Test Steps (3 steps):</strong></p>
+        <ol>
+            <li>"User views restaurant menu"</li>
+            <li>"User selects 'Appetizers' filter"</li>
+            <li>"System applies category filter"</li>
+        </ol>
+        <p><strong>Expected Output:</strong></p>
+        <ul>
+            <li>"Only appetizer items displayed: Caesar Salad, Garlic Bread"</li>
+            <li>"Entree items hidden"</li>
+            <li>"Filter works correctly"</li>
+        </ul>
+        <p><strong>Result:</strong> ✅ PASS - Test passed successfully</p>
+        <p><strong>Transition:</strong> "Kamal will now present the additional test case for UC-003."</p>
+        <p><strong>Speaker Flow:</strong></p>
+        <ul>
+            <li>"Here I keep it short and set Kamal up for success."</li>
+            <li>"I quickly summarize that we’ve just covered the core architecture, critical flows, and key test cases for UC‑001."</li>
+            <li>"Then I say something like: ‘To show how we applied the same discipline to a different use case, I’ll hand it over to Kamal who will walk through the UC‑003 test case.’"</li>
+            <li>"Then I pause, look at Kamal, and physically turn toward him to signal the hand‑off."</li>
+        </ul>
+
+        <div class="transition">
+            <p><strong>After Kamal finishes Slide 23:</strong><br>
+            "Thank you, Kamal. Let me now summarize our key achievements."</p>
+        </div>
+    </div>
+
+    <div class="slide-section">
+        <h3>SLIDE 24: Summary (~1 minute)</h3>
+        <p><strong>Key Achievements:</strong></p>
+        <p><strong>Complete Implementation:</strong></p>
+        <ul>
+            <li>"We've successfully implemented all use cases"</li>
+            <li>"Our 3-tier architecture has been successfully deployed"</li>
+            <li>"We created 33 comprehensive test cases with a 100% pass rate"</li>
+        </ul>
+        <p><strong>Security Features:</strong></p>
+        <ul>
+            <li>"We implemented secure password reset (UC-003)"</li>
+            <li>"Passwords are hashed and encrypted"</li>
+            <li>"SQL injection prevention is in place"</li>
+            <li>"Access control has been implemented"</li>
+        </ul>
+        <p><strong>Quality Assurance:</strong></p>
+        <ul>
+            <li>"We conducted comprehensive testing covering both sunny day and rainy day scenarios"</li>
+            <li>"Data models have been validated"</li>
+            <li>"Error handling has been verified"</li>
+        </ul>
+        <p><strong>System Status:</strong> "Our system is ready for deployment"</p>
+        <p><strong>Transition:</strong> "Now we welcome your questions."</p>
+        <p><strong>Speaker Flow:</strong></p>
+        <ul>
+            <li>"For the final slide, I thank the audience for their time and attention."</li>
+            <li>"I briefly restate the core message in one sentence: MenuMap is designed to be secure, testable, and easy for FIU students to use."</li>
+            <li>"I invite questions specifically about architecture, security, or testing, so people know what kinds of topics I’m most prepared to answer."</li>
+            <li>"Then I stop talking and give the room a moment of silence so someone feels comfortable asking the first question."</li>
+        </ul>
+
+    </div>
+
+    <div class="slide-section">
+        <h3>SLIDE 25: Q&A (~10 minutes)</h3>
+        <p><strong>Opening Statement:</strong></p>
+        <p>"We welcome your questions about:
+        <ul>
+            <li>System architecture and design</li>
+            <li>Implementation details</li>
+            <li>Testing process and results</li>
+            <li>Security measures</li>
+            <li>Use case functionality</li>
+            <li>Any other aspects of the project"</li>
+        </ul>
+        <p><strong>During Q&A:</strong></p>
+        <ul>
+            <li><strong>Architecture/Design questions</strong> → You (Andre)</li>
+            <li><strong>Security questions</strong> → Alexandra</li>
+            <li><strong>Test case questions</strong> → Kamal</li>
+            <li><strong>General questions</strong> → Any team member</li>
+        </ul>
+        <p><strong>Closing Statement:</strong></p>
+        <p>"Thank you for your attention. If you have any further questions, please feel free to contact us.<br>
+        - Team Lead: Andre Lewis<br>
+        - Team 9, CEN 4010<br>
+        - Florida International University"</p>
+    </div>
+
+    <div class="tips">
+        <h2>🎤 PRESENTATION TIPS</h2>
+        <h3>Before You Start:</h3>
+        <ol>
+            <li><strong>Take a deep breath</strong> - You've got this!</li>
+            <li><strong>Check your slides</strong> - Make sure slides 9-25 are loaded</li>
+            <li><strong>Have water nearby</strong> - Stay hydrated</li>
+            <li><strong>Test your microphone</strong> - Ensure you can be heard</li>
+            <li><strong>Listen to Alexandra</strong> - Be ready for smooth transition</li>
+        </ol>
+        <h3>During Presentation:</h3>
+        <ol>
+            <li><strong>Speak clearly</strong> - Don't rush, enunciate</li>
+            <li><strong>Make eye contact</strong> - Look at audience/camera</li>
+            <li><strong>Point to diagrams</strong> - Use your cursor or pointer</li>
+            <li><strong>Pause for emphasis</strong> - Let important points sink in</li>
+            <li><strong>Stay on time</strong> - Keep track of your pace (~15-16 minutes)</li>
+        </ol>
+    </div>
+
+    <div class="time-mgmt">
+        <h2>⏱️ TIME MANAGEMENT</h2>
+        <p><strong>Your Total Time: ~15-16 minutes</strong></p>
+        <p><strong>Breakdown:</strong></p>
+        <ul>
+            <li>Slide 9 (Architecture): ~1.5 minutes</li>
+            <li>Slides 10-11 (Data Management): ~2 minutes</li>
+            <li>Slides 12-13 (Security/Privacy): ~2 minutes</li>
+            <li>Slides 14-16 (Class Diagrams): ~2.25 minutes</li>
+            <li>Slide 17 (Sequence Diagram): ~1 minute</li>
+            <li>Slides 18-19 (UC-001 Tests): ~2 minutes</li>
+            <li>Slide 22 (UC-001 Additional): ~45 seconds</li>
+            <li>Slide 24 (Summary): ~1 minute</li>
+            <li><strong>Total: ~12.5 minutes</strong> (with buffer for transitions and questions)</li>
+        </ul>
+    </div>
+
+    <div class="checklist">
+        <h2>✅ FINAL CHECKLIST</h2>
+        <h3>Before Presentation:</h3>
+        <ul>
+            <li>Review all your slides (9-25) one more time</li>
+            <li>Practice your transition from Alexandra</li>
+            <li>Practice transitions to/from Kamal</li>
+            <li>Know where all diagrams are located</li>
+            <li>Have backup plan if technology fails</li>
+            <li>Listen to Alexandra's presentation to be ready for transition</li>
+        </ul>
+        <h3>During Presentation:</h3>
+        <ul>
+            <li>Listen to Alexandra's presentation</li>
+            <li>Smooth transition from Alexandra</li>
+            <li>Speak clearly and confidently</li>
+            <li>Point to diagrams when explaining</li>
+            <li>Make eye contact with audience</li>
+            <li>Stay within time limits (~15-16 minutes)</li>
+            <li>Support your team members</li>
+        </ul>
+    </div>
+
+    <h2>📋 YOUR SLIDES SUMMARY</h2>
+    <p><strong>Slides You're Presenting:</strong></p>
+    <ul>
+        <li>Slide 9: Software Architecture Diagram</li>
+        <li>Slide 10: Data Management - Part 1</li>
+        <li>Slide 11: Data Management - Part 2</li>
+        <li>Slide 12: Security/Privacy - Part 1</li>
+        <li>Slide 13: Security/Privacy - Part 2</li>
+        <li>Slide 14: Minimal Class Diagram - Part 1 (Presentation Layer)</li>
+        <li>Slide 15: Minimal Class Diagram - Part 2 (Business Logic Layer)</li>
+        <li>Slide 16: Minimal Class Diagram - Part 3 (Data Access Layer)</li>
+        <li>Slide 17: Sequence Diagram</li>
+        <li>Slide 18: Test Cases - UC-001 Sunny Day</li>
+        <li>Slide 19: Test Cases - UC-001 Rainy Day</li>
+        <li>Slide 22: Test Cases - UC-001 Additional</li>
+        <li>Slide 24: Summary</li>
+        <li>Slide 25: Q&A</li>
+    </ul>
+    <p><strong>Total: 14 slides (~15-16 minutes)</strong></p>
+
+    <div style="text-align: center; margin-top: 30px; padding: 20px; background-color: #e8f5e9; border-radius: 5px;">
+        <h2>🚀 GOOD LUCK! YOU'VE GOT THIS! 🚀</h2>
+        <p><strong>Presentation Time: 4:15pm Today</strong></p>
+        <p><strong>Break a leg! (But not literally 😊)</strong></p>
+    </div>
+
+</body>
+</html>
