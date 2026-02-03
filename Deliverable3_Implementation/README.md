@@ -4,13 +4,13 @@
 
 ---
 
-## 📋 Overview
+## Overview
 
 This folder contains materials for Deliverable 3: Implementation and Testing, specifically **Andre Lewis's (Team Lead) responsibilities**.
 
 ---
 
-## 📁 Contents
+## Contents
 
 ### **Andre's Primary Responsibilities:**
 
@@ -36,7 +36,7 @@ This folder contains materials for Deliverable 3: Implementation and Testing, sp
 
 ---
 
-## 🎯 Andre's Specific Responsibilities
+## Andre's Specific Responsibilities
 
 ### **Chapter 5: Software Architecture**
 - Architectural overview
@@ -58,18 +58,18 @@ This folder contains materials for Deliverable 3: Implementation and Testing, sp
 
 ### **Test Cases:**
 - **UC-001: Browse Restaurant Menus** (8 test cases)
-  - TC-001-01 through TC-001-08
-  - Sunny day and rainy day scenarios
+ - TC-001-01 through TC-001-08
+ - Sunny day and rainy day scenarios
 
 - **UC-005: User Login** (10 test cases)
-  - TC-005-01 through TC-005-10
-  - Sunny day and rainy day scenarios
+ - TC-005-01 through TC-005-10
+ - Sunny day and rainy day scenarios
 
 **File:** `MenuMap_Test_Cases_Login_UC001.md`
 
 ---
 
-## 📊 Test Results (Andre's Test Cases)
+## Test Results (Andre's Test Cases)
 
 - **UC-001 Test Cases:** 8/8 passed (100%)
 - **UC-005 Test Cases:** 10/10 passed (100%)
@@ -77,7 +77,7 @@ This folder contains materials for Deliverable 3: Implementation and Testing, sp
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 - **Architecture:** 3-Tier (Presentation, Business Logic, Data)
 - **Design Patterns:** MVC, DAO, Service Layer, Strategy, Repository
@@ -85,7 +85,7 @@ This folder contains materials for Deliverable 3: Implementation and Testing, sp
 
 ---
 
-## 📝 Notes
+## Notes
 
 - All diagrams are in `../Deliverable2_Design/UML_Diagrams/Diagrams_Only/`
 - Papyrus workspace contains all UML models
@@ -95,7 +95,7 @@ This folder contains materials for Deliverable 3: Implementation and Testing, sp
 
 ---
 
-## ✅ Completion Status
+## Completion Status
 
 - [x] Chapter 5: Software Architecture - Complete
 - [x] Chapter 6: Detailed Design - Complete
@@ -106,7 +106,7 @@ This folder contains materials for Deliverable 3: Implementation and Testing, sp
 
 ---
 
-**Repository:** AndreLewis1400/MenuMap  
-**Course:** CEN 4010 - Software Engineering  
-**Institution:** Florida International University  
+**Repository:** AndreLewis1400/MenuMap 
+**Course:** CEN 4010 - Software Engineering 
+**Institution:** Florida International University 
 **Team Lead:** Andre Lewis

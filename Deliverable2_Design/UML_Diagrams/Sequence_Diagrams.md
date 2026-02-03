@@ -1,11 +1,11 @@
 # MenuMap Sequence Diagrams
 ## CEN4010 Software Engineering - Team 9
 
-**Project:** MenuMap Application  
-**Team:** Team 9  
-**Software Architecture & Design Lead:** Andre Lewis  
-**Date:** [Current Date]  
-**Version:** 1.0  
+**Project:** MenuMap Application 
+**Team:** Team 9 
+**Software Architecture & Design Lead:** Andre Lewis 
+**Date:** [Current Date] 
+**Version:** 1.0 
 
 ---
 
@@ -46,12 +46,12 @@ WebInterface -> User: 14. display menu
 
 ### **Alternative Flows:**
 - **A1: No Results Found**
-  - Database returns empty list
-  - WebInterface displays "No results found" message
+ - Database returns empty list
+ - WebInterface displays "No results found" message
 
 - **A2: Menu Unavailable**
-  - Database returns error
-  - WebInterface displays error message
+ - Database returns error
+ - WebInterface displays error message
 
 ---
 
@@ -89,12 +89,12 @@ WebInterface -> User: 16. display "Added to favorites"
 
 ### **Alternative Flows:**
 - **A1: Not Logged In**
-  - AuthenticationService returns null
-  - WebInterface redirects to login
+ - AuthenticationService returns null
+ - WebInterface redirects to login
 
 - **A2: Favorites Limit Reached**
-  - Database returns limit error
-  - WebInterface displays limit message
+ - Database returns limit error
+ - WebInterface displays limit message
 
 ---
 
@@ -140,16 +140,16 @@ WebInterface -> User: 23. display "Password reset successful"
 
 ### **Alternative Flows:**
 - **A1: Email Not Found**
-  - Database returns false
-  - AuthenticationService returns generic message (security)
+ - Database returns false
+ - AuthenticationService returns generic message (security)
 
 - **A2: Token Expired**
-  - Database returns token expired
-  - WebInterface displays "Token expired" message
+ - Database returns token expired
+ - WebInterface displays "Token expired" message
 
 - **A3: Invalid Token**
-  - Database returns invalid token
-  - SecurityLogger logs suspicious activity
+ - Database returns invalid token
+ - SecurityLogger logs suspicious activity
 
 ---
 
@@ -261,15 +261,15 @@ SpamProtection -> SpamProtection: 4. validateContentQuality()
 SpamProtection -> SpamProtection: 5. checkRateLimits(userID)
 
 alt Content is Clean
-    SpamProtection -> Database: 6a. saveContent(content)
-    Database -> SpamProtection: 7a. return success
-    SpamProtection -> WebInterface: 8a. return approved
-    WebInterface -> User: 9a. display "Content published"
+ SpamProtection -> Database: 6a. saveContent(content)
+ Database -> SpamProtection: 7a. return success
+ SpamProtection -> WebInterface: 8a. return approved
+ WebInterface -> User: 9a. display "Content published"
 else Content is Spam
-    SpamProtection -> Database: 6b. createAlert(content, userID)
-    Database -> SpamProtection: 7b. return alertID
-    SpamProtection -> WebInterface: 8b. return blocked
-    WebInterface -> User: 9b. display "Content blocked"
+ SpamProtection -> Database: 6b. createAlert(content, userID)
+ Database -> SpamProtection: 7b. return alertID
+ SpamProtection -> WebInterface: 8b. return blocked
+ WebInterface -> User: 9b. display "Content blocked"
 end
 
 Administrator -> WebInterface: 10. review spam alerts

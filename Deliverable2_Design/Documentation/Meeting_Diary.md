@@ -1,11 +1,11 @@
 # MenuMap Project - Meeting Diary
 ## CEN4010 Software Engineering - Team 9
 
-**Project:** MenuMap Application  
-**Team:** Team 9  
-**Software Architecture & Design Lead:** Andre Lewis  
-**Date:** [Current Date]  
-**Version:** 1.0  
+**Project:** MenuMap Application 
+**Team:** Team 9 
+**Software Architecture & Design Lead:** Andre Lewis 
+**Date:** [Current Date] 
+**Version:** 1.0 
 
 ---
 
@@ -16,8 +16,8 @@ This document chronicles the design decisions, architectural choices, and iterat
 ---
 
 ## Design Session 1: Project Initialization
-**Date:** [Project Start Date]  
-**Duration:** 2 hours  
+**Date:** [Project Start Date] 
+**Duration:** 2 hours 
 **Participants:** Andre Lewis (Software Architecture & Design Lead)
 
 ### **Agenda:**
@@ -68,8 +68,8 @@ This document chronicles the design decisions, architectural choices, and iterat
 ---
 
 ## Design Session 2: System Architecture
-**Date:** [Architecture Planning Date]  
-**Duration:** 3 hours  
+**Date:** [Architecture Planning Date] 
+**Duration:** 3 hours 
 **Participants:** Andre Lewis (Software Architecture & Design Lead)
 
 ### **Agenda:**
@@ -121,8 +121,8 @@ This document chronicles the design decisions, architectural choices, and iterat
 ---
 
 ## Design Session 3: UML Modeling
-**Date:** [UML Design Date]  
-**Duration:** 4 hours  
+**Date:** [UML Design Date] 
+**Duration:** 4 hours 
 **Participants:** Andre Lewis (Software Architecture & Design Lead)
 
 ### **Agenda:**
@@ -171,8 +171,8 @@ This document chronicles the design decisions, architectural choices, and iterat
 ---
 
 ## Design Session 4: Design Patterns
-**Date:** [Pattern Selection Date]  
-**Duration:** 2 hours  
+**Date:** [Pattern Selection Date] 
+**Duration:** 2 hours 
 **Participants:** Andre Lewis (Software Architecture & Design Lead)
 
 ### **Agenda:**
@@ -224,8 +224,8 @@ This document chronicles the design decisions, architectural choices, and iterat
 ---
 
 ## Design Session 5: Security Design
-**Date:** [Security Planning Date]  
-**Duration:** 2.5 hours  
+**Date:** [Security Planning Date] 
+**Duration:** 2.5 hours 
 **Participants:** Andre Lewis (Software Architecture & Design Lead)
 
 ### **Agenda:**
@@ -279,8 +279,8 @@ This document chronicles the design decisions, architectural choices, and iterat
 ---
 
 ## Design Session 6: OCL Constraints
-**Date:** [OCL Design Date]  
-**Duration:** 3 hours  
+**Date:** [OCL Design Date] 
+**Duration:** 3 hours 
 **Participants:** Andre Lewis (Software Architecture & Design Lead)
 
 ### **Agenda:**
@@ -328,8 +328,8 @@ This document chronicles the design decisions, architectural choices, and iterat
 ---
 
 ## Design Session 7: Implementation Planning
-**Date:** [Implementation Planning Date]  
-**Duration:** 2 hours  
+**Date:** [Implementation Planning Date] 
+**Duration:** 2 hours 
 **Participants:** Andre Lewis (Software Architecture & Design Lead)
 
 ### **Agenda:**
@@ -383,8 +383,8 @@ This document chronicles the design decisions, architectural choices, and iterat
 ---
 
 ## Design Session 8: Final Review
-**Date:** [Final Review Date]  
-**Duration:** 1.5 hours  
+**Date:** [Final Review Date] 
+**Duration:** 1.5 hours 
 **Participants:** Andre Lewis (Software Architecture & Design Lead)
 
 ### **Agenda:**

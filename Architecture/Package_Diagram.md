@@ -1,9 +1,9 @@
 # MenuMap Package Diagram - Software Architecture
 ## CEN4010 Software Engineering - Team 9
 
-**Author:** Andre Lewis (Software Architecture & Design Lead)  
-**Date:** [Current Date]  
-**Version:** 1.0  
+**Author:** Andre Lewis (Software Architecture & Design Lead) 
+**Date:** [Current Date] 
+**Version:** 1.0 
 
 ---
 
@@ -18,58 +18,58 @@ The MenuMap application follows a **Layered Architecture** pattern with **MVC** 
 ### **1. Presentation Layer**
 - **Purpose**: Handles user interface and user interactions
 - **Responsibilities**: 
-  - Web interface rendering
-  - User input validation
-  - Response formatting
-  - Mobile responsiveness
+ - Web interface rendering
+ - User input validation
+ - Response formatting
+ - Mobile responsiveness
 
 ### **2. Business Logic Layer**
 - **Purpose**: Contains core business rules and application logic
 - **Responsibilities**:
-  - Use case orchestration
-  - Business rule enforcement
-  - Data validation
-  - Workflow management
+ - Use case orchestration
+ - Business rule enforcement
+ - Data validation
+ - Workflow management
 
 ### **3. Data Access Layer**
 - **Purpose**: Manages data persistence and retrieval
 - **Responsibilities**:
-  - Database operations
-  - Data mapping
-  - Transaction management
-  - Cache management
+ - Database operations
+ - Data mapping
+ - Transaction management
+ - Cache management
 
 ### **4. Security Subsystem**
 - **Purpose**: Handles authentication, authorization, and security
 - **Responsibilities**:
-  - User authentication
-  - Password reset security
-  - Spam protection
-  - Access control
+ - User authentication
+ - Password reset security
+ - Spam protection
+ - Access control
 
 ### **5. Menu Management Subsystem**
 - **Purpose**: Manages restaurant and menu data
 - **Responsibilities**:
-  - Menu browsing and search
-  - Menu verification
-  - Restaurant data management
-  - Content moderation
+ - Menu browsing and search
+ - Menu verification
+ - Restaurant data management
+ - Content moderation
 
 ### **6. User Management Subsystem**
 - **Purpose**: Handles user accounts and preferences
 - **Responsibilities**:
-  - User registration
-  - Profile management
-  - Favorites management
-  - User preferences
+ - User registration
+ - Profile management
+ - Favorites management
+ - User preferences
 
 ### **7. Notification Subsystem**
 - **Purpose**: Handles email and system notifications
 - **Responsibilities**:
-  - Email delivery
-  - Password reset emails
-  - System notifications
-  - Alert management
+ - Email delivery
+ - Password reset emails
+ - System notifications
+ - Alert management
 
 ---
 
@@ -77,27 +77,27 @@ The MenuMap application follows a **Layered Architecture** pattern with **MVC** 
 
 ```
 Presentation Layer
-    ↓ (depends on)
+ ↓ (depends on)
 Business Logic Layer
-    ↓ (depends on)
+ ↓ (depends on)
 Data Access Layer
-    ↓ (depends on)
+ ↓ (depends on)
 Database
 
 Security Subsystem
-    ↓ (provides services to)
+ ↓ (provides services to)
 Business Logic Layer
 
 Menu Management Subsystem
-    ↓ (provides services to)
+ ↓ (provides services to)
 Business Logic Layer
 
 User Management Subsystem
-    ↓ (provides services to)
+ ↓ (provides services to)
 Business Logic Layer
 
 Notification Subsystem
-    ↓ (provides services to)
+ ↓ (provides services to)
 Business Logic Layer
 ```
 

@@ -5,7 +5,7 @@ This state machine diagram models the user authentication and session management
 
 ---
 
-## 🎯 **States (Rounded Rectangles)**
+## **States (Rounded Rectangles)**
 
 ### **1. Ready (Initial Interactive State)**
 - **Location:** Central left position
@@ -46,7 +46,7 @@ This state machine diagram models the user authentication and session management
 
 ---
 
-## 🔄 **Transitions (with Proper Format: event[guard]/action)**
+## **Transitions (with Proper Format: event[guard]/action)**
 
 ### **Initial State → Ready**
 - **From:** Initial (black circle labeled "Initial")
@@ -57,88 +57,88 @@ This state machine diagram models the user authentication and session management
 - **From:** Ready
 - **To:** LoggedIn
 - **Label:** `login(username, password)[valid(username, password)]/loggedIn`
-  - **Event:** `login(username, password)`
-  - **Guard:** `[valid(username, password)]` (credentials are valid)
-  - **Action:** `/loggedIn` (session established)
+ - **Event:** `login(username, password)`
+ - **Guard:** `[valid(username, password)]` (credentials are valid)
+ - **Action:** `/loggedIn` (session established)
 
 ### **Ready → Ready (Failed Login - Self-Transition)**
 - **From:** Ready
 - **To:** Ready (self-loop)
 - **Label:** `login(username, password)[!valid(username, password)]/print(errmsg)`
-  - **Event:** `login(username, password)`
-  - **Guard:** `[!valid(username, password)]` (credentials are invalid)
-  - **Action:** `/print(errmsg)` (display error message)
+ - **Event:** `login(username, password)`
+ - **Guard:** `[!valid(username, password)]` (credentials are invalid)
+ - **Action:** `/print(errmsg)` (display error message)
 
 ### **Ready → Registering (Start Registration)**
 - **From:** Ready
 - **To:** Registering
 - **Label:** `register()`
-  - **Event:** `register()`
+ - **Event:** `register()`
 
 ### **Registering → Ready (Registration Complete)**
 - **From:** Registering
 - **To:** Ready
 - **Label:** `registrationComplete()`
-  - **Event:** `registrationComplete()`
-  - **Action:** (user can now log in)
+ - **Event:** `registrationComplete()`
+ - **Action:** (user can now log in)
 
 ### **Registering → Registering (Registration Failed - Self-Transition)**
 - **From:** Registering
 - **To:** Registering (self-loop)
 - **Label:** `submitRegistration()[!validRegistrationData()]/print(validationErrors)`
-  - **Event:** `submitRegistration()`
-  - **Guard:** `[!validRegistrationData()]` (data validation failed)
-  - **Action:** `/print(validationErrors)` (display validation errors)
+ - **Event:** `submitRegistration()`
+ - **Guard:** `[!validRegistrationData()]` (data validation failed)
+ - **Action:** `/print(validationErrors)` (display validation errors)
 
 ### **LoggedIn → Ready (Logout)**
 - **From:** LoggedIn
 - **To:** Ready
 - **Label:** `logout()`
-  - **Event:** `logout()`
-  - **Action:** Session invalidated
+ - **Event:** `logout()`
+ - **Action:** Session invalidated
 
 ### **LoggedIn → BrowseMenus**
 - **From:** LoggedIn
 - **To:** BrowseMenus
 - **Label:** `browseMenus()`
-  - **Event:** `browseMenus()`
-  - **Guard:** (no guard - all authenticated users can browse)
+ - **Event:** `browseMenus()`
+ - **Guard:** (no guard - all authenticated users can browse)
 
 ### **BrowseMenus → LoggedIn (Exit Browsing)**
 - **From:** BrowseMenus
 - **To:** LoggedIn
 - **Label:** `exitBrowse()`
-  - **Event:** `exitBrowse()`
+ - **Event:** `exitBrowse()`
 
 ### **LoggedIn → ManageFavorites**
 - **From:** LoggedIn
 - **To:** ManageFavorites
 - **Label:** `manageFavorites()`
-  - **Event:** `manageFavorites()`
-  - **Guard:** (no guard - all authenticated users can manage favorites)
+ - **Event:** `manageFavorites()`
+ - **Guard:** (no guard - all authenticated users can manage favorites)
 
 ### **ManageFavorites → LoggedIn (Exit Favorites)**
 - **From:** ManageFavorites
 - **To:** LoggedIn
 - **Label:** `exitFavorites()`
-  - **Event:** `exitFavorites()`
+ - **Event:** `exitFavorites()`
 
 ### **LoggedIn → MenuManagement**
 - **From:** LoggedIn
 - **To:** MenuManagement
 - **Label:** `manageMenu()[role == RestaurantOwner]`
-  - **Event:** `manageMenu()`
-  - **Guard:** `[role == RestaurantOwner]` (only Restaurant Owners can access)
+ - **Event:** `manageMenu()`
+ - **Guard:** `[role == RestaurantOwner]` (only Restaurant Owners can access)
 
 ### **MenuManagement → LoggedIn (Exit Menu Management)**
 - **From:** MenuManagement
 - **To:** LoggedIn
 - **Label:** `exitMenuManagement()`
-  - **Event:** `exitMenuManagement()`
+ - **Event:** `exitMenuManagement()`
 
 ---
 
-## 📋 **Diagram Structure (Based on Example)**
+## **Diagram Structure (Based on Example)**
 
 ### **Initial State**
 - Black circle labeled "Initial" or "Initial1"
@@ -147,11 +147,11 @@ This state machine diagram models the user authentication and session management
 
 ### **State Layout**
 ```
-        [Registering]          [BrowseMenus]
-              ↓                      ↓
-        [Ready] ←→ [LoggedIn] → [ManageFavorites]
-              ↑                      ↓
-        [MenuManagement]
+ [Registering] [BrowseMenus]
+ ↓ ↓
+ [Ready] ←→ [LoggedIn] → [ManageFavorites]
+ ↑ ↓
+ [MenuManagement]
 ```
 
 ### **Transition Format Rules**
@@ -159,9 +159,9 @@ This state machine diagram models the user authentication and session management
 2. **Guard:** Boolean expression in square brackets (e.g., `[valid(username, password)]`)
 3. **Action:** Slash-prefixed action (e.g., `/loggedIn`, `/print(errmsg)`)
 4. **Format:** `event[guard]/action`
-   - If no guard: `event/action`
-   - If no action: `event[guard]`
-   - If neither: just `event`
+ - If no guard: `event/action`
+ - If no action: `event[guard]`
+ - If neither: just `event`
 
 ### **Self-Transitions**
 - Used for error handling (failed login, failed registration)
@@ -170,7 +170,7 @@ This state machine diagram models the user authentication and session management
 
 ---
 
-## ✅ **Checklist for Papyrus Implementation**
+## **Checklist for Papyrus Implementation**
 
 - [ ] Initial state (black circle) labeled "Initial"
 - [ ] All states are rounded rectangles
@@ -186,7 +186,7 @@ This state machine diagram models the user authentication and session management
 
 ---
 
-## 🔧 **Common Issues to Fix**
+## **Common Issues to Fix**
 
 ### **Issue 1: Missing Event Labels**
 - **Problem:** Transition shows "null" or no label
@@ -210,17 +210,17 @@ This state machine diagram models the user authentication and session management
 
 ---
 
-## 📊 **Example Transition Labels**
+## **Example Transition Labels**
 
 ```
-✅ CORRECT:
+ CORRECT:
 login(username, password)[valid(username, password)]/loggedIn
 logout()
 register()
 manageMenu()[role == RestaurantOwner]
 login(username, password)[!valid(username, password)]/print(errmsg)
 
-❌ INCORRECT:
+ INCORRECT:
 login (no parameters)
 [valid] (no event)
 loggedIn (no event, should be /loggedIn as action)
@@ -229,7 +229,7 @@ login[valid]/loggedIn (missing parentheses for event parameters)
 
 ---
 
-## 🎨 **Visual Layout Recommendations**
+## **Visual Layout Recommendations**
 
 1. **Initial State:** Top center or top left
 2. **Ready:** Central left (main entry point)
@@ -241,13 +241,13 @@ login[valid]/loggedIn (missing parentheses for event parameters)
 
 ---
 
-## 📝 **Notes**
+## **Notes**
 
 - This state machine follows the same pattern as the example:
-  - Initial → Ready → LoggedIn flow
-  - Self-transitions for error handling
-  - Role-based guards for restricted actions
-  - Clear event/guard/action format on all transitions
+ - Initial → Ready → LoggedIn flow
+ - Self-transitions for error handling
+ - Role-based guards for restricted actions
+ - Clear event/guard/action format on all transitions
 - All transitions must have proper labels (no "null" labels)
 - Guards are optional but should be used for conditional transitions
 - Actions are optional but should be used when state changes trigger side effects

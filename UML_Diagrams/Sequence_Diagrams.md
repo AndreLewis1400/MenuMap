@@ -1,21 +1,21 @@
 # MenuMap Sequence Diagrams
 ## CEN4010 Software Engineering - Team 9
 
-**Project:** MenuMap Application  
-**Team:** Team 9  
-**Software Architecture & Design Lead:** Andre Lewis  
-**Date:** [Current Date]  
-**Version:** 1.0  
+**Project:** MenuMap Application 
+**Team:** Team 9 
+**Software Architecture & Design Lead:** Andre Lewis 
+**Date:** [Current Date] 
+**Version:** 1.0 
 
 ---
 
-## 📊 Sequence Diagram Overview
+## Sequence Diagram Overview
 
 This document contains sequence diagrams for all 7 use cases selected for implementation in Deliverable 2. Each sequence diagram shows the detailed interaction flow between actors and system objects.
 
 ---
 
-## 🍽️ UC-001: Browse Restaurant Menus - Sequence Diagram
+## UC-001: Browse Restaurant Menus - Sequence Diagram
 
 ### **Actors & Objects:**
 - **User** (Primary Actor)
@@ -46,16 +46,16 @@ WebInterface -> User: 14. display menu
 
 ### **Alternative Flows:**
 - **A1: No Results Found**
-  - Database returns empty list
-  - WebInterface displays "No results found" message
+ - Database returns empty list
+ - WebInterface displays "No results found" message
 
 - **A2: Menu Unavailable**
-  - Database returns error
-  - WebInterface displays error message
+ - Database returns error
+ - WebInterface displays error message
 
 ---
 
-## ⭐ UC-002: Manage Favorites - Sequence Diagram
+## UC-002: Manage Favorites - Sequence Diagram
 
 ### **Actors & Objects:**
 - **User** (Primary Actor)
@@ -89,16 +89,16 @@ WebInterface -> User: 16. display "Added to favorites"
 
 ### **Alternative Flows:**
 - **A1: Not Logged In**
-  - AuthenticationService returns null
-  - WebInterface redirects to login
+ - AuthenticationService returns null
+ - WebInterface redirects to login
 
 - **A2: Favorites Limit Reached**
-  - Database returns limit error
-  - WebInterface displays limit message
+ - Database returns limit error
+ - WebInterface displays limit message
 
 ---
 
-## 🔒 UC-003: Secure Password Reset - Sequence Diagram
+## UC-003: Secure Password Reset - Sequence Diagram
 
 ### **Actors & Objects:**
 - **User** (Primary Actor)
@@ -140,20 +140,20 @@ WebInterface -> User: 23. display "Password reset successful"
 
 ### **Alternative Flows:**
 - **A1: Email Not Found**
-  - Database returns false
-  - AuthenticationService returns generic message (security)
+ - Database returns false
+ - AuthenticationService returns generic message (security)
 
 - **A2: Token Expired**
-  - Database returns token expired
-  - WebInterface displays "Token expired" message
+ - Database returns token expired
+ - WebInterface displays "Token expired" message
 
 - **A3: Invalid Token**
-  - Database returns invalid token
-  - SecurityLogger logs suspicious activity
+ - Database returns invalid token
+ - SecurityLogger logs suspicious activity
 
 ---
 
-## 👤 UC-004: User Registration & Login - Sequence Diagram
+## UC-004: User Registration & Login - Sequence Diagram
 
 ### **Actors & Objects:**
 - **User** (Primary Actor)
@@ -199,7 +199,7 @@ WebInterface -> User: 24. display dashboard
 
 ---
 
-## ✅ UC-005: Menu Verification System - Sequence Diagram
+## UC-005: Menu Verification System - Sequence Diagram
 
 ### **Actors & Objects:**
 - **Restaurant Owner** (Primary Actor)
@@ -242,7 +242,7 @@ WebInterface -> Administrator: 23. display "Status updated"
 
 ---
 
-## 🛡️ UC-006: Spam Protection System - Sequence Diagram
+## UC-006: Spam Protection System - Sequence Diagram
 
 ### **Actors & Objects:**
 - **User** (Primary Actor)
@@ -261,15 +261,15 @@ SpamProtection -> SpamProtection: 4. validateContentQuality()
 SpamProtection -> SpamProtection: 5. checkRateLimits(userID)
 
 alt Content is Clean
-    SpamProtection -> Database: 6a. saveContent(content)
-    Database -> SpamProtection: 7a. return success
-    SpamProtection -> WebInterface: 8a. return approved
-    WebInterface -> User: 9a. display "Content published"
+ SpamProtection -> Database: 6a. saveContent(content)
+ Database -> SpamProtection: 7a. return success
+ SpamProtection -> WebInterface: 8a. return approved
+ WebInterface -> User: 9a. display "Content published"
 else Content is Spam
-    SpamProtection -> Database: 6b. createAlert(content, userID)
-    Database -> SpamProtection: 7b. return alertID
-    SpamProtection -> WebInterface: 8b. return blocked
-    WebInterface -> User: 9b. display "Content blocked"
+ SpamProtection -> Database: 6b. createAlert(content, userID)
+ Database -> SpamProtection: 7b. return alertID
+ SpamProtection -> WebInterface: 8b. return blocked
+ WebInterface -> User: 9b. display "Content blocked"
 end
 
 Administrator -> WebInterface: 10. review spam alerts
@@ -289,7 +289,7 @@ WebInterface -> Administrator: 21. display "Action completed"
 
 ---
 
-## 🏪 UC-007: Restaurant Owner Menu Management - Sequence Diagram
+## UC-007: Restaurant Owner Menu Management - Sequence Diagram
 
 ### **Actors & Objects:**
 - **Restaurant Owner** (Primary Actor)
@@ -340,7 +340,7 @@ WebInterface -> Restaurant Owner: 30. display "Item deleted"
 
 ---
 
-## 📋 Sequence Diagram Summary
+## Sequence Diagram Summary
 
 | Use Case | Primary Actor | Key Control Objects | Key Entity Objects | Complexity |
 |----------|---------------|-------------------|-------------------|------------|
@@ -354,7 +354,7 @@ WebInterface -> Restaurant Owner: 30. display "Item deleted"
 
 ---
 
-## 🎯 Implementation Notes
+## Implementation Notes
 
 ### **Common Patterns:**
 1. **Authentication Flow**: Most use cases start with session validation

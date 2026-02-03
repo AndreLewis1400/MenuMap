@@ -1,19 +1,19 @@
 # MenuMap Subsystem Decomposition
 ## CEN4010 Software Engineering - Team 9
 
-**Author:** Andre Lewis (Software Architecture & Design Lead)  
-**Date:** 10/14/2025  
-**Version:** 1.0  
+**Author:** Andre Lewis (Software Architecture & Design Lead) 
+**Date:** 10/14/2025 
+**Version:** 1.0 
 
 ---
 
-## 🏗️ Subsystem Decomposition Overview
+## Subsystem Decomposition Overview
 
 This document provides detailed specifications for each of the 7 major subsystems in the MenuMap application. Each subsystem is designed to handle specific functional areas while maintaining clear separation of concerns and loose coupling.
 
 ---
 
-## 📦 Subsystem 1: Presentation Layer
+## Subsystem 1: Presentation Layer
 
 ### **Purpose**
 Handles all user interface components and user interactions across web and mobile platforms.
@@ -29,19 +29,19 @@ Handles all user interface components and user interactions across web and mobil
 ```
 Presentation Layer
 ├── WebInterface
-│   ├── LoginForm
-│   ├── Dashboard
-│   ├── MenuBrowser
-│   ├── UserProfile
-│   └── RestaurantOwnerPanel
+│ ├── LoginForm
+│ ├── Dashboard
+│ ├── MenuBrowser
+│ ├── UserProfile
+│ └── RestaurantOwnerPanel
 ├── MobileInterface
-│   ├── MobileApp
-│   ├── ResponsiveDesign
-│   └── TouchOptimization
+│ ├── MobileApp
+│ ├── ResponsiveDesign
+│ └── TouchOptimization
 └── APIInterface
-    ├── RESTEndpoints
-    ├── GraphQLQueries
-    └── WebSocketConnections
+ ├── RESTEndpoints
+ ├── GraphQLQueries
+ └── WebSocketConnections
 ```
 
 ### **Interfaces**
@@ -60,7 +60,7 @@ Presentation Layer
 
 ---
 
-## 📦 Subsystem 2: Business Logic Layer
+## Subsystem 2: Business Logic Layer
 
 ### **Purpose**
 Contains core business rules, application logic, and orchestrates use case execution.
@@ -76,22 +76,22 @@ Contains core business rules, application logic, and orchestrates use case execu
 ```
 Business Logic Layer
 ├── UseCaseControllers
-│   ├── MenuBrowsingController
-│   ├── FavoritesController
-│   ├── AuthenticationController
-│   ├── UserRegistrationController
-│   ├── MenuVerificationController
-│   ├── SpamProtectionController
-│   └── RestaurantOwnerController
+│ ├── MenuBrowsingController
+│ ├── FavoritesController
+│ ├── AuthenticationController
+│ ├── UserRegistrationController
+│ ├── MenuVerificationController
+│ ├── SpamProtectionController
+│ └── RestaurantOwnerController
 ├── BusinessRules
-│   ├── MenuValidationRules
-│   ├── UserPermissionRules
-│   ├── SpamDetectionRules
-│   └── SecurityRules
+│ ├── MenuValidationRules
+│ ├── UserPermissionRules
+│ ├── SpamDetectionRules
+│ └── SecurityRules
 └── WorkflowEngine
-    ├── AuthenticationWorkflow
-    ├── MenuVerificationWorkflow
-    └── NotificationWorkflow
+ ├── AuthenticationWorkflow
+ ├── MenuVerificationWorkflow
+ └── NotificationWorkflow
 ```
 
 ### **Interfaces**
@@ -104,7 +104,7 @@ Business Logic Layer
 
 ---
 
-## 📦 Subsystem 3: Data Access Layer
+## Subsystem 3: Data Access Layer
 
 ### **Purpose**
 Manages data persistence, retrieval, and database operations.
@@ -120,24 +120,24 @@ Manages data persistence, retrieval, and database operations.
 ```
 Data Access Layer
 ├── Repositories
-│   ├── UserRepository
-│   ├── MenuRepository
-│   ├── RestaurantRepository
-│   ├── FavoriteRepository
-│   └── VerificationRepository
+│ ├── UserRepository
+│ ├── MenuRepository
+│ ├── RestaurantRepository
+│ ├── FavoriteRepository
+│ └── VerificationRepository
 ├── DataMappers
-│   ├── UserMapper
-│   ├── MenuMapper
-│   ├── RestaurantMapper
-│   └── FavoriteMapper
+│ ├── UserMapper
+│ ├── MenuMapper
+│ ├── RestaurantMapper
+│ └── FavoriteMapper
 ├── DatabaseConnections
-│   ├── ConnectionPool
-│   ├── TransactionManager
-│   └── QueryOptimizer
+│ ├── ConnectionPool
+│ ├── TransactionManager
+│ └── QueryOptimizer
 └── CacheManager
-    ├── RedisCache
-    ├── MemoryCache
-    └── CacheInvalidation
+ ├── RedisCache
+ ├── MemoryCache
+ └── CacheInvalidation
 ```
 
 ### **Interfaces**
@@ -150,7 +150,7 @@ Data Access Layer
 
 ---
 
-## 📦 Subsystem 4: Security Subsystem
+## Subsystem 4: Security Subsystem
 
 ### **Purpose**
 Handles authentication, authorization, and all security-related functionality.
@@ -166,23 +166,23 @@ Handles authentication, authorization, and all security-related functionality.
 ```
 Security Subsystem
 ├── AuthenticationService
-│   ├── LoginManager
-│   ├── SessionManager
-│   ├── TokenGenerator
-│   └── PasswordValidator
+│ ├── LoginManager
+│ ├── SessionManager
+│ ├── TokenGenerator
+│ └── PasswordValidator
 ├── AuthorizationService
-│   ├── RoleManager
-│   ├── PermissionChecker
-│   └── AccessController
+│ ├── RoleManager
+│ ├── PermissionChecker
+│ └── AccessController
 ├── SpamProtectionService
-│   ├── ContentAnalyzer
-│   ├── BehaviorMonitor
-│   ├── MLDetector
-│   └── RateLimiter
+│ ├── ContentAnalyzer
+│ ├── BehaviorMonitor
+│ ├── MLDetector
+│ └── RateLimiter
 └── SecurityMonitoring
-    ├── AuditLogger
-    ├── ThreatDetector
-    └── SecurityAlerts
+ ├── AuditLogger
+ ├── ThreatDetector
+ └── SecurityAlerts
 ```
 
 ### **Interfaces**
@@ -198,7 +198,7 @@ Security Subsystem
 
 ---
 
-## 📦 Subsystem 5: Menu Management Subsystem
+## Subsystem 5: Menu Management Subsystem
 
 ### **Purpose**
 Manages restaurant and menu data, including browsing, search, and verification.
@@ -214,24 +214,24 @@ Manages restaurant and menu data, including browsing, search, and verification.
 ```
 Menu Management Subsystem
 ├── MenuService
-│   ├── MenuBrowser
-│   ├── MenuSearch
-│   ├── MenuFilter
-│   └── MenuRanking
+│ ├── MenuBrowser
+│ ├── MenuSearch
+│ ├── MenuFilter
+│ └── MenuRanking
 ├── RestaurantService
-│   ├── RestaurantManager
-│   ├── LocationService
-│   ├── CuisineClassifier
-│   └── RatingCalculator
+│ ├── RestaurantManager
+│ ├── LocationService
+│ ├── CuisineClassifier
+│ └── RatingCalculator
 ├── VerificationService
-│   ├── MenuVerifier
-│   ├── ContentValidator
-│   ├── AuthenticityChecker
-│   └── ApprovalWorkflow
+│ ├── MenuVerifier
+│ ├── ContentValidator
+│ ├── AuthenticityChecker
+│ └── ApprovalWorkflow
 └── ContentModeration
-    ├── ContentReviewer
-    ├── ModerationQueue
-    └── ApprovalSystem
+ ├── ContentReviewer
+ ├── ModerationQueue
+ └── ApprovalSystem
 ```
 
 ### **Interfaces**
@@ -246,7 +246,7 @@ Menu Management Subsystem
 
 ---
 
-## 📦 Subsystem 6: User Management Subsystem
+## Subsystem 6: User Management Subsystem
 
 ### **Purpose**
 Handles user accounts, profiles, preferences, and favorites management.
@@ -262,24 +262,24 @@ Handles user accounts, profiles, preferences, and favorites management.
 ```
 User Management Subsystem
 ├── UserService
-│   ├── UserRegistration
-│   ├── ProfileManager
-│   ├── AccountManager
-│   └── UserValidator
+│ ├── UserRegistration
+│ ├── ProfileManager
+│ ├── AccountManager
+│ └── UserValidator
 ├── FavoritesService
-│   ├── FavoritesManager
-│   ├── FavoritesOrganizer
-│   ├── FavoritesSharing
-│   └── FavoritesAnalytics
+│ ├── FavoritesManager
+│ ├── FavoritesOrganizer
+│ ├── FavoritesSharing
+│ └── FavoritesAnalytics
 ├── PreferencesService
-│   ├── SettingsManager
-│   ├── NotificationPreferences
-│   ├── PrivacySettings
-│   └── DisplayPreferences
+│ ├── SettingsManager
+│ ├── NotificationPreferences
+│ ├── PrivacySettings
+│ └── DisplayPreferences
 └── UserAnalytics
-    ├── UsageTracker
-    ├── BehaviorAnalyzer
-    └── RecommendationEngine
+ ├── UsageTracker
+ ├── BehaviorAnalyzer
+ └── RecommendationEngine
 ```
 
 ### **Interfaces**
@@ -294,7 +294,7 @@ User Management Subsystem
 
 ---
 
-## 📦 Subsystem 7: Notification Subsystem
+## Subsystem 7: Notification Subsystem
 
 ### **Purpose**
 Handles all types of notifications including email, SMS, and in-app notifications.
@@ -310,25 +310,25 @@ Handles all types of notifications including email, SMS, and in-app notification
 ```
 Notification Subsystem
 ├── EmailService
-│   ├── EmailSender
-│   ├── TemplateEngine
-│   ├── EmailQueue
-│   └── DeliveryTracker
+│ ├── EmailSender
+│ ├── TemplateEngine
+│ ├── EmailQueue
+│ └── DeliveryTracker
 ├── NotificationService
-│   ├── InAppNotifications
-│   ├── PushNotifications
-│   ├── NotificationQueue
-│   └── NotificationHistory
+│ ├── InAppNotifications
+│ ├── PushNotifications
+│ ├── NotificationQueue
+│ └── NotificationHistory
 ├── RealTimeService
-│   ├── WebSocketManager
-│   ├── EventBroadcaster
-│   ├── ConnectionManager
-│   └── MessageRouter
+│ ├── WebSocketManager
+│ ├── EventBroadcaster
+│ ├── ConnectionManager
+│ └── MessageRouter
 └── TemplateManager
-    ├── EmailTemplates
-    ├── NotificationTemplates
-    ├── TemplateEngine
-    └── TemplateVersioning
+ ├── EmailTemplates
+ ├── NotificationTemplates
+ ├── TemplateEngine
+ └── TemplateVersioning
 ```
 
 ### **Interfaces**
@@ -344,17 +344,17 @@ Notification Subsystem
 
 ---
 
-## 🔗 Subsystem Interactions
+## Subsystem Interactions
 
 ### **Primary Data Flow**
 ```
 User Request → Presentation Layer → Business Logic Layer → Data Access Layer → Database
-                ↓
-            Security Subsystem (Authentication/Authorization)
-                ↓
-            Specific Subsystem (Menu/User/Notification)
-                ↓
-            Response ← Presentation Layer ← Business Logic Layer ← Data Access Layer
+ ↓
+ Security Subsystem (Authentication/Authorization)
+ ↓
+ Specific Subsystem (Menu/User/Notification)
+ ↓
+ Response ← Presentation Layer ← Business Logic Layer ← Data Access Layer
 ```
 
 ### **Cross-Subsystem Dependencies**
@@ -367,7 +367,7 @@ User Request → Presentation Layer → Business Logic Layer → Data Access Lay
 
 ---
 
-## 📊 Subsystem Metrics
+## Subsystem Metrics
 
 ### **Performance Requirements**
 - **Presentation Layer**: < 200ms response time for UI updates
@@ -387,7 +387,7 @@ User Request → Presentation Layer → Business Logic Layer → Data Access Lay
 
 ---
 
-## 🔒 Security Considerations
+## Security Considerations
 
 ### **Authentication & Authorization**
 - Multi-factor authentication support
@@ -409,7 +409,7 @@ User Request → Presentation Layer → Business Logic Layer → Data Access Lay
 
 ---
 
-## 🎯 Quality Attributes
+## Quality Attributes
 
 ### **Reliability**
 - 99.9% uptime target

@@ -11,59 +11,59 @@
 
 ---
 
-## ✅ **Andre's Completed Responsibilities as Group Lead**
+## **Andre's Completed Responsibilities as Group Lead**
 
 ### **Primary Content (Chapters)**
 
-#### **Chapter 5: Software Architecture** ✅ COMPLETE
+#### **Chapter 5: Software Architecture** COMPLETE
 - **Section 5.1**: Overview
 - **Section 5.2**: Subsystem Decomposition
-  - 5.2.1 Subsystem 1: Presentation Tier (MM_Client) with MVC pattern
-  - 5.2.2 Subsystem 2: Business Logic Tier (MM_Logic)
-  - 5.2.3 Subsystem 3: Data Tier (MM_DataStore)
+ - 5.2.1 Subsystem 1: Presentation Tier (MM_Client) with MVC pattern
+ - 5.2.2 Subsystem 2: Business Logic Tier (MM_Logic)
+ - 5.2.3 Subsystem 3: Data Tier (MM_DataStore)
 - **Section 5.3**: Hardware and Software Mapping
-  - Hardware Infrastructure
-  - Software Technology Stack
-  - Software Component Mapping
+ - Hardware Infrastructure
+ - Software Technology Stack
+ - Software Component Mapping
 - **Section 5.4**: Persistent Data Management
-  - Database Design
-  - Data Access Patterns
-  - Data Storage Strategy
+ - Database Design
+ - Data Access Patterns
+ - Data Storage Strategy
 - **Section 5.5**: Security Management
-  - Access Control (CRUD permissions table)
-  - Security Management (Authentication, Data Protection, Threat Detection, Security Monitoring)
+ - Access Control (CRUD permissions table)
+ - Security Management (Authentication, Data Protection, Threat Detection, Security Monitoring)
 - **Diagrams**: 4 placeholders ready (Figures 5.1-5.4)
 
-#### **Chapter 6: Detailed Design** ✅ COMPLETE
+#### **Chapter 6: Detailed Design** COMPLETE
 - **Section 6.1**: Overview
 - **Section 6.2**: Class Design
-  - 6.2.1 Presentation Layer Classes
-  - 6.2.2 Business Logic Layer Classes
-  - 6.2.3 Data Access Layer Classes
+ - 6.2.1 Presentation Layer Classes
+ - 6.2.2 Business Logic Layer Classes
+ - 6.2.3 Data Access Layer Classes
 - **Section 6.3**: Object Interaction (Sequence Diagrams)
-  - UC-001: Browse Restaurant Menus (complete with message flow)
-  - UC-005: User Login (complete with message flow)
+ - UC-001: Browse Restaurant Menus (complete with message flow)
+ - UC-005: User Login (complete with message flow)
 - **Section 6.4**: Detailed Class Design
-  - Presentation Layer Classes overview
-  - Business Logic Layer Classes overview
-  - Data Access Layer Classes overview
+ - Presentation Layer Classes overview
+ - Business Logic Layer Classes overview
+ - Data Access Layer Classes overview
 - **Diagrams**: 2 sequence diagram placeholders (Figures 6.1-6.2)
 
 ### **Test Cases (Chapter 7)**
 
-#### **UC-001: Browse Restaurant Menus** ✅ COMPLETE
+#### **UC-001: Browse Restaurant Menus** COMPLETE
 - **8 Test Cases**: TC-001-01 through TC-001-08
 - **Sunny Day Scenarios**: 2 test cases (successful operations)
 - **Rainy Day Scenarios**: 6 test cases (error handling and edge cases)
 
-#### **UC-005: User Login** ✅ COMPLETE
+#### **UC-005: User Login** COMPLETE
 - **10 Test Cases**: TC-005-01 through TC-005-10
 - **Sunny Day Scenarios**: 2 test cases (successful login)
 - **Rainy Day Scenarios**: 8 test cases (error handling and security)
 
 **Total Test Cases Completed: 18 test cases**
 
-### **Additional Responsibilities** ✅ COMPLETE
+### **Additional Responsibilities** COMPLETE
 - **Project Coordination**: Overall project coordination and team management
 - **Final Document Integration**: Maintains complete document structure
 - **Document Structure Maintenance**: Ensures all sections are properly organized
@@ -262,11 +262,11 @@ The MVC pattern is implemented exclusively within Subsystem 1 (MM_Client):
 
 - **Model**: Represents data and business logic at the presentation level. The Model in the client handles data representation and coordinates with the Business Logic Tier.
 - **View**: Displays data to users. Views include web pages, forms, and interactive UI components such as:
-  - LoginForm
-  - Dashboard
-  - MenuBrowser
-  - UserProfile
-  - RestaurantOwnerPanel
+ - LoginForm
+ - Dashboard
+ - MenuBrowser
+ - UserProfile
+ - RestaurantOwnerPanel
 - **Controller**: Handles user input and coordinates between Model and View. Controllers process HTTP requests and responses, including:
 - `MenuController`: Handles menu browsing requests
 - `UserController`: Manages authentication and user management
@@ -398,27 +398,27 @@ The system uses a relational database (PostgreSQL or MySQL) with the following p
 ### Primary Database Entities
 
 - **Users**: User accounts and authentication information
-  - Stores user credentials, profile data, and account status
-  - Includes email verification status and account lock status
-  
+ - Stores user credentials, profile data, and account status
+ - Includes email verification status and account lock status
+ 
 - **Restaurants**: Restaurant information and details
-  - Contains restaurant name, address, contact information
-  - Links to owner user accounts
-  - Tracks restaurant status (Active/Inactive)
-  
+ - Contains restaurant name, address, contact information
+ - Links to owner user accounts
+ - Tracks restaurant status (Active/Inactive)
+ 
 - **Menu Items**: Individual menu items with descriptions and prices
-  - Associated with specific restaurants
-  - Includes category classification and availability status
-  - Contains pricing and description information
-  
+ - Associated with specific restaurants
+ - Includes category classification and availability status
+ - Contains pricing and description information
+ 
 - **Sessions**: User session management
-  - Tracks active user sessions
-  - Manages session tokens and expiration times
-  - Ensures secure session handling
-  
+ - Tracks active user sessions
+ - Manages session tokens and expiration times
+ - Ensures secure session handling
+ 
 - **Access Control**: Access control permissions for CRUD operations
-  - Defines role-based permissions
-  - Manages resource-level access control
+ - Defines role-based permissions
+ - Manages resource-level access control
 
 ### Data Access Patterns
 
@@ -730,7 +730,7 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 - **Test Setup**: Restaurant "Joe's Pizza" exists with menu items in database (see tables above)
 - **Test Input**: User searches for "Joe's Pizza" and views menu
 - **Expected Output**: Menu displays correctly with all items, prices, and descriptions
-- **Result**: ✅ PASS
+- **Result**: PASS
 
 **TC-001-02: Browse Menu with Filters (Sunny Day)**
 - **Test Case ID**: SystemTest-012-UC001
@@ -747,7 +747,7 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 - **Test Setup**: User is viewing a menu with multiple categories (see table above)
 - **Test Input**: User selects "Appetizers" filter
 - **Expected Output**: Only appetizer items are displayed
-- **Result**: ✅ PASS
+- **Result**: PASS
 
 **TC-001-03: Restaurant Not Found (Rainy Day)**
 - **Test Case ID**: SystemTest-013-UC001
@@ -762,7 +762,7 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 - **Test Setup**: Restaurant does not exist in database (see table above)
 - **Test Input**: User searches for "NonExistent Restaurant"
 - **Expected Output**: Appropriate error message displayed
-- **Result**: ✅ PASS
+- **Result**: PASS
 
 **TC-001-04: Menu Not Available (Rainy Day)**
 - **Test Case ID**: SystemTest-014-UC001
@@ -783,7 +783,7 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 - **Test Setup**: Restaurant exists but has no menu items (see tables above)
 - **Test Input**: User attempts to view menu
 - **Expected Output**: Message indicating menu is not available
-- **Result**: ✅ PASS
+- **Result**: PASS
 
 **TC-001-05: Database Connection Error (Rainy Day)**
 - **Test Case ID**: SystemTest-015-UC001
@@ -798,7 +798,7 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 - **Test Setup**: Database server is down; restaurant exists in database (see table above)
 - **Test Input**: User attempts to browse menu
 - **Expected Output**: User-friendly error message displayed
-- **Result**: ✅ PASS
+- **Result**: PASS
 
 **TC-001-06: Invalid Search Input (Rainy Day)**
 - **Test Case ID**: SystemTest-016-UC001
@@ -813,7 +813,7 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 - **Test Setup**: User is on search page
 - **Test Input**: User enters SQL injection attempt: `'; DROP TABLE restaurants; --`
 - **Expected Output**: Input is sanitized, no SQL executed
-- **Result**: ✅ PASS
+- **Result**: PASS
 
 **TC-001-07: Timeout During Menu Load (Rainy Day)**
 - **Test Case ID**: SystemTest-017-UC001
@@ -828,7 +828,7 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 - **Test Setup**: Database is slow or under heavy load; restaurant exists (see table above)
 - **Test Input**: User attempts to load menu
 - **Expected Output**: Timeout message displayed, user can retry
-- **Result**: ✅ PASS
+- **Result**: PASS
 
 **TC-001-08: Restaurant Inactive/Closed (Rainy Day)**
 - **Test Case ID**: SystemTest-018-UC001
@@ -843,7 +843,7 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 - **Test Setup**: Restaurant status is "Inactive" (see table above)
 - **Test Input**: User attempts to view menu
 - **Expected Output**: Message indicating restaurant is closed
-- **Result**: ✅ PASS
+- **Result**: PASS
 
 #### UC-005: User Login
 
@@ -866,7 +866,7 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 - **Test Setup**: User "johndoe" exists with active account (see Users table above)
 - **Test Input**: User enters correct email and password
 - **Expected Output**: User is authenticated and redirected to homepage; session created (see Sessions table above)
-- **Result**: ✅ PASS
+- **Result**: PASS
 
 **TC-005-02: Successful Login with User ID (Sunny Day)**
 - **Test Case ID**: SystemTest-002-UC005
@@ -881,7 +881,7 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 - **Test Setup**: User exists in database (see table above)
 - **Test Input**: User enters User ID instead of email
 - **Expected Output**: Login successful
-- **Result**: ✅ PASS
+- **Result**: PASS
 
 **TC-005-03: Invalid Password (Rainy Day)**
 - **Test Case ID**: SystemTest-003-UC005
@@ -896,7 +896,7 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 - **Test Setup**: User exists with correct password (see table above)
 - **Test Input**: User enters incorrect password
 - **Expected Output**: Error message displayed, no session created
-- **Result**: ✅ PASS
+- **Result**: PASS
 
 **TC-005-04: User Not Found (Rainy Day)**
 - **Test Case ID**: SystemTest-004-UC005
@@ -911,7 +911,7 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 - **Test Setup**: Email does not exist in database (see table above)
 - **Test Input**: User enters non-existent email
 - **Expected Output**: Generic error message (security)
-- **Result**: ✅ PASS
+- **Result**: PASS
 
 **TC-005-05: Empty Required Fields (Rainy Day)**
 - **Test Case ID**: SystemTest-005-UC005
@@ -926,7 +926,7 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 - **Test Setup**: User is on login page
 - **Test Input**: User leaves email field empty
 - **Expected Output**: Validation error displayed
-- **Result**: ✅ PASS
+- **Result**: PASS
 
 **TC-005-06: Account Locked (Rainy Day)**
 - **Test Case ID**: SystemTest-006-UC005
@@ -941,7 +941,7 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 - **Test Setup**: User account status is "Locked" (see table above)
 - **Test Input**: User attempts to log in
 - **Expected Output**: Account locked message displayed
-- **Result**: ✅ PASS
+- **Result**: PASS
 
 **TC-005-07: Email Not Verified (Rainy Day)**
 - **Test Case ID**: SystemTest-007-UC005
@@ -956,7 +956,7 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 - **Test Setup**: User exists but email is not verified (see table above)
 - **Test Input**: User attempts to log in
 - **Expected Output**: Verification reminder message
-- **Result**: ✅ PASS
+- **Result**: PASS
 
 **TC-005-08: SQL Injection Attempt (Rainy Day)**
 - **Test Case ID**: SystemTest-008-UC005
@@ -971,7 +971,7 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 - **Test Setup**: User is on login page
 - **Test Input**: User enters SQL injection: `admin' OR '1'='1`
 - **Expected Output**: Input sanitized, no SQL executed
-- **Result**: ✅ PASS
+- **Result**: PASS
 
 **TC-005-09: Database Connection Error (Rainy Day)**
 - **Test Case ID**: SystemTest-009-UC005
@@ -986,7 +986,7 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 - **Test Setup**: Database server is down; user exists (see table above)
 - **Test Input**: User attempts to log in
 - **Expected Output**: User-friendly error message
-- **Result**: ✅ PASS
+- **Result**: PASS
 
 **TC-005-10: Multiple Failed Login Attempts (Rainy Day)**
 - **Test Case ID**: SystemTest-010-UC005
@@ -1007,7 +1007,7 @@ The testing process for MenuMap follows a comprehensive approach to ensure syste
 - **Test Setup**: User account is active (see Users table before)
 - **Test Input**: User attempts login 5 times with wrong password
 - **Expected Output**: Account locked after 5 attempts (see Users table after - status changed to "Locked")
-- **Result**: ✅ PASS
+- **Result**: PASS
 
 #### UC-002: Restaurant Owner Menu Management
 
@@ -1159,11 +1159,11 @@ The MenuMap project has been successfully completed, delivering a functional res
 ## 10.2 Objectives Achieved
 
 All project objectives have been met:
-- ✅ Functional menu management system developed
-- ✅ User authentication and authorization implemented
-- ✅ Intuitive user interface created
-- ✅ System reliability ensured through comprehensive testing
-- ✅ Complete system documentation provided
+- Functional menu management system developed
+- User authentication and authorization implemented
+- Intuitive user interface created
+- System reliability ensured through comprehensive testing
+- Complete system documentation provided
 
 ## 10.3 System Capabilities
 
@@ -1201,9 +1201,9 @@ The MenuMap project demonstrates the successful application of software engineer
 
 ### UC-001: Browse Restaurant Menus
 
-**Actor**: Customer  
-**Description**: Customer searches for and views restaurant menus  
-**Preconditions**: User is on MenuMap application  
+**Actor**: Customer 
+**Description**: Customer searches for and views restaurant menus 
+**Preconditions**: User is on MenuMap application 
 **Main Flow**:
 1. User enters restaurant name in search field
 2. System displays matching restaurants
@@ -1218,9 +1218,9 @@ The MenuMap project demonstrates the successful application of software engineer
 
 ### UC-002: Restaurant Owner Menu Management
 
-**Actor**: Restaurant Owner  
-**Description**: Restaurant owner creates and manages menu items  
-**Preconditions**: Restaurant owner is logged in  
+**Actor**: Restaurant Owner 
+**Description**: Restaurant owner creates and manages menu items 
+**Preconditions**: Restaurant owner is logged in 
 **Main Flow**:
 1. Owner navigates to menu management page
 2. Owner creates new menu item with details
@@ -1233,9 +1233,9 @@ The MenuMap project demonstrates the successful application of software engineer
 
 ### UC-003: Menu Item Management
 
-**Actor**: Restaurant Owner  
-**Description**: Restaurant owner updates and deletes menu items  
-**Preconditions**: Restaurant owner is logged in, menu items exist  
+**Actor**: Restaurant Owner 
+**Description**: Restaurant owner updates and deletes menu items 
+**Preconditions**: Restaurant owner is logged in, menu items exist 
 **Main Flow**:
 1. Owner selects menu item to modify
 2. Owner updates item details
@@ -1244,9 +1244,9 @@ The MenuMap project demonstrates the successful application of software engineer
 
 ### UC-004: User Registration
 
-**Actor**: New User  
-**Description**: New user creates an account  
-**Preconditions**: User is on registration page  
+**Actor**: New User 
+**Description**: New user creates an account 
+**Preconditions**: User is on registration page 
 **Main Flow**:
 1. User enters registration information
 2. System validates input
@@ -1261,9 +1261,9 @@ The MenuMap project demonstrates the successful application of software engineer
 
 ### UC-005: User Login
 
-**Actor**: User  
-**Description**: User authenticates and logs into system  
-**Preconditions**: User has registered account  
+**Actor**: User 
+**Description**: User authenticates and logs into system 
+**Preconditions**: User has registered account 
 **Main Flow**:
 1. User enters email/user ID and password
 2. System validates credentials
@@ -1277,9 +1277,9 @@ The MenuMap project demonstrates the successful application of software engineer
 
 ### UC-006: Menu Verification
 
-**Actor**: System Administrator  
-**Description**: Administrator verifies menu accuracy  
-**Preconditions**: Administrator is logged in  
+**Actor**: System Administrator 
+**Description**: Administrator verifies menu accuracy 
+**Preconditions**: Administrator is logged in 
 **Main Flow**:
 1. Administrator selects menu for verification
 2. System checks menu against criteria
@@ -1288,9 +1288,9 @@ The MenuMap project demonstrates the successful application of software engineer
 
 ### UC-007: Restaurant Management
 
-**Actor**: Restaurant Owner  
-**Description**: Restaurant owner manages restaurant information  
-**Preconditions**: Restaurant owner is logged in  
+**Actor**: Restaurant Owner 
+**Description**: Restaurant owner manages restaurant information 
+**Preconditions**: Restaurant owner is logged in 
 **Main Flow**:
 1. Owner navigates to restaurant management
 2. Owner updates restaurant details

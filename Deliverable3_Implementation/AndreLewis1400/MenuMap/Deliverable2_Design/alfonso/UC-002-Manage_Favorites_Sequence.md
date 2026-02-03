@@ -1,13 +1,13 @@
 # UC-002: Manage Favorites - Sequence Diagram
 ## MenuMap Application - Team 9
 
-**Use Case:** UC-002: Manage Favorites  
-**Complexity:** Medium  
-**Priority:** User engagement feature  
+**Use Case:** UC-002: Manage Favorites 
+**Complexity:** Medium 
+**Priority:** User engagement feature 
 
 ---
 
-## 🎯 **Lifelines (Participants) - 3-Tier Architecture**
+## **Lifelines (Participants) - 3-Tier Architecture**
 
 ```
 User | FavoritesForm | UserManager_CMD | UserRepository | Database
@@ -20,7 +20,7 @@ User | FavoritesForm | UserManager_CMD | UserRepository | Database
 
 ---
 
-## 📋 **Message Flow (Step by Step) - Corrected for 3-Tier**
+## **Message Flow (Step by Step) - Corrected for 3-Tier**
 
 ### **Phase 1: View Favorites**
 ```
@@ -75,26 +75,26 @@ User | FavoritesForm | UserManager_CMD | UserRepository | Database
 
 ---
 
-## 🔄 **Alternative Flows (Alt Frames)**
+## **Alternative Flows (Alt Frames)**
 
 ### **Alt Frame 1: Not Logged In**
 ```
 alt Not Logged In
-    AuthenticationService -> WebInterface: return null
-    WebInterface -> User: redirect to login
+ AuthenticationService -> WebInterface: return null
+ WebInterface -> User: redirect to login
 ```
 
 ### **Alt Frame 2: Favorites Limit Reached**
 ```
 alt Favorites Limit Reached
-    Database -> UserController: return limitError
-    UserController -> WebInterface: return limitReached
-    WebInterface -> User: display "Favorites limit reached"
+ Database -> UserController: return limitError
+ UserController -> WebInterface: return limitReached
+ WebInterface -> User: display "Favorites limit reached"
 ```
 
 ---
 
-## 🎨 **Visual Layout in Papyrus**
+## **Visual Layout in Papyrus**
 
 ### **Lifeline Order (Left to Right):**
 ```
@@ -114,7 +114,7 @@ User | FavoritesForm | UserManager_CMD | UserRepository | Database
 
 ---
 
-## ✅ **Validation Checklist**
+## **Validation Checklist**
 
 - [ ] All 6 lifelines created
 - [ ] 22 main flow messages added

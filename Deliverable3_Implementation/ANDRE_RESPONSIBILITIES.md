@@ -3,24 +3,24 @@
 
 ---
 
-## 📋 My Responsibilities
+## My Responsibilities
 
 ### **Chapters:**
-- ✅ **Chapter 5: Software Architecture**
-- ✅ **Chapter 6: Detailed Design**
+- **Chapter 5: Software Architecture**
+- **Chapter 6: Detailed Design**
 
 ### **Test Cases:**
-- ✅ **UC-001: Browse Restaurant Menus** (8 test cases)
-- ✅ **UC-005: User Login** (10 test cases)
+- **UC-001: Browse Restaurant Menus** (8 test cases)
+- **UC-005: User Login** (10 test cases)
 
 ### **Additional:**
-- ✅ Overall project coordination
-- ✅ Final document integration
-- ✅ Presentation coordination
+- Overall project coordination
+- Final document integration
+- Presentation coordination
 
 ---
 
-## 📁 My Files in This Folder
+## My Files in This Folder
 
 ### **Chapter Files:**
 - `Chapter_5_Software_Architecture_Draft.md` - My Chapter 5 content
@@ -40,7 +40,7 @@
 
 ---
 
-## ❌ Not My Responsibility (Removed from this folder)
+## Not My Responsibility (Removed from this folder)
 
 ### **Alexandra's Work:**
 - Chapter 3: Project Plan
@@ -61,7 +61,7 @@
 
 ---
 
-## ✅ Status
+## Status
 
 All my assigned sections are complete:
 - [x] Chapter 5: Software Architecture

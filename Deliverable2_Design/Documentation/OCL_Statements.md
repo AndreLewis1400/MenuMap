@@ -1,9 +1,9 @@
 # MenuMap OCL Statements
 ## CEN4010 Software Engineering - Team 9
 
-**Author:** Andre Lewis (Software Architecture & Design Lead)  
-**Date:** [Current Date]  
-**Version:** 1.0  
+**Author:** Andre Lewis (Software Architecture & Design Lead) 
+**Date:** [Current Date] 
+**Version:** 1.0 
 
 ---
 
@@ -221,14 +221,14 @@ pre: item.price <> null
 context MenuValidationRules::validateMenu(menu: Menu): ValidationResult
 post: result <> null
 post: result.isValid = (menu.menuItems->size() <= self.maxMenuItems and 
-                       menu.menuItems->forAll(i | i.price <= self.maxPrice) and
-                       menu.menuItems->forAll(i | self.requiredFields->forAll(f | i.hasField(f))))
+ menu.menuItems->forAll(i | i.price <= self.maxPrice) and
+ menu.menuItems->forAll(i | self.requiredFields->forAll(f | i.hasField(f))))
 
 context MenuValidationRules::validateMenuItem(item: MenuItem): ValidationResult
 post: result <> null
 post: result.isValid = (item.price > 0 and item.price <= self.maxPrice and
-                       self.requiredFields->forAll(f | item.hasField(f)) and
-                       item.name.size() > 0 and item.description.size() > 0)
+ self.requiredFields->forAll(f | item.hasField(f)) and
+ item.name.size() > 0 and item.description.size() > 0)
 ```
 
 ### **UserPermissionRules**
@@ -300,8 +300,8 @@ pre: action <> null and action.size() > 0
 context SpamDetectionRules::detectSpam(content: String): SpamResult
 post: result <> null
 post: result.isSpam = (self.spamKeywords->exists(k | content.toLowerCase().contains(k.toLowerCase())) or
-                      self.suspiciousPatterns->exists(p | p.matches(content)) or
-                      content.size() > self.maxContentLength)
+ self.suspiciousPatterns->exists(p | p.matches(content)) or
+ content.size() > self.maxContentLength)
 post: result.confidence >= 0.0 and result.confidence <= 1.0
 
 context SpamDetectionRules::checkRateLimit(userID: String, action: String): Boolean

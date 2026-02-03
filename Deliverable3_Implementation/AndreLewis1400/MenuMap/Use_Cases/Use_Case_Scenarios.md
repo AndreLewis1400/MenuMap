@@ -1,28 +1,28 @@
 # MenuMap Use Case Scenarios
 ## CEN4010 Software Engineering - Team 9
 
-**Project:** MenuMap Application  
-**Team:** Team 9  
-**Project Lead:** Alfonso Oramas Jr.  
-**Document Author:** Andre Lewis (UML Diagrams Coordinator)  
-**Date:** [Current Date]  
-**Version:** 1.0  
+**Project:** MenuMap Application 
+**Team:** Team 9 
+**Project Lead:** Alfonso Oramas Jr. 
+**Document Author:** Andre Lewis (UML Diagrams Coordinator) 
+**Date:** [Current Date] 
+**Version:** 1.0 
 
 ---
 
-## 📋 Scenarios Overview
+## Scenarios Overview
 
 This document contains detailed scenarios for each of the three use cases in the MenuMap application. Each scenario demonstrates a specific user journey through the system.
 
 ---
 
-## 🍽️ UC-001: Browse Restaurant Menus - Scenarios
+## UC-001: Browse Restaurant Menus - Scenarios
 
 ### **Scenario 1: User Searches for Italian Restaurants**
 
-**Actor:** Sarah (Food enthusiast)  
-**Goal:** Find Italian restaurants near her location  
-**Context:** Sarah is looking for a nice Italian restaurant for dinner tonight  
+**Actor:** Sarah (Food enthusiast) 
+**Goal:** Find Italian restaurants near her location 
+**Context:** Sarah is looking for a nice Italian restaurant for dinner tonight 
 
 **Steps:**
 1. Sarah opens the MenuMap application on her phone
@@ -42,9 +42,9 @@ This document contains detailed scenarios for each of the three use cases in the
 
 ### **Scenario 2: User Browses Menu by Cuisine Type**
 
-**Actor:** Mike (College student)  
-**Goal:** Find affordable Mexican food  
-**Context:** Mike is on a budget and wants Mexican food for lunch  
+**Actor:** Mike (College student) 
+**Goal:** Find affordable Mexican food 
+**Context:** Mike is on a budget and wants Mexican food for lunch 
 
 **Steps:**
 1. Mike opens MenuMap on his laptop
@@ -64,9 +64,9 @@ This document contains detailed scenarios for each of the three use cases in the
 
 ### **Scenario 3: User Searches for Specific Menu Item**
 
-**Actor:** Lisa (Vegetarian)  
-**Goal:** Find restaurants that serve vegetarian burgers  
-**Context:** Lisa is looking for a vegetarian burger for lunch  
+**Actor:** Lisa (Vegetarian) 
+**Goal:** Find restaurants that serve vegetarian burgers 
+**Context:** Lisa is looking for a vegetarian burger for lunch 
 
 **Steps:**
 1. Lisa opens MenuMap
@@ -84,19 +84,19 @@ This document contains detailed scenarios for each of the three use cases in the
 
 ---
 
-## ⭐ UC-002: Manage Favorites - Scenarios
+## UC-002: Manage Favorites - Scenarios
 
 ### **Scenario 1: User Adds Restaurant to Favorites**
 
-**Actor:** David (Regular customer)  
-**Goal:** Save his favorite pizza place for quick access  
-**Context:** David frequently orders from the same pizza restaurant  
+**Actor:** David (Regular customer) 
+**Goal:** Save his favorite pizza place for quick access 
+**Context:** David frequently orders from the same pizza restaurant 
 
 **Steps:**
 1. David opens MenuMap and logs into his account
 2. He searches for "Tony's Pizza" (his favorite place)
 3. System displays Tony's Pizza with menu and details
-4. David sees a "❤️ Add to Favorites" button
+4. David sees a " Add to Favorites" button
 5. He taps the heart button
 6. System shows "Added to Favorites!" confirmation message
 7. David navigates to "My Favorites" section
@@ -110,9 +110,9 @@ This document contains detailed scenarios for each of the three use cases in the
 
 ### **Scenario 2: User Organizes Favorites into Categories**
 
-**Actor:** Maria (Food blogger)  
-**Goal:** Organize her favorite restaurants by meal type  
-**Context:** Maria has many favorite restaurants and wants to organize them  
+**Actor:** Maria (Food blogger) 
+**Goal:** Organize her favorite restaurants by meal type 
+**Context:** Maria has many favorite restaurants and wants to organize them 
 
 **Steps:**
 1. Maria opens MenuMap and goes to "My Favorites"
@@ -132,9 +132,9 @@ This document contains detailed scenarios for each of the three use cases in the
 
 ### **Scenario 3: User Adds Menu Item to Favorites**
 
-**Actor:** Alex (Health-conscious eater)  
-**Goal:** Save his favorite healthy meal for quick reordering  
-**Context:** Alex wants to quickly find his favorite healthy dish  
+**Actor:** Alex (Health-conscious eater) 
+**Goal:** Save his favorite healthy meal for quick reordering 
+**Context:** Alex wants to quickly find his favorite healthy dish 
 
 **Steps:**
 1. Alex opens MenuMap and searches for "Healthy Bites"
@@ -142,7 +142,7 @@ This document contains detailed scenarios for each of the three use cases in the
 3. Alex finds "Quinoa Power Bowl - $14.99" in the menu
 4. He taps on the menu item to see details
 5. System shows full description: "Quinoa, kale, chickpeas, avocado, tahini dressing"
-6. Alex sees a "⭐ Add to Favorites" button
+6. Alex sees a " Add to Favorites" button
 7. He taps the star button
 8. System asks "Which category?" and shows options
 9. Alex selects "Healthy Meals" category
@@ -152,13 +152,13 @@ This document contains detailed scenarios for each of the three use cases in the
 
 ---
 
-## 🔒 UC-003: Secure Password Reset - Scenarios
+## UC-003: Secure Password Reset - Scenarios
 
 ### **Scenario 1: User Forgets Password and Resets Successfully**
 
-**Actor:** Jennifer (Regular user)  
-**Goal:** Reset her forgotten password securely  
-**Context:** Jennifer hasn't used MenuMap in months and forgot her password  
+**Actor:** Jennifer (Regular user) 
+**Goal:** Reset her forgotten password securely 
+**Context:** Jennifer hasn't used MenuMap in months and forgot her password 
 
 **Steps:**
 1. Jennifer opens MenuMap and tries to log in
@@ -184,9 +184,9 @@ This document contains detailed scenarios for each of the three use cases in the
 
 ### **Scenario 2: User Attempts Reset with Invalid Email**
 
-**Actor:** Tom (New user)  
-**Goal:** Reset password but enters wrong email  
-**Context:** Tom thinks he used a different email address  
+**Actor:** Tom (New user) 
+**Goal:** Reset password but enters wrong email 
+**Context:** Tom thinks he used a different email address 
 
 **Steps:**
 1. Tom opens MenuMap and clicks "Forgot Password?"
@@ -206,9 +206,9 @@ This document contains detailed scenarios for each of the three use cases in the
 
 ### **Scenario 3: User Clicks Expired Reset Link**
 
-**Actor:** Robert (Busy professional)  
-**Goal:** Reset password but link has expired  
-**Context:** Robert received reset email but didn't check it for 2 days  
+**Actor:** Robert (Busy professional) 
+**Goal:** Reset password but link has expired 
+**Context:** Robert received reset email but didn't check it for 2 days 
 
 **Steps:**
 1. Robert receives password reset email
@@ -228,7 +228,7 @@ This document contains detailed scenarios for each of the three use cases in the
 
 ---
 
-## 📊 **Scenario Summary**
+## **Scenario Summary**
 
 | Use Case | Scenario | Actor | Key Learning |
 |----------|----------|-------|--------------|

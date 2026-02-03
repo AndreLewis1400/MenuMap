@@ -6,17 +6,17 @@ This folder contains all the PNG exports of UML diagrams required for the MenuMa
 
 ### Use Case Diagrams
 - **MenuMap_UseCase_Diagram.PNG** - Main use case diagram showing all actors and use cases
-  - Actors: User, Restaurant Owner, Administrator
-  - Use Cases: TM901, TM902, Password Reset, Manage Favorites, etc.
+ - Actors: User, Restaurant Owner, Administrator
+ - Use Cases: TM901, TM902, Password Reset, Manage Favorites, etc.
 
 ### Class Diagrams
 - **MenuMap_Class_Diagram.PNG** - System class diagram showing key classes and relationships
-  - Key Classes: User, Restaurant, MenuItem, Favorite, VerificationSystem, SpamProtection, AuthenticationService
+ - Key Classes: User, Restaurant, MenuItem, Favorite, VerificationSystem, SpamProtection, AuthenticationService
 
 ### Sequence Diagrams
 - **User_Login_Sequence.PNG** - User login process sequence diagram
 - **Menu_Verification_Sequence.PNG** - Menu verification process (TM901)
-- **Spam_Detection_Sequence.PNG** - Spam detection process (TM902)  
+- **Spam_Detection_Sequence.PNG** - Spam detection process (TM902) 
 - **Password_Reset_Sequence.PNG** - Password reset process (UC-003)
 
 ### Activity Diagrams
@@ -26,7 +26,7 @@ This folder contains all the PNG exports of UML diagrams required for the MenuMa
 
 ### Component Diagrams
 - **MenuMap_Component_Diagram.PNG** - System architecture component diagram
-  - Components: Web Interface, Mobile App, Database, Authentication Service, Email Service
+ - Components: Web Interface, Mobile App, Database, Authentication Service, Email Service
 
 ## Submission Requirements
 
@@ -52,5 +52,5 @@ All required UML diagrams have been:
 
 ---
 
-*Last Updated: [Current Date]*  
+*Last Updated: [Current Date]* 
 *Status: Ready for diagram creation and export*

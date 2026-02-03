@@ -1,8 +1,8 @@
 # Chapter 5: Software Architecture
 ## MenuMap Final Systems Document
 
-**Author:** Andre Lewis (Team Lead)  
-**Date:** December 2024  
+**Author:** Andre Lewis (Team Lead) 
+**Date:** December 2024 
 **Status:** Final - Ready for Document Integration
 
 ---
@@ -246,12 +246,12 @@ The subsystems interact through well-defined interfaces:
 **Primary Data Flow**:
 ```
 User Request → Presentation Layer → Business Logic Layer → Data Access Layer → Database
-                ↓
-            Security Subsystem (Authentication/Authorization)
-                ↓
-            Specific Subsystem (Menu/User/Notification)
-                ↓
-            Response ← Presentation Layer ← Business Logic Layer ← Data Access Layer
+ ↓
+ Security Subsystem (Authentication/Authorization)
+ ↓
+ Specific Subsystem (Menu/User/Notification)
+ ↓
+ Response ← Presentation Layer ← Business Logic Layer ← Data Access Layer
 ```
 
 **Cross-Subsystem Dependencies**:

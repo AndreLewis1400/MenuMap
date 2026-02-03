@@ -1,19 +1,19 @@
 # MenuMap Hardware/Software Mapping
 ## CEN4010 Software Engineering - Team 9
 
-**Author:** Andre Lewis (Software Architecture & Design Lead)  
-**Date:** [Current Date]  
-**Version:** 1.0  
+**Author:** Andre Lewis (Software Architecture & Design Lead) 
+**Date:** [Current Date] 
+**Version:** 1.0 
 
 ---
 
-## 🖥️ Hardware/Software Mapping Overview
+## Hardware/Software Mapping Overview
 
 This document defines the deployment architecture, technology stack, and mapping of software components to hardware infrastructure for the MenuMap application. The system is designed for cloud-native deployment with microservices architecture.
 
 ---
 
-## 🏗️ Deployment Architecture
+## Deployment Architecture
 
 ### **Cloud Infrastructure Provider**
 - **Primary**: Amazon Web Services (AWS)
@@ -28,7 +28,7 @@ This document defines the deployment architecture, technology stack, and mapping
 
 ---
 
-## 🖥️ Hardware Infrastructure
+## Hardware Infrastructure
 
 ### **Production Environment**
 
@@ -36,105 +36,105 @@ This document defines the deployment architecture, technology stack, and mapping
 ```
 Hardware Specifications:
 ├── Load Balancer (AWS Application Load Balancer)
-│   ├── Type: Network Load Balancer
-│   ├── Capacity: 10,000+ concurrent connections
-│   ├── SSL Termination: Yes
-│   └── Health Checks: HTTP/HTTPS
+│ ├── Type: Network Load Balancer
+│ ├── Capacity: 10,000+ concurrent connections
+│ ├── SSL Termination: Yes
+│ └── Health Checks: HTTP/HTTPS
 ├── API Gateway (AWS API Gateway)
-│   ├── Type: Regional API Gateway
-│   ├── Rate Limiting: 10,000 requests/second
-│   ├── Caching: 5GB cache
-│   └── Monitoring: CloudWatch integration
+│ ├── Type: Regional API Gateway
+│ ├── Rate Limiting: 10,000 requests/second
+│ ├── Caching: 5GB cache
+│ └── Monitoring: CloudWatch integration
 └── CDN (CloudFront)
-    ├── Edge Locations: 200+ globally
-    ├── Cache Capacity: 1TB
-    └── SSL/TLS: End-to-end encryption
+ ├── Edge Locations: 200+ globally
+ ├── Cache Capacity: 1TB
+ └── SSL/TLS: End-to-end encryption
 ```
 
 #### **Application Tier (Microservices)**
 ```
 Hardware Specifications:
 ├── Presentation Service
-│   ├── Instance Type: t3.large (2 vCPU, 8GB RAM)
-│   ├── Auto Scaling: 2-10 instances
-│   ├── Load Balancing: Application Load Balancer
-│   └── Health Checks: /health endpoint
+│ ├── Instance Type: t3.large (2 vCPU, 8GB RAM)
+│ ├── Auto Scaling: 2-10 instances
+│ ├── Load Balancing: Application Load Balancer
+│ └── Health Checks: /health endpoint
 ├── Business Logic Service
-│   ├── Instance Type: t3.xlarge (4 vCPU, 16GB RAM)
-│   ├── Auto Scaling: 3-15 instances
-│   ├── Load Balancing: Application Load Balancer
-│   └── Health Checks: /health endpoint
+│ ├── Instance Type: t3.xlarge (4 vCPU, 16GB RAM)
+│ ├── Auto Scaling: 3-15 instances
+│ ├── Load Balancing: Application Load Balancer
+│ └── Health Checks: /health endpoint
 ├── Security Service
-│   ├── Instance Type: t3.large (2 vCPU, 8GB RAM)
-│   ├── Auto Scaling: 2-8 instances
-│   ├── Load Balancing: Application Load Balancer
-│   └── Health Checks: /health endpoint
+│ ├── Instance Type: t3.large (2 vCPU, 8GB RAM)
+│ ├── Auto Scaling: 2-8 instances
+│ ├── Load Balancing: Application Load Balancer
+│ └── Health Checks: /health endpoint
 ├── Menu Management Service
-│   ├── Instance Type: t3.xlarge (4 vCPU, 16GB RAM)
-│   ├── Auto Scaling: 3-12 instances
-│   ├── Load Balancing: Application Load Balancer
-│   └── Health Checks: /health endpoint
+│ ├── Instance Type: t3.xlarge (4 vCPU, 16GB RAM)
+│ ├── Auto Scaling: 3-12 instances
+│ ├── Load Balancing: Application Load Balancer
+│ └── Health Checks: /health endpoint
 ├── User Management Service
-│   ├── Instance Type: t3.large (2 vCPU, 8GB RAM)
-│   ├── Auto Scaling: 2-10 instances
-│   ├── Load Balancing: Application Load Balancer
-│   └── Health Checks: /health endpoint
+│ ├── Instance Type: t3.large (2 vCPU, 8GB RAM)
+│ ├── Auto Scaling: 2-10 instances
+│ ├── Load Balancing: Application Load Balancer
+│ └── Health Checks: /health endpoint
 └── Notification Service
-    ├── Instance Type: t3.medium (2 vCPU, 4GB RAM)
-    ├── Auto Scaling: 2-6 instances
-    ├── Load Balancing: Application Load Balancer
-    └── Health Checks: /health endpoint
+ ├── Instance Type: t3.medium (2 vCPU, 4GB RAM)
+ ├── Auto Scaling: 2-6 instances
+ ├── Load Balancing: Application Load Balancer
+ └── Health Checks: /health endpoint
 ```
 
 #### **Data Tier (Databases & Storage)**
 ```
 Hardware Specifications:
 ├── Primary Database (PostgreSQL)
-│   ├── Instance Type: db.r5.xlarge (4 vCPU, 32GB RAM)
-│   ├── Storage: 1TB SSD (gp3)
-│   ├── Multi-AZ: Yes (High Availability)
-│   ├── Backup: Automated daily backups
-│   └── Encryption: At rest and in transit
+│ ├── Instance Type: db.r5.xlarge (4 vCPU, 32GB RAM)
+│ ├── Storage: 1TB SSD (gp3)
+│ ├── Multi-AZ: Yes (High Availability)
+│ ├── Backup: Automated daily backups
+│ └── Encryption: At rest and in transit
 ├── Cache Layer (Redis)
-│   ├── Instance Type: cache.r6g.large (2 vCPU, 13GB RAM)
-│   ├── Cluster Mode: Yes (3 nodes)
-│   ├── Persistence: RDB + AOF
-│   └── Encryption: At rest and in transit
+│ ├── Instance Type: cache.r6g.large (2 vCPU, 13GB RAM)
+│ ├── Cluster Mode: Yes (3 nodes)
+│ ├── Persistence: RDB + AOF
+│ └── Encryption: At rest and in transit
 ├── Search Engine (Elasticsearch)
-│   ├── Instance Type: r6g.large (2 vCPU, 16GB RAM)
-│   ├── Cluster: 3 master nodes + 3 data nodes
-│   ├── Storage: 500GB SSD per node
-│   └── Indexing: Real-time indexing
+│ ├── Instance Type: r6g.large (2 vCPU, 16GB RAM)
+│ ├── Cluster: 3 master nodes + 3 data nodes
+│ ├── Storage: 500GB SSD per node
+│ └── Indexing: Real-time indexing
 └── File Storage (S3)
-    ├── Storage Class: Standard
-    ├── Capacity: Unlimited
-    ├── Versioning: Enabled
-    └── Encryption: AES-256
+ ├── Storage Class: Standard
+ ├── Capacity: Unlimited
+ ├── Versioning: Enabled
+ └── Encryption: AES-256
 ```
 
 #### **Message Queue & Event Streaming**
 ```
 Hardware Specifications:
 ├── Message Queue (RabbitMQ)
-│   ├── Instance Type: t3.medium (2 vCPU, 4GB RAM)
-│   ├── Cluster: 3 nodes (High Availability)
-│   ├── Persistence: Yes
-│   └── Monitoring: CloudWatch integration
+│ ├── Instance Type: t3.medium (2 vCPU, 4GB RAM)
+│ ├── Cluster: 3 nodes (High Availability)
+│ ├── Persistence: Yes
+│ └── Monitoring: CloudWatch integration
 ├── Event Streaming (Apache Kafka)
-│   ├── Instance Type: t3.large (2 vCPU, 8GB RAM)
-│   ├── Cluster: 3 brokers
-│   ├── Storage: 100GB SSD per broker
-│   └── Replication: 3x replication factor
+│ ├── Instance Type: t3.large (2 vCPU, 8GB RAM)
+│ ├── Cluster: 3 brokers
+│ ├── Storage: 100GB SSD per broker
+│ └── Replication: 3x replication factor
 └── Real-time Communication (WebSocket)
-    ├── Instance Type: t3.medium (2 vCPU, 4GB RAM)
-    ├── Auto Scaling: 2-8 instances
-    ├── Load Balancing: Application Load Balancer
-    └── Sticky Sessions: Yes
+ ├── Instance Type: t3.medium (2 vCPU, 4GB RAM)
+ ├── Auto Scaling: 2-8 instances
+ ├── Load Balancing: Application Load Balancer
+ └── Sticky Sessions: Yes
 ```
 
 ---
 
-## 💻 Software Technology Stack
+## Software Technology Stack
 
 ### **Frontend Technologies**
 ```
@@ -229,7 +229,7 @@ Monitoring & Logging:
 
 ---
 
-## 🔄 Software Component Mapping
+## Software Component Mapping
 
 ### **Presentation Layer Mapping**
 ```
@@ -352,55 +352,55 @@ Real-time Service:
 
 ---
 
-## 🌐 Network Architecture
+## Network Architecture
 
 ### **Network Topology**
 ```
 Internet
-    ↓
+ ↓
 CloudFront CDN (Global)
-    ↓
+ ↓
 AWS Application Load Balancer
-    ↓
+ ↓
 VPC (Virtual Private Cloud)
 ├── Public Subnets (AZ-1, AZ-2, AZ-3)
-│   ├── Load Balancers
-│   ├── NAT Gateways
-│   └── Bastion Hosts
+│ ├── Load Balancers
+│ ├── NAT Gateways
+│ └── Bastion Hosts
 ├── Private Subnets (AZ-1, AZ-2, AZ-3)
-│   ├── Application Servers
-│   ├── Database Servers
-│   └── Cache Servers
+│ ├── Application Servers
+│ ├── Database Servers
+│ └── Cache Servers
 └── Database Subnets (AZ-1, AZ-2, AZ-3)
-    ├── RDS Instances
-    ├── ElastiCache Clusters
-    └── OpenSearch Clusters
+ ├── RDS Instances
+ ├── ElastiCache Clusters
+ └── OpenSearch Clusters
 ```
 
 ### **Security Groups & NACLs**
 ```
 Security Groups:
 ├── Web Tier SG
-│   ├── Inbound: HTTP (80), HTTPS (443)
-│   ├── Outbound: All traffic
-│   └── Source: 0.0.0.0/0
+│ ├── Inbound: HTTP (80), HTTPS (443)
+│ ├── Outbound: All traffic
+│ └── Source: 0.0.0.0/0
 ├── Application Tier SG
-│   ├── Inbound: HTTP (8080), HTTPS (8443)
-│   ├── Outbound: Database (5432), Cache (6379)
-│   └── Source: Web Tier SG
+│ ├── Inbound: HTTP (8080), HTTPS (8443)
+│ ├── Outbound: Database (5432), Cache (6379)
+│ └── Source: Web Tier SG
 ├── Database Tier SG
-│   ├── Inbound: PostgreSQL (5432), Redis (6379)
-│   ├── Outbound: None
-│   └── Source: Application Tier SG
+│ ├── Inbound: PostgreSQL (5432), Redis (6379)
+│ ├── Outbound: None
+│ └── Source: Application Tier SG
 └── Management SG
-    ├── Inbound: SSH (22), RDP (3389)
-    ├── Outbound: All traffic
-    └── Source: Corporate IP ranges
+ ├── Inbound: SSH (22), RDP (3389)
+ ├── Outbound: All traffic
+ └── Source: Corporate IP ranges
 ```
 
 ---
 
-## 📊 Performance & Scalability
+## Performance & Scalability
 
 ### **Auto Scaling Configuration**
 ```
@@ -441,24 +441,24 @@ Database Load Balancing:
 
 ---
 
-## 🔒 Security Architecture
+## Security Architecture
 
 ### **Network Security**
 ```
 Firewall Rules:
 ├── Web Application Firewall (WAF)
-│   ├── OWASP Top 10 Protection
-│   ├── Rate Limiting: 10,000 req/min
-│   ├── Geo-blocking: Configurable
-│   └── DDoS Protection: AWS Shield
+│ ├── OWASP Top 10 Protection
+│ ├── Rate Limiting: 10,000 req/min
+│ ├── Geo-blocking: Configurable
+│ └── DDoS Protection: AWS Shield
 ├── Network ACLs
-│   ├── Subnet-level filtering
-│   ├── Allow/Deny rules
-│   └── Logging: VPC Flow Logs
+│ ├── Subnet-level filtering
+│ ├── Allow/Deny rules
+│ └── Logging: VPC Flow Logs
 └── Security Groups
-    ├── Instance-level filtering
-    ├── Stateful rules
-    └── Least privilege access
+ ├── Instance-level filtering
+ ├── Stateful rules
+ └── Least privilege access
 ```
 
 ### **Data Security**
@@ -479,7 +479,7 @@ Key Management:
 
 ---
 
-## 📈 Monitoring & Observability
+## Monitoring & Observability
 
 ### **Application Monitoring**
 ```
@@ -513,7 +513,7 @@ Log Analysis:
 
 ---
 
-## 🚀 Deployment Strategy
+## Deployment Strategy
 
 ### **Deployment Pipeline**
 ```

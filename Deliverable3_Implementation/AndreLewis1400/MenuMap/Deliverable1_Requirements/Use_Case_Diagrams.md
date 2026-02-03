@@ -1,28 +1,28 @@
 # MenuMap Use Case Diagrams
 ## CEN4010 Software Engineering - Team 9
 
-**Project:** MenuMap Application  
-**Team:** Team 9  
-**Project Lead:** Alfonso Oramas Jr.  
-**Document Author:** Andre Lewis (UML Diagrams Coordinator)  
-**Date:** [Current Date]  
-**Version:** 1.0  
+**Project:** MenuMap Application 
+**Team:** Team 9 
+**Project Lead:** Alfonso Oramas Jr. 
+**Document Author:** Andre Lewis (UML Diagrams Coordinator) 
+**Date:** [Current Date] 
+**Version:** 1.0 
 
 ---
 
-## 📊 Use Case Diagram Overview
+## Use Case Diagram Overview
 
 This document contains individual use case diagrams for each of the three required use cases:
 
 1. **UC-001: Browse Restaurant Menus** (Normal Use Case)
-2. **UC-002: Manage Favorites** (Normal Use Case)  
+2. **UC-002: Manage Favorites** (Normal Use Case) 
 3. **UC-003: Secure Password Reset** (Security Use Case)
 
 Each diagram shows the actors, use case, relationships, and system boundaries.
 
 ---
 
-## 🍽️ UC-001: Browse Restaurant Menus - Use Case Diagram
+## UC-001: Browse Restaurant Menus - Use Case Diagram
 
 ### Diagram Description
 This diagram illustrates the "Browse Restaurant Menus" use case, showing how users interact with the system to search and browse restaurant menus.
@@ -36,31 +36,31 @@ This diagram illustrates the "Browse Restaurant Menus" use case, showing how use
 
 ```mermaid
 graph TB
-    subgraph "MenuMap System"
-        UC1["UC-001: Browse Restaurant Menus"]
-    end
-    
-    User["👤 User<br/>(Food Enthusiast)"]
-    RestaurantOwner["🏪 Restaurant Owner<br/>(Data Provider)"]
-    System["💻 MenuMap System<br/>(Data Processor)"]
-    
-    User -->|"1. Search for restaurants"| UC1
-    User -->|"2. Browse menu items"| UC1
-    User -->|"3. View menu details"| UC1
-    
-    UC1 -->|"4. Query menu data"| System
-    UC1 -->|"5. Display results"| User
-    
-    RestaurantOwner -->|"6. Provides menu data"| System
-    System -->|"7. Stores menu information"| UC1
-    
-    classDef actor fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-    classDef usecase fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
-    classDef system fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
-    
-    class User,RestaurantOwner actor
-    class UC1 usecase
-    class System system
+ subgraph "MenuMap System"
+ UC1["UC-001: Browse Restaurant Menus"]
+ end
+ 
+ User[" User<br/>(Food Enthusiast)"]
+ RestaurantOwner[" Restaurant Owner<br/>(Data Provider)"]
+ System[" MenuMap System<br/>(Data Processor)"]
+ 
+ User -->|"1. Search for restaurants"| UC1
+ User -->|"2. Browse menu items"| UC1
+ User -->|"3. View menu details"| UC1
+ 
+ UC1 -->|"4. Query menu data"| System
+ UC1 -->|"5. Display results"| User
+ 
+ RestaurantOwner -->|"6. Provides menu data"| System
+ System -->|"7. Stores menu information"| UC1
+ 
+ classDef actor fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+ classDef usecase fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+ classDef system fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
+ 
+ class User,RestaurantOwner actor
+ class UC1 usecase
+ class System system
 ```
 
 ### Flow Description
@@ -74,7 +74,7 @@ graph TB
 
 ---
 
-## ⭐ UC-002: Manage Favorites - Use Case Diagram
+## UC-002: Manage Favorites - Use Case Diagram
 
 ### Diagram Description
 This diagram illustrates the "Manage Favorites" use case, showing how registered users save, organize, and manage their favorite restaurants and menu items.
@@ -87,30 +87,30 @@ This diagram illustrates the "Manage Favorites" use case, showing how registered
 
 ```mermaid
 graph TB
-    subgraph "MenuMap System"
-        UC2["UC-002: Manage Favorites"]
-    end
-    
-    RegisteredUser["👤 Registered User<br/>(Account Holder)"]
-    System["💻 MenuMap System<br/>(Data Storage)"]
-    
-    RegisteredUser -->|"1. Add to favorites"| UC2
-    RegisteredUser -->|"2. Remove from favorites"| UC2
-    RegisteredUser -->|"3. Organize favorites"| UC2
-    RegisteredUser -->|"4. View favorites"| UC2
-    
-    UC2 -->|"5. Store favorite data"| System
-    UC2 -->|"6. Retrieve favorites"| System
-    UC2 -->|"7. Update favorites list"| System
-    UC2 -->|"8. Display favorites"| RegisteredUser
-    
-    classDef actor fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-    classDef usecase fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
-    classDef system fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
-    
-    class RegisteredUser actor
-    class UC2 usecase
-    class System system
+ subgraph "MenuMap System"
+ UC2["UC-002: Manage Favorites"]
+ end
+ 
+ RegisteredUser[" Registered User<br/>(Account Holder)"]
+ System[" MenuMap System<br/>(Data Storage)"]
+ 
+ RegisteredUser -->|"1. Add to favorites"| UC2
+ RegisteredUser -->|"2. Remove from favorites"| UC2
+ RegisteredUser -->|"3. Organize favorites"| UC2
+ RegisteredUser -->|"4. View favorites"| UC2
+ 
+ UC2 -->|"5. Store favorite data"| System
+ UC2 -->|"6. Retrieve favorites"| System
+ UC2 -->|"7. Update favorites list"| System
+ UC2 -->|"8. Display favorites"| RegisteredUser
+ 
+ classDef actor fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+ classDef usecase fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+ classDef system fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
+ 
+ class RegisteredUser actor
+ class UC2 usecase
+ class System system
 ```
 
 ### Flow Description
@@ -125,7 +125,7 @@ graph TB
 
 ---
 
-## 🔒 UC-003: Secure Password Reset - Use Case Diagram
+## UC-003: Secure Password Reset - Use Case Diagram
 
 ### Diagram Description
 This diagram illustrates the "Secure Password Reset" use case, showing the security-focused process for resetting user passwords while preventing misuse and fraud.
@@ -139,38 +139,38 @@ This diagram illustrates the "Secure Password Reset" use case, showing the secur
 
 ```mermaid
 graph TB
-    subgraph "MenuMap System"
-        UC3["UC-003: Secure Password Reset"]
-    end
-    
-    User["👤 User<br/>(Account Owner)"]
-    System["💻 MenuMap System<br/>(Security Manager)"]
-    EmailService["📧 Email Service<br/>(External Provider)"]
-    
-    User -->|"1. Request password reset"| UC3
-    User -->|"2. Enter email address"| UC3
-    User -->|"3. Click reset link"| UC3
-    User -->|"4. Enter new password"| UC3
-    
-    UC3 -->|"5. Validate email"| System
-    UC3 -->|"6. Generate secure token"| System
-    UC3 -->|"7. Send reset email"| EmailService
-    UC3 -->|"8. Validate reset token"| System
-    UC3 -->|"9. Encrypt new password"| System
-    UC3 -->|"10. Confirm reset"| User
-    
-    EmailService -->|"11. Deliver reset email"| User
-    System -->|"12. Log security events"| UC3
-    
-    classDef actor fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-    classDef usecase fill:#ffebee,stroke:#c62828,stroke-width:3px
-    classDef system fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
-    classDef external fill:#fff3e0,stroke:#e65100,stroke-width:2px
-    
-    class User actor
-    class UC3 usecase
-    class System system
-    class EmailService external
+ subgraph "MenuMap System"
+ UC3["UC-003: Secure Password Reset"]
+ end
+ 
+ User[" User<br/>(Account Owner)"]
+ System[" MenuMap System<br/>(Security Manager)"]
+ EmailService[" Email Service<br/>(External Provider)"]
+ 
+ User -->|"1. Request password reset"| UC3
+ User -->|"2. Enter email address"| UC3
+ User -->|"3. Click reset link"| UC3
+ User -->|"4. Enter new password"| UC3
+ 
+ UC3 -->|"5. Validate email"| System
+ UC3 -->|"6. Generate secure token"| System
+ UC3 -->|"7. Send reset email"| EmailService
+ UC3 -->|"8. Validate reset token"| System
+ UC3 -->|"9. Encrypt new password"| System
+ UC3 -->|"10. Confirm reset"| User
+ 
+ EmailService -->|"11. Deliver reset email"| User
+ System -->|"12. Log security events"| UC3
+ 
+ classDef actor fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+ classDef usecase fill:#ffebee,stroke:#c62828,stroke-width:3px
+ classDef system fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
+ classDef external fill:#fff3e0,stroke:#e65100,stroke-width:2px
+ 
+ class User actor
+ class UC3 usecase
+ class System system
+ class EmailService external
 ```
 
 ### Flow Description
@@ -196,52 +196,52 @@ graph TB
 
 ---
 
-## 🔄 Combined Use Case Overview
+## Combined Use Case Overview
 
 ### System-Wide Use Case Diagram
 
 ```mermaid
 graph TB
-    subgraph "MenuMap Application System"
-        UC1["UC-001: Browse Restaurant Menus"]
-        UC2["UC-002: Manage Favorites"]
-        UC3["UC-003: Secure Password Reset"]
-    end
-    
-    User["👤 User"]
-    RegisteredUser["👤 Registered User"]
-    RestaurantOwner["🏪 Restaurant Owner"]
-    System["💻 MenuMap System"]
-    EmailService["📧 Email Service"]
-    
-    User --> UC1
-    RegisteredUser --> UC2
-    User --> UC3
-    RegisteredUser --> UC3
-    
-    UC1 --> System
-    UC2 --> System
-    UC3 --> System
-    UC3 --> EmailService
-    
-    RestaurantOwner --> System
-    
-    classDef actor fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-    classDef normalusecase fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
-    classDef securityusecase fill:#ffebee,stroke:#c62828,stroke-width:3px
-    classDef system fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
-    classDef external fill:#fff3e0,stroke:#e65100,stroke-width:2px
-    
-    class User,RegisteredUser,RestaurantOwner actor
-    class UC1,UC2 normalusecase
-    class UC3 securityusecase
-    class System system
-    class EmailService external
+ subgraph "MenuMap Application System"
+ UC1["UC-001: Browse Restaurant Menus"]
+ UC2["UC-002: Manage Favorites"]
+ UC3["UC-003: Secure Password Reset"]
+ end
+ 
+ User[" User"]
+ RegisteredUser[" Registered User"]
+ RestaurantOwner[" Restaurant Owner"]
+ System[" MenuMap System"]
+ EmailService[" Email Service"]
+ 
+ User --> UC1
+ RegisteredUser --> UC2
+ User --> UC3
+ RegisteredUser --> UC3
+ 
+ UC1 --> System
+ UC2 --> System
+ UC3 --> System
+ UC3 --> EmailService
+ 
+ RestaurantOwner --> System
+ 
+ classDef actor fill:#e1f5fe,stroke:#01579b,stroke-width:2px
+ classDef normalusecase fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
+ classDef securityusecase fill:#ffebee,stroke:#c62828,stroke-width:3px
+ classDef system fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
+ classDef external fill:#fff3e0,stroke:#e65100,stroke-width:2px
+ 
+ class User,RegisteredUser,RestaurantOwner actor
+ class UC1,UC2 normalusecase
+ class UC3 securityusecase
+ class System system
+ class EmailService external
 ```
 
 ---
 
-## 📋 Diagram Summary
+## Diagram Summary
 
 | Use Case | Type | Primary Actor | Key Relationships | Security Level |
 |----------|------|---------------|-------------------|----------------|
@@ -251,7 +251,7 @@ graph TB
 
 ---
 
-## 🎯 Key Design Principles
+## Key Design Principles
 
 ### Normal Use Cases (UC-001, UC-002)
 - **User-Centric Design**: Focus on user experience and ease of use
@@ -266,7 +266,7 @@ graph TB
 
 ---
 
-## 🔗 Related Documentation
+## Related Documentation
 
 - **Use Case Documentation**: Detailed descriptions of each use case
 - **Software Requirements Document**: Functional and non-functional requirements

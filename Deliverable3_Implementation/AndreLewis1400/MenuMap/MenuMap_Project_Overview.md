@@ -1,19 +1,19 @@
 # MenuMap Project Overview
 ## CEN4010 Software Engineering - Team 9
 
-**Project Lead:** Alfonso Oramas Jr.  
-**UML Diagrams Coordinator:** Andre Lewis  
-**Team:** Team 9  
-**Course:** CEN4010 Software Engineering  
-**Repository:** AndreLewis1400/MenuMap  
+**Project Lead:** Alfonso Oramas Jr. 
+**UML Diagrams Coordinator:** Andre Lewis 
+**Team:** Team 9 
+**Course:** CEN4010 Software Engineering 
+**Repository:** AndreLewis1400/MenuMap 
 
 ---
 
-## 🍽️ What is MenuMap?
+## What is MenuMap?
 
 MenuMap is a comprehensive restaurant discovery and menu management application designed to help users find, explore, and manage restaurant menus and meal information. Think of it as a "Google Maps for restaurant menus" - a centralized platform where food enthusiasts can discover new restaurants, browse detailed menus, save their favorites, and verify menu information accuracy.
 
-## 🎯 Project Purpose & Vision
+## Project Purpose & Vision
 
 ### Primary Goal
 Create a user-friendly platform that bridges the gap between restaurants and customers by providing accurate, up-to-date menu information in an easily accessible format.
@@ -23,7 +23,7 @@ Create a user-friendly platform that bridges the gap between restaurants and cus
 - **Secondary Users**: Restaurant owners, food service managers
 - **Administrators**: System administrators, content moderators
 
-## 🚀 Core Features & Functionality
+## Core Features & Functionality
 
 ### 1. **Menu Discovery & Browsing**
 - Browse restaurant menus by location, cuisine type, or restaurant name
@@ -59,7 +59,7 @@ Create a user-friendly platform that bridges the gap between restaurants and cus
 - User preferences and settings
 - Activity history tracking
 
-## 🏗️ Technical Architecture
+## Technical Architecture
 
 ### Platform
 - **Web Application**: Responsive design for desktop and mobile browsers
@@ -74,7 +74,7 @@ Create a user-friendly platform that bridges the gap between restaurants and cus
 - **Authentication**: OAuth 2.0, JWT tokens
 - **Security**: HTTPS encryption, secure authentication protocols
 
-## 📊 System Requirements
+## System Requirements
 
 ### Functional Requirements
 - Support for 10,000+ restaurants and 100,000+ menu items
@@ -90,7 +90,7 @@ Create a user-friendly platform that bridges the gap between restaurants and cus
 - **Security**: OWASP security guidelines compliance
 - **Usability**: WCAG 2.1 AA accessibility compliance
 
-## 🎨 User Experience Design
+## User Experience Design
 
 ### Interface Design
 - Clean, intuitive user interface
@@ -104,7 +104,7 @@ Create a user-friendly platform that bridges the gap between restaurants and cus
 3. **Interaction**: Save favorites, leave reviews, verify information
 4. **Management**: Organize preferences and manage account
 
-## 🔒 Security & Privacy
+## Security & Privacy
 
 ### Data Protection
 - GDPR and CCPA compliance
@@ -118,7 +118,7 @@ Create a user-friendly platform that bridges the gap between restaurants and cus
 - User reporting system
 - Automated verification processes
 
-## 📈 Business Model & Monetization
+## Business Model & Monetization
 
 ### Revenue Streams (Future Considerations)
 - Premium subscription features
@@ -126,7 +126,7 @@ Create a user-friendly platform that bridges the gap between restaurants and cus
 - Advertising and sponsored content
 - Data analytics services for restaurants
 
-## 🛠️ Development Phases
+## Development Phases
 
 ### Phase 1: Core Foundation
 - Basic user authentication
@@ -144,26 +144,26 @@ Create a user-friendly platform that bridges the gap between restaurants and cus
 - Restaurant owner tools
 - Community features
 
-## 📋 Current Project Status
+## Current Project Status
 
 ### Completed
-- ✅ Software Requirements Document (SRD)
-- ✅ UML Design Specifications
-- ✅ Use Case Documentation
-- ✅ System Architecture Planning
+- Software Requirements Document (SRD)
+- UML Design Specifications
+- Use Case Documentation
+- System Architecture Planning
 
 ### In Progress
-- 🔄 Eclipse Papyrus UML Diagrams
-- 🔄 Detailed Use Case Diagrams
-- 🔄 Presentation Preparation
+- Eclipse Papyrus UML Diagrams
+- Detailed Use Case Diagrams
+- Presentation Preparation
 
 ### Upcoming
-- ⏳ Prototype Development
-- ⏳ User Interface Design
-- ⏳ Database Schema Implementation
-- ⏳ Security Implementation
+- Prototype Development
+- User Interface Design
+- Database Schema Implementation
+- Security Implementation
 
-## 👥 Team Structure & Roles
+## Team Structure & Roles
 
 ### Team 9 Members
 - **Alfonso Oramas Jr.**: Project Lead
@@ -179,10 +179,10 @@ Create a user-friendly platform that bridges the gap between restaurants and cus
 - **Alex**: [Role to be assigned]
 - **Kamal**: [Role to be assigned]
 
-## 📚 Documentation & Deliverables
+## Documentation & Deliverables
 
 ### Required Deliverables
-1. **Software Requirements Document (SRD)** ✅
+1. **Software Requirements Document (SRD)** 
 2. **UML Diagrams** (Use Case, Class, Sequence, Activity, Component)
 3. **Use Case Documentation** (3 use cases: 2 normal + 1 security)
 4. **Presentation Materials**
@@ -194,7 +194,7 @@ Create a user-friendly platform that bridges the gap between restaurants and cus
 - Database schema design
 - Security implementation guide
 
-## 🎯 Success Metrics
+## Success Metrics
 
 ### Technical Metrics
 - System performance benchmarks
@@ -208,7 +208,7 @@ Create a user-friendly platform that bridges the gap between restaurants and cus
 - System usability scores
 - Accessibility compliance
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 ### Potential Features
 - AI-powered menu recommendations
@@ -220,12 +220,12 @@ Create a user-friendly platform that bridges the gap between restaurants and cus
 
 ---
 
-## 📞 Contact & Support
+## Contact & Support
 
-**Project Repository**: [AndreLewis1400/MenuMap](https://github.com/AndreLewis1400/MenuMap)  
-**Course**: CEN4010 Software Engineering  
-**Institution**: [University Name]  
-**Team**: Team 9  
+**Project Repository**: [AndreLewis1400/MenuMap](https://github.com/AndreLewis1400/MenuMap) 
+**Course**: CEN4010 Software Engineering 
+**Institution**: [University Name] 
+**Team**: Team 9 
 
 ---
 

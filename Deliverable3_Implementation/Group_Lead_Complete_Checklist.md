@@ -1,34 +1,34 @@
 # Group Lead Complete Checklist - Deliverable 3
 ## Andre Lewis - Final Action Plan
 
-**Last Updated:** Today  
-**Status:** Test Cases ✅ Updated | Chapters 5 & 6 ⏳ Pending
+**Last Updated:** Today 
+**Status:** Test Cases Updated | Chapters 5 & 6 Pending
 
 ---
 
-## ✅ COMPLETED TASKS
+## COMPLETED TASKS
 
-### **1. Test Cases (Chapter 7 Contribution)** ✅
-- ✅ **UC-005: User Login** - 10 test cases (2 sunny day, 8 rainy day)
-- ✅ **UC-001: Browse Restaurant Menus** - 8 test cases (2 sunny day, 6 rainy day)
-- ✅ **Updated:** All test cases now specify user names (e.g., "janedoe", "johndoe") and restaurant names (e.g., "Joe's Pizza", "Burger Palace")
-- ✅ **File:** `MenuMap_Test_Cases_Login_UC001.md`
-- ✅ **Pushed to GitHub:** Yes
-- ✅ **Status:** Complete and ready for Chapter 7.1.3 inclusion
+### **1. Test Cases (Chapter 7 Contribution)** 
+- **UC-005: User Login** - 10 test cases (2 sunny day, 8 rainy day)
+- **UC-001: Browse Restaurant Menus** - 8 test cases (2 sunny day, 6 rainy day)
+- **Updated:** All test cases now specify user names (e.g., "janedoe", "johndoe") and restaurant names (e.g., "Joe's Pizza", "Burger Palace")
+- **File:** `MenuMap_Test_Cases_Login_UC001.md`
+- **Pushed to GitHub:** Yes
+- **Status:** Complete and ready for Chapter 7.1.3 inclusion
 
-### **2. Team Coordination** ✅
-- ✅ Created `Test_Case_Assignments.md` - Team member assignments
-- ✅ Created `Chapter_7_Test_Cases_Structure.md` - Compilation guide
-- ✅ Created `Test_Cases_Summary.md` - Quick reference
-- ✅ Created `Group_Lead_Remaining_Tasks.md` - Task checklist
+### **2. Team Coordination** 
+- Created `Test_Case_Assignments.md` - Team member assignments
+- Created `Chapter_7_Test_Cases_Structure.md` - Compilation guide
+- Created `Test_Cases_Summary.md` - Quick reference
+- Created `Group_Lead_Remaining_Tasks.md` - Task checklist
 
 ---
 
-## ⏳ REMAINING TASKS (Your Primary Responsibilities)
+## REMAINING TASKS (Your Primary Responsibilities)
 
-### **Chapter 5: Software Architecture** (7 points) 🔴 HIGH PRIORITY
-**Status:** ⏳ Pending  
-**Timeline:** Complete Today/Tomorrow  
+### **Chapter 5: Software Architecture** (7 points) HIGH PRIORITY
+**Status:** Pending 
+**Timeline:** Complete Today/Tomorrow 
 **Reference:** `Deliverable2_Design/Architecture/` - Use as starting point with corrections
 
 #### **Required Sections:**
@@ -46,13 +46,13 @@
 **5.2 Subsystem Decomposition** (2 points)
 - [ ] Reference: `Deliverable2_Design/Architecture/Subsystem_Decomposition.md`
 - [ ] Break down system into 7 subsystems:
-  - Presentation Layer
-  - Business Logic Layer
-  - Data Access Layer
-  - Security Subsystem
-  - Menu Management Subsystem
-  - User Management Subsystem
-  - Notification Subsystem
+ - Presentation Layer
+ - Business Logic Layer
+ - Data Access Layer
+ - Security Subsystem
+ - Menu Management Subsystem
+ - User Management Subsystem
+ - Notification Subsystem
 - [ ] Describe subsystem responsibilities
 - [ ] Show subsystem relationships
 
@@ -87,10 +87,10 @@
 
 ---
 
-### **Chapter 6: Detailed Design** (9 points) 🔴 HIGH PRIORITY
-**Status:** ⏳ Pending  
-**Timeline:** Complete Today/Tomorrow  
-**Reference:** `Deliverable2_Design/UML_Diagrams/` - Use sequence diagrams and class diagrams  
+### **Chapter 6: Detailed Design** (9 points) HIGH PRIORITY
+**Status:** Pending 
+**Timeline:** Complete Today/Tomorrow 
+**Reference:** `Deliverable2_Design/UML_Diagrams/` - Use sequence diagrams and class diagrams 
 **Support:** Alfonso Oramas (Class diagrams for Section 6.4)
 
 #### **Required Sections:**
@@ -102,9 +102,9 @@
 **6.1 Overview (Minimum Class Diagram)** (2 points)
 - [ ] Reference: `Deliverable2_Design/UML_Diagrams/Diagrams_Only/Package_MM_Clent_MM_Client_Class_Dia.PNG`
 - [ ] High-level class diagram showing:
-  - MM_Client package classes
-  - MM_Logic package classes
-  - MM_DataStore package classes
+ - MM_Client package classes
+ - MM_Logic package classes
+ - MM_DataStore package classes
 - [ ] Key classes and relationships
 - [ ] Design patterns overview
 
@@ -117,10 +117,10 @@
 **6.3 Object Interaction (Sequence Diagrams)** (3 points)
 - [ ] Reference: `Deliverable2_Design/UML_Diagrams/` - Sequence diagrams for implemented use cases
 - [ ] Include sequence diagrams for:
-  - UC-001: Browse Restaurant Menus
-  - UC-005: User Login
-  - UC-004: User Registration (if implemented)
-  - Other implemented use cases
+ - UC-001: Browse Restaurant Menus
+ - UC-005: User Login
+ - UC-004: User Registration (if implemented)
+ - Other implemented use cases
 - [ ] Show object interactions (3-tier architecture)
 - [ ] Message flows between Presentation, Business Logic, and Data layers
 
@@ -128,14 +128,14 @@
 - [ ] **Coordinate with Alfonso Oramas** - He's assigned to Appendix D (Detailed Class Diagrams)
 - [ ] Reference: `Deliverable2_Design/UML_Diagrams/Diagrams_Only/`
 - [ ] Detailed class diagrams with:
-  - All attributes
-  - All methods
-  - Relationships and associations
-  - Full class details
+ - All attributes
+ - All methods
+ - Relationships and associations
+ - Full class details
 - [ ] Include diagrams for all three tiers:
-  - MM_Client classes
-  - MM_Logic classes
-  - MM_DataStore classes
+ - MM_Client classes
+ - MM_Logic classes
+ - MM_DataStore classes
 
 **Action Items:**
 - [ ] Review Deliverable 2 Design Document UML diagrams
@@ -150,25 +150,25 @@
 
 ---
 
-## 📋 ADDITIONAL GROUP LEAD RESPONSIBILITIES
+## ADDITIONAL GROUP LEAD RESPONSIBILITIES
 
-### **1. Review & Coordination** 🟡 MEDIUM PRIORITY
+### **1. Review & Coordination** MEDIUM PRIORITY
 - [ ] Review all team members' test cases (Chapter 7) for quality
 - [ ] Ensure format consistency across chapters
 - [ ] Coordinate with team members on dependencies
 - [ ] Review compiled Final Document before submission
 
-### **2. Final Document Compilation** 🟡 MEDIUM PRIORITY
+### **2. Final Document Compilation** MEDIUM PRIORITY
 - [ ] Ensure all chapters are complete
 - [ ] Verify format requirements are met:
-  - 1.5 line spacing
-  - Chapter headings: 16 pt
-  - Section headings: 13 pt
-  - Text: 11pt Arial or 12pt Times
+ - 1.5 line spacing
+ - Chapter headings: 16 pt
+ - Section headings: 13 pt
+ - Text: 11pt Arial or 12pt Times
 - [ ] Check table of contents accuracy
 - [ ] Final review before submission
 
-### **3. Team Support** 🟢 LOW PRIORITY
+### **3. Team Support** LOW PRIORITY
 - [ ] Answer questions from team members
 - [ ] Provide guidance on format and requirements
 - [ ] Resolve blockers and issues
@@ -176,14 +176,14 @@
 
 ---
 
-## 📚 REFERENCE DOCUMENTS
+## REFERENCE DOCUMENTS
 
 ### **For Chapters 5 & 6:**
 - **Deliverable 2 Design Document** - Primary reference
-  - Location: `C:\Users\alewi\MenuMap\Deliverable2_Design\`
-  - Architecture folder: `Architecture/`
-  - UML Diagrams: `UML_Diagrams/`
-  - Use similar content but make corrections/updates
+ - Location: `C:\Users\alewi\MenuMap\Deliverable2_Design\`
+ - Architecture folder: `Architecture/`
+ - UML Diagrams: `UML_Diagrams/`
+ - Use similar content but make corrections/updates
 
 ### **For Format Requirements:**
 - **CEN4010-Final.docx** - Format document (in Downloads folder)
@@ -197,7 +197,7 @@
 
 ---
 
-## 🎯 TODAY/TOMORROW ACTION PLAN
+## TODAY/TOMORROW ACTION PLAN
 
 ### **Priority 1: Complete Chapter 5 (7 points)**
 1. [ ] Open Deliverable 2 Design Document architecture sections
@@ -223,23 +223,23 @@
 
 ---
 
-## 📊 PROGRESS SUMMARY
+## PROGRESS SUMMARY
 
 | Task | Status | Points | Priority |
 |------|--------|--------|----------|
-| Test Cases (UC-005, UC-001) | ✅ Complete | - | ✅ Done |
-| Chapter 5: Software Architecture | ⏳ Pending | 7 | 🔴 High |
-| Chapter 6: Detailed Design | ⏳ Pending | 9 | 🔴 High |
-| Team Coordination | ✅ Complete | - | ✅ Done |
-| Final Review | ⏳ Pending | - | 🟡 Medium |
+| Test Cases (UC-005, UC-001) | Complete | - | Done |
+| Chapter 5: Software Architecture | Pending | 7 | High |
+| Chapter 6: Detailed Design | Pending | 9 | High |
+| Team Coordination | Complete | - | Done |
+| Final Review | Pending | - | Medium |
 
-**Total Points for Your Chapters:** 16 points  
-**Completed:** 0/16 (0%)  
+**Total Points for Your Chapters:** 16 points 
+**Completed:** 0/16 (0%) 
 **Remaining:** 16/16 (100%)
 
 ---
 
-## 💡 QUICK START GUIDE FOR CHAPTERS 5 & 6
+## QUICK START GUIDE FOR CHAPTERS 5 & 6
 
 ### **Step 1: Open Reference Documents**
 ```
@@ -280,7 +280,7 @@
 
 ---
 
-## 🚨 IMPORTANT REMINDERS
+## IMPORTANT REMINDERS
 
 1. **Chapters 5 & 6 are your primary responsibility** - 16 points total
 2. **Content should be similar to Design Document** but with corrections
@@ -292,26 +292,26 @@
 
 ---
 
-## 📝 NOTES
+## NOTES
 
 - **Word Documents:** I cannot read .docx files directly. If you need me to review the CEN4010-Final.docx or CEN4010-GradeSheet_Deliver-3.docx files, please copy and paste the text content.
 
 - **Format Requirements:** Based on the images you shared:
-  - 1.5 line spacing
-  - Chapter headings: 16 pt
-  - Section headings: 13 pt
-  - Text: 11pt Arial or 12pt Times
-  - Table of Contents must be accurate
+ - 1.5 line spacing
+ - Chapter headings: 16 pt
+ - Section headings: 13 pt
+ - Text: 11pt Arial or 12pt Times
+ - Table of Contents must be accurate
 
 - **Content Requirements:**
-  - Similar to Design Document (with corrections)
-  - Include diagrams where specified
-  - Reference other chapters and appendices
-  - Use present tense (not future tense)
+ - Similar to Design Document (with corrections)
+ - Include diagrams where specified
+ - Reference other chapters and appendices
+ - Use present tense (not future tense)
 
 ---
 
-## ✅ COMPLETION CHECKLIST
+## COMPLETION CHECKLIST
 
 ### **Before Submission:**
 - [ ] Chapter 5: Software Architecture complete (all 6 sections)

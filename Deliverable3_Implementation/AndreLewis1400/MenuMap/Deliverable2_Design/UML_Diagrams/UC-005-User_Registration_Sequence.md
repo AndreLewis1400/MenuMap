@@ -1,16 +1,16 @@
 # UC-005: User Registration Sequence Diagram
 
 ## Use Case: User Registration
-**Actor:** Guest User  
-**Goal:** Create new user account with secure credentials  
-**Precondition:** User is not already registered  
+**Actor:** Guest User 
+**Goal:** Create new user account with secure credentials 
+**Precondition:** User is not already registered 
 
-**Design Pattern:** Factory Pattern  
+**Design Pattern:** Factory Pattern 
 **3-Tier Architecture:** MM_Client → MM_Logic → MM_DataStore
 
 ---
 
-## 🎯 **Lifelines (Participants) - Factory Pattern Implementation**
+## **Lifelines (Participants) - Factory Pattern Implementation**
 
 ```
 User | RegistrationForm | UserManager_CMD | UserRepository | Database
@@ -38,26 +38,26 @@ Database -> UserRepository: return null (email doesn't exist)
 UserRepository -> UserManager_CMD: return emailAvailable
 
 alt Valid Registration Data
-    UserManager_CMD -> UserManager_CMD: hashPassword(password)
-    UserManager_CMD -> UserManager_CMD: createUser(userType, userData, hashedPassword)
-    
-    alt userType == "RegularUser"
-        UserManager_CMD -> UserManager_CMD: createRegularUser(userData)
-    else userType == "PremiumUser"
-        UserManager_CMD -> UserManager_CMD: createPremiumUser(userData)
-    else userType == "RestaurantOwner"
-        UserManager_CMD -> UserManager_CMD: createRestaurantOwner(userData)
-    end
-    
-    UserManager_CMD -> UserRepository: saveUser(newUser)
-    UserRepository -> Database: INSERT INTO users (email, password, userType, ...)
-    Database -> UserRepository: return userId
-    UserRepository -> UserManager_CMD: return userId
-    UserManager_CMD -> RegistrationForm: return success + userId
-    RegistrationForm -> User: display "Check email for verification"
+ UserManager_CMD -> UserManager_CMD: hashPassword(password)
+ UserManager_CMD -> UserManager_CMD: createUser(userType, userData, hashedPassword)
+ 
+ alt userType == "RegularUser"
+ UserManager_CMD -> UserManager_CMD: createRegularUser(userData)
+ else userType == "PremiumUser"
+ UserManager_CMD -> UserManager_CMD: createPremiumUser(userData)
+ else userType == "RestaurantOwner"
+ UserManager_CMD -> UserManager_CMD: createRestaurantOwner(userData)
+ end
+ 
+ UserManager_CMD -> UserRepository: saveUser(newUser)
+ UserRepository -> Database: INSERT INTO users (email, password, userType, ...)
+ Database -> UserRepository: return userId
+ UserRepository -> UserManager_CMD: return userId
+ UserManager_CMD -> RegistrationForm: return success + userId
+ RegistrationForm -> User: display "Check email for verification"
 else Invalid Data
-    UserManager_CMD -> RegistrationForm: return validationErrors
-    RegistrationForm -> User: display error messages
+ UserManager_CMD -> RegistrationForm: return validationErrors
+ RegistrationForm -> User: display error messages
 end
 ```
 

@@ -7,16 +7,16 @@
 
 ---
 
-## 🍽️ Project Overview
+## Project Overview
 
 **MenuMap** is a comprehensive restaurant discovery and menu management application designed to help users find, explore, and manage restaurant menus and meal information. Think of it as a "Google Maps for restaurant menus" - a centralized platform where food enthusiasts can discover new restaurants, browse detailed menus, save their favorites, and verify menu information accuracy.
 
-### 🎯 Mission Statement
+### Mission Statement
 Create a user-friendly platform that bridges the gap between restaurants and customers by providing accurate, up-to-date menu information in an easily accessible format.
 
 ---
 
-## 📋 Project Information
+## Project Information
 
 | Field | Details |
 |-------|---------|
@@ -25,37 +25,37 @@ Create a user-friendly platform that bridges the gap between restaurants and cus
 | **Team** | Team 9 |
 | **Project Lead** | Andre Lewis |
 | **Repository** | [AndreLewis1400/MenuMap](https://github.com/AndreLewis1400/MenuMap) |
-| **Documentation Status** | ✅ Complete |
-| **UML Diagrams** | ✅ Complete |
-| **Use Cases** | ✅ Complete |
+| **Documentation Status** | Complete |
+| **UML Diagrams** | Complete |
+| **Use Cases** | Complete |
 
 ---
 
-## 🚀 Core Features
+## Core Features
 
-### 🔍 **Menu Discovery & Browsing**
+### **Menu Discovery & Browsing**
 - Browse restaurant menus by location, cuisine type, or restaurant name
 - View detailed menu items with descriptions, prices, and nutritional information
 - Advanced search functionality with filters (price range, dietary restrictions, ratings)
 
-### ⭐ **Favorites Management**
+### **Favorites Management**
 - Save favorite restaurants and specific menu items
 - Organize favorites into custom categories
 - Quick access to saved items for easy reordering
 
-### ✅ **Content Verification System (TM901)**
+### **Content Verification System (TM901)**
 - Automated verification of menu information accuracy
 - Flag suspicious or inconsistent data
 - Community-driven verification process
 - Restaurant owner verification capabilities
 
-### 🛡️ **Spam Protection System (TM902)**
+### **Spam Protection System (TM902)**
 - Advanced spam detection algorithms
 - Rate limiting for submissions
 - Blacklist management for known spam sources
 - User reporting system for suspicious content
 
-### 🔒 **Security Features**
+### **Security Features**
 - Secure user authentication and authorization
 - Password reset functionality with email verification
 - Data encryption and privacy protection
@@ -63,28 +63,28 @@ Create a user-friendly platform that bridges the gap between restaurants and cus
 
 ---
 
-## 📚 Documentation Structure
+## Documentation Structure
 
 ```
 MenuMap_Project/
-├── README.md                           # This file - Project overview
-├── MenuMap_Project_Overview.md         # Comprehensive project overview
+├── README.md # This file - Project overview
+├── MenuMap_Project_Overview.md # Comprehensive project overview
 ├── Requirements_Document/
-│   └── Software_Requirements_Document.md  # Complete SRD
+│ └── Software_Requirements_Document.md # Complete SRD
 ├── Use_Cases/
-│   ├── Use_Case_Documentation.md       # 3 detailed use cases
-│   └── Use_Case_Diagrams.md           # Visual use case diagrams
+│ ├── Use_Case_Documentation.md # 3 detailed use cases
+│ └── Use_Case_Diagrams.md # Visual use case diagrams
 ├── UML_Design/
-│   ├── Use_Case_Diagram_Specification.md
-│   ├── Class_Diagram_Specification.md
-│   ├── Sequence_Diagram_Specifications.md
-│   └── Step_by_Step_Papyrus_Instructions.md
-└── SUBMISSION_CHECKLIST.md            # Project completion checklist
+│ ├── Use_Case_Diagram_Specification.md
+│ ├── Class_Diagram_Specification.md
+│ ├── Sequence_Diagram_Specifications.md
+│ └── Step_by_Step_Papyrus_Instructions.md
+└── SUBMISSION_CHECKLIST.md # Project completion checklist
 ```
 
 ---
 
-## 🎯 Required Use Cases
+## Required Use Cases
 
 This project includes **3 comprehensive use cases** as required for CEN4010:
 
@@ -109,7 +109,7 @@ This project includes **3 comprehensive use cases** as required for CEN4010:
 
 ---
 
-## 🏗️ Technical Architecture
+## Technical Architecture
 
 ### **Platform & Technology Stack**
 - **Frontend**: HTML5, CSS3, JavaScript (ES6+)
@@ -127,7 +127,7 @@ This project includes **3 comprehensive use cases** as required for CEN4010:
 
 ---
 
-## 👥 Team Structure
+## Team Structure
 
 ### **Team 9 Members**
 - **Andre Lewis**: Document Editor & Diagram Coordinator
@@ -141,9 +141,9 @@ This project includes **3 comprehensive use cases** as required for CEN4010:
 
 ---
 
-## 📊 Project Status
+## Project Status
 
-### ✅ **Completed Deliverables**
+### **Completed Deliverables**
 - [x] Software Requirements Document (SRD)
 - [x] Use Case Documentation (3 use cases)
 - [x] Use Case Diagrams (Individual diagrams for each use case)
@@ -151,12 +151,12 @@ This project includes **3 comprehensive use cases** as required for CEN4010:
 - [x] Project Overview Documentation
 - [x] GitHub Repository Setup
 
-### 🔄 **In Progress**
+### **In Progress**
 - [ ] Eclipse Papyrus UML Diagrams
 - [ ] Presentation Materials
 - [ ] Final Documentation Review
 
-### ⏳ **Upcoming**
+### **Upcoming**
 - [ ] Prototype Development
 - [ ] User Interface Design
 - [ ] Database Schema Implementation
@@ -164,7 +164,7 @@ This project includes **3 comprehensive use cases** as required for CEN4010:
 
 ---
 
-## 🔒 Security & Compliance
+## Security & Compliance
 
 ### **Security Features**
 - **Data Protection**: GDPR and CCPA compliance
@@ -181,7 +181,7 @@ This project includes **3 comprehensive use cases** as required for CEN4010:
 
 ---
 
-## 📈 Success Metrics
+## Success Metrics
 
 ### **Technical Metrics**
 - System performance benchmarks
@@ -197,7 +197,7 @@ This project includes **3 comprehensive use cases** as required for CEN4010:
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### **For Team Members**
 1. Clone the repository: `git clone https://github.com/AndreLewis1400/MenuMap.git`
@@ -212,22 +212,22 @@ This project includes **3 comprehensive use cases** as required for CEN4010:
 
 ---
 
-## 📞 Contact & Support
+## Contact & Support
 
-**Project Repository**: [AndreLewis1400/MenuMap](https://github.com/AndreLewis1400/MenuMap)  
-**Course**: CEN4010 Software Engineering  
-**Team**: Team 9  
-**Project Lead**: Andre Lewis  
+**Project Repository**: [AndreLewis1400/MenuMap](https://github.com/AndreLewis1400/MenuMap) 
+**Course**: CEN4010 Software Engineering 
+**Team**: Team 9 
+**Project Lead**: Andre Lewis 
 
 ---
 
-## 📄 License
+## License
 
 This project is developed for educational purposes as part of the CEN4010 Software Engineering course. All documentation and code are created by Team 9 members.
 
 ---
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - **Course Instructor**: [Instructor Name]
 - **Team 9 Members**: [Team Member Names]

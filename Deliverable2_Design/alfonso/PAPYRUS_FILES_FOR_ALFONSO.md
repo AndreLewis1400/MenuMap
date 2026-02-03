@@ -3,35 +3,35 @@
 
 ---
 
-## 📁 **Required Papyrus Workspace Files**
+## **Required Papyrus Workspace Files**
 
 Alfonso needs these **5 core files** to open and edit the sequence diagrams in Papyrus:
 
 ### **Essential Files (Must Have All 5):**
 
-1. **`MenuMap_UML_Design.aird`** ⭐ **PRIMARY FILE - Open this in Papyrus**
-   - This is the main representation file - Alfonso should open this file in Papyrus
-   - Contains references to all diagrams including the 7 sequence diagrams
+1. **`MenuMap_UML_Design.aird`** **PRIMARY FILE - Open this in Papyrus**
+ - This is the main representation file - Alfonso should open this file in Papyrus
+ - Contains references to all diagrams including the 7 sequence diagrams
 
 2. **`MenuMap_UML_Design.uml`**
-   - Contains the actual UML model with all Interaction elements (sequence diagrams)
-   - This is where the sequence diagram data is stored
+ - Contains the actual UML model with all Interaction elements (sequence diagrams)
+ - This is where the sequence diagram data is stored
 
 3. **`MenuMap_UML_Design.di`**
-   - Contains diagram layout and positioning information
-   - Needed for proper diagram display
+ - Contains diagram layout and positioning information
+ - Needed for proper diagram display
 
 4. **`MenuMap_UML_Design.notation`**
-   - Contains notation and styling information
-   - Needed for diagram appearance
+ - Contains notation and styling information
+ - Needed for diagram appearance
 
 5. **`MenuMap_UML_Design_en_US.properties`**
-   - Localization properties file
-   - May be needed for proper display
+ - Localization properties file
+ - May be needed for proper display
 
 ---
 
-## 📍 **File Location**
+## **File Location**
 
 All files are located in:
 ```
@@ -40,7 +40,7 @@ C:\Users\alewi\workspace-papyrus\MenuMap_UML_Design\
 
 ---
 
-## 🎯 **7 Sequence Diagrams in the Workspace**
+## **7 Sequence Diagrams in the Workspace**
 
 The following sequence diagrams are already created in the Papyrus workspace:
 
@@ -54,7 +54,7 @@ The following sequence diagrams are already created in the Papyrus workspace:
 
 ---
 
-## 📋 **Instructions for Alfonso**
+## **Instructions for Alfonso**
 
 ### **To Open the Workspace:**
 1. Open Papyrus
@@ -72,13 +72,13 @@ The following sequence diagrams are already created in the Papyrus workspace:
 - Ensure all 7 sequence diagrams are complete
 - Export updated PNG files if changes are made
 - Write the text description for Section 3.3 explaining:
-  - How the sequence diagrams refine the SRD diagrams
-  - What solution objects were added
-  - The interaction flow for each use case
+ - How the sequence diagrams refine the SRD diagrams
+ - What solution objects were added
+ - The interaction flow for each use case
 
 ---
 
-## 📦 **Files to Share with Alfonso**
+## **Files to Share with Alfonso**
 
 **Option 1: Share the entire folder**
 - Share the entire `MenuMap_UML_Design` folder
@@ -86,11 +86,11 @@ The following sequence diagrams are already created in the Papyrus workspace:
 
 **Option 2: Share only essential files**
 - Share these 5 files:
-  - MenuMap_UML_Design.aird
-  - MenuMap_UML_Design.uml
-  - MenuMap_UML_Design.di
-  - MenuMap_UML_Design.notation
-  - MenuMap_UML_Design_en_US.properties
+ - MenuMap_UML_Design.aird
+ - MenuMap_UML_Design.uml
+ - MenuMap_UML_Design.di
+ - MenuMap_UML_Design.notation
+ - MenuMap_UML_Design_en_US.properties
 
 **Option 3: Create a zip file**
 - Zip all 5 essential files together
@@ -98,7 +98,7 @@ The following sequence diagrams are already created in the Papyrus workspace:
 
 ---
 
-## ⚠️ **Important Notes**
+## **Important Notes**
 
 1. **All 5 files must be kept together** - They are interdependent
 2. **The .aird file is the entry point** - This is what Alfonso opens in Papyrus
@@ -107,7 +107,7 @@ The following sequence diagrams are already created in the Papyrus workspace:
 
 ---
 
-## 📝 **Reference Documentation**
+## **Reference Documentation**
 
 Alfonso can also reference the sequence diagram markdown files in:
 ```

@@ -3,7 +3,7 @@
 
 ---
 
-## 📋 **Test Case Format**
+## **Test Case Format**
 
 Based on CEN4010 requirements, each test case includes:
 - **Test Case ID**: Unique identifier (e.g., SystemTest-001-UC005)
@@ -14,9 +14,9 @@ Based on CEN4010 requirements, each test case includes:
 
 ---
 
-## 🔐 **UC-005: User Login**
+## **UC-005: User Login**
 
-## 🌞 **UC-005: User Login - SUNNY DAY SCENARIOS**
+## **UC-005: User Login - SUNNY DAY SCENARIOS**
 
 ### **TC-005-01: Successful Login (Sunny Day)**
 
@@ -40,8 +40,8 @@ Based on CEN4010 requirements, each test case includes:
 **Test Input:**
 1. User "johndoe" navigates to MenuMap login page
 2. User "johndoe" enters the following data:
-   a. Email/User ID: `johndoe@example.com`
-   b. Password: `SecurePass123!`
+ a. Email/User ID: `johndoe@example.com`
+ b. Password: `SecurePass123!`
 3. User "johndoe" clicks "Login" button
 
 **Expected Output:**
@@ -74,8 +74,8 @@ Based on CEN4010 requirements, each test case includes:
 **Test Input:**
 1. User "johndoe" navigates to MenuMap login page
 2. User "johndoe" enters the following data:
-   a. Email/User ID: `johndoe`
-   b. Password: `SecurePass123!`
+ a. Email/User ID: `johndoe`
+ b. Password: `SecurePass123!`
 3. User "johndoe" clicks "Login" button
 
 **Expected Output:**
@@ -87,7 +87,7 @@ Based on CEN4010 requirements, each test case includes:
 
 ---
 
-## 🌧️ **UC-005: User Login - RAINY DAY SCENARIOS**
+## **UC-005: User Login - RAINY DAY SCENARIOS**
 
 ### **TC-005-03: Invalid Password**
 
@@ -109,8 +109,8 @@ Based on CEN4010 requirements, each test case includes:
 **Test Input:**
 1. User "johndoe" navigates to MenuMap login page
 2. User "johndoe" enters the following data:
-   a. Email/User ID: `johndoe@example.com`
-   b. Password: `WrongPassword123`
+ a. Email/User ID: `johndoe@example.com`
+ b. Password: `WrongPassword123`
 3. User "johndoe" clicks "Login" button
 
 **Expected Output:**
@@ -143,15 +143,15 @@ Based on CEN4010 requirements, each test case includes:
 **Test Input:**
 1. Test user navigates to MenuMap login page
 2. Test user enters the following data:
-   a. Email/User ID: `nonexistent@example.com`
-   b. Password: `AnyPassword123`
+ a. Email/User ID: `nonexistent@example.com`
+ b. Password: `AnyPassword123`
 3. Test user clicks "Login" button
 
 **Expected Output:**
 1. System searches for user in database
 2. System finds no matching user
 3. Error message displays: "Invalid email or password. Please try again."
-   (Note: Generic message for security - doesn't reveal if email exists)
+ (Note: Generic message for security - doesn't reveal if email exists)
 4. Test user remains on login page
 5. No session is created
 
@@ -210,8 +210,8 @@ Based on CEN4010 requirements, each test case includes:
 **Test Input:**
 1. User "lockeduser" navigates to MenuMap login page
 2. User "lockeduser" enters the following data:
-   a. Email/User ID: `locked@example.com`
-   b. Password: `CorrectPassword123`
+ a. Email/User ID: `locked@example.com`
+ b. Password: `CorrectPassword123`
 3. User "lockeduser" clicks "Login" button
 
 **Expected Output:**
@@ -245,8 +245,8 @@ Based on CEN4010 requirements, each test case includes:
 **Test Input:**
 1. User "unverified" navigates to MenuMap login page
 2. User "unverified" enters the following data:
-   a. Email/User ID: `unverified@example.com`
-   b. Password: `CorrectPassword123`
+ a. Email/User ID: `unverified@example.com`
+ b. Password: `CorrectPassword123`
 3. User "unverified" clicks "Login" button
 
 **Expected Output:**
@@ -279,8 +279,8 @@ Based on CEN4010 requirements, each test case includes:
 **Test Input:**
 1. Attacker navigates to MenuMap login page
 2. Attacker enters the following data:
-   a. Email/User ID: `admin' OR '1'='1`
-   b. Password: `anything' OR '1'='1`
+ a. Email/User ID: `admin' OR '1'='1`
+ b. Password: `anything' OR '1'='1`
 3. Attacker clicks "Login" button
 
 **Expected Output:**
@@ -314,8 +314,8 @@ Based on CEN4010 requirements, each test case includes:
 **Test Input:**
 1. User "johndoe" navigates to MenuMap login page
 2. User "johndoe" enters the following data:
-   a. Email/User ID: `johndoe@example.com`
-   b. Password: `SecurePass123!`
+ a. Email/User ID: `johndoe@example.com`
+ b. Password: `SecurePass123!`
 3. User "johndoe" clicks "Login" button
 
 **Expected Output:**
@@ -350,11 +350,11 @@ Based on CEN4010 requirements, each test case includes:
 **Test Input:**
 1. User "johndoe" navigates to MenuMap login page
 2. User "johndoe" attempts login 5 times with incorrect password:
-   - Attempt 1: Email: `johndoe@example.com`, Password: `Wrong1`
-   - Attempt 2: Email: `johndoe@example.com`, Password: `Wrong2`
-   - Attempt 3: Email: `johndoe@example.com`, Password: `Wrong3`
-   - Attempt 4: Email: `johndoe@example.com`, Password: `Wrong4`
-   - Attempt 5: Email: `johndoe@example.com`, Password: `Wrong5`
+ - Attempt 1: Email: `johndoe@example.com`, Password: `Wrong1`
+ - Attempt 2: Email: `johndoe@example.com`, Password: `Wrong2`
+ - Attempt 3: Email: `johndoe@example.com`, Password: `Wrong3`
+ - Attempt 4: Email: `johndoe@example.com`, Password: `Wrong4`
+ - Attempt 5: Email: `johndoe@example.com`, Password: `Wrong5`
 3. User "johndoe" clicks "Login" button for each attempt
 
 **Expected Output:**
@@ -366,9 +366,9 @@ Based on CEN4010 requirements, each test case includes:
 
 ---
 
-## 🍽️ **UC-001: Browse Restaurant Menus**
+## **UC-001: Browse Restaurant Menus**
 
-## 🌞 **UC-001: Browse Restaurant Menus - SUNNY DAY SCENARIOS**
+## **UC-001: Browse Restaurant Menus - SUNNY DAY SCENARIOS**
 
 ### **TC-001-01: Successful Menu Browse (Sunny Day)**
 
@@ -409,9 +409,9 @@ Based on CEN4010 requirements, each test case includes:
 2. Restaurant "Joe's Pizza" details are displayed correctly
 3. Menu for restaurant "Joe's Pizza" loads successfully from database
 4. Menu for restaurant "Joe's Pizza" displays all items for restaurant ID 101:
-   - Margherita Pizza - $12.99 (Entree)
-   - Pepperoni Pizza - $14.99 (Entree)
-   - Caesar Salad - $8.99 (Appetizer)
+ - Margherita Pizza - $12.99 (Entree)
+ - Pepperoni Pizza - $14.99 (Entree)
+ - Caesar Salad - $8.99 (Appetizer)
 5. Items are organized by category (if applicable)
 6. Prices are formatted correctly
 7. No error messages displayed
@@ -462,7 +462,7 @@ Based on CEN4010 requirements, each test case includes:
 
 ---
 
-## 🌧️ **UC-001: Browse Restaurant Menus - RAINY DAY SCENARIOS**
+## **UC-001: Browse Restaurant Menus - RAINY DAY SCENARIOS**
 
 ### **TC-001-03: Restaurant Not Found**
 
@@ -698,7 +698,7 @@ Based on CEN4010 requirements, each test case includes:
 
 ---
 
-## 📊 **Test Case Summary**
+## **Test Case Summary**
 
 ### **UC-005: User Login**
 - **Sunny Day:** 2 test cases (TC-005-01, TC-005-02)
@@ -718,7 +718,7 @@ Based on CEN4010 requirements, each test case includes:
 
 ---
 
-## ✅ **Test Execution Checklist**
+## **Test Execution Checklist**
 
 ### **Before Testing:**
 - [ ] Test environment is set up
@@ -742,7 +742,7 @@ Based on CEN4010 requirements, each test case includes:
 
 ---
 
-## 📝 **Notes for Deliverable 3 Submission**
+## **Notes for Deliverable 3 Submission**
 
 1. **Format:** These test cases follow the CEN4010 format shown in lecture examples
 2. **Database Tables:** Each test case includes its own database state table(s) before the Test Setup section

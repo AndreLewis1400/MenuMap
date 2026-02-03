@@ -1,23 +1,23 @@
 # Individual Use Case Diagrams Guide
 ## Creating 3 Separate Use Case Diagrams in Papyrus
 
-**Purpose**: Create individual use case diagrams for each of the 3 use cases as required by the assignment  
-**Tool**: Eclipse Papyrus  
-**Author**: Andre Lewis (UML Diagrams Coordinator)  
+**Purpose**: Create individual use case diagrams for each of the 3 use cases as required by the assignment 
+**Tool**: Eclipse Papyrus 
+**Author**: Andre Lewis (UML Diagrams Coordinator) 
 
 ---
 
-## 🎯 **What You Need to Create**
+## **What You Need to Create**
 
 You need to create **3 separate use case diagrams** in Papyrus:
 
 1. **UC-001: Browse Restaurant Menus** (Normal Use Case)
-2. **UC-002: Manage Favorites** (Normal Use Case)  
+2. **UC-002: Manage Favorites** (Normal Use Case) 
 3. **UC-003: Secure Password Reset** (Security Use Case)
 
 ---
 
-## 📋 **Step-by-Step Instructions**
+## **Step-by-Step Instructions**
 
 ### **Step 1: Open Eclipse Papyrus**
 1. Launch Eclipse IDE
@@ -36,14 +36,14 @@ You need to create **3 separate use case diagrams** in Papyrus:
 
 **Elements to Add:**
 - **Actors**:
-  - User (Primary Actor)
-  - Restaurant Owner (Secondary Actor)
-  - MenuMap System (System Actor)
+ - User (Primary Actor)
+ - Restaurant Owner (Secondary Actor)
+ - MenuMap System (System Actor)
 - **Use Case**: Browse Restaurant Menus
 - **Relationships**:
-  - User → Browse Restaurant Menus (Association)
-  - Restaurant Owner → Browse Restaurant Menus (Association)
-  - MenuMap System → Browse Restaurant Menus (Association)
+ - User → Browse Restaurant Menus (Association)
+ - Restaurant Owner → Browse Restaurant Menus (Association)
+ - MenuMap System → Browse Restaurant Menus (Association)
 
 #### **For UC-002: Manage Favorites**
 
@@ -55,12 +55,12 @@ You need to create **3 separate use case diagrams** in Papyrus:
 
 **Elements to Add:**
 - **Actors**:
-  - Registered User (Primary Actor)
-  - MenuMap System (System Actor)
+ - Registered User (Primary Actor)
+ - MenuMap System (System Actor)
 - **Use Case**: Manage Favorites
 - **Relationships**:
-  - Registered User → Manage Favorites (Association)
-  - MenuMap System → Manage Favorites (Association)
+ - Registered User → Manage Favorites (Association)
+ - MenuMap System → Manage Favorites (Association)
 
 #### **For UC-003: Secure Password Reset**
 
@@ -72,18 +72,18 @@ You need to create **3 separate use case diagrams** in Papyrus:
 
 **Elements to Add:**
 - **Actors**:
-  - User (Primary Actor)
-  - MenuMap System (System Actor)
-  - Email Service (External Actor)
+ - User (Primary Actor)
+ - MenuMap System (System Actor)
+ - Email Service (External Actor)
 - **Use Case**: Secure Password Reset
 - **Relationships**:
-  - User → Secure Password Reset (Association)
-  - MenuMap System → Secure Password Reset (Association)
-  - Email Service → Secure Password Reset (Association)
+ - User → Secure Password Reset (Association)
+ - MenuMap System → Secure Password Reset (Association)
+ - Email Service → Secure Password Reset (Association)
 
 ---
 
-## 🎨 **Visual Design Guidelines**
+## **Visual Design Guidelines**
 
 ### **Actor Styling:**
 - **Primary Actors**: Larger, more prominent
@@ -103,13 +103,13 @@ You need to create **3 separate use case diagrams** in Papyrus:
 
 ---
 
-## 📐 **Layout Suggestions**
+## **Layout Suggestions**
 
 ### **UC-001: Browse Restaurant Menus**
 ```
 [User] ──────────→ [Browse Restaurant Menus] ←────────── [Restaurant Owner]
-                           ↑
-                    [MenuMap System]
+ ↑
+ [MenuMap System]
 ```
 
 ### **UC-002: Manage Favorites**
@@ -120,13 +120,13 @@ You need to create **3 separate use case diagrams** in Papyrus:
 ### **UC-003: Secure Password Reset**
 ```
 [User] ──────────→ [Secure Password Reset] ←────────── [MenuMap System]
-                           ↑
-                    [Email Service]
+ ↑
+ [Email Service]
 ```
 
 ---
 
-## 🔧 **Technical Steps in Papyrus**
+## **Technical Steps in Papyrus**
 
 ### **Adding Actors:**
 1. **Drag** "Actor" from the palette
@@ -154,7 +154,7 @@ You need to create **3 separate use case diagrams** in Papyrus:
 
 ---
 
-## 📁 **File Organization**
+## **File Organization**
 
 ### **Save As:**
 - `UC001_Browse_Restaurant_Menus.PNG`
@@ -167,7 +167,7 @@ Copy the exported PNG files to:
 
 ---
 
-## ✅ **Quality Checklist**
+## **Quality Checklist**
 
 ### **Before Exporting:**
 - [ ] All actors are clearly labeled
@@ -185,7 +185,7 @@ Copy the exported PNG files to:
 
 ---
 
-## 🚀 **Quick Start Commands**
+## **Quick Start Commands**
 
 ### **If you need to create a new Papyrus project:**
 1. File → New → Papyrus Project
@@ -200,7 +200,7 @@ Copy the exported PNG files to:
 
 ---
 
-## 💡 **Pro Tips**
+## **Pro Tips**
 
 1. **Start Simple**: Create basic diagrams first, then add styling
 2. **Use Templates**: Copy elements from your existing diagrams

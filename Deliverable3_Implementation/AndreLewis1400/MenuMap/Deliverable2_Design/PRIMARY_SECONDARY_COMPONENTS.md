@@ -4,7 +4,7 @@
 
 ### 1. Primary Architectural Pattern: 3-Tier Architecture
 - **MM_Client** (Presentation Tier)
-- **MM_Logic** (Business Logic Tier)  
+- **MM_Logic** (Business Logic Tier) 
 - **MM_DataStore** (Data Tier)
 
 **Diagram:** `Model_Static_Menu_map_3_tier.PNG`

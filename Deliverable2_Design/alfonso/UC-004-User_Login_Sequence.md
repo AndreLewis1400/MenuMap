@@ -1,16 +1,16 @@
 # UC-004: User Login Sequence Diagram
 
 ## Use Case: User Login
-**Actor:** Registered User  
-**Goal:** Authenticate user and establish secure session  
-**Precondition:** User has valid account credentials  
+**Actor:** Registered User 
+**Goal:** Authenticate user and establish secure session 
+**Precondition:** User has valid account credentials 
 
-**Design Pattern:** Command Pattern  
+**Design Pattern:** Command Pattern 
 **3-Tier Architecture:** MM_Client → MM_Logic → MM_DataStore
 
 ---
 
-## 🎯 **Lifelines (Participants) - Command Pattern Implementation**
+## **Lifelines (Participants) - Command Pattern Implementation**
 
 ```
 User | LoginForm | API | Login_CMD | UserManager_CMD | UserRepository | Database
@@ -43,20 +43,20 @@ UserManager_CMD -> UserManager_CMD: hashPassword(password)
 UserManager_CMD -> UserManager_CMD: comparePasswords(storedHash, inputHash)
 
 alt Valid Credentials
-    UserManager_CMD -> UserManager_CMD: generateSessionToken()
-    UserManager_CMD -> UserRepository: saveSession(userId, sessionToken)
-    UserRepository -> Database: INSERT INTO sessions (userId, token)
-    Database -> UserRepository: return success
-    UserRepository -> UserManager_CMD: return success
-    UserManager_CMD -> Login_CMD: return sessionToken
-    Login_CMD -> API: return sessionToken
-    API -> LoginForm: return success + sessionToken
-    LoginForm -> User: redirect to Dashboard
+ UserManager_CMD -> UserManager_CMD: generateSessionToken()
+ UserManager_CMD -> UserRepository: saveSession(userId, sessionToken)
+ UserRepository -> Database: INSERT INTO sessions (userId, token)
+ Database -> UserRepository: return success
+ UserRepository -> UserManager_CMD: return success
+ UserManager_CMD -> Login_CMD: return sessionToken
+ Login_CMD -> API: return sessionToken
+ API -> LoginForm: return success + sessionToken
+ LoginForm -> User: redirect to Dashboard
 else Invalid Credentials
-    UserManager_CMD -> Login_CMD: return error
-    Login_CMD -> API: return error
-    API -> LoginForm: return "Invalid credentials"
-    LoginForm -> User: display "Invalid credentials"
+ UserManager_CMD -> Login_CMD: return error
+ Login_CMD -> API: return error
+ API -> LoginForm: return "Invalid credentials"
+ LoginForm -> User: display "Invalid credentials"
 end
 ```
 
