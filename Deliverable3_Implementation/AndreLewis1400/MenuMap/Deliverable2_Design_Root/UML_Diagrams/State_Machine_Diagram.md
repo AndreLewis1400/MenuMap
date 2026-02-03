@@ -1,19 +1,19 @@
 # MenuMap State Machine Diagram
 ## CEN4010 Software Engineering - Team 9
 
-**Author:** Andre Lewis (Software Architecture & Design Lead)  
-**Date:** [Current Date]  
-**Version:** 1.0  
+**Author:** Andre Lewis (Software Architecture & Design Lead) 
+**Date:** [Current Date] 
+**Version:** 1.0 
 
 ---
 
-## 🔄 State Machine Overview
+## State Machine Overview
 
 This state machine represents the overall system states of the MenuMap application, focusing on the main user journey and system behavior.
 
 ---
 
-## 📋 System States
+## System States
 
 ### **1. Initial State**
 - **State Name**: `SystemStartup`
@@ -88,7 +88,7 @@ This state machine represents the overall system states of the MenuMap applicati
 
 ---
 
-## 🔄 State Transitions
+## State Transitions
 
 ### **Authentication Flow**
 ```
@@ -135,7 +135,7 @@ SystemMaintenance → SystemStartup [maintenance complete]
 
 ---
 
-## 📊 State Machine Benefits
+## State Machine Benefits
 
 ### **System Behavior Clarity**
 - Clear understanding of system states
@@ -154,7 +154,7 @@ SystemMaintenance → SystemStartup [maintenance complete]
 
 ---
 
-## 🔒 Security State Considerations
+## Security State Considerations
 
 ### **Authentication States**
 - Secure token validation
@@ -173,7 +173,7 @@ SystemMaintenance → SystemStartup [maintenance complete]
 
 ---
 
-## 📋 State Machine Implementation
+## State Machine Implementation
 
 ### **State Management**
 - State machine controller class
@@ -192,7 +192,7 @@ SystemMaintenance → SystemStartup [maintenance complete]
 
 ---
 
-## 🎯 State Machine Design Rationale
+## State Machine Design Rationale
 
 ### **Why This State Machine?**
 1. **User-Centric**: Focuses on user journey and experience

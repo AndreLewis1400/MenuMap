@@ -1,21 +1,21 @@
 # UC-007: Restaurant Owner Menu Management Sequence Diagram
 
 ## Use Case: Restaurant Owner Menu Management
-**Actor:** Restaurant Owner  
-**Goal:** Create, update, and manage restaurant menus  
-**Precondition:** User is authenticated as Restaurant Owner  
+**Actor:** Restaurant Owner 
+**Goal:** Create, update, and manage restaurant menus 
+**Precondition:** User is authenticated as Restaurant Owner 
 
-**Design Pattern:** Observer Pattern  
+**Design Pattern:** Observer Pattern 
 **3-Tier Architecture:** MM_Client → MM_Logic → MM_DataStore
 
 ---
 
-## 🎯 **Lifelines (Participants) - Observer Pattern Implementation**
+## **Lifelines (Participants) - Observer Pattern Implementation**
 
 ```
 RestaurantOwner | MenuForm | MenuManager | UserManager_CMD | MenuRepository | Database
-                       |          |
-                  FavoriteObserver | NotificationObserver
+ | |
+ FavoriteObserver | NotificationObserver
 ```
 
 **Tier Mapping:**

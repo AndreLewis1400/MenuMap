@@ -1,15 +1,15 @@
 # MenuMap Application - Design Document
 ## CEN4010 Software Engineering - Team 9
 
-**Project:** MenuMap Application  
-**Team:** Team 9  
-**Software Architecture & Design Lead:** Andre Lewis  
-**Date:** [Current Date]  
-**Version:** 1.0  
+**Project:** MenuMap Application 
+**Team:** Team 9 
+**Software Architecture & Design Lead:** Andre Lewis 
+**Date:** [Current Date] 
+**Version:** 1.0 
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 1. [Executive Summary](#executive-summary)
 2. [System Overview](#system-overview)
@@ -24,7 +24,7 @@
 
 ---
 
-## 🎯 Executive Summary
+## Executive Summary
 
 The MenuMap application is a comprehensive restaurant menu browsing and management system designed to connect users with restaurant menus while providing restaurant owners with tools to manage their digital presence. This design document outlines the complete software architecture, detailed design specifications, and implementation guidelines for the system.
 
@@ -45,7 +45,7 @@ The MenuMap application is a comprehensive restaurant menu browsing and manageme
 
 ---
 
-## 🏗️ System Overview
+## System Overview
 
 ### **System Purpose**
 MenuMap serves as a digital bridge between restaurants and customers, providing an intuitive platform for menu discovery while giving restaurant owners powerful tools to manage their digital presence and engage with customers.
@@ -68,24 +68,24 @@ MenuMap serves as a digital bridge between restaurants and customers, providing 
 
 ---
 
-## 🏛️ Architectural Design
+## Architectural Design
 
 ### **Architectural Patterns**
 
 #### **Primary Pattern: Layered Architecture**
 ```
 ┌─────────────────────────────────────┐
-│           Presentation Layer        │
-│    (WebInterface, MobileInterface)  │
+│ Presentation Layer │
+│ (WebInterface, MobileInterface) │
 ├─────────────────────────────────────┤
-│          Business Logic Layer       │
-│   (Controllers, Services, Rules)    │
+│ Business Logic Layer │
+│ (Controllers, Services, Rules) │
 ├─────────────────────────────────────┤
-│          Data Access Layer          │
-│    (Repositories, Mappers, Cache)   │
+│ Data Access Layer │
+│ (Repositories, Mappers, Cache) │
 ├─────────────────────────────────────┤
-│            Database Layer           │
-│        (PostgreSQL Database)        │
+│ Database Layer │
+│ (PostgreSQL Database) │
 └─────────────────────────────────────┘
 ```
 
@@ -97,11 +97,11 @@ MenuMap serves as a digital bridge between restaurants and customers, providing 
 
 #### **Secondary Pattern: Model-View-Controller (MVC)**
 ```
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│    Model    │◄──►│ Controller  │◄──►│    View     │
-│ (Business   │    │ (Business   │    │ (User       │
-│  Logic)     │    │  Logic)     │    │ Interface)  │
-└─────────────┘    └─────────────┘    └─────────────┘
+┌─────────────┐ ┌─────────────┐ ┌─────────────┐
+│ Model │◄──►│ Controller │◄──►│ View │
+│ (Business │ │ (Business │ │ (User │
+│ Logic) │ │ Logic) │ │ Interface) │
+└─────────────┘ └─────────────┘ └─────────────┘
 ```
 
 **Benefits:**
@@ -152,7 +152,7 @@ MenuMap serves as a digital bridge between restaurants and customers, providing 
 
 ---
 
-## 🔧 Detailed Design
+## Detailed Design
 
 ### **1. Component Selection**
 
@@ -181,33 +181,33 @@ MenuMap serves as a digital bridge between restaurants and customers, providing 
 #### **Authentication Service**
 ```java
 public interface AuthenticationService {
-    UserDTO login(String email, String password);
-    void logout(String sessionToken);
-    UserDTO register(UserRegistrationDTO userData);
-    void resetPassword(String email);
-    boolean validateToken(String token);
+ UserDTO login(String email, String password);
+ void logout(String sessionToken);
+ UserDTO register(UserRegistrationDTO userData);
+ void resetPassword(String email);
+ boolean validateToken(String token);
 }
 ```
 
 #### **Menu Management Service**
 ```java
 public interface MenuService {
-    List<MenuDTO> getMenusByRestaurant(Long restaurantId);
-    MenuDTO createMenu(MenuCreationDTO menuData);
-    MenuDTO updateMenu(Long menuId, MenuUpdateDTO menuData);
-    void deleteMenu(Long menuId);
-    List<MenuDTO> searchMenus(SearchCriteria criteria);
+ List<MenuDTO> getMenusByRestaurant(Long restaurantId);
+ MenuDTO createMenu(MenuCreationDTO menuData);
+ MenuDTO updateMenu(Long menuId, MenuUpdateDTO menuData);
+ void deleteMenu(Long menuId);
+ List<MenuDTO> searchMenus(SearchCriteria criteria);
 }
 ```
 
 #### **User Management Service**
 ```java
 public interface UserService {
-    UserDTO getUserProfile(Long userId);
-    UserDTO updateProfile(Long userId, ProfileUpdateDTO profileData);
-    List<FavoriteDTO> getUserFavorites(Long userId);
-    void addFavorite(Long userId, Long menuItemId);
-    void removeFavorite(Long userId, Long menuItemId);
+ UserDTO getUserProfile(Long userId);
+ UserDTO updateProfile(Long userId, ProfileUpdateDTO profileData);
+ List<FavoriteDTO> getUserFavorites(Long userId);
+ void addFavorite(Long userId, Long menuItemId);
+ void removeFavorite(Long userId, Long menuItemId);
 }
 ```
 
@@ -277,7 +277,7 @@ Clients depend only on interfaces they use:
 
 ---
 
-## 📊 UML Diagrams
+## UML Diagrams
 
 ### **Use Case Diagram**
 The system supports 7 primary use cases:
@@ -317,23 +317,23 @@ System architecture showing:
 
 ---
 
-## 🎨 Design Patterns
+## Design Patterns
 
 ### **1. Observer Pattern**
 **Implementation**: Menu updates and real-time notifications
 ```java
 public class MenuManager implements Subject {
-    private List<Observer> observers = new ArrayList<>();
-    
-    public void attach(Observer observer) {
-        observers.add(observer);
-    }
-    
-    public void notifyObservers() {
-        for (Observer observer : observers) {
-            observer.update(this);
-        }
-    }
+ private List<Observer> observers = new ArrayList<>();
+ 
+ public void attach(Observer observer) {
+ observers.add(observer);
+ }
+ 
+ public void notifyObservers() {
+ for (Observer observer : observers) {
+ observer.update(this);
+ }
+ }
 }
 ```
 
@@ -346,15 +346,15 @@ public class MenuManager implements Subject {
 **Implementation**: User and menu object creation
 ```java
 public class UserFactory {
-    public static User createUser(UserType type, UserData data) {
-        switch (type) {
-            case REGULAR: return new RegularUser(data);
-            case PREMIUM: return new PremiumUser(data);
-            case RESTAURANT_OWNER: return new RestaurantOwner(data);
-            case ADMIN: return new Administrator(data);
-            default: throw new IllegalArgumentException("Invalid user type");
-        }
-    }
+ public static User createUser(UserType type, UserData data) {
+ switch (type) {
+ case REGULAR: return new RegularUser(data);
+ case PREMIUM: return new PremiumUser(data);
+ case RESTAURANT_OWNER: return new RestaurantOwner(data);
+ case ADMIN: return new Administrator(data);
+ default: throw new IllegalArgumentException("Invalid user type");
+ }
+ }
 }
 ```
 
@@ -367,15 +367,15 @@ public class UserFactory {
 **Implementation**: Search algorithms and spam detection
 ```java
 public class SearchContext {
-    private SearchStrategy strategy;
-    
-    public void setStrategy(SearchStrategy strategy) {
-        this.strategy = strategy;
-    }
-    
-    public List<SearchResult> executeSearch(String query) {
-        return strategy.search(query);
-    }
+ private SearchStrategy strategy;
+ 
+ public void setStrategy(SearchStrategy strategy) {
+ this.strategy = strategy;
+ }
+ 
+ public List<SearchResult> executeSearch(String query) {
+ return strategy.search(query);
+ }
 }
 ```
 
@@ -386,7 +386,7 @@ public class SearchContext {
 
 ---
 
-## 🔒 Security Design
+## Security Design
 
 ### **Authentication & Authorization**
 
@@ -431,7 +431,7 @@ public class SearchContext {
 
 ---
 
-## 🛠️ Implementation Guidelines
+## Implementation Guidelines
 
 ### **Technology Stack**
 
@@ -484,7 +484,7 @@ public class SearchContext {
 
 ---
 
-## 🧪 Testing Strategy
+## Testing Strategy
 
 ### **Testing Pyramid**
 
@@ -522,7 +522,7 @@ public class SearchContext {
 
 ---
 
-## 🚀 Deployment Considerations
+## Deployment Considerations
 
 ### **Deployment Architecture**
 
@@ -569,7 +569,7 @@ public class SearchContext {
 
 ---
 
-## 📈 Future Considerations
+## Future Considerations
 
 ### **Planned Enhancements**
 - **Machine Learning**: Personalized recommendations
@@ -585,7 +585,7 @@ public class SearchContext {
 
 ---
 
-## 📋 Conclusion
+## Conclusion
 
 The MenuMap application design provides a solid foundation for a scalable, secure, and maintainable restaurant menu management system. The layered architecture with MVC pattern ensures clear separation of concerns, while the comprehensive UML modeling provides detailed implementation guidance.
 

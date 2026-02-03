@@ -2,7 +2,7 @@
 
 ## Classes to Create in Papyrus
 
-### 👤 **User Management Classes**
+### **User Management Classes**
 
 #### **User Class**
 ```
@@ -34,7 +34,7 @@
 + sendResetEmail(): void
 ```
 
-### 🏪 **Restaurant & Menu Classes**
+### **Restaurant & Menu Classes**
 
 #### **Restaurant Class**
 ```
@@ -81,7 +81,7 @@
 + setAvailability(): void
 ```
 
-### ⭐ **Favorites & User Preferences**
+### **Favorites & User Preferences**
 
 #### **Favorite Class**
 ```
@@ -97,7 +97,7 @@
 + updateNotes(): void
 ```
 
-### 🔒 **Security & Verification Classes**
+### **Security & Verification Classes**
 
 #### **VerificationSystem Class**
 ```
@@ -126,7 +126,7 @@
 + generateAlert(): Alert
 ```
 
-### 📊 **Supporting Classes**
+### **Supporting Classes**
 
 #### **Report Class**
 ```
@@ -153,7 +153,7 @@
 + logAlert(): void
 ```
 
-## 🔗 **Relationships**
+## **Relationships**
 
 ### **Associations:**
 - User 1..* → 0..* Favorite
@@ -174,18 +174,18 @@
 - VerificationSystem → MenuItem
 - SpamProtection → MenuItem
 
-## 📐 **Layout Suggestions**
+## **Layout Suggestions**
 ```
 [User] ←→ [AuthenticationService]
-   ↓
+ ↓
 [Favorite] ←→ [MenuItem] ←→ [Menu] ←→ [Restaurant]
-                ↓
-        [VerificationSystem] [SpamProtection]
-                ↓              ↓
-            [Report]        [Alert]
+ ↓
+ [VerificationSystem] [SpamProtection]
+ ↓ ↓
+ [Report] [Alert]
 ```
 
-## 🎨 **Visual Guidelines**
+## **Visual Guidelines**
 - **Primary Classes**: Larger rectangles, bold borders
 - **Supporting Classes**: Smaller rectangles
 - **Relationships**: Clear arrows with proper multiplicities

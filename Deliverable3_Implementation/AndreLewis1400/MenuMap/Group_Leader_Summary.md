@@ -1,20 +1,20 @@
 # MenuMap Project - Group Leader Summary
 ## For Alfonso Oramas Jr. - CEN4010 Software Engineering
 
-**From:** Andre Lewis (UML Diagrams Coordinator)  
-**To:** Alfonso Oramas Jr. (Project Lead)  
-**Date:** [Current Date]  
-**Subject:** MenuMap Project Information & Deliverables  
+**From:** Andre Lewis (UML Diagrams Coordinator) 
+**To:** Alfonso Oramas Jr. (Project Lead) 
+**Date:** [Current Date] 
+**Subject:** MenuMap Project Information & Deliverables 
 
 ---
 
-## 📋 Executive Summary
+## Executive Summary
 
 Hi Alfonso! Here's everything you need to know about the **MenuMap** project for our CEN4010 Software Engineering class. I've created comprehensive documentation that explains what the project is, what we're building, and all the deliverables required for the course.
 
 ---
 
-## 🍽️ What is MenuMap?
+## What is MenuMap?
 
 **MenuMap** is a restaurant discovery and menu management application - think of it as "Google Maps for restaurant menus." Here's what it does:
 
@@ -32,7 +32,7 @@ Hi Alfonso! Here's everything you need to know about the **MenuMap** project for
 
 ---
 
-## 📚 Complete Documentation Package
+## Complete Documentation Package
 
 I've created all the documentation you requested in a Google/Word document format. Here's what's included:
 
@@ -44,9 +44,9 @@ I've created all the documentation you requested in a Google/Word document forma
 ### **2. Use Cases (3 Required)**
 - **File**: `Use_Case_Documentation.md`
 - **Content**: 3 detailed use cases as required by the assignment:
-  - **UC-001: Browse Restaurant Menus** (Normal Use Case)
-  - **UC-002: Manage Favorites** (Normal Use Case)
-  - **UC-003: Secure Password Reset** (Security Use Case - prevents fraud/abuse)
+ - **UC-001: Browse Restaurant Menus** (Normal Use Case)
+ - **UC-002: Manage Favorites** (Normal Use Case)
+ - **UC-003: Secure Password Reset** (Security Use Case - prevents fraud/abuse)
 
 ### **3. Use Case Diagrams**
 - **File**: `Use_Case_Diagrams.md`
@@ -60,28 +60,28 @@ I've created all the documentation you requested in a Google/Word document forma
 
 ---
 
-## 🎯 Assignment Requirements Met
+## Assignment Requirements Met
 
-### ✅ **3 Use Cases Required**
+### **3 Use Cases Required**
 1. **2 Normal Use Cases**:
-   - Browse Restaurant Menus
-   - Manage Favorites
+ - Browse Restaurant Menus
+ - Manage Favorites
 2. **1 Security Use Case**:
-   - Secure Password Reset (addresses misuse cases like fraud prevention)
+ - Secure Password Reset (addresses misuse cases like fraud prevention)
 
-### ✅ **Individual Use Case Diagrams**
+### **Individual Use Case Diagrams**
 - Each use case has its own detailed diagram
 - Shows actors, relationships, and system interactions
 - Visual representation of the use cases
 
-### ✅ **GitHub Repository Ready**
+### **GitHub Repository Ready**
 - All documents prepared for upload to `AndreLewis1400/MenuMap`
 - Complete project structure
 - Professional documentation format
 
 ---
 
-## 🚀 Key Features of MenuMap
+## Key Features of MenuMap
 
 ### **For Users**
 - Search restaurants by location, cuisine, or name
@@ -104,7 +104,7 @@ I've created all the documentation you requested in a Google/Word document forma
 
 ---
 
-## 📊 Technical Specifications
+## Technical Specifications
 
 ### **Platform**
 - Web-based application (responsive design)
@@ -125,7 +125,7 @@ I've created all the documentation you requested in a Google/Word document forma
 
 ---
 
-## 👥 Team Structure & Roles
+## Team Structure & Roles
 
 ### **Current Team Status**
 - **Alfonso Oramas Jr.**: Project Lead
@@ -136,14 +136,14 @@ I've created all the documentation you requested in a Google/Word document forma
 
 ### **Responsibilities Completed**
 - **Alfonso Oramas Jr.**: Project coordination and presentation leadership
-- **Andre Lewis**: ✅ Requirements analysis and documentation, ✅ Use case creation and documentation, ✅ UML design specifications, ✅ Project overview and presentation materials
+- **Andre Lewis**: Requirements analysis and documentation, Use case creation and documentation, UML design specifications, Project overview and presentation materials
 - **Eve**: [Responsibilities to be assigned]
 - **Alex**: [Responsibilities to be assigned]
 - **Kamal**: [Responsibilities to be assigned]
 
 ---
 
-## 📋 Presentation Preparation
+## Presentation Preparation
 
 ### **What You Can Present**
 1. **Project Overview**: What MenuMap is and why it's valuable
@@ -161,7 +161,7 @@ I've created all the documentation you requested in a Google/Word document forma
 
 ---
 
-## 🔗 GitHub Repository Information
+## GitHub Repository Information
 
 ### **Repository Details**
 - **URL**: `AndreLewis1400/MenuMap`
@@ -179,7 +179,7 @@ I've created all the documentation you requested in a Google/Word document forma
 
 ---
 
-## 🎯 Next Steps for the Team
+## Next Steps for the Team
 
 ### **Immediate Actions**
 1. **Review Documentation**: All team members should review the project overview
@@ -195,16 +195,16 @@ I've created all the documentation you requested in a Google/Word document forma
 
 ---
 
-## 📞 Contact Information
+## Contact Information
 
-**Andre Lewis**  
-**Role**: UML Diagrams Coordinator & Document Editor  
-**Contact**: [Your contact information]  
-**GitHub**: AndreLewis1400  
+**Andre Lewis** 
+**Role**: UML Diagrams Coordinator & Document Editor 
+**Contact**: [Your contact information] 
+**GitHub**: AndreLewis1400 
 
 ---
 
-## 🙏 Final Notes
+## Final Notes
 
 Alfonso, I've created everything you need to understand and present the MenuMap project. The documentation is comprehensive, professional, and meets all the CEN4010 requirements. The project overview document gives you a complete understanding of what we're building, and the use cases with diagrams provide the specific deliverables required by the assignment.
 

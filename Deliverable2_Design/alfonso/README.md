@@ -3,7 +3,7 @@
 
 ---
 
-## 📋 **Section 3.2: State Machine (4 points)**
+## **Section 3.2: State Machine (4 points)**
 
 ### **Required:**
 - One state machine diagram for the overall system
@@ -15,14 +15,14 @@
 ### **What You Need to Do:**
 1. Review the state machine diagram
 2. Write a text description for Section 3.2 explaining:
-   - The states in the system
-   - The transitions between states
-   - How the state machine represents the overall system behavior
-   - How it relates to the application's menu system
+ - The states in the system
+ - The transitions between states
+ - How the state machine represents the overall system behavior
+ - How it relates to the application's menu system
 
 ---
 
-## 📋 **Section 3.3: Object Interaction (4 points)**
+## **Section 3.3: Object Interaction (4 points)**
 
 ### **Required:**
 - Refinement of sequence diagrams from SRD
@@ -58,29 +58,29 @@
 2. Refine the sequence diagrams from the SRD (if needed)
 3. Add any additional "solution objects" that may be required
 4. Write a text description for Section 3.3 explaining:
-   - How the sequence diagrams refine the SRD diagrams
-   - What solution objects were added (if any)
-   - The interaction flow for each use case
-   - How the sequence diagrams represent object interactions
+ - How the sequence diagrams refine the SRD diagrams
+ - What solution objects were added (if any)
+ - The interaction flow for each use case
+ - How the sequence diagrams represent object interactions
 
 ---
 
-## 📝 **Summary**
+## **Summary**
 
 **Section 3.2 (State Machine):**
-- ✅ State machine diagram provided
-- 📝 Write text description explaining the state machine
+- State machine diagram provided
+- Write text description explaining the state machine
 
 **Section 3.3 (Object Interaction):**
-- ✅ All 7 sequence diagram PNGs provided
-- ✅ All 7 sequence diagram documentation files provided
-- ✅ Papyrus workspace instructions provided
-- 📝 Review and refine sequence diagrams if needed
-- 📝 Write text description explaining the sequence diagrams
+- All 7 sequence diagram PNGs provided
+- All 7 sequence diagram documentation files provided
+- Papyrus workspace instructions provided
+- Review and refine sequence diagrams if needed
+- Write text description explaining the sequence diagrams
 
 ---
 
-## 🎯 **Next Steps**
+## **Next Steps**
 
 1. Review the state machine diagram for Section 3.2
 2. Review all 7 sequence diagrams for Section 3.3

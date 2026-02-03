@@ -2,69 +2,69 @@
 
 ## Diagram Elements to Create in Papyrus
 
-### 🎭 **Actors**
+### **Actors**
 1. **User** (Primary Actor)
-   - Stick figure icon
-   - Label: "User"
-   - Description: "Food enthusiast, restaurant customer"
+ - Stick figure icon
+ - Label: "User"
+ - Description: "Food enthusiast, restaurant customer"
 
 2. **Restaurant Owner** (Secondary Actor)
-   - Stick figure icon
-   - Label: "Restaurant Owner"
-   - Description: "Food service establishment owner"
+ - Stick figure icon
+ - Label: "Restaurant Owner"
+ - Description: "Food service establishment owner"
 
 3. **Administrator** (Secondary Actor)
-   - Stick figure icon
-   - Label: "Administrator"
-   - Description: "System administrator, content manager"
+ - Stick figure icon
+ - Label: "Administrator"
+ - Description: "System administrator, content manager"
 
-### 📋 **Use Cases**
+### **Use Cases**
 1. **Browse Menus**
-   - Oval shape
-   - Label: "Browse Menus"
-   - Description: "View restaurant menus and menu items"
+ - Oval shape
+ - Label: "Browse Menus"
+ - Description: "View restaurant menus and menu items"
 
 2. **Search Restaurants**
-   - Oval shape
-   - Label: "Search Restaurants"
-   - Description: "Find restaurants by location, cuisine, or name"
+ - Oval shape
+ - Label: "Search Restaurants"
+ - Description: "Find restaurants by location, cuisine, or name"
 
 3. **TM901 - Menu Verification**
-   - Oval shape
-   - Label: "TM901 - Menu Verification"
-   - Description: "Verify menu information accuracy and authenticity"
+ - Oval shape
+ - Label: "TM901 - Menu Verification"
+ - Description: "Verify menu information accuracy and authenticity"
 
 4. **TM902 - Spam Protection**
-   - Oval shape
-   - Label: "TM902 - Spam Protection"
-   - Description: "Protect against spam content and malicious entries"
+ - Oval shape
+ - Label: "TM902 - Spam Protection"
+ - Description: "Protect against spam content and malicious entries"
 
 5. **Password Reset**
-   - Oval shape
-   - Label: "Password Reset"
-   - Description: "Secure password reset functionality"
+ - Oval shape
+ - Label: "Password Reset"
+ - Description: "Secure password reset functionality"
 
 6. **Manage Favorites**
-   - Oval shape
-   - Label: "Manage Favorites"
-   - Description: "Save and organize favorite restaurants and meals"
+ - Oval shape
+ - Label: "Manage Favorites"
+ - Description: "Save and organize favorite restaurants and meals"
 
 7. **Delete Meal Entry**
-   - Oval shape
-   - Label: "Delete Meal Entry"
-   - Description: "Remove meal entries from history or favorites"
+ - Oval shape
+ - Label: "Delete Meal Entry"
+ - Description: "Remove meal entries from history or favorites"
 
 8. **User Registration**
-   - Oval shape
-   - Label: "User Registration"
-   - Description: "Create new user account"
+ - Oval shape
+ - Label: "User Registration"
+ - Description: "Create new user account"
 
 9. **User Login**
-   - Oval shape
-   - Label: "User Login"
-   - Description: "Authenticate user access"
+ - Oval shape
+ - Label: "User Login"
+ - Description: "Authenticate user access"
 
-### 🔗 **Relationships**
+### **Relationships**
 
 #### **User Relationships:**
 - User → Browse Menus (Association)
@@ -92,19 +92,19 @@
 #### **Extend Relationships:**
 - Password Reset → User Login (Extend)
 
-## 📐 **Layout Suggestions**
+## **Layout Suggestions**
 ```
 [User] ←→ [Browse Menus] ←→ [Search Restaurants]
-   ↓           ↓
+ ↓ ↓
 [User Login] [Manage Favorites]
-   ↓           ↓
+ ↓ ↓
 [Password Reset] [Delete Meal Entry]
 
 [Restaurant Owner] → [TM901 - Menu Verification]
 [Administrator] → [TM902 - Spam Protection]
 ```
 
-## 🎨 **Visual Guidelines**
+## **Visual Guidelines**
 - **Actors**: Place on left and right sides
 - **Use Cases**: Arrange in center area
 - **Primary Use Cases**: Larger, more prominent

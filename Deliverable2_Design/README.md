@@ -1,9 +1,9 @@
 # MenuMap Deliverable 2 - Design Phase
 ## CEN4010 Software Engineering - Team 9
 
-**Software Architecture & Design Lead:** Andre Lewis  
-**Date:** [Current Date]  
-**Status:** In Progress  
+**Software Architecture & Design Lead:** Andre Lewis 
+**Date:** [Current Date] 
+**Status:** In Progress 
 
 ---
 
@@ -12,41 +12,41 @@
 ### **Completed Tasks**
 
 1. **Project Structure Created**
-   - Organized deliverable 2 folder structure
-   - Created separate directories for Architecture, UML_Diagrams, Design_Patterns, and Documentation
+ - Organized deliverable 2 folder structure
+ - Created separate directories for Architecture, UML_Diagrams, Design_Patterns, and Documentation
 
 2. **Architectural Patterns Selected**
-   - **Primary**: Layered Architecture (separation of concerns, maintainability)
-   - **Secondary**: Model-View-Controller (UI separation, reusability)
+ - **Primary**: Layered Architecture (separation of concerns, maintainability)
+ - **Secondary**: Model-View-Controller (UI separation, reusability)
 
 3. **Package Diagram Designed**
-   - 7 major subsystems identified
-   - Clear package dependencies defined
-   - Use case mapping to subsystems completed
+ - 7 major subsystems identified
+ - Clear package dependencies defined
+ - Use case mapping to subsystems completed
 
 4. **7 Use Cases Identified**
-   - UC-001: Browse Restaurant Menus
-   - UC-002: Manage Favorites
-   - UC-003: Secure Password Reset
-   - UC-004: User Registration & Login
-   - UC-005: Menu Verification System
-   - UC-006: Spam Protection System
-   - UC-007: Restaurant Owner Menu Management
+ - UC-001: Browse Restaurant Menus
+ - UC-002: Manage Favorites
+ - UC-003: Secure Password Reset
+ - UC-004: User Registration & Login
+ - UC-005: Menu Verification System
+ - UC-006: Spam Protection System
+ - UC-007: Restaurant Owner Menu Management
 
 5. **Design Patterns Documented**
-   - **Observer Pattern**: Real-time updates and notifications
-   - **Factory Pattern**: Object creation without specifying classes
-   - **Strategy Pattern**: Interchangeable algorithms
+ - **Observer Pattern**: Real-time updates and notifications
+ - **Factory Pattern**: Object creation without specifying classes
+ - **Strategy Pattern**: Interchangeable algorithms
 
 6. **Minimal Class Diagram Created**
-   - All system classes identified
-   - Class relationships defined
-   - Design pattern integration documented
+ - All system classes identified
+ - Class relationships defined
+ - Design pattern integration documented
 
 7. **State Machine Diagram Designed**
-   - Overall system states defined
-   - State transitions documented
-   - User journey mapped
+ - Overall system states defined
+ - State transitions documented
+ - User journey mapped
 
 ---
 
@@ -54,15 +54,15 @@
 
 ```
 Deliverable2_Design/
-├── README.md                           # This file
-├── Deliverable2_Overview.md            # Project overview and 7 use cases
+├── README.md # This file
+├── Deliverable2_Overview.md # Project overview and 7 use cases
 ├── Architecture/
-│   └── Package_Diagram.md              # Major subsystems and dependencies
+│ └── Package_Diagram.md # Major subsystems and dependencies
 ├── Design_Patterns/
-│   └── Design_Patterns_Overview.md     # Observer, Factory, Strategy patterns
+│ └── Design_Patterns_Overview.md # Observer, Factory, Strategy patterns
 └── UML_Diagrams/
-    ├── Minimal_Class_Diagram.md        # All classes without attributes/methods
-    └── State_Machine_Diagram.md        # Overall system state machine
+ ├── Minimal_Class_Diagram.md # All classes without attributes/methods
+ └── State_Machine_Diagram.md # Overall system state machine
 ```
 
 ---
@@ -72,24 +72,24 @@ Deliverable2_Design/
 ### **Immediate Next Tasks:**
 
 1. **Create Detailed Class Diagram**
-   - Add attributes and methods to all classes
-   - Show design pattern implementations
-   - Document OCL statements for control objects
+ - Add attributes and methods to all classes
+ - Show design pattern implementations
+ - Document OCL statements for control objects
 
 2. **Create 7 Sequence Diagrams**
-   - One for each use case
-   - Show object interactions
-   - Include solution objects
+ - One for each use case
+ - Show object interactions
+ - Include solution objects
 
 3. **Set Up Papyrus Project**
-   - Create UML diagrams in Papyrus
-   - Export diagrams for document inclusion
-   - Ensure professional formatting
+ - Create UML diagrams in Papyrus
+ - Export diagrams for document inclusion
+ - Ensure professional formatting
 
 4. **Complete Design Document**
-   - Write all required sections
-   - Include meeting diary
-   - Prepare for team review
+ - Write all required sections
+ - Include meeting diary
+ - Prepare for team review
 
 ---
 

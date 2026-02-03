@@ -1,9 +1,9 @@
 # MenuMap Subsystem Decomposition
 ## CEN4010 Software Engineering - Team 9
 
-**Author:** Andre Lewis (Software Architecture & Design Lead)  
-**Date:** 10/14/2025  
-**Version:** 1.0  
+**Author:** Andre Lewis (Software Architecture & Design Lead) 
+**Date:** 10/14/2025 
+**Version:** 1.0 
 
 ---
 
@@ -29,19 +29,19 @@ Handles all user interface components and user interactions across web and mobil
 ```
 Presentation Layer
 ├── WebInterface
-│   ├── LoginForm
-│   ├── Dashboard
-│   ├── MenuBrowser
-│   ├── UserProfile
-│   └── RestaurantOwnerPanel
+│ ├── LoginForm
+│ ├── Dashboard
+│ ├── MenuBrowser
+│ ├── UserProfile
+│ └── RestaurantOwnerPanel
 ├── MobileInterface
-│   ├── MobileApp
-│   ├── ResponsiveDesign
-│   └── TouchOptimization
+│ ├── MobileApp
+│ ├── ResponsiveDesign
+│ └── TouchOptimization
 └── APIInterface
-    ├── RESTEndpoints
-    ├── GraphQLQueries
-    └── WebSocketConnections
+ ├── RESTEndpoints
+ ├── GraphQLQueries
+ └── WebSocketConnections
 ```
 
 ### **Interfaces**
@@ -76,22 +76,22 @@ Contains core business rules, application logic, and orchestrates use case execu
 ```
 Business Logic Layer
 ├── UseCaseControllers
-│   ├── MenuBrowsingController
-│   ├── FavoritesController
-│   ├── AuthenticationController
-│   ├── UserRegistrationController
-│   ├── MenuVerificationController
-│   ├── SpamProtectionController
-│   └── RestaurantOwnerController
+│ ├── MenuBrowsingController
+│ ├── FavoritesController
+│ ├── AuthenticationController
+│ ├── UserRegistrationController
+│ ├── MenuVerificationController
+│ ├── SpamProtectionController
+│ └── RestaurantOwnerController
 ├── BusinessRules
-│   ├── MenuValidationRules
-│   ├── UserPermissionRules
-│   ├── SpamDetectionRules
-│   └── SecurityRules
+│ ├── MenuValidationRules
+│ ├── UserPermissionRules
+│ ├── SpamDetectionRules
+│ └── SecurityRules
 └── WorkflowEngine
-    ├── AuthenticationWorkflow
-    ├── MenuVerificationWorkflow
-    └── NotificationWorkflow
+ ├── AuthenticationWorkflow
+ ├── MenuVerificationWorkflow
+ └── NotificationWorkflow
 ```
 
 ### **Interfaces**
@@ -120,24 +120,24 @@ Manages data persistence, retrieval, and database operations.
 ```
 Data Access Layer
 ├── Repositories
-│   ├── UserRepository
-│   ├── MenuRepository
-│   ├── RestaurantRepository
-│   ├── FavoriteRepository
-│   └── VerificationRepository
+│ ├── UserRepository
+│ ├── MenuRepository
+│ ├── RestaurantRepository
+│ ├── FavoriteRepository
+│ └── VerificationRepository
 ├── DataMappers
-│   ├── UserMapper
-│   ├── MenuMapper
-│   ├── RestaurantMapper
-│   └── FavoriteMapper
+│ ├── UserMapper
+│ ├── MenuMapper
+│ ├── RestaurantMapper
+│ └── FavoriteMapper
 ├── DatabaseConnections
-│   ├── ConnectionPool
-│   ├── TransactionManager
-│   └── QueryOptimizer
+│ ├── ConnectionPool
+│ ├── TransactionManager
+│ └── QueryOptimizer
 └── CacheManager
-    ├── RedisCache
-    ├── MemoryCache
-    └── CacheInvalidation
+ ├── RedisCache
+ ├── MemoryCache
+ └── CacheInvalidation
 ```
 
 ### **Interfaces**
@@ -166,23 +166,23 @@ Handles authentication, authorization, and all security-related functionality.
 ```
 Security Subsystem
 ├── AuthenticationService
-│   ├── LoginManager
-│   ├── SessionManager
-│   ├── TokenGenerator
-│   └── PasswordValidator
+│ ├── LoginManager
+│ ├── SessionManager
+│ ├── TokenGenerator
+│ └── PasswordValidator
 ├── AuthorizationService
-│   ├── RoleManager
-│   ├── PermissionChecker
-│   └── AccessController
+│ ├── RoleManager
+│ ├── PermissionChecker
+│ └── AccessController
 ├── SpamProtectionService
-│   ├── ContentAnalyzer
-│   ├── BehaviorMonitor
-│   ├── MLDetector
-│   └── RateLimiter
+│ ├── ContentAnalyzer
+│ ├── BehaviorMonitor
+│ ├── MLDetector
+│ └── RateLimiter
 └── SecurityMonitoring
-    ├── AuditLogger
-    ├── ThreatDetector
-    └── SecurityAlerts
+ ├── AuditLogger
+ ├── ThreatDetector
+ └── SecurityAlerts
 ```
 
 ### **Interfaces**
@@ -214,24 +214,24 @@ Manages restaurant and menu data, including browsing, search, and verification.
 ```
 Menu Management Subsystem
 ├── MenuService
-│   ├── MenuBrowser
-│   ├── MenuSearch
-│   ├── MenuFilter
-│   └── MenuRanking
+│ ├── MenuBrowser
+│ ├── MenuSearch
+│ ├── MenuFilter
+│ └── MenuRanking
 ├── RestaurantService
-│   ├── RestaurantManager
-│   ├── LocationService
-│   ├── CuisineClassifier
-│   └── RatingCalculator
+│ ├── RestaurantManager
+│ ├── LocationService
+│ ├── CuisineClassifier
+│ └── RatingCalculator
 ├── VerificationService
-│   ├── MenuVerifier
-│   ├── ContentValidator
-│   ├── AuthenticityChecker
-│   └── ApprovalWorkflow
+│ ├── MenuVerifier
+│ ├── ContentValidator
+│ ├── AuthenticityChecker
+│ └── ApprovalWorkflow
 └── ContentModeration
-    ├── ContentReviewer
-    ├── ModerationQueue
-    └── ApprovalSystem
+ ├── ContentReviewer
+ ├── ModerationQueue
+ └── ApprovalSystem
 ```
 
 ### **Interfaces**
@@ -262,24 +262,24 @@ Handles user accounts, profiles, preferences, and favorites management.
 ```
 User Management Subsystem
 ├── UserService
-│   ├── UserRegistration
-│   ├── ProfileManager
-│   ├── AccountManager
-│   └── UserValidator
+│ ├── UserRegistration
+│ ├── ProfileManager
+│ ├── AccountManager
+│ └── UserValidator
 ├── FavoritesService
-│   ├── FavoritesManager
-│   ├── FavoritesOrganizer
-│   ├── FavoritesSharing
-│   └── FavoritesAnalytics
+│ ├── FavoritesManager
+│ ├── FavoritesOrganizer
+│ ├── FavoritesSharing
+│ └── FavoritesAnalytics
 ├── PreferencesService
-│   ├── SettingsManager
-│   ├── NotificationPreferences
-│   ├── PrivacySettings
-│   └── DisplayPreferences
+│ ├── SettingsManager
+│ ├── NotificationPreferences
+│ ├── PrivacySettings
+│ └── DisplayPreferences
 └── UserAnalytics
-    ├── UsageTracker
-    ├── BehaviorAnalyzer
-    └── RecommendationEngine
+ ├── UsageTracker
+ ├── BehaviorAnalyzer
+ └── RecommendationEngine
 ```
 
 ### **Interfaces**
@@ -310,25 +310,25 @@ Handles all types of notifications including email, SMS, and in-app notification
 ```
 Notification Subsystem
 ├── EmailService
-│   ├── EmailSender
-│   ├── TemplateEngine
-│   ├── EmailQueue
-│   └── DeliveryTracker
+│ ├── EmailSender
+│ ├── TemplateEngine
+│ ├── EmailQueue
+│ └── DeliveryTracker
 ├── NotificationService
-│   ├── InAppNotifications
-│   ├── PushNotifications
-│   ├── NotificationQueue
-│   └── NotificationHistory
+│ ├── InAppNotifications
+│ ├── PushNotifications
+│ ├── NotificationQueue
+│ └── NotificationHistory
 ├── RealTimeService
-│   ├── WebSocketManager
-│   ├── EventBroadcaster
-│   ├── ConnectionManager
-│   └── MessageRouter
+│ ├── WebSocketManager
+│ ├── EventBroadcaster
+│ ├── ConnectionManager
+│ └── MessageRouter
 └── TemplateManager
-    ├── EmailTemplates
-    ├── NotificationTemplates
-    ├── TemplateEngine
-    └── TemplateVersioning
+ ├── EmailTemplates
+ ├── NotificationTemplates
+ ├── TemplateEngine
+ └── TemplateVersioning
 ```
 
 ### **Interfaces**
@@ -349,12 +349,12 @@ Notification Subsystem
 ### **Primary Data Flow**
 ```
 User Request → Presentation Layer → Business Logic Layer → Data Access Layer → Database
-                ↓
-            Security Subsystem (Authentication/Authorization)
-                ↓
-            Specific Subsystem (Menu/User/Notification)
-                ↓
-            Response ← Presentation Layer ← Business Logic Layer ← Data Access Layer
+ ↓
+ Security Subsystem (Authentication/Authorization)
+ ↓
+ Specific Subsystem (Menu/User/Notification)
+ ↓
+ Response ← Presentation Layer ← Business Logic Layer ← Data Access Layer
 ```
 
 ### **Cross-Subsystem Dependencies**

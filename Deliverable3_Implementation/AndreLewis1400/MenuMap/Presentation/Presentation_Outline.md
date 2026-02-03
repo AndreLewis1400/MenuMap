@@ -1,15 +1,15 @@
 # MenuMap Presentation Outline
 ## CEN4010 Software Engineering - Team 9
 
-**Project:** MenuMap Application  
-**Team:** Team 9  
-**Project Lead:** Alfonso Oramas Jr.  
-**UML Diagrams Coordinator:** Andre Lewis  
-**Date:** [Current Date]  
+**Project:** MenuMap Application 
+**Team:** Team 9 
+**Project Lead:** Alfonso Oramas Jr. 
+**UML Diagrams Coordinator:** Andre Lewis 
+**Date:** [Current Date] 
 
 ---
 
-## 🎯 **Presentation Structure (10-15 minutes)**
+## **Presentation Structure (10-15 minutes)**
 
 ### **Slide 1: Title Slide**
 - **Title**: MenuMap Application
@@ -32,9 +32,9 @@
 
 ### **Slide 4: Use Cases Overview**
 - **3 Use Cases Required**:
-  - UC-001: Browse Restaurant Menus (Normal)
-  - UC-002: Manage Favorites (Normal)
-  - UC-003: Secure Password Reset (Security)
+ - UC-001: Browse Restaurant Menus (Normal)
+ - UC-002: Manage Favorites (Normal)
+ - UC-003: Secure Password Reset (Security)
 - **Why these use cases?**
 - **How they work together**
 
@@ -42,28 +42,28 @@
 - **Use Case Description**
 - **Actors**: User, Restaurant Owner, System
 - **Key Scenarios**:
-  - Search for Italian restaurants
-  - Browse by cuisine type
-  - Search for specific menu items
+ - Search for Italian restaurants
+ - Browse by cuisine type
+ - Search for specific menu items
 - **Papyrus Use Case Diagram**
 
 ### **Slide 6: UC-002 - Manage Favorites**
 - **Use Case Description**
 - **Actors**: Registered User, System
 - **Key Scenarios**:
-  - Add restaurant to favorites
-  - Organize favorites into categories
-  - Add menu items to favorites
+ - Add restaurant to favorites
+ - Organize favorites into categories
+ - Add menu items to favorites
 - **Papyrus Use Case Diagram**
 
 ### **Slide 7: UC-003 - Secure Password Reset**
 - **Use Case Description**
 - **Actors**: User, System, Email Service
 - **Security Features**:
-  - Token-based security
-  - Rate limiting
-  - Audit logging
-  - Fraud prevention
+ - Token-based security
+ - Rate limiting
+ - Audit logging
+ - Fraud prevention
 - **Papyrus Use Case Diagram**
 
 ### **Slide 8: Scenarios Demonstration**
@@ -120,7 +120,7 @@
 
 ---
 
-## 🎤 **Speaking Notes**
+## **Speaking Notes**
 
 ### **Opening (2 minutes)**
 "Good morning/afternoon everyone. I'm [Your Name], and I'm the UML Diagrams Coordinator for Team 9. Today I'll be presenting our MenuMap application, a restaurant discovery and menu management system that we've developed for CEN4010 Software Engineering."
@@ -139,7 +139,7 @@
 
 ---
 
-## 📋 **Presentation Checklist**
+## **Presentation Checklist**
 
 ### **Before Presentation:**
 - [ ] All slides created and reviewed
@@ -163,7 +163,7 @@
 
 ---
 
-## 🎯 **Key Points to Emphasize**
+## **Key Points to Emphasize**
 
 1. **Three Use Cases**: We have exactly what was required - 2 normal use cases and 1 security use case
 2. **Individual Diagrams**: Each use case has its own Papyrus diagram

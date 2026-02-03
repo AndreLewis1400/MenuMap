@@ -1,24 +1,24 @@
-# 🚀 Quick Start Guide - UML Creation in Papyrus
+# Quick Start Guide - UML Creation in Papyrus
 
-## ⚡ **Fast Track to UML Success**
+## **Fast Track to UML Success**
 
 Since I can't directly create the UML diagrams in Papyrus, I've created everything you need to build them quickly and professionally!
 
-## 📋 **What You Have Now:**
+## **What You Have Now:**
 
-### ✅ **Complete Specifications:**
+### **Complete Specifications:**
 - **Use Case Diagram**: All actors, use cases, and relationships defined
 - **Class Diagram**: All classes, attributes, methods, and relationships specified
 - **Sequence Diagrams**: 5 complete interaction flows with step-by-step sequences
 - **Step-by-Step Instructions**: Detailed Papyrus creation guide
 
-### ✅ **Ready-to-Use Content:**
+### **Ready-to-Use Content:**
 - **Exact element names** to type in Papyrus
 - **Precise relationships** to draw
 - **Complete attribute lists** for classes
 - **Detailed message flows** for sequences
 
-## 🎯 **Your 30-Minute UML Creation Plan:**
+## **Your 30-Minute UML Creation Plan:**
 
 ### **Minutes 1-10: Use Case Diagram**
 1. Open Papyrus → Create new project
@@ -38,7 +38,7 @@ Since I can't directly create the UML diagrams in Papyrus, I've created everythi
 3. Focus on: Login, Menu Verification, Spam Protection, Password Reset
 4. **Result**: Professional sequence diagrams showing system interactions
 
-## 🎨 **Pro Tips for Speed:**
+## **Pro Tips for Speed:**
 
 ### **Copy-Paste Ready:**
 - All class names, attributes, and methods are listed
@@ -56,18 +56,18 @@ Since I can't directly create the UML diagrams in Papyrus, I've created everythi
 - Proper file naming conventions
 - Submission-ready organization
 
-## 📁 **File Structure Created:**
+## **File Structure Created:**
 ```
 UML_Design/
-├── Use_Case_Diagram_Specification.md      ← Exact elements to create
-├── Class_Diagram_Specification.md         ← All classes with attributes
-├── Sequence_Diagram_Specifications.md     ← Complete interaction flows
-├── Step_by_Step_Papyrus_Instructions.md   ← Detailed creation steps
-├── Quick_Start_Guide.md                   ← This file
-└── Papyrus_Project_Setup.md               ← Project organization
+├── Use_Case_Diagram_Specification.md ← Exact elements to create
+├── Class_Diagram_Specification.md ← All classes with attributes
+├── Sequence_Diagram_Specifications.md ← Complete interaction flows
+├── Step_by_Step_Papyrus_Instructions.md ← Detailed creation steps
+├── Quick_Start_Guide.md ← This file
+└── Papyrus_Project_Setup.md ← Project organization
 ```
 
-## 🏆 **Why This Approach is Better:**
+## **Why This Approach is Better:**
 
 ### **Speed:**
 - No guesswork - everything is specified
@@ -84,17 +84,17 @@ UML_Design/
 - All use cases covered (TM901, TM902, etc.)
 - Ready for team submission
 
-## 🎯 **Next Steps:**
+## **Next Steps:**
 1. **Open Eclipse Papyrus** (already on your desktop)
 2. **Follow the Quick Start Plan** above
 3. **Use the specifications** as your blueprint
 4. **Export high-quality images** for submission
 5. **Package everything** for team submission
 
-## 💡 **Remember:**
+## **Remember:**
 - You're the **Document Editor & Diagram Coordinator**
 - These specifications ensure **comprehensive requirements coverage**
 - The step-by-step guide makes creation **fast and professional**
 - All content is **rubric-aligned** for maximum points
 
-**You've got everything you need to create professional UML diagrams in Papyrus quickly and successfully!** 🎓
+**You've got everything you need to create professional UML diagrams in Papyrus quickly and successfully!** 

@@ -1,9 +1,9 @@
 # MenuMap Detailed Class Diagram
 ## CEN4010 Software Engineering - Team 9
 
-**Author:** Andre Lewis (Software Architecture & Design Lead)  
-**Date:** [Current Date]  
-**Version:** 1.0  
+**Author:** Andre Lewis (Software Architecture & Design Lead) 
+**Date:** [Current Date] 
+**Version:** 1.0 
 
 ---
 
@@ -21,51 +21,51 @@ This document defines the comprehensive class diagram for the MenuMap applicatio
 ```
 <<Boundary>> WebInterface
 ├── Attributes:
-│   ├── - sessionID: String
-│   ├── - currentUser: User
-│   └── - isAuthenticated: Boolean
+│ ├── - sessionID: String
+│ ├── - currentUser: User
+│ └── - isAuthenticated: Boolean
 ├── Operations:
-│   ├── + displayLoginForm(): void
-│   ├── + displayDashboard(sessionToken: String): void  
-│   ├── + handleUserInput(): void
-│   ├── + validateUser(credentials: String): Boolean
-│   ├── + handleLoginResponse(sessionToken: String): void
-│   └── + renderMenu(menu: Menu): void
+│ ├── + displayLoginForm(): void
+│ ├── + displayDashboard(sessionToken: String): void 
+│ ├── + handleUserInput(): void
+│ ├── + validateUser(credentials: String): Boolean
+│ ├── + handleLoginResponse(sessionToken: String): void
+│ └── + renderMenu(menu: Menu): void
 └── Relationships:
-    ├── uses → AuthenticationController
-    ├── uses → MenuController
-    └── uses → UserController
+ ├── uses → AuthenticationController
+ ├── uses → MenuController
+ └── uses → UserController
 
 <<Boundary>> MobileInterface
 ├── Attributes:
-│   ├── - deviceID: String
-│   ├── - platform: String
-│   └── - pushToken: String
+│ ├── - deviceID: String
+│ ├── - platform: String
+│ └── - pushToken: String
 ├── Operations:
-│   ├── + displayLoginForm(): void
-│   ├── + displayDashboard(): void
-│   ├── + handleTouchInput(): void
-│   ├── + sendPushNotification(message: String): void
-│   └── + syncOfflineData(): void
+│ ├── + displayLoginForm(): void
+│ ├── + displayDashboard(): void
+│ ├── + handleTouchInput(): void
+│ ├── + sendPushNotification(message: String): void
+│ └── + syncOfflineData(): void
 └── Relationships:
-    ├── uses → AuthenticationController
-    └── uses → MenuController
+ ├── uses → AuthenticationController
+ └── uses → MenuController
 
 <<Boundary>> APIInterface
 ├── Attributes:
-│   ├── - baseURL: String
-│   ├── - apiVersion: String
-│   └── - rateLimit: Integer
+│ ├── - baseURL: String
+│ ├── - apiVersion: String
+│ └── - rateLimit: Integer
 ├── Operations:
-│   ├── + authenticateUser(credentials: String): String
-│   ├── + getMenu(restaurantID: String): Menu
-│   ├── + getUserFavorites(userID: String): List<Favorite>
-│   ├── + updateUserProfile(userID: String, profile: UserProfile): Boolean
-│   └── + searchRestaurants(query: String): List<Restaurant>
+│ ├── + authenticateUser(credentials: String): String
+│ ├── + getMenu(restaurantID: String): Menu
+│ ├── + getUserFavorites(userID: String): List<Favorite>
+│ ├── + updateUserProfile(userID: String, profile: UserProfile): Boolean
+│ └── + searchRestaurants(query: String): List<Restaurant>
 └── Relationships:
-    ├── uses → AuthenticationController
-    ├── uses → MenuController
-    └── uses → UserController
+ ├── uses → AuthenticationController
+ ├── uses → MenuController
+ └── uses → UserController
 ```
 
 ### **Business Logic Layer Classes**
@@ -74,111 +74,111 @@ This document defines the comprehensive class diagram for the MenuMap applicatio
 ```
 <<Control>> AuthenticationController
 ├── Attributes:
-│   ├── - authService: AuthenticationService
-│   ├── - sessionManager: SessionManager
-│   └── - securityLogger: SecurityLogger
+│ ├── - authService: AuthenticationService
+│ ├── - sessionManager: SessionManager
+│ └── - securityLogger: SecurityLogger
 ├── Operations:
-│   ├── + validateUser(credentials: String): Boolean
-│   ├── + authenticateUser(username: String, password: String): String
-│   ├── + logoutUser(sessionToken: String): void
-│   ├── + resetPassword(email: String): Boolean
-│   └── + verifyPasswordReset(token: String, newPassword: String): Boolean
+│ ├── + validateUser(credentials: String): Boolean
+│ ├── + authenticateUser(username: String, password: String): String
+│ ├── + logoutUser(sessionToken: String): void
+│ ├── + resetPassword(email: String): Boolean
+│ └── + verifyPasswordReset(token: String, newPassword: String): Boolean
 └── Relationships:
-    ├── uses → AuthenticationService
-    ├── uses → UserRepository
-    └── uses → NotificationService
+ ├── uses → AuthenticationService
+ ├── uses → UserRepository
+ └── uses → NotificationService
 
 <<Control>> MenuController
 ├── Attributes:
-│   ├── - menuService: MenuService
-│   ├── - searchService: SearchService
-│   └── - verificationService: VerificationService
+│ ├── - menuService: MenuService
+│ ├── - searchService: SearchService
+│ └── - verificationService: VerificationService
 ├── Operations:
-│   ├── + browseMenus(restaurantID: String): Menu
-│   ├── + searchMenus(query: String, filters: SearchFilters): List<Menu>
-│   ├── + getMenuDetails(menuID: String): MenuItem
-│   ├── + verifyMenu(menuID: String): Boolean
-│   └── + updateMenu(menuID: String, updates: MenuUpdate): Boolean
+│ ├── + browseMenus(restaurantID: String): Menu
+│ ├── + searchMenus(query: String, filters: SearchFilters): List<Menu>
+│ ├── + getMenuDetails(menuID: String): MenuItem
+│ ├── + verifyMenu(menuID: String): Boolean
+│ └── + updateMenu(menuID: String, updates: MenuUpdate): Boolean
 └── Relationships:
-    ├── uses → MenuService
-    ├── uses → RestaurantRepository
-    └── uses → VerificationService
+ ├── uses → MenuService
+ ├── uses → RestaurantRepository
+ └── uses → VerificationService
 
 <<Control>> UserController
 ├── Attributes:
-│   ├── - userService: UserService
-│   ├── - favoritesService: FavoritesService
-│   └── - preferencesService: PreferencesService
+│ ├── - userService: UserService
+│ ├── - favoritesService: FavoritesService
+│ └── - preferencesService: PreferencesService
 ├── Operations:
-│   ├── + registerUser(userData: UserRegistration): Boolean
-│   ├── + updateUserProfile(userID: String, profile: UserProfile): Boolean
-│   ├── + addToFavorites(userID: String, itemID: String): Boolean
-│   ├── + removeFromFavorites(userID: String, itemID: String): Boolean
-│   ├── + getUserFavorites(userID: String): List<Favorite>
-│   └── + updateUserPreferences(userID: String, preferences: UserPreferences): Boolean
+│ ├── + registerUser(userData: UserRegistration): Boolean
+│ ├── + updateUserProfile(userID: String, profile: UserProfile): Boolean
+│ ├── + addToFavorites(userID: String, itemID: String): Boolean
+│ ├── + removeFromFavorites(userID: String, itemID: String): Boolean
+│ ├── + getUserFavorites(userID: String): List<Favorite>
+│ └── + updateUserPreferences(userID: String, preferences: UserPreferences): Boolean
 └── Relationships:
-    ├── uses → UserService
-    ├── uses → FavoritesService
-    └── uses → UserRepository
+ ├── uses → UserService
+ ├── uses → FavoritesService
+ └── uses → UserRepository
 
 <<Control>> RestaurantController
 ├── Attributes:
-│   ├── - restaurantService: RestaurantService
-│   ├── - menuService: MenuService
-│   └── - verificationService: VerificationService
+│ ├── - restaurantService: RestaurantService
+│ ├── - menuService: MenuService
+│ └── - verificationService: VerificationService
 ├── Operations:
-│   ├── + createRestaurant(restaurantData: RestaurantData): Boolean
-│   ├── + updateRestaurant(restaurantID: String, updates: RestaurantUpdate): Boolean
-│   ├── + addMenu(restaurantID: String, menu: Menu): Boolean
-│   ├── + updateMenu(restaurantID: String, menuID: String, updates: MenuUpdate): Boolean
-│   └── + verifyRestaurant(restaurantID: String): Boolean
+│ ├── + createRestaurant(restaurantData: RestaurantData): Boolean
+│ ├── + updateRestaurant(restaurantID: String, updates: RestaurantUpdate): Boolean
+│ ├── + addMenu(restaurantID: String, menu: Menu): Boolean
+│ ├── + updateMenu(restaurantID: String, menuID: String, updates: MenuUpdate): Boolean
+│ └── + verifyRestaurant(restaurantID: String): Boolean
 └── Relationships:
-    ├── uses → RestaurantService
-    ├── uses → MenuService
-    └── uses → VerificationService
+ ├── uses → RestaurantService
+ ├── uses → MenuService
+ └── uses → VerificationService
 ```
 
 #### **Business Rules Classes**
 ```
 <<Control>> MenuValidationRules
 ├── Attributes:
-│   ├── - maxMenuItems: Integer
-│   ├── - maxPrice: Decimal
-│   └── - requiredFields: List<String>
+│ ├── - maxMenuItems: Integer
+│ ├── - maxPrice: Decimal
+│ └── - requiredFields: List<String>
 ├── Operations:
-│   ├── + validateMenu(menu: Menu): ValidationResult
-│   ├── + validateMenuItem(item: MenuItem): ValidationResult
-│   ├── + validatePrice(price: Decimal): Boolean
-│   └── + validateDescription(description: String): Boolean
+│ ├── + validateMenu(menu: Menu): ValidationResult
+│ ├── + validateMenuItem(item: MenuItem): ValidationResult
+│ ├── + validatePrice(price: Decimal): Boolean
+│ └── + validateDescription(description: String): Boolean
 └── Relationships:
-    └── uses → Menu
+ └── uses → Menu
 
 <<Control>> UserPermissionRules
 ├── Attributes:
-│   ├── - rolePermissions: Map<Role, List<Permission>>
-│   └── - resourcePermissions: Map<Resource, List<Permission>>
+│ ├── - rolePermissions: Map<Role, List<Permission>>
+│ └── - resourcePermissions: Map<Resource, List<Permission>>
 ├── Operations:
-│   ├── + checkPermission(userID: String, resource: String, action: String): Boolean
-│   ├── + getUserRole(userID: String): Role
-│   ├── + hasPermission(role: Role, permission: Permission): Boolean
-│   └── + grantPermission(userID: String, permission: Permission): Boolean
+│ ├── + checkPermission(userID: String, resource: String, action: String): Boolean
+│ ├── + getUserRole(userID: String): Role
+│ ├── + hasPermission(role: Role, permission: Permission): Boolean
+│ └── + grantPermission(userID: String, permission: Permission): Boolean
 └── Relationships:
-    ├── uses → User
-    └── uses → Role
+ ├── uses → User
+ └── uses → Role
 
 <<Control>> SpamDetectionRules
 ├── Attributes:
-│   ├── - spamKeywords: List<String>
-│   ├── - maxContentLength: Integer
-│   └── - suspiciousPatterns: List<Pattern>
+│ ├── - spamKeywords: List<String>
+│ ├── - maxContentLength: Integer
+│ └── - suspiciousPatterns: List<Pattern>
 ├── Operations:
-│   ├── + detectSpam(content: String): SpamResult
-│   ├── + analyzeBehavior(userID: String): BehaviorAnalysis
-│   ├── + checkRateLimit(userID: String, action: String): Boolean
-│   └── + flagSuspiciousActivity(userID: String, activity: Activity): void
+│ ├── + detectSpam(content: String): SpamResult
+│ ├── + analyzeBehavior(userID: String): BehaviorAnalysis
+│ ├── + checkRateLimit(userID: String, action: String): Boolean
+│ └── + flagSuspiciousActivity(userID: String, activity: Activity): void
 └── Relationships:
-    ├── uses → User
-    └── uses → Content
+ ├── uses → User
+ └── uses → Content
 ```
 
 ### **Data Access Layer Classes**
@@ -187,101 +187,101 @@ This document defines the comprehensive class diagram for the MenuMap applicatio
 ```
 <<Entity>> UserRepository
 ├── Attributes:
-│   ├── - connection: DatabaseConnection
-│   └── - cache: Cache
+│ ├── - connection: DatabaseConnection
+│ └── - cache: Cache
 ├── Operations:
-│   ├── + findById(userID: String): User
-│   ├── + findByEmail(email: String): User
-│   ├── + save(user: User): Boolean
-│   ├── + update(user: User): Boolean
-│   ├── + delete(userID: String): Boolean
-│   └── + findAll(): List<User>
+│ ├── + findById(userID: String): User
+│ ├── + findByEmail(email: String): User
+│ ├── + save(user: User): Boolean
+│ ├── + update(user: User): Boolean
+│ ├── + delete(userID: String): Boolean
+│ └── + findAll(): List<User>
 └── Relationships:
-    ├── uses → User
-    └── uses → DatabaseConnection
+ ├── uses → User
+ └── uses → DatabaseConnection
 
 <<Entity>> MenuRepository
 ├── Attributes:
-│   ├── - connection: DatabaseConnection
-│   └── - cache: Cache
+│ ├── - connection: DatabaseConnection
+│ └── - cache: Cache
 ├── Operations:
-│   ├── + findById(menuID: String): Menu
-│   ├── + findByRestaurant(restaurantID: String): List<Menu>
-│   ├── + save(menu: Menu): Boolean
-│   ├── + update(menu: Menu): Boolean
-│   ├── + delete(menuID: String): Boolean
-│   └── + search(query: String): List<Menu>
+│ ├── + findById(menuID: String): Menu
+│ ├── + findByRestaurant(restaurantID: String): List<Menu>
+│ ├── + save(menu: Menu): Boolean
+│ ├── + update(menu: Menu): Boolean
+│ ├── + delete(menuID: String): Boolean
+│ └── + search(query: String): List<Menu>
 └── Relationships:
-    ├── uses → Menu
-    └── uses → DatabaseConnection
+ ├── uses → Menu
+ └── uses → DatabaseConnection
 
 <<Entity>> RestaurantRepository
 ├── Attributes:
-│   ├── - connection: DatabaseConnection
-│   └── - cache: Cache
+│ ├── - connection: DatabaseConnection
+│ └── - cache: Cache
 ├── Operations:
-│   ├── + findById(restaurantID: String): Restaurant
-│   ├── + findByLocation(location: Location): List<Restaurant>
-│   ├── + save(restaurant: Restaurant): Boolean
-│   ├── + update(restaurant: Restaurant): Boolean
-│   ├── + delete(restaurantID: String): Boolean
-│   └── + search(query: String): List<Restaurant>
+│ ├── + findById(restaurantID: String): Restaurant
+│ ├── + findByLocation(location: Location): List<Restaurant>
+│ ├── + save(restaurant: Restaurant): Boolean
+│ ├── + update(restaurant: Restaurant): Boolean
+│ ├── + delete(restaurantID: String): Boolean
+│ └── + search(query: String): List<Restaurant>
 └── Relationships:
-    ├── uses → Restaurant
-    └── uses → DatabaseConnection
+ ├── uses → Restaurant
+ └── uses → DatabaseConnection
 
 <<Entity>> FavoriteRepository
 ├── Attributes:
-│   ├── - connection: DatabaseConnection
-│   └── - cache: Cache
+│ ├── - connection: DatabaseConnection
+│ └── - cache: Cache
 ├── Operations:
-│   ├── + findByUser(userID: String): List<Favorite>
-│   ├── + findByItem(itemID: String): List<Favorite>
-│   ├── + save(favorite: Favorite): Boolean
-│   ├── + delete(favoriteID: String): Boolean
-│   └── + exists(userID: String, itemID: String): Boolean
+│ ├── + findByUser(userID: String): List<Favorite>
+│ ├── + findByItem(itemID: String): List<Favorite>
+│ ├── + save(favorite: Favorite): Boolean
+│ ├── + delete(favoriteID: String): Boolean
+│ └── + exists(userID: String, itemID: String): Boolean
 └── Relationships:
-    ├── uses → Favorite
-    └── uses → DatabaseConnection
+ ├── uses → Favorite
+ └── uses → DatabaseConnection
 ```
 
 #### **Data Mapper Classes**
 ```
 <<Entity>> UserMapper
 ├── Attributes:
-│   └── - fieldMappings: Map<String, String>
+│ └── - fieldMappings: Map<String, String>
 ├── Operations:
-│   ├── + toDomain(record: DatabaseRecord): User
-│   ├── + toRecord(user: User): DatabaseRecord
-│   ├── + mapFields(record: DatabaseRecord): User
-│   └── + validateMapping(user: User): Boolean
+│ ├── + toDomain(record: DatabaseRecord): User
+│ ├── + toRecord(user: User): DatabaseRecord
+│ ├── + mapFields(record: DatabaseRecord): User
+│ └── + validateMapping(user: User): Boolean
 └── Relationships:
-    ├── uses → User
-    └── uses → DatabaseRecord
+ ├── uses → User
+ └── uses → DatabaseRecord
 
 <<Entity>> MenuMapper
 ├── Attributes:
-│   └── - fieldMappings: Map<String, String>
+│ └── - fieldMappings: Map<String, String>
 ├── Operations:
-│   ├── + toDomain(record: DatabaseRecord): Menu
-│   ├── + toRecord(menu: Menu): DatabaseRecord
-│   ├── + mapFields(record: DatabaseRecord): Menu
-│   └── + validateMapping(menu: Menu): Boolean
+│ ├── + toDomain(record: DatabaseRecord): Menu
+│ ├── + toRecord(menu: Menu): DatabaseRecord
+│ ├── + mapFields(record: DatabaseRecord): Menu
+│ └── + validateMapping(menu: Menu): Boolean
 └── Relationships:
-    ├── uses → Menu
-    └── uses → DatabaseRecord
+ ├── uses → Menu
+ └── uses → DatabaseRecord
 
 <<Entity>> RestaurantMapper
 ├── Attributes:
-│   └── - fieldMappings: Map<String, String>
+│ └── - fieldMappings: Map<String, String>
 ├── Operations:
-│   ├── + toDomain(record: DatabaseRecord): Restaurant
-│   ├── + toRecord(restaurant: Restaurant): DatabaseRecord
-│   ├── + mapFields(record: DatabaseRecord): Restaurant
-│   └── + validateMapping(restaurant: Restaurant): Boolean
+│ ├── + toDomain(record: DatabaseRecord): Restaurant
+│ ├── + toRecord(restaurant: Restaurant): DatabaseRecord
+│ ├── + mapFields(record: DatabaseRecord): Restaurant
+│ └── + validateMapping(restaurant: Restaurant): Boolean
 └── Relationships:
-    ├── uses → Restaurant
-    └── uses → DatabaseRecord
+ ├── uses → Restaurant
+ └── uses → DatabaseRecord
 ```
 
 ### **Security Subsystem Classes**
@@ -290,108 +290,108 @@ This document defines the comprehensive class diagram for the MenuMap applicatio
 ```
 <<Control>> AuthenticationService
 ├── Attributes:
-│   ├── - userRepository: UserRepository
-│   ├── - sessionManager: SessionManager
-│   ├── - passwordHasher: PasswordHasher
-│   └── - tokenGenerator: TokenGenerator
+│ ├── - userRepository: UserRepository
+│ ├── - sessionManager: SessionManager
+│ ├── - passwordHasher: PasswordHasher
+│ └── - tokenGenerator: TokenGenerator
 ├── Operations:
-│   ├── + validateUser(credentials: String): Boolean
-│   ├── + authenticateUser(username: String, password: String): String
-│   ├── + verifyPassword(username: String, password: String): Boolean
-│   ├── + generateSessionToken(userID: String): String
-│   ├── + updateLastLogin(userID: String): void
-│   └── + logoutUser(sessionToken: String): void
+│ ├── + validateUser(credentials: String): Boolean
+│ ├── + authenticateUser(username: String, password: String): String
+│ ├── + verifyPassword(username: String, password: String): Boolean
+│ ├── + generateSessionToken(userID: String): String
+│ ├── + updateLastLogin(userID: String): void
+│ └── + logoutUser(sessionToken: String): void
 └── Relationships:
-    ├── uses → UserRepository
-    ├── uses → SessionManager
-    └── uses → PasswordHasher
+ ├── uses → UserRepository
+ ├── uses → SessionManager
+ └── uses → PasswordHasher
 
 <<Control>> SessionManager
 ├── Attributes:
-│   ├── - activeSessions: Map<String, Session>
-│   ├── - sessionTimeout: Integer
-│   └── - maxSessions: Integer
+│ ├── - activeSessions: Map<String, Session>
+│ ├── - sessionTimeout: Integer
+│ └── - maxSessions: Integer
 ├── Operations:
-│   ├── + createSession(userID: String): Session
-│   ├── + validateSession(sessionToken: String): Boolean
-│   ├── + refreshSession(sessionToken: String): Session
-│   ├── + invalidateSession(sessionToken: String): void
-│   └── + cleanupExpiredSessions(): void
+│ ├── + createSession(userID: String): Session
+│ ├── + validateSession(sessionToken: String): Boolean
+│ ├── + refreshSession(sessionToken: String): Session
+│ ├── + invalidateSession(sessionToken: String): void
+│ └── + cleanupExpiredSessions(): void
 └── Relationships:
-    ├── uses → Session
-    └── uses → User
+ ├── uses → Session
+ └── uses → User
 
 <<Control>> PasswordHasher
 ├── Attributes:
-│   ├── - saltRounds: Integer
-│   └── - algorithm: String
+│ ├── - saltRounds: Integer
+│ └── - algorithm: String
 ├── Operations:
-│   ├── + hashPassword(password: String): String
-│   ├── + verifyPassword(password: String, hash: String): Boolean
-│   ├── + generateSalt(): String
-│   └── + validatePasswordStrength(password: String): Boolean
+│ ├── + hashPassword(password: String): String
+│ ├── + verifyPassword(password: String, hash: String): Boolean
+│ ├── + generateSalt(): String
+│ └── + validatePasswordStrength(password: String): Boolean
 └── Relationships:
-    └── uses → Password
+ └── uses → Password
 
 <<Control>> TokenGenerator
 ├── Attributes:
-│   ├── - secretKey: String
-│   ├── - expirationTime: Integer
-│   └── - algorithm: String
+│ ├── - secretKey: String
+│ ├── - expirationTime: Integer
+│ └── - algorithm: String
 ├── Operations:
-│   ├── + generateAccessToken(userID: String): String
-│   ├── + generateRefreshToken(userID: String): String
-│   ├── + validateToken(token: String): Boolean
-│   ├── + extractUserID(token: String): String
-│   └── + refreshToken(refreshToken: String): String
+│ ├── + generateAccessToken(userID: String): String
+│ ├── + generateRefreshToken(userID: String): String
+│ ├── + validateToken(token: String): Boolean
+│ ├── + extractUserID(token: String): String
+│ └── + refreshToken(refreshToken: String): String
 └── Relationships:
-    └── uses → Token
+ └── uses → Token
 ```
 
 #### **Authorization Service Classes**
 ```
 <<Control>> AuthorizationService
 ├── Attributes:
-│   ├── - roleManager: RoleManager
-│   ├── - permissionChecker: PermissionChecker
-│   └── - accessController: AccessController
+│ ├── - roleManager: RoleManager
+│ ├── - permissionChecker: PermissionChecker
+│ └── - accessController: AccessController
 ├── Operations:
-│   ├── + checkPermission(userID: String, resource: String, action: String): Boolean
-│   ├── + getUserRole(userID: String): Role
-│   ├── + grantPermission(userID: String, permission: Permission): Boolean
-│   ├── + revokePermission(userID: String, permission: Permission): Boolean
-│   └── + hasAccess(userID: String, resource: String): Boolean
+│ ├── + checkPermission(userID: String, resource: String, action: String): Boolean
+│ ├── + getUserRole(userID: String): Role
+│ ├── + grantPermission(userID: String, permission: Permission): Boolean
+│ ├── + revokePermission(userID: String, permission: Permission): Boolean
+│ └── + hasAccess(userID: String, resource: String): Boolean
 └── Relationships:
-    ├── uses → RoleManager
-    ├── uses → PermissionChecker
-    └── uses → User
+ ├── uses → RoleManager
+ ├── uses → PermissionChecker
+ └── uses → User
 
 <<Control>> RoleManager
 ├── Attributes:
-│   ├── - roles: Map<String, Role>
-│   └── - roleHierarchy: Map<Role, List<Role>>
+│ ├── - roles: Map<String, Role>
+│ └── - roleHierarchy: Map<Role, List<Role>>
 ├── Operations:
-│   ├── + createRole(roleName: String, permissions: List<Permission>): Role
-│   ├── + assignRole(userID: String, role: Role): Boolean
-│   ├── + removeRole(userID: String, role: Role): Boolean
-│   ├── + getRolePermissions(role: Role): List<Permission>
-│   └── + validateRole(role: Role): Boolean
+│ ├── + createRole(roleName: String, permissions: List<Permission>): Role
+│ ├── + assignRole(userID: String, role: Role): Boolean
+│ ├── + removeRole(userID: String, role: Role): Boolean
+│ ├── + getRolePermissions(role: Role): List<Permission>
+│ └── + validateRole(role: Role): Boolean
 └── Relationships:
-    ├── uses → Role
-    └── uses → Permission
+ ├── uses → Role
+ └── uses → Permission
 
 <<Control>> PermissionChecker
 ├── Attributes:
-│   ├── - permissionCache: Cache
-│   └── - permissionRules: List<PermissionRule>
+│ ├── - permissionCache: Cache
+│ └── - permissionRules: List<PermissionRule>
 ├── Operations:
-│   ├── + checkPermission(userID: String, permission: Permission): Boolean
-│   ├── + hasPermission(role: Role, permission: Permission): Boolean
-│   ├── + checkResourceAccess(userID: String, resource: String): Boolean
-│   └── + validatePermission(permission: Permission): Boolean
+│ ├── + checkPermission(userID: String, permission: Permission): Boolean
+│ ├── + hasPermission(role: Role, permission: Permission): Boolean
+│ ├── + checkResourceAccess(userID: String, resource: String): Boolean
+│ └── + validatePermission(permission: Permission): Boolean
 └── Relationships:
-    ├── uses → Permission
-    └── uses → Role
+ ├── uses → Permission
+ └── uses → Role
 ```
 
 ### **Menu Management Subsystem Classes**
@@ -400,83 +400,83 @@ This document defines the comprehensive class diagram for the MenuMap applicatio
 ```
 <<Control>> MenuService
 ├── Attributes:
-│   ├── - menuRepository: MenuRepository
-│   ├── - searchService: SearchService
-│   └── - cache: Cache
+│ ├── - menuRepository: MenuRepository
+│ ├── - searchService: SearchService
+│ └── - cache: Cache
 ├── Operations:
-│   ├── + getMenu(restaurantID: String): Menu
-│   ├── + getMenuItem(menuID: String, itemID: String): MenuItem
-│   ├── + searchMenus(query: String, filters: SearchFilters): List<Menu>
-│   ├── + updateMenu(menuID: String, updates: MenuUpdate): Boolean
-│   └── + deleteMenu(menuID: String): Boolean
+│ ├── + getMenu(restaurantID: String): Menu
+│ ├── + getMenuItem(menuID: String, itemID: String): MenuItem
+│ ├── + searchMenus(query: String, filters: SearchFilters): List<Menu>
+│ ├── + updateMenu(menuID: String, updates: MenuUpdate): Boolean
+│ └── + deleteMenu(menuID: String): Boolean
 └── Relationships:
-    ├── uses → MenuRepository
-    ├── uses → SearchService
-    └── uses → Menu
+ ├── uses → MenuRepository
+ ├── uses → SearchService
+ └── uses → Menu
 
 <<Control>> SearchService
 ├── Attributes:
-│   ├── - searchIndex: SearchIndex
-│   ├── - searchStrategies: Map<String, SearchStrategy>
-│   └── - cache: Cache
+│ ├── - searchIndex: SearchIndex
+│ ├── - searchStrategies: Map<String, SearchStrategy>
+│ └── - cache: Cache
 ├── Operations:
-│   ├── + search(query: String, strategy: String): List<SearchResult>
-│   ├── + searchByLocation(location: Location): List<Restaurant>
-│   ├── + searchByCuisine(cuisine: String): List<Restaurant>
-│   ├── + searchByPrice(priceRange: PriceRange): List<Menu>
-│   └── + indexContent(content: Content): Boolean
+│ ├── + search(query: String, strategy: String): List<SearchResult>
+│ ├── + searchByLocation(location: Location): List<Restaurant>
+│ ├── + searchByCuisine(cuisine: String): List<Restaurant>
+│ ├── + searchByPrice(priceRange: PriceRange): List<Menu>
+│ └── + indexContent(content: Content): Boolean
 └── Relationships:
-    ├── uses → SearchStrategy
-    ├── uses → SearchIndex
-    └── uses → SearchResult
+ ├── uses → SearchStrategy
+ ├── uses → SearchIndex
+ └── uses → SearchResult
 
 <<Control>> RestaurantService
 ├── Attributes:
-│   ├── - restaurantRepository: RestaurantRepository
-│   ├── - locationService: LocationService
-│   └── - ratingCalculator: RatingCalculator
+│ ├── - restaurantRepository: RestaurantRepository
+│ ├── - locationService: LocationService
+│ └── - ratingCalculator: RatingCalculator
 ├── Operations:
-│   ├── + getRestaurant(restaurantID: String): Restaurant
-│   ├── + getRestaurantsByLocation(location: Location): List<Restaurant>
-│   ├── + updateRestaurant(restaurantID: String, updates: RestaurantUpdate): Boolean
-│   ├── + calculateRating(restaurantID: String): Rating
-│   └── + verifyRestaurant(restaurantID: String): Boolean
+│ ├── + getRestaurant(restaurantID: String): Restaurant
+│ ├── + getRestaurantsByLocation(location: Location): List<Restaurant>
+│ ├── + updateRestaurant(restaurantID: String, updates: RestaurantUpdate): Boolean
+│ ├── + calculateRating(restaurantID: String): Rating
+│ └── + verifyRestaurant(restaurantID: String): Boolean
 └── Relationships:
-    ├── uses → RestaurantRepository
-    ├── uses → LocationService
-    └── uses → Restaurant
+ ├── uses → RestaurantRepository
+ ├── uses → LocationService
+ └── uses → Restaurant
 ```
 
 #### **Verification Service Classes**
 ```
 <<Control>> VerificationService
 ├── Attributes:
-│   ├── - contentValidator: ContentValidator
-│   ├── - authenticityChecker: AuthenticityChecker
-│   └── - approvalWorkflow: ApprovalWorkflow
+│ ├── - contentValidator: ContentValidator
+│ ├── - authenticityChecker: AuthenticityChecker
+│ └── - approvalWorkflow: ApprovalWorkflow
 ├── Operations:
-│   ├── + verifyMenu(menuID: String): VerificationResult
-│   ├── + verifyContent(content: String): VerificationResult
-│   ├── + checkAuthenticity(menuID: String): Boolean
-│   ├── + approveContent(contentID: String): Boolean
-│   └── + rejectContent(contentID: String, reason: String): Boolean
+│ ├── + verifyMenu(menuID: String): VerificationResult
+│ ├── + verifyContent(content: String): VerificationResult
+│ ├── + checkAuthenticity(menuID: String): Boolean
+│ ├── + approveContent(contentID: String): Boolean
+│ └── + rejectContent(contentID: String, reason: String): Boolean
 └── Relationships:
-    ├── uses → ContentValidator
-    ├── uses → AuthenticityChecker
-    └── uses → VerificationResult
+ ├── uses → ContentValidator
+ ├── uses → AuthenticityChecker
+ └── uses → VerificationResult
 
 <<Control>> ContentValidator
 ├── Attributes:
-│   ├── - validationRules: List<ValidationRule>
-│   └── - spamDetector: SpamDetector
+│ ├── - validationRules: List<ValidationRule>
+│ └── - spamDetector: SpamDetector
 ├── Operations:
-│   ├── + validateContent(content: String): ValidationResult
-│   ├── + validateMenu(menu: Menu): ValidationResult
-│   ├── + checkSpam(content: String): SpamResult
-│   └── + validateFormat(content: String, format: String): Boolean
+│ ├── + validateContent(content: String): ValidationResult
+│ ├── + validateMenu(menu: Menu): ValidationResult
+│ ├── + checkSpam(content: String): SpamResult
+│ └── + validateFormat(content: String, format: String): Boolean
 └── Relationships:
-    ├── uses → ValidationRule
-    └── uses → SpamDetector
+ ├── uses → ValidationRule
+ └── uses → SpamDetector
 ```
 
 ### **User Management Subsystem Classes**
@@ -485,51 +485,51 @@ This document defines the comprehensive class diagram for the MenuMap applicatio
 ```
 <<Control>> UserService
 ├── Attributes:
-│   ├── - userRepository: UserRepository
-│   ├── - profileManager: ProfileManager
-│   └── - accountManager: AccountManager
+│ ├── - userRepository: UserRepository
+│ ├── - profileManager: ProfileManager
+│ └── - accountManager: AccountManager
 ├── Operations:
-│   ├── + registerUser(userData: UserRegistration): Boolean
-│   ├── + updateProfile(userID: String, profile: UserProfile): Boolean
-│   ├── + getUserProfile(userID: String): UserProfile
-│   ├── + deactivateAccount(userID: String): Boolean
-│   └── + validateUser(userID: String): Boolean
+│ ├── + registerUser(userData: UserRegistration): Boolean
+│ ├── + updateProfile(userID: String, profile: UserProfile): Boolean
+│ ├── + getUserProfile(userID: String): UserProfile
+│ ├── + deactivateAccount(userID: String): Boolean
+│ └── + validateUser(userID: String): Boolean
 └── Relationships:
-    ├── uses → UserRepository
-    ├── uses → ProfileManager
-    └── uses → User
+ ├── uses → UserRepository
+ ├── uses → ProfileManager
+ └── uses → User
 
 <<Control>> FavoritesService
 ├── Attributes:
-│   ├── - favoriteRepository: FavoriteRepository
-│   ├── - organizer: FavoritesOrganizer
-│   └── - cache: Cache
+│ ├── - favoriteRepository: FavoriteRepository
+│ ├── - organizer: FavoritesOrganizer
+│ └── - cache: Cache
 ├── Operations:
-│   ├── + addFavorite(userID: String, itemID: String): Boolean
-│   ├── + removeFavorite(userID: String, itemID: String): Boolean
-│   ├── + getUserFavorites(userID: String): List<Favorite>
-│   ├── + organizeFavorites(userID: String, categories: List<String>): Boolean
-│   └── + shareFavorites(userID: String, shareWith: String): Boolean
+│ ├── + addFavorite(userID: String, itemID: String): Boolean
+│ ├── + removeFavorite(userID: String, itemID: String): Boolean
+│ ├── + getUserFavorites(userID: String): List<Favorite>
+│ ├── + organizeFavorites(userID: String, categories: List<String>): Boolean
+│ └── + shareFavorites(userID: String, shareWith: String): Boolean
 └── Relationships:
-    ├── uses → FavoriteRepository
-    ├── uses → FavoritesOrganizer
-    └── uses → Favorite
+ ├── uses → FavoriteRepository
+ ├── uses → FavoritesOrganizer
+ └── uses → Favorite
 
 <<Control>> PreferencesService
 ├── Attributes:
-│   ├── - preferencesRepository: PreferencesRepository
-│   ├── - settingsManager: SettingsManager
-│   └── - privacyManager: PrivacyManager
+│ ├── - preferencesRepository: PreferencesRepository
+│ ├── - settingsManager: SettingsManager
+│ └── - privacyManager: PrivacyManager
 ├── Operations:
-│   ├── + updatePreferences(userID: String, preferences: UserPreferences): Boolean
-│   ├── + getPreferences(userID: String): UserPreferences
-│   ├── + updateNotificationSettings(userID: String, settings: NotificationSettings): Boolean
-│   ├── + updatePrivacySettings(userID: String, settings: PrivacySettings): Boolean
-│   └── + resetToDefaults(userID: String): Boolean
+│ ├── + updatePreferences(userID: String, preferences: UserPreferences): Boolean
+│ ├── + getPreferences(userID: String): UserPreferences
+│ ├── + updateNotificationSettings(userID: String, settings: NotificationSettings): Boolean
+│ ├── + updatePrivacySettings(userID: String, settings: PrivacySettings): Boolean
+│ └── + resetToDefaults(userID: String): Boolean
 └── Relationships:
-    ├── uses → PreferencesRepository
-    ├── uses → SettingsManager
-    └── uses → UserPreferences
+ ├── uses → PreferencesRepository
+ ├── uses → SettingsManager
+ └── uses → UserPreferences
 ```
 
 ### **Notification Subsystem Classes**
@@ -538,51 +538,51 @@ This document defines the comprehensive class diagram for the MenuMap applicatio
 ```
 <<Control>> EmailService
 ├── Attributes:
-│   ├── - emailSender: EmailSender
-│   ├── - templateEngine: TemplateEngine
-│   └── - emailQueue: EmailQueue
+│ ├── - emailSender: EmailSender
+│ ├── - templateEngine: TemplateEngine
+│ └── - emailQueue: EmailQueue
 ├── Operations:
-│   ├── + sendEmail(to: String, subject: String, body: String): Boolean
-│   ├── + sendTemplateEmail(to: String, template: String, data: Map): Boolean
-│   ├── + queueEmail(email: Email): Boolean
-│   ├── + processEmailQueue(): void
-│   └── + validateEmail(email: String): Boolean
+│ ├── + sendEmail(to: String, subject: String, body: String): Boolean
+│ ├── + sendTemplateEmail(to: String, template: String, data: Map): Boolean
+│ ├── + queueEmail(email: Email): Boolean
+│ ├── + processEmailQueue(): void
+│ └── + validateEmail(email: String): Boolean
 └── Relationships:
-    ├── uses → EmailSender
-    ├── uses → TemplateEngine
-    └── uses → Email
+ ├── uses → EmailSender
+ ├── uses → TemplateEngine
+ └── uses → Email
 
 <<Control>> NotificationService
 ├── Attributes:
-│   ├── - pushService: PushService
-│   ├── - inAppService: InAppService
-│   └── - notificationQueue: NotificationQueue
+│ ├── - pushService: PushService
+│ ├── - inAppService: InAppService
+│ └── - notificationQueue: NotificationQueue
 ├── Operations:
-│   ├── + sendPushNotification(userID: String, message: String): Boolean
-│   ├── + sendInAppNotification(userID: String, notification: Notification): Boolean
-│   ├── + scheduleNotification(notification: Notification, scheduleTime: DateTime): Boolean
-│   ├── + markAsRead(notificationID: String): Boolean
-│   └── + getUserNotifications(userID: String): List<Notification>
+│ ├── + sendPushNotification(userID: String, message: String): Boolean
+│ ├── + sendInAppNotification(userID: String, notification: Notification): Boolean
+│ ├── + scheduleNotification(notification: Notification, scheduleTime: DateTime): Boolean
+│ ├── + markAsRead(notificationID: String): Boolean
+│ └── + getUserNotifications(userID: String): List<Notification>
 └── Relationships:
-    ├── uses → PushService
-    ├── uses → InAppService
-    └── uses → Notification
+ ├── uses → PushService
+ ├── uses → InAppService
+ └── uses → Notification
 
 <<Control>> RealTimeService
 ├── Attributes:
-│   ├── - webSocketManager: WebSocketManager
-│   ├── - eventBroadcaster: EventBroadcaster
-│   └── - connectionManager: ConnectionManager
+│ ├── - webSocketManager: WebSocketManager
+│ ├── - eventBroadcaster: EventBroadcaster
+│ └── - connectionManager: ConnectionManager
 ├── Operations:
-│   ├── + connectUser(userID: String, connection: WebSocketConnection): Boolean
-│   ├── + disconnectUser(userID: String): Boolean
-│   ├── + broadcastEvent(event: Event): Boolean
-│   ├── + sendToUser(userID: String, message: String): Boolean
-│   └── + getActiveConnections(): List<WebSocketConnection>
+│ ├── + connectUser(userID: String, connection: WebSocketConnection): Boolean
+│ ├── + disconnectUser(userID: String): Boolean
+│ ├── + broadcastEvent(event: Event): Boolean
+│ ├── + sendToUser(userID: String, message: String): Boolean
+│ └── + getActiveConnections(): List<WebSocketConnection>
 └── Relationships:
-    ├── uses → WebSocketManager
-    ├── uses → EventBroadcaster
-    └── uses → WebSocketConnection
+ ├── uses → WebSocketManager
+ ├── uses → EventBroadcaster
+ └── uses → WebSocketConnection
 ```
 
 ---
@@ -656,9 +656,9 @@ This document defines the comprehensive class diagram for the MenuMap applicatio
 ├── + detach(observer: Observer): void
 ├── + notify(): void
 └── Relationships:
-    ├── observed by → UserFavorites (Observer)
-    ├── observed by → RestaurantOwner (Observer)
-    └── observed by → AdminDashboard (Observer)
+ ├── observed by → UserFavorites (Observer)
+ ├── observed by → RestaurantOwner (Observer)
+ └── observed by → AdminDashboard (Observer)
 ```
 
 ### **Factory Pattern**
@@ -682,10 +682,10 @@ This document defines the comprehensive class diagram for the MenuMap applicatio
 ├── + setStrategy(strategy: SearchStrategy): void
 ├── + executeSearch(query: String): List<SearchResult>
 └── Relationships:
-    ├── uses → LocationSearchStrategy
-    ├── uses → CuisineSearchStrategy
-    ├── uses → PriceSearchStrategy
-    └── uses → RatingSearchStrategy
+ ├── uses → LocationSearchStrategy
+ ├── uses → CuisineSearchStrategy
+ ├── uses → PriceSearchStrategy
+ └── uses → RatingSearchStrategy
 ```
 
 ---

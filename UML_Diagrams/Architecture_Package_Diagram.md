@@ -1,19 +1,19 @@
 # MenuMap Architecture Package Diagram
 ## CEN4010 Software Engineering - Team 9
 
-**Author:** Andre Lewis (Software Architecture & Design Lead)  
+**Author:** Andre Lewis (Software Architecture & Design Lead) 
 **Date:** 10/14/2025 
-**Version:** 1.0  
+**Version:** 1.0 
 
 ---
 
-## 🏗️ Architecture Package Diagram Overview
+## Architecture Package Diagram Overview
 
 This document defines the Architecture Package Diagram for the MenuMap application, showing the high-level system structure, package relationships, and architectural patterns. The diagram follows a layered architecture with clear separation of concerns and well-defined interfaces between packages.
 
 ---
 
-## 📦 Package Structure
+## Package Structure
 
 ### **Top-Level System Package**
 ```
@@ -32,39 +32,39 @@ MenuMap System
 ```
 Dependency Hierarchy:
 ├── Presentation Layer
-│   ├── depends on → Business Logic Layer
-│   ├── depends on → Security Subsystem
-│   └── depends on → External Interfaces
+│ ├── depends on → Business Logic Layer
+│ ├── depends on → Security Subsystem
+│ └── depends on → External Interfaces
 ├── Business Logic Layer
-│   ├── depends on → Data Access Layer
-│   ├── depends on → Security Subsystem
-│   ├── depends on → Menu Management Subsystem
-│   ├── depends on → User Management Subsystem
-│   └── depends on → Notification Subsystem
+│ ├── depends on → Data Access Layer
+│ ├── depends on → Security Subsystem
+│ ├── depends on → Menu Management Subsystem
+│ ├── depends on → User Management Subsystem
+│ └── depends on → Notification Subsystem
 ├── Data Access Layer
-│   ├── depends on → External Interfaces (Database)
-│   └── depends on → Security Subsystem
+│ ├── depends on → External Interfaces (Database)
+│ └── depends on → Security Subsystem
 ├── Security Subsystem
-│   ├── depends on → Data Access Layer
-│   ├── depends on → Notification Subsystem
-│   └── depends on → External Interfaces
+│ ├── depends on → Data Access Layer
+│ ├── depends on → Notification Subsystem
+│ └── depends on → External Interfaces
 ├── Menu Management Subsystem
-│   ├── depends on → Data Access Layer
-│   ├── depends on → Security Subsystem
-│   └── depends on → External Interfaces
+│ ├── depends on → Data Access Layer
+│ ├── depends on → Security Subsystem
+│ └── depends on → External Interfaces
 ├── User Management Subsystem
-│   ├── depends on → Data Access Layer
-│   ├── depends on → Security Subsystem
-│   └── depends on → Notification Subsystem
+│ ├── depends on → Data Access Layer
+│ ├── depends on → Security Subsystem
+│ └── depends on → Notification Subsystem
 └── Notification Subsystem
-    ├── depends on → Data Access Layer
-    ├── depends on → Security Subsystem
-    └── depends on → External Interfaces
+ ├── depends on → Data Access Layer
+ ├── depends on → Security Subsystem
+ └── depends on → External Interfaces
 ```
 
 ---
 
-## 🎯 Package Specifications
+## Package Specifications
 
 ### **1. Presentation Layer Package**
 ```
@@ -74,17 +74,17 @@ Purpose: User interface and user interaction handling
 
 Sub-packages:
 ├── Web Interface
-│   ├── Components: React SPA, HTML/CSS/JS
-│   ├── Responsibilities: Web UI rendering, user input handling
-│   └── Dependencies: Business Logic Layer, Security Subsystem
+│ ├── Components: React SPA, HTML/CSS/JS
+│ ├── Responsibilities: Web UI rendering, user input handling
+│ └── Dependencies: Business Logic Layer, Security Subsystem
 ├── Mobile Interface
-│   ├── Components: React Native App, iOS/Android
-│   ├── Responsibilities: Mobile UI, touch interactions
-│   └── Dependencies: Business Logic Layer, Security Subsystem
+│ ├── Components: React Native App, iOS/Android
+│ ├── Responsibilities: Mobile UI, touch interactions
+│ └── Dependencies: Business Logic Layer, Security Subsystem
 └── API Interface
-    ├── Components: REST API, GraphQL, WebSocket
-    ├── Responsibilities: API endpoints, real-time communication
-    └── Dependencies: Business Logic Layer, Security Subsystem
+ ├── Components: REST API, GraphQL, WebSocket
+ ├── Responsibilities: API endpoints, real-time communication
+ └── Dependencies: Business Logic Layer, Security Subsystem
 
 Interfaces:
 ├── IUserInterface: User interaction interface
@@ -106,17 +106,17 @@ Purpose: Core business rules and use case orchestration
 
 Sub-packages:
 ├── Use Case Controllers
-│   ├── Components: MenuBrowsingController, FavoritesController
-│   ├── Responsibilities: Use case orchestration, workflow management
-│   └── Dependencies: All subsystem packages
+│ ├── Components: MenuBrowsingController, FavoritesController
+│ ├── Responsibilities: Use case orchestration, workflow management
+│ └── Dependencies: All subsystem packages
 ├── Business Rules
-│   ├── Components: MenuValidationRules, UserPermissionRules
-│   ├── Responsibilities: Business rule enforcement, validation
-│   └── Dependencies: Security Subsystem
+│ ├── Components: MenuValidationRules, UserPermissionRules
+│ ├── Responsibilities: Business rule enforcement, validation
+│ └── Dependencies: Security Subsystem
 └── Workflow Engine
-    ├── Components: AuthenticationWorkflow, MenuVerificationWorkflow
-    ├── Responsibilities: Complex workflow management
-    └── Dependencies: All subsystem packages
+ ├── Components: AuthenticationWorkflow, MenuVerificationWorkflow
+ ├── Responsibilities: Complex workflow management
+ └── Dependencies: All subsystem packages
 
 Interfaces:
 ├── IUseCaseController: Use case control interface
@@ -140,17 +140,17 @@ Purpose: Data persistence and database operations
 
 Sub-packages:
 ├── Repositories
-│   ├── Components: UserRepository, MenuRepository, RestaurantRepository
-│   ├── Responsibilities: Data access abstraction, CRUD operations
-│   └── Dependencies: Database, Cache
+│ ├── Components: UserRepository, MenuRepository, RestaurantRepository
+│ ├── Responsibilities: Data access abstraction, CRUD operations
+│ └── Dependencies: Database, Cache
 ├── Data Mappers
-│   ├── Components: UserMapper, MenuMapper, RestaurantMapper
-│   ├── Responsibilities: Object-relational mapping, data transformation
-│   └── Dependencies: Domain models
+│ ├── Components: UserMapper, MenuMapper, RestaurantMapper
+│ ├── Responsibilities: Object-relational mapping, data transformation
+│ └── Dependencies: Domain models
 └── Database Connections
-    ├── Components: ConnectionPool, TransactionManager
-    ├── Responsibilities: Database connection management, transaction handling
-    └── Dependencies: Database systems
+ ├── Components: ConnectionPool, TransactionManager
+ ├── Responsibilities: Database connection management, transaction handling
+ └── Dependencies: Database systems
 
 Interfaces:
 ├── IRepository: Repository interface
@@ -172,21 +172,21 @@ Purpose: Authentication, authorization, and security management
 
 Sub-packages:
 ├── Authentication Service
-│   ├── Components: LoginManager, SessionManager, TokenGenerator
-│   ├── Responsibilities: User authentication, session management
-│   └── Dependencies: Data Access Layer, Notification Subsystem
+│ ├── Components: LoginManager, SessionManager, TokenGenerator
+│ ├── Responsibilities: User authentication, session management
+│ └── Dependencies: Data Access Layer, Notification Subsystem
 ├── Authorization Service
-│   ├── Components: RoleManager, PermissionChecker, AccessController
-│   ├── Responsibilities: Access control, permission management
-│   └── Dependencies: Data Access Layer
+│ ├── Components: RoleManager, PermissionChecker, AccessController
+│ ├── Responsibilities: Access control, permission management
+│ └── Dependencies: Data Access Layer
 ├── Spam Protection Service
-│   ├── Components: ContentAnalyzer, BehaviorMonitor, MLDetector
-│   ├── Responsibilities: Spam detection, content filtering
-│   └── Dependencies: Data Access Layer, External Interfaces
+│ ├── Components: ContentAnalyzer, BehaviorMonitor, MLDetector
+│ ├── Responsibilities: Spam detection, content filtering
+│ └── Dependencies: Data Access Layer, External Interfaces
 └── Security Monitoring
-    ├── Components: AuditLogger, ThreatDetector, SecurityAlerts
-    ├── Responsibilities: Security monitoring, threat detection
-    └── Dependencies: Data Access Layer, Notification Subsystem
+ ├── Components: AuditLogger, ThreatDetector, SecurityAlerts
+ ├── Responsibilities: Security monitoring, threat detection
+ └── Dependencies: Data Access Layer, Notification Subsystem
 
 Interfaces:
 ├── IAuthenticationService: Authentication service interface
@@ -208,21 +208,21 @@ Purpose: Restaurant and menu data management
 
 Sub-packages:
 ├── Menu Service
-│   ├── Components: MenuBrowser, MenuSearch, MenuFilter
-│   ├── Responsibilities: Menu browsing, search, filtering
-│   └── Dependencies: Data Access Layer, Security Subsystem
+│ ├── Components: MenuBrowser, MenuSearch, MenuFilter
+│ ├── Responsibilities: Menu browsing, search, filtering
+│ └── Dependencies: Data Access Layer, Security Subsystem
 ├── Restaurant Service
-│   ├── Components: RestaurantManager, LocationService, CuisineClassifier
-│   ├── Responsibilities: Restaurant data management, location services
-│   └── Dependencies: Data Access Layer, External Interfaces
+│ ├── Components: RestaurantManager, LocationService, CuisineClassifier
+│ ├── Responsibilities: Restaurant data management, location services
+│ └── Dependencies: Data Access Layer, External Interfaces
 ├── Verification Service
-│   ├── Components: MenuVerifier, ContentValidator, AuthenticityChecker
-│   ├── Responsibilities: Menu verification, content validation
-│   └── Dependencies: Data Access Layer, Security Subsystem
+│ ├── Components: MenuVerifier, ContentValidator, AuthenticityChecker
+│ ├── Responsibilities: Menu verification, content validation
+│ └── Dependencies: Data Access Layer, Security Subsystem
 └── Content Moderation
-    ├── Components: ContentReviewer, ModerationQueue, ApprovalSystem
-    ├── Responsibilities: Content moderation, approval workflow
-    └── Dependencies: Data Access Layer, Security Subsystem
+ ├── Components: ContentReviewer, ModerationQueue, ApprovalSystem
+ ├── Responsibilities: Content moderation, approval workflow
+ └── Dependencies: Data Access Layer, Security Subsystem
 
 Interfaces:
 ├── IMenuService: Menu service interface
@@ -244,21 +244,21 @@ Purpose: User accounts and preferences management
 
 Sub-packages:
 ├── User Service
-│   ├── Components: UserRegistration, ProfileManager, AccountManager
-│   ├── Responsibilities: User account management, profile handling
-│   └── Dependencies: Data Access Layer, Security Subsystem
+│ ├── Components: UserRegistration, ProfileManager, AccountManager
+│ ├── Responsibilities: User account management, profile handling
+│ └── Dependencies: Data Access Layer, Security Subsystem
 ├── Favorites Service
-│   ├── Components: FavoritesManager, FavoritesOrganizer, FavoritesSharing
-│   ├── Responsibilities: Favorites management, organization
-│   └── Dependencies: Data Access Layer, Security Subsystem
+│ ├── Components: FavoritesManager, FavoritesOrganizer, FavoritesSharing
+│ ├── Responsibilities: Favorites management, organization
+│ └── Dependencies: Data Access Layer, Security Subsystem
 ├── Preferences Service
-│   ├── Components: SettingsManager, NotificationPreferences, PrivacySettings
-│   ├── Responsibilities: User preferences, settings management
-│   └── Dependencies: Data Access Layer, Security Subsystem
+│ ├── Components: SettingsManager, NotificationPreferences, PrivacySettings
+│ ├── Responsibilities: User preferences, settings management
+│ └── Dependencies: Data Access Layer, Security Subsystem
 └── User Analytics
-    ├── Components: UsageTracker, BehaviorAnalyzer, RecommendationEngine
-    ├── Responsibilities: User analytics, behavior analysis
-    └── Dependencies: Data Access Layer, Security Subsystem
+ ├── Components: UsageTracker, BehaviorAnalyzer, RecommendationEngine
+ ├── Responsibilities: User analytics, behavior analysis
+ └── Dependencies: Data Access Layer, Security Subsystem
 
 Interfaces:
 ├── IUserService: User service interface
@@ -280,21 +280,21 @@ Purpose: Communication and notification management
 
 Sub-packages:
 ├── Email Service
-│   ├── Components: EmailSender, TemplateEngine, EmailQueue
-│   ├── Responsibilities: Email delivery, template management
-│   └── Dependencies: External Interfaces, Data Access Layer
+│ ├── Components: EmailSender, TemplateEngine, EmailQueue
+│ ├── Responsibilities: Email delivery, template management
+│ └── Dependencies: External Interfaces, Data Access Layer
 ├── Notification Service
-│   ├── Components: InAppNotifications, PushNotifications, NotificationQueue
-│   ├── Responsibilities: In-app notifications, push notifications
-│   └── Dependencies: Data Access Layer, External Interfaces
+│ ├── Components: InAppNotifications, PushNotifications, NotificationQueue
+│ ├── Responsibilities: In-app notifications, push notifications
+│ └── Dependencies: Data Access Layer, External Interfaces
 ├── Real-time Service
-│   ├── Components: WebSocketManager, EventBroadcaster, ConnectionManager
-│   ├── Responsibilities: Real-time communication, WebSocket management
-│   └── Dependencies: Data Access Layer, External Interfaces
+│ ├── Components: WebSocketManager, EventBroadcaster, ConnectionManager
+│ ├── Responsibilities: Real-time communication, WebSocket management
+│ └── Dependencies: Data Access Layer, External Interfaces
 └── Template Manager
-    ├── Components: EmailTemplates, NotificationTemplates, TemplateEngine
-    ├── Responsibilities: Template management, template rendering
-    └── Dependencies: Data Access Layer, External Interfaces
+ ├── Components: EmailTemplates, NotificationTemplates, TemplateEngine
+ ├── Responsibilities: Template management, template rendering
+ └── Dependencies: Data Access Layer, External Interfaces
 
 Interfaces:
 ├── IEmailService: Email service interface
@@ -316,21 +316,21 @@ Purpose: External system integrations and interfaces
 
 Sub-packages:
 ├── Database Interfaces
-│   ├── Components: PostgreSQL, Redis, Elasticsearch
-│   ├── Responsibilities: Data persistence, caching, search
-│   └── Dependencies: None (external systems)
+│ ├── Components: PostgreSQL, Redis, Elasticsearch
+│ ├── Responsibilities: Data persistence, caching, search
+│ └── Dependencies: None (external systems)
 ├── Communication Interfaces
-│   ├── Components: EmailService, SMSService, PushNotificationService
-│   ├── Responsibilities: External communication services
-│   └── Dependencies: None (external systems)
+│ ├── Components: EmailService, SMSService, PushNotificationService
+│ ├── Responsibilities: External communication services
+│ └── Dependencies: None (external systems)
 ├── Payment Interfaces
-│   ├── Components: PaymentGateway, SubscriptionService
-│   ├── Responsibilities: Payment processing, subscription management
-│   └── Dependencies: None (external systems)
+│ ├── Components: PaymentGateway, SubscriptionService
+│ ├── Responsibilities: Payment processing, subscription management
+│ └── Dependencies: None (external systems)
 └── Third-party Services
-    ├── Components: MapService, SocialMediaPlatform, AnalyticsService
-    ├── Responsibilities: External service integrations
-    └── Dependencies: None (external systems)
+ ├── Components: MapService, SocialMediaPlatform, AnalyticsService
+ ├── Responsibilities: External service integrations
+ └── Dependencies: None (external systems)
 
 Interfaces:
 ├── IDatabase: Database interface
@@ -345,7 +345,7 @@ Dependencies:
 
 ---
 
-## 🔗 Package Relationships
+## Package Relationships
 
 ### **Dependency Relationships**
 ```
@@ -396,7 +396,7 @@ Package Compositions:
 
 ---
 
-## 📊 Package Metrics
+## Package Metrics
 
 ### **Package Size Metrics**
 ```
@@ -426,7 +426,7 @@ Package Coupling:
 
 ---
 
-## 🎯 Architectural Benefits
+## Architectural Benefits
 
 ### **Layered Architecture Benefits**
 ```
@@ -472,7 +472,7 @@ Testability:
 
 ---
 
-## 🔒 Security Considerations
+## Security Considerations
 
 ### **Package Security**
 ```

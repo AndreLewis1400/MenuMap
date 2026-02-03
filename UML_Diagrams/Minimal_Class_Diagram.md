@@ -1,19 +1,19 @@
 # MenuMap Minimal Class Diagram
 ## CEN4010 Software Engineering - Team 9
 
-**Author:** Andre Lewis (Software Architecture & Design Lead)  
-**Date:** [Current Date]  
-**Version:** 1.0  
+**Author:** Andre Lewis (Software Architecture & Design Lead) 
+**Date:** [Current Date] 
+**Version:** 1.0 
 
 ---
 
-## 🏗️ Minimal Class Diagram Overview
+## Minimal Class Diagram Overview
 
 This minimal class diagram shows all classes in the MenuMap system without attributes or methods, focusing on class relationships and design pattern identification.
 
 ---
 
-## 📋 Core Classes
+## Core Classes
 
 ### **User Management Classes**
 - **User** - Base class for all user types
@@ -78,7 +78,7 @@ This minimal class diagram shows all classes in the MenuMap system without attri
 
 ---
 
-## 🔗 Class Relationships
+## Class Relationships
 
 ### **Inheritance Relationships**
 ```
@@ -103,13 +103,13 @@ NotificationService
 ```
 Restaurant
 ├── Menu
-│   └── MenuItem
-│       └── Category
+│ └── MenuItem
+│ └── Category
 
 User
 ├── FavoritesManager
-│   ├── FavoriteRestaurant
-│   └── FavoriteMenuItem
+│ ├── FavoriteRestaurant
+│ └── FavoriteMenuItem
 
 MenuController
 ├── MenuManager
@@ -127,7 +127,7 @@ Menu ↔ MenuItem (contains)
 
 ---
 
-## 🎯 Design Pattern Identification
+## Design Pattern Identification
 
 ### **Observer Pattern**
 - **Subject**: MenuManager, UserManager, SecurityManager
@@ -146,7 +146,7 @@ Menu ↔ MenuItem (contains)
 
 ---
 
-## 📊 Class Responsibilities
+## Class Responsibilities
 
 ### **User Classes**
 - **User**: Base user functionality and common attributes
@@ -175,7 +175,7 @@ Menu ↔ MenuItem (contains)
 
 ---
 
-## 🔒 Security Considerations
+## Security Considerations
 
 ### **Authentication Flow**
 1. User → AuthenticationManager → SecurityToken
@@ -190,7 +190,7 @@ Menu ↔ MenuItem (contains)
 
 ---
 
-## 📋 Class Diagram Benefits
+## Class Diagram Benefits
 
 ### **Maintainability**
 - Clear separation of concerns

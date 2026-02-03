@@ -1,19 +1,19 @@
 # MenuMap Design Patterns
 ## CEN4010 Software Engineering - Team 9
 
-**Author:** Andre Lewis (Software Architecture & Design Lead)  
-**Date:** [Current Date]  
-**Version:** 1.0  
+**Author:** Andre Lewis (Software Architecture & Design Lead) 
+**Date:** [Current Date] 
+**Version:** 1.0 
 
 ---
 
-## 🎯 Design Patterns Overview
+## Design Patterns Overview
 
 The MenuMap application implements three key design patterns to ensure maintainable, scalable, and flexible code architecture.
 
 ---
 
-## 📋 Required Design Patterns (3+)
+## Required Design Patterns (3+)
 
 ### **1. Observer Pattern**
 **Purpose**: Handle real-time updates and notifications
@@ -59,7 +59,7 @@ The MenuMap application implements three key design patterns to ensure maintaina
 
 ---
 
-## 🏗️ Pattern Integration in Architecture
+## Pattern Integration in Architecture
 
 ### **Observer Pattern in Menu Management**
 ```
@@ -90,7 +90,7 @@ SearchContext
 
 ---
 
-## 📊 Pattern Benefits for MenuMap
+## Pattern Benefits for MenuMap
 
 ### **Observer Pattern Benefits:**
 1. **Real-time Updates**: Users get instant notifications of menu changes
@@ -112,7 +112,7 @@ SearchContext
 
 ---
 
-## 🔗 Pattern Relationships
+## Pattern Relationships
 
 ### **Observer + Factory Integration**
 - Factory creates Observer objects
@@ -131,7 +131,7 @@ SearchContext
 
 ---
 
-## 📋 Implementation Guidelines
+## Implementation Guidelines
 
 ### **Observer Pattern Implementation:**
 1. Define Subject interface with attach/detach/notify methods
@@ -156,7 +156,7 @@ SearchContext
 
 ---
 
-## 🎯 Pattern Selection Rationale
+## Pattern Selection Rationale
 
 ### **Why These Patterns?**
 1. **Observer**: Essential for real-time features in a restaurant app

@@ -1,24 +1,24 @@
 # UC-001: Browse Restaurant Menus
 ## MenuMap Application - Team 9
 
-**Use Case ID:** UC-001  
-**Use Case Name:** Browse Restaurant Menus  
-**Actor:** User  
-**Priority:** High  
-**Complexity:** Medium  
+**Use Case ID:** UC-001 
+**Use Case Name:** Browse Restaurant Menus 
+**Actor:** User 
+**Priority:** High 
+**Complexity:** Medium 
 
 ---
 
-## 📋 Use Case Description
+## Use Case Description
 
-**Primary Actor:** User  
-**Goal:** Browse and search restaurant menus to find dining options  
-**Scope:** MenuMap Application  
-**Level:** User Goal  
+**Primary Actor:** User 
+**Goal:** Browse and search restaurant menus to find dining options 
+**Scope:** MenuMap Application 
+**Level:** User Goal 
 
 ---
 
-## 🎯 Main Success Scenario
+## Main Success Scenario
 
 1. User opens the MenuMap application
 2. User enters search criteria (location, cuisine type, price range)
@@ -31,7 +31,7 @@
 
 ---
 
-## 🔄 Alternative Flows
+## Alternative Flows
 
 ### **A1: No Restaurants Found**
 - **A1.1:** System displays "No restaurants found" message
@@ -50,7 +50,7 @@
 
 ---
 
-## 📊 Preconditions
+## Preconditions
 
 - User has access to MenuMap application
 - System is operational and connected to database
@@ -58,7 +58,7 @@
 
 ---
 
-## 📈 Postconditions
+## Postconditions
 
 - User has viewed restaurant menus
 - System has logged user search activity
@@ -66,7 +66,7 @@
 
 ---
 
-## 🎨 Special Requirements
+## Special Requirements
 
 - **Performance:** Search results should appear within 2 seconds
 - **Usability:** Interface should be intuitive and mobile-friendly
@@ -74,7 +74,7 @@
 
 ---
 
-## 📱 Technology and Data Variations
+## Technology and Data Variations
 
 - **Web Interface:** Full-featured browsing experience
 - **Mobile Interface:** Touch-optimized interface with swipe gestures
@@ -82,7 +82,7 @@
 
 ---
 
-## 🔗 Related Information
+## Related Information
 
 **Related Use Cases:**
 - UC-002: Manage Favorites (extends browsing with favorites)

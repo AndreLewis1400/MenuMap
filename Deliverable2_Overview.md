@@ -1,11 +1,11 @@
 # MenuMap Deliverable 2 - Design Document
 ## CEN4010 Software Engineering - Team 9
 
-**Project:** MenuMap Application  
-**Team:** Team 9  
-**Software Architecture & Design Lead:** Andre Lewis  
-**Date:** [Current Date]  
-**Version:** 1.0  
+**Project:** MenuMap Application 
+**Team:** Team 9 
+**Software Architecture & Design Lead:** Andre Lewis 
+**Date:** [Current Date] 
+**Version:** 1.0 
 
 ---
 
@@ -21,7 +21,7 @@ Based on the deliverable 2 requirements, we will implement the following 7 use c
 
 ### **Core Use Cases (3 from Deliverable 1)**
 1. **UC-001: Browse Restaurant Menus** (Normal Use Case)
-2. **UC-002: Manage Favorites** (Normal Use Case)  
+2. **UC-002: Manage Favorites** (Normal Use Case) 
 3. **UC-003: Secure Password Reset** (Security Use Case)
 
 ### **Additional Use Cases (4 to be defined)**
@@ -55,25 +55,25 @@ Based on the deliverable 2 requirements, we will implement the following 7 use c
 ```
 Deliverable2_Design/
 ├── Architecture/
-│   ├── Package_Diagram.md
-│   ├── Subsystem_Decomposition.md
-│   ├── Hardware_Software_Mapping.md
-│   └── Security_Management.md
+│ ├── Package_Diagram.md
+│ ├── Subsystem_Decomposition.md
+│ ├── Hardware_Software_Mapping.md
+│ └── Security_Management.md
 ├── UML_Diagrams/
-│   ├── Use_Case_Diagram.md
-│   ├── Architecture_Package_Diagram.md
-│   ├── Minimal_Class_Diagram.md
-│   ├── Detailed_Class_Diagram.md
-│   ├── State_Machine_Diagram.md
-│   └── Sequence_Diagrams.md
+│ ├── Use_Case_Diagram.md
+│ ├── Architecture_Package_Diagram.md
+│ ├── Minimal_Class_Diagram.md
+│ ├── Detailed_Class_Diagram.md
+│ ├── State_Machine_Diagram.md
+│ └── Sequence_Diagrams.md
 ├── Design_Patterns/
-│   ├── Observer_Pattern.md
-│   ├── Factory_Pattern.md
-│   └── Strategy_Pattern.md
+│ ├── Observer_Pattern.md
+│ ├── Factory_Pattern.md
+│ └── Strategy_Pattern.md
 └── Documentation/
-    ├── Design_Document.md
-    ├── Meeting_Diary.md
-    └── OCL_Statements.md
+ ├── Design_Document.md
+ ├── Meeting_Diary.md
+ └── OCL_Statements.md
 ```
 
 ---

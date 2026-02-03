@@ -5,16 +5,16 @@
 
 ---
 
-## 🎯 QUICK REFERENCE
+## QUICK REFERENCE
 
-**Total Time:** 30 minutes (20 min presenting + 10 min Q&A)  
-**Alexandra's Slides:** Slides 1-7 (~4-5 minutes)  
-**Your Slides:** Slides 9-25 (~15-16 minutes)  
+**Total Time:** 30 minutes (20 min presenting + 10 min Q&A) 
+**Alexandra's Slides:** Slides 1-7 (~4-5 minutes) 
+**Your Slides:** Slides 9-25 (~15-16 minutes) 
 **Your Role:** Main Presenter (Architecture, Design, Testing, Summary)
 
 ---
 
-## 📋 YOUR SLIDE-BY-SLIDE TALKING POINTS
+## YOUR SLIDE-BY-SLIDE TALKING POINTS
 
 ### **TRANSITION FROM ALEXANDRA** (~10 seconds)
 
@@ -53,9 +53,9 @@
 
 **Architectural Patterns:**
 - "We implemented multiple architectural patterns:
-  - 3-Tier Architecture as our primary pattern
-  - MVC Pattern within the Presentation Tier
-  - Layered Architecture for separation of concerns"
+ - 3-Tier Architecture as our primary pattern
+ - MVC Pattern within the Presentation Tier
+ - Layered Architecture for separation of concerns"
 
 **Transition:**
 "Let me explain our data management approach."
@@ -69,24 +69,24 @@
 
 **Primary Entities:**
 - "Our database has three primary entities:
-  
-  **Users:**
-  - Stores user accounts and authentication information
-  - Attributes include: userId, email, password (hashed), firstName, lastName, accountStatus, emailVerified
-  
-  **Restaurants:**
-  - Stores restaurant information and details
-  - Attributes include: restaurantId, name, address, phone, status, ownerUserId
-  
-  **MenuItems:**
-  - Stores individual menu items with descriptions and prices
-  - Attributes include: menuItemId, restaurantId, itemName, description, price, category, available"
+ 
+ **Users:**
+ - Stores user accounts and authentication information
+ - Attributes include: userId, email, password (hashed), firstName, lastName, accountStatus, emailVerified
+ 
+ **Restaurants:**
+ - Stores restaurant information and details
+ - Attributes include: restaurantId, name, address, phone, status, ownerUserId
+ 
+ **MenuItems:**
+ - Stores individual menu items with descriptions and prices
+ - Attributes include: menuItemId, restaurantId, itemName, description, price, category, available"
 
 **Relationships:**
 - "We have three key relationships:
-  - Users to Restaurants: One-to-Many (Owner relationship)
-  - Restaurants to MenuItems: One-to-Many
-  - Users to Sessions: One-to-Many"
+ - Users to Restaurants: One-to-Many (Owner relationship)
+ - Restaurants to MenuItems: One-to-Many
+ - Users to Sessions: One-to-Many"
 
 **Transition:**
 "Now let me explain how we access and secure this data."
@@ -97,30 +97,30 @@
 
 **Data Access Objects (DAOs):**
 - "We use DAOs to abstract database operations:
-  
-  **MenuDAO:**
-  - Handles menu data operations
-  - Methods: findMenuByRestaurantId(), saveMenu(), updateMenu()
-  
-  **UserDAO:**
-  - Manages user data operations
-  - Methods: findUserByEmail(), saveUser(), updateUser()
-  
-  **RestaurantDAO:**
-  - Handles restaurant data operations
-  - Methods: findRestaurantById(), saveRestaurant(), updateRestaurant()"
+ 
+ **MenuDAO:**
+ - Handles menu data operations
+ - Methods: findMenuByRestaurantId(), saveMenu(), updateMenu()
+ 
+ **UserDAO:**
+ - Manages user data operations
+ - Methods: findUserByEmail(), saveUser(), updateUser()
+ 
+ **RestaurantDAO:**
+ - Handles restaurant data operations
+ - Methods: findRestaurantById(), saveRestaurant(), updateRestaurant()"
 
 **Data Integrity:**
 - "We ensure data integrity through:
-  - Foreign key constraints for referential integrity
-  - Transaction management for data consistency
-  - Validation at service layer before persistence"
+ - Foreign key constraints for referential integrity
+ - Transaction management for data consistency
+ - Validation at service layer before persistence"
 
 **Data Security:**
 - "We implement multiple security measures:
-  - Passwords stored as hashed values using BCrypt
-  - Sensitive data encrypted in transit using HTTPS
-  - Parameterized queries to prevent SQL injection"
+ - Passwords stored as hashed values using BCrypt
+ - Sensitive data encrypted in transit using HTTPS
+ - Parameterized queries to prevent SQL injection"
 
 **Transition:**
 "Now let me discuss our security and privacy measures."
@@ -131,25 +131,25 @@
 
 **Authentication Mechanisms:**
 - "We implement four authentication mechanisms:
-  - Email/User ID and password authentication
-  - Secure password hashing using BCrypt algorithm
-  - Session management with secure tokens
-  - Password reset with time-limited tokens"
+ - Email/User ID and password authentication
+ - Secure password hashing using BCrypt algorithm
+ - Session management with secure tokens
+ - Password reset with time-limited tokens"
 
 **Access Control:**
 - "We use Role-Based Access Control (RBAC):
-  - Customer role: Can browse menus and manage favorites
-  - Restaurant Owner role: Can manage own restaurant menus
-  - Administrator role: Can verify menus and manage system
+ - Customer role: Can browse menus and manage favorites
+ - Restaurant Owner role: Can manage own restaurant menus
+ - Administrator role: Can verify menus and manage system
 - Authorization checks occur at the service layer
 - Unauthorized access attempts are logged"
 
 **Session Management:**
 - "We implement secure session management:
-  - Secure session tokens
-  - Session timeout after inactivity
-  - Session invalidation on logout
-  - Protection against session hijacking"
+ - Secure session tokens
+ - Session timeout after inactivity
+ - Session invalidation on logout
+ - Protection against session hijacking"
 
 **Transition:**
 "Let me continue with data encryption and privacy protection."
@@ -160,25 +160,25 @@
 
 **Data Encryption:**
 - "We encrypt data in multiple ways:
-  - Passwords: BCrypt hashing (one-way encryption)
-  - Data in transit: HTTPS/TLS encryption
-  - Sensitive data: Encrypted at rest in database
-  - Reset tokens: Cryptographically secure random generation"
+ - Passwords: BCrypt hashing (one-way encryption)
+ - Data in transit: HTTPS/TLS encryption
+ - Sensitive data: Encrypted at rest in database
+ - Reset tokens: Cryptographically secure random generation"
 
 **Privacy Protection:**
 - "We protect user privacy through:
-  - User data access restricted to authorized users
-  - No information leakage in error messages
-  - Secure password reset process
-  - Email verification required for account activation"
+ - User data access restricted to authorized users
+ - No information leakage in error messages
+ - Secure password reset process
+ - Email verification required for account activation"
 
 **Security Measures:**
 - "We implement comprehensive security measures:
-  - SQL injection prevention through parameterized queries
-  - Input validation and sanitization
-  - XSS (Cross-Site Scripting) prevention
-  - CSRF (Cross-Site Request Forgery) protection
-  - Account lockout after multiple failed login attempts"
+ - SQL injection prevention through parameterized queries
+ - Input validation and sanitization
+ - XSS (Cross-Site Scripting) prevention
+ - CSRF (Cross-Site Request Forgery) protection
+ - Account lockout after multiple failed login attempts"
 
 **Transition:**
 "Now let me show you our class diagrams, starting with the Presentation Layer."
@@ -192,14 +192,14 @@
 
 **Presentation Layer Classes:**
 - "We have three main controllers:
-  - **MenuController**: Handles menu browsing requests
-  - **UserController**: Manages authentication and user management
-  - **RestaurantController**: Handles restaurant operations"
+ - **MenuController**: Handles menu browsing requests
+ - **UserController**: Manages authentication and user management
+ - **RestaurantController**: Handles restaurant operations"
 
 **Design Patterns:**
 - "We identified two design patterns in this layer:
-  - **MVC Pattern**: Model-View-Controller separation
-  - **Front Controller Pattern**: Centralized request handling"
+ - **MVC Pattern**: Model-View-Controller separation
+ - **Front Controller Pattern**: Centralized request handling"
 
 **Transition:**
 "Now let me show you the Business Logic Layer."
@@ -213,15 +213,15 @@
 
 **Business Logic Layer Classes:**
 - "We have four main services:
-  - **MenuService**: Menu business logic and validation
-  - **UserService**: User authentication and management logic
-  - **RestaurantService**: Restaurant management logic
-  - **VerificationService**: Menu verification processes"
+ - **MenuService**: Menu business logic and validation
+ - **UserService**: User authentication and management logic
+ - **RestaurantService**: Restaurant management logic
+ - **VerificationService**: Menu verification processes"
 
 **Design Patterns:**
 - "We identified two design patterns in this layer:
-  - **Service Layer Pattern**: Encapsulates business logic
-  - **Strategy Pattern**: Different validation strategies"
+ - **Service Layer Pattern**: Encapsulates business logic
+ - **Strategy Pattern**: Different validation strategies"
 
 **Transition:**
 "Now let me show you the Data Access Layer."
@@ -235,20 +235,20 @@
 
 **Data Access Layer Classes:**
 - "We have three main DAOs:
-  - **MenuDAO**: Database operations for menus
-  - **UserDAO**: Database operations for users
-  - **RestaurantDAO**: Database operations for restaurants"
+ - **MenuDAO**: Database operations for menus
+ - **UserDAO**: Database operations for users
+ - **RestaurantDAO**: Database operations for restaurants"
 
 **Data Models:**
 - "Our data models include:
-  - **User**: User entity with authentication data
-  - **Restaurant**: Restaurant entity with business information
-  - **MenuItem**: Menu item entity with product details"
+ - **User**: User entity with authentication data
+ - **Restaurant**: Restaurant entity with business information
+ - **MenuItem**: Menu item entity with product details"
 
 **Design Patterns:**
 - "We identified two design patterns in this layer:
-  - **DAO Pattern**: Abstracts database access operations
-  - **Repository Pattern**: Encapsulates data access logic"
+ - **DAO Pattern**: Abstracts database access operations
+ - **Repository Pattern**: Encapsulates data access logic"
 
 **Transition:**
 "Now let me show you how these layers interact in a sequence diagram."
@@ -272,11 +272,11 @@
 
 **Lifelines:**
 - "The diagram shows five lifelines:
-  - User (Actor)
-  - MenuController (Presentation Layer)
-  - MenuService (Business Logic Layer)
-  - MenuDAO (Data Access Layer)
-  - Database (External System)"
+ - User (Actor)
+ - MenuController (Presentation Layer)
+ - MenuService (Business Logic Layer)
+ - MenuDAO (Data Access Layer)
+ - Database (External System)"
 
 **Key Point:**
 - "This demonstrates how our 3-tier architecture separates concerns and allows data to flow cleanly through each layer."
@@ -302,8 +302,8 @@
 
 **Data Model (Point to Table):**
 - "Before the test, we have:
-  - Restaurant ID 101: Joe's Pizza (Active)
-  - Three menu items: Margherita Pizza ($12.99), Pepperoni Pizza ($14.99), Caesar Salad ($8.99)"
+ - Restaurant ID 101: Joe's Pizza (Active)
+ - Three menu items: Margherita Pizza ($12.99), Pepperoni Pizza ($14.99), Caesar Salad ($8.99)"
 
 **Test Steps (4 steps):**
 1. "User navigates to MenuMap application"
@@ -317,7 +317,7 @@
 - "Categories properly organized"
 
 **Result:**
-- "✅ PASS - Test passed successfully"
+- " PASS - Test passed successfully"
 
 **Transition:**
 "Now let me show you a rainy day scenario."
@@ -356,7 +356,7 @@
 - "No data corruption"
 
 **Result:**
-- "✅ PASS - Test passed successfully"
+- " PASS - Test passed successfully"
 
 **Transition:**
 "Now I'll hand it over to Kamal to present the test cases for our security use case."
@@ -389,8 +389,8 @@
 
 **Data Model (Point to Table):**
 - "Before the test, we have four menu items:
-  - Two entrees: Margherita Pizza, Pepperoni Pizza
-  - Two appetizers: Caesar Salad, Garlic Bread"
+ - Two entrees: Margherita Pizza, Pepperoni Pizza
+ - Two appetizers: Caesar Salad, Garlic Bread"
 
 **Test Steps (3 steps):**
 1. "User views restaurant menu"
@@ -403,7 +403,7 @@
 - "Filter works correctly"
 
 **Result:**
-- "✅ PASS - Test passed successfully"
+- " PASS - Test passed successfully"
 
 **Transition:**
 "Kamal will now present the additional test case for UC-003."
@@ -458,10 +458,10 @@
 
 **During Q&A:**
 - **Direct questions to appropriate team members:**
-  - Architecture/Design questions → You (Andre)
-  - Security questions → Alexandra
-  - Test case questions → Kamal
-  - General questions → Any team member
+ - Architecture/Design questions → You (Andre)
+ - Security questions → Alexandra
+ - Test case questions → Kamal
+ - General questions → Any team member
 
 **Closing Statement:**
 "Thank you for your attention. If you have any further questions, please feel free to contact us.
@@ -471,7 +471,7 @@
 
 ---
 
-## 🎤 PRESENTATION TIPS
+## PRESENTATION TIPS
 
 ### **Before You Start:**
 1. **Take a deep breath** - You've got this!
@@ -499,7 +499,7 @@
 
 ---
 
-## ⏱️ TIME MANAGEMENT
+## TIME MANAGEMENT
 
 **Your Total Time: ~15-16 minutes**
 
@@ -521,7 +521,7 @@
 
 ---
 
-## ✅ FINAL CHECKLIST
+## FINAL CHECKLIST
 
 **Before Presentation:**
 - [ ] Review all your slides (9-25) one more time
@@ -548,11 +548,11 @@
 - [ ] Thank the audience
 - [ ] Be ready for Q&A
 - [ ] Support team members during Q&A
-- [ ] Celebrate when done! 🎉
+- [ ] Celebrate when done! 
 
 ---
 
-## 🎯 KEY MESSAGES TO EMPHASIZE
+## KEY MESSAGES TO EMPHASIZE
 
 1. **Complete Implementation** - All use cases implemented and tested
 2. **Strong Architecture** - Well-designed 3-tier architecture
@@ -562,7 +562,7 @@
 
 ---
 
-## 💪 CONFIDENCE BOOSTERS
+## CONFIDENCE BOOSTERS
 
 - **You know this material** - You've been working on it all semester
 - **You're the team lead** - You've coordinated everything
@@ -572,7 +572,7 @@
 
 ---
 
-## 📋 YOUR SLIDES SUMMARY
+## YOUR SLIDES SUMMARY
 
 **Slides You're Presenting:**
 - Slide 9: Software Architecture Diagram
@@ -594,8 +594,8 @@
 
 ---
 
-**GOOD LUCK! YOU'VE GOT THIS! 🚀**
+**GOOD LUCK! YOU'VE GOT THIS! **
 
 **Presentation Time: 4:15pm Today**
 
-**Break a leg! (But not literally 😊)**
+**Break a leg! (But not literally )**

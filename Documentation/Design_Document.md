@@ -1,11 +1,11 @@
 # MenuMap Application - Design Document
 ## CEN4010 Software Engineering - Team 9
 
-**Project:** MenuMap Application  
-**Team:** Team 9  
-**Software Architecture & Design Lead:** Andre Lewis  
-**Date:** [Current Date]  
-**Version:** 1.0  
+**Project:** MenuMap Application 
+**Team:** Team 9 
+**Software Architecture & Design Lead:** Andre Lewis 
+**Date:** [Current Date] 
+**Version:** 1.0 
 
 ---
 
@@ -75,17 +75,17 @@ MenuMap serves as a digital bridge between restaurants and customers, providing 
 #### **Primary Pattern: Layered Architecture**
 ```
 ┌─────────────────────────────────────┐
-│           Presentation Layer        │
-│    (WebInterface, MobileInterface)  │
+│ Presentation Layer │
+│ (WebInterface, MobileInterface) │
 ├─────────────────────────────────────┤
-│          Business Logic Layer       │
-│   (Controllers, Services, Rules)    │
+│ Business Logic Layer │
+│ (Controllers, Services, Rules) │
 ├─────────────────────────────────────┤
-│          Data Access Layer          │
-│    (Repositories, Mappers, Cache)   │
+│ Data Access Layer │
+│ (Repositories, Mappers, Cache) │
 ├─────────────────────────────────────┤
-│            Database Layer           │
-│        (PostgreSQL Database)        │
+│ Database Layer │
+│ (PostgreSQL Database) │
 └─────────────────────────────────────┘
 ```
 
@@ -97,11 +97,11 @@ MenuMap serves as a digital bridge between restaurants and customers, providing 
 
 #### **Secondary Pattern: Model-View-Controller (MVC)**
 ```
-┌─────────────┐    ┌─────────────┐    ┌─────────────┐
-│    Model    │◄──►│ Controller  │◄──►│    View     │
-│ (Business   │    │ (Business   │    │ (User       │
-│  Logic)     │    │  Logic)     │    │ Interface)  │
-└─────────────┘    └─────────────┘    └─────────────┘
+┌─────────────┐ ┌─────────────┐ ┌─────────────┐
+│ Model │◄──►│ Controller │◄──►│ View │
+│ (Business │ │ (Business │ │ (User │
+│ Logic) │ │ Logic) │ │ Interface) │
+└─────────────┘ └─────────────┘ └─────────────┘
 ```
 
 **Benefits:**
@@ -248,17 +248,17 @@ System architecture showing:
 **Implementation**: Menu updates and real-time notifications
 ```java
 public class MenuManager implements Subject {
-    private List<Observer> observers = new ArrayList<>();
-    
-    public void attach(Observer observer) {
-        observers.add(observer);
-    }
-    
-    public void notifyObservers() {
-        for (Observer observer : observers) {
-            observer.update(this);
-        }
-    }
+ private List<Observer> observers = new ArrayList<>();
+ 
+ public void attach(Observer observer) {
+ observers.add(observer);
+ }
+ 
+ public void notifyObservers() {
+ for (Observer observer : observers) {
+ observer.update(this);
+ }
+ }
 }
 ```
 
@@ -271,15 +271,15 @@ public class MenuManager implements Subject {
 **Implementation**: User and menu object creation
 ```java
 public class UserFactory {
-    public static User createUser(UserType type, UserData data) {
-        switch (type) {
-            case REGULAR: return new RegularUser(data);
-            case PREMIUM: return new PremiumUser(data);
-            case RESTAURANT_OWNER: return new RestaurantOwner(data);
-            case ADMIN: return new Administrator(data);
-            default: throw new IllegalArgumentException("Invalid user type");
-        }
-    }
+ public static User createUser(UserType type, UserData data) {
+ switch (type) {
+ case REGULAR: return new RegularUser(data);
+ case PREMIUM: return new PremiumUser(data);
+ case RESTAURANT_OWNER: return new RestaurantOwner(data);
+ case ADMIN: return new Administrator(data);
+ default: throw new IllegalArgumentException("Invalid user type");
+ }
+ }
 }
 ```
 
@@ -292,15 +292,15 @@ public class UserFactory {
 **Implementation**: Search algorithms and spam detection
 ```java
 public class SearchContext {
-    private SearchStrategy strategy;
-    
-    public void setStrategy(SearchStrategy strategy) {
-        this.strategy = strategy;
-    }
-    
-    public List<SearchResult> executeSearch(String query) {
-        return strategy.search(query);
-    }
+ private SearchStrategy strategy;
+ 
+ public void setStrategy(SearchStrategy strategy) {
+ this.strategy = strategy;
+ }
+ 
+ public List<SearchResult> executeSearch(String query) {
+ return strategy.search(query);
+ }
 }
 ```
 

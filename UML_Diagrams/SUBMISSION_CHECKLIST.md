@@ -4,35 +4,35 @@
 
 ### Requirements Document
 - [ ] **Software Requirements Document (SRD)** completed
-  - [ ] All sections filled out (Introduction, Overall Description, System Features, etc.)
-  - [ ] Use cases properly documented (TM901, TM902, Password Reset, etc.)
-  - [ ] Functional requirements numbered and detailed
-  - [ ] Non-functional requirements specified
-  - [ ] Document formatted professionally
-  - [ ] Team information and version included
+ - [ ] All sections filled out (Introduction, Overall Description, System Features, etc.)
+ - [ ] Use cases properly documented (TM901, TM902, Password Reset, etc.)
+ - [ ] Functional requirements numbered and detailed
+ - [ ] Non-functional requirements specified
+ - [ ] Document formatted professionally
+ - [ ] Team information and version included
 
 ### Eclipse Papyrus UML Project
 - [ ] **Papyrus project created** in Eclipse
 - [ ] **Use Case Diagram** completed
-  - [ ] All actors identified (User, Restaurant Owner, Administrator)
-  - [ ] All use cases included (TM901, TM902, Password Reset, etc.)
-  - [ ] Relationships properly defined
+ - [ ] All actors identified (User, Restaurant Owner, Administrator)
+ - [ ] All use cases included (TM901, TM902, Password Reset, etc.)
+ - [ ] Relationships properly defined
 - [ ] **Class Diagram** completed
-  - [ ] Key classes identified (User, Restaurant, MenuItem, etc.)
-  - [ ] Relationships and associations defined
-  - [ ] Attributes and methods specified
+ - [ ] Key classes identified (User, Restaurant, MenuItem, etc.)
+ - [ ] Relationships and associations defined
+ - [ ] Attributes and methods specified
 - [ ] **Sequence Diagrams** completed
-  - [ ] User Login Process
-  - [ ] Menu Verification Process
-  - [ ] Spam Detection Process
-  - [ ] Password Reset Process
+ - [ ] User Login Process
+ - [ ] Menu Verification Process
+ - [ ] Spam Detection Process
+ - [ ] Password Reset Process
 - [ ] **Activity Diagrams** completed
-  - [ ] User Registration Flow
-  - [ ] Menu Search Flow
-  - [ ] Favorites Management Flow
+ - [ ] User Registration Flow
+ - [ ] Menu Search Flow
+ - [ ] Favorites Management Flow
 - [ ] **Component Diagram** completed
-  - [ ] System components identified
-  - [ ] Interfaces and dependencies shown
+ - [ ] System components identified
+ - [ ] Interfaces and dependencies shown
 - [ ] **Export diagrams** as PNG/PDF for documentation
 
 ### Presentation
@@ -46,9 +46,9 @@
 
 ### Final Submission Package
 - [ ] **Zipped file** containing:
-  - [ ] Requirements Document (PDF or Word)
-  - [ ] Eclipse Papyrus UML Project (entire project folder)
-  - [ ] Presentation (PowerPoint or PDF)
+ - [ ] Requirements Document (PDF or Word)
+ - [ ] Eclipse Papyrus UML Project (entire project folder)
+ - [ ] Presentation (PowerPoint or PDF)
 - [ ] **File naming** follows course requirements
 - [ ] **Submission deadline** met
 - [ ] **Team leader** submits on behalf of team
@@ -72,11 +72,11 @@
 ```
 MenuMap_Project_Submission.zip
 ├── Requirements_Document/
-│   └── Software_Requirements_Document.pdf
+│ └── Software_Requirements_Document.pdf
 ├── UML_Design/
-│   └── MenuMap_UML_Project/ (Eclipse Papyrus project)
+│ └── MenuMap_UML_Project/ (Eclipse Papyrus project)
 └── Presentation/
-    └── MenuMap_Presentation.pptx
+ └── MenuMap_Presentation.pptx
 ```
 
 ## Next Steps
@@ -93,6 +93,6 @@ MenuMap_Project_Submission.zip
 - **Deadlines**: [List all important dates]
 
 ---
-*Checklist completed by: Andre Lewis*  
-*Date: [Current Date]*  
+*Checklist completed by: Andre Lewis* 
+*Date: [Current Date]* 
 *Status: Ready for submission*

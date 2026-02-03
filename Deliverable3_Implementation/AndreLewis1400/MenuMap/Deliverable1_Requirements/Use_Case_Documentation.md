@@ -1,28 +1,28 @@
 # MenuMap Use Case Documentation
 ## CEN4010 Software Engineering - Team 9
 
-**Project:** MenuMap Application  
-**Team:** Team 9  
-**Project Lead:** Alfonso Oramas Jr.  
-**Document Author:** Andre Lewis (UML Diagrams Coordinator)  
-**Date:** [Current Date]  
-**Version:** 1.0  
+**Project:** MenuMap Application 
+**Team:** Team 9 
+**Project Lead:** Alfonso Oramas Jr. 
+**Document Author:** Andre Lewis (UML Diagrams Coordinator) 
+**Date:** [Current Date] 
+**Version:** 1.0 
 
 ---
 
-## 📋 Use Case Overview
+## Use Case Overview
 
 This document contains three detailed use cases for the MenuMap application as required for the CEN4010 Software Engineering course:
 
 1. **UC-001: Browse Restaurant Menus** (Normal Use Case)
-2. **UC-002: Manage Favorites** (Normal Use Case)  
+2. **UC-002: Manage Favorites** (Normal Use Case) 
 3. **UC-003: Secure Password Reset** (Security Use Case)
 
 Each use case includes detailed descriptions, actors, preconditions, main flow, alternative flows, and postconditions.
 
 ---
 
-## 🍽️ UC-001: Browse Restaurant Menus
+## UC-001: Browse Restaurant Menus
 
 ### Use Case Information
 - **Use Case ID**: UC-001
@@ -98,7 +98,7 @@ This use case describes how a user browses and searches for restaurant menus wit
 
 ---
 
-## ⭐ UC-002: Manage Favorites
+## UC-002: Manage Favorites
 
 ### Use Case Information
 - **Use Case ID**: UC-002
@@ -126,10 +126,10 @@ This use case describes how a registered user manages their favorite restaurants
 3. User navigates to the "My Favorites" section
 4. System displays the user's current favorites organized by category
 5. User can perform one of the following actions:
-   - **Add to Favorites**: User selects a restaurant or menu item and clicks "Add to Favorites"
-   - **Remove from Favorites**: User selects a favorite item and clicks "Remove"
-   - **Organize Favorites**: User creates custom categories or moves items between categories
-   - **View Favorites**: User browses through their saved favorites
+ - **Add to Favorites**: User selects a restaurant or menu item and clicks "Add to Favorites"
+ - **Remove from Favorites**: User selects a favorite item and clicks "Remove"
+ - **Organize Favorites**: User creates custom categories or moves items between categories
+ - **View Favorites**: User browses through their saved favorites
 6. System processes the user's action
 7. System updates the user's favorites list
 8. System displays confirmation of the action
@@ -188,7 +188,7 @@ This use case describes how a registered user manages their favorite restaurants
 
 ---
 
-## 🔒 UC-003: Secure Password Reset
+## UC-003: Secure Password Reset
 
 ### Use Case Information
 - **Use Case ID**: UC-003
@@ -320,7 +320,7 @@ This use case describes the secure password reset functionality that prevents un
 
 ---
 
-## 📊 Use Case Summary
+## Use Case Summary
 
 | Use Case ID | Name | Type | Priority | Complexity | Security Level |
 |-------------|------|------|----------|------------|----------------|
@@ -330,7 +330,7 @@ This use case describes the secure password reset functionality that prevents un
 
 ---
 
-## 🔗 Related Documentation
+## Related Documentation
 
 - **Software Requirements Document (SRD)**: Detailed functional and non-functional requirements
 - **UML Diagrams**: Visual representations of use cases and system interactions
