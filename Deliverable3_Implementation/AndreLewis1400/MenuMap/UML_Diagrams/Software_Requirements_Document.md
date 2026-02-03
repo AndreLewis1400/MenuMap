@@ -1,10 +1,10 @@
 # Software Requirements Document (SRD)
 ## MenuMap Application
 
-**Team:** Team 9  
-**Document Editor & Diagram Coordinator:** Andre Lewis  
-**Date:** [Current Date]  
-**Version:** 1.0  
+**Team:** Team 9 
+**Document Editor & Diagram Coordinator:** Andre Lewis 
+**Date:** [Current Date] 
+**Version:** 1.0 
 
 ---
 
@@ -236,6 +236,6 @@ The primary functions of MenuMap include:
 
 ---
 
-**Document Status**: Draft  
-**Next Review Date**: [Date]  
+**Document Status**: Draft 
+**Next Review Date**: [Date] 
 **Approval**: [Team Leader Signature Required]

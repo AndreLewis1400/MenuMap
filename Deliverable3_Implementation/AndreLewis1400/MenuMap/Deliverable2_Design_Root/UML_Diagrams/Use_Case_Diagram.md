@@ -1,78 +1,78 @@
 # MenuMap Use Case Diagram
 ## CEN4010 Software Engineering - Team 9
 
-**Author:** Andre Lewis (Software Architecture & Design Lead)  
-**Date:** [Current Date]  
-**Version:** 1.0  
+**Author:** Andre Lewis (Software Architecture & Design Lead) 
+**Date:** [Current Date] 
+**Version:** 1.0 
 
 ---
 
-## 🎯 Use Case Diagram Overview
+## Use Case Diagram Overview
 
 This document defines the comprehensive use case diagram for the MenuMap application, covering all 7 selected use cases for implementation. The use cases are categorized into Normal Use Cases and Security Use Cases, with detailed actor definitions and relationships.
 
 ---
 
-## 👥 Actors Definition
+## Actors Definition
 
 ### **Primary Actors**
 ```
 User Types:
 ├── Guest User
-│   ├── Description: Unregistered user browsing the application
-│   ├── Permissions: Limited browsing, no personalization
-│   ├── Goals: Explore restaurants and menus
-│   └── Use Cases: UC-001 (Browse Restaurant Menus)
+│ ├── Description: Unregistered user browsing the application
+│ ├── Permissions: Limited browsing, no personalization
+│ ├── Goals: Explore restaurants and menus
+│ └── Use Cases: UC-001 (Browse Restaurant Menus)
 ├── Registered User
-│   ├── Description: Authenticated user with account
-│   ├── Permissions: Full browsing, favorites, reviews
-│   ├── Goals: Personalized restaurant discovery
-│   └── Use Cases: UC-001, UC-002, UC-004
+│ ├── Description: Authenticated user with account
+│ ├── Permissions: Full browsing, favorites, reviews
+│ ├── Goals: Personalized restaurant discovery
+│ └── Use Cases: UC-001, UC-002, UC-004
 ├── Premium User
-│   ├── Description: Paid subscriber with enhanced features
-│   ├── Permissions: Advanced search, priority support
-│   ├── Goals: Enhanced restaurant discovery experience
-│   └── Use Cases: UC-001, UC-002, UC-004
+│ ├── Description: Paid subscriber with enhanced features
+│ ├── Permissions: Advanced search, priority support
+│ ├── Goals: Enhanced restaurant discovery experience
+│ └── Use Cases: UC-001, UC-002, UC-004
 ├── Restaurant Owner
-│   ├── Description: Business owner managing restaurant data
-│   ├── Permissions: Menu management, analytics, reviews
-│   ├── Goals: Manage restaurant presence and menu data
-│   └── Use Cases: UC-001, UC-004, UC-007
+│ ├── Description: Business owner managing restaurant data
+│ ├── Permissions: Menu management, analytics, reviews
+│ ├── Goals: Manage restaurant presence and menu data
+│ └── Use Cases: UC-001, UC-004, UC-007
 └── System Administrator
-    ├── Description: Technical administrator managing system
-    ├── Permissions: Full system access, user management
-    ├── Goals: System maintenance and user support
-    └── Use Cases: All use cases (administrative access)
+ ├── Description: Technical administrator managing system
+ ├── Permissions: Full system access, user management
+ ├── Goals: System maintenance and user support
+ └── Use Cases: All use cases (administrative access)
 ```
 
 ### **Secondary Actors**
 ```
 External Systems:
 ├── Email Service
-│   ├── Description: External email delivery service
-│   ├── Purpose: Send notifications and confirmations
-│   └── Use Cases: UC-003, UC-004
+│ ├── Description: External email delivery service
+│ ├── Purpose: Send notifications and confirmations
+│ └── Use Cases: UC-003, UC-004
 ├── SMS Service
-│   ├── Description: External SMS delivery service
-│   ├── Purpose: Send OTP and notifications
-│   └── Use Cases: UC-003, UC-004
+│ ├── Description: External SMS delivery service
+│ ├── Purpose: Send OTP and notifications
+│ └── Use Cases: UC-003, UC-004
 ├── Payment Gateway
-│   ├── Description: External payment processing service
-│   ├── Purpose: Process subscription payments
-│   └── Use Cases: UC-004 (Premium subscription)
+│ ├── Description: External payment processing service
+│ ├── Purpose: Process subscription payments
+│ └── Use Cases: UC-004 (Premium subscription)
 ├── Map Service
-│   ├── Description: External mapping and geolocation service
-│   ├── Purpose: Provide location-based services
-│   └── Use Cases: UC-001, UC-007
+│ ├── Description: External mapping and geolocation service
+│ ├── Purpose: Provide location-based services
+│ └── Use Cases: UC-001, UC-007
 └── Social Media Platform
-    ├── Description: External social media integration
-    ├── Purpose: Social login and sharing
-    └── Use Cases: UC-004, UC-002
+ ├── Description: External social media integration
+ ├── Purpose: Social login and sharing
+ └── Use Cases: UC-004, UC-002
 ```
 
 ---
 
-## 📋 Use Cases Specification
+## Use Cases Specification
 
 ### **UC-001: Browse Restaurant Menus**
 ```
@@ -374,7 +374,7 @@ Exceptions:
 
 ---
 
-## 🔗 Use Case Relationships
+## Use Case Relationships
 
 ### **Include Relationships**
 ```
@@ -461,7 +461,7 @@ Use Case Generalizations:
 
 ---
 
-## 📊 Use Case Priority Matrix
+## Use Case Priority Matrix
 
 ### **Priority Classification**
 ```
@@ -501,7 +501,7 @@ Phase 3 (Security Features):
 
 ---
 
-## 🎯 Use Case Success Criteria
+## Use Case Success Criteria
 
 ### **Functional Requirements**
 ```

@@ -3,7 +3,7 @@
 
 ---
 
-## 📍 WHERE TO ADD DIAGRAMS
+## WHERE TO ADD DIAGRAMS
 
 ### **Chapter 5: Software Architecture**
 
@@ -110,7 +110,7 @@ The system uses sequence diagrams to illustrate interactions between components.
 
 ---
 
-## 📋 WHERE YOUR TEST CASES ARE
+## WHERE YOUR TEST CASES ARE
 
 ### **Chapter 7: Testing Process**
 
@@ -119,36 +119,36 @@ The system uses sequence diagrams to illustrate interactions between components.
 **Your Test Cases Are Already in the Document:**
 
 1. **UC-001: Browse Restaurant Menus** (8 test cases)
-   - **Location:** Lines ~434-498
-   - **Test Cases:**
-     - TC-001-01: Successful Menu Browse (Sunny Day)
-     - TC-001-02: Browse Menu with Filters (Sunny Day)
-     - TC-001-03: Restaurant Not Found (Rainy Day)
-     - TC-001-04: Menu Not Available (Rainy Day)
-     - TC-001-05: Database Connection Error (Rainy Day)
-     - TC-001-06: Invalid Search Input (Rainy Day)
-     - TC-001-07: Timeout During Menu Load (Rainy Day)
-     - TC-001-08: Restaurant Inactive/Closed (Rainy Day)
+ - **Location:** Lines ~434-498
+ - **Test Cases:**
+ - TC-001-01: Successful Menu Browse (Sunny Day)
+ - TC-001-02: Browse Menu with Filters (Sunny Day)
+ - TC-001-03: Restaurant Not Found (Rainy Day)
+ - TC-001-04: Menu Not Available (Rainy Day)
+ - TC-001-05: Database Connection Error (Rainy Day)
+ - TC-001-06: Invalid Search Input (Rainy Day)
+ - TC-001-07: Timeout During Menu Load (Rainy Day)
+ - TC-001-08: Restaurant Inactive/Closed (Rainy Day)
 
 2. **UC-005: User Login** (10 test cases)
-   - **Location:** Lines ~500-580
-   - **Test Cases:**
-     - TC-005-01: Successful Login (Sunny Day)
-     - TC-005-02: Successful Login with User ID (Sunny Day)
-     - TC-005-03: Invalid Password (Rainy Day)
-     - TC-005-04: User Not Found (Rainy Day)
-     - TC-005-05: Empty Required Fields (Rainy Day)
-     - TC-005-06: Account Locked (Rainy Day)
-     - TC-005-07: Email Not Verified (Rainy Day)
-     - TC-005-08: SQL Injection Attempt (Rainy Day)
-     - TC-005-09: Database Connection Error (Rainy Day)
-     - TC-005-10: Multiple Failed Login Attempts (Rainy Day)
+ - **Location:** Lines ~500-580
+ - **Test Cases:**
+ - TC-005-01: Successful Login (Sunny Day)
+ - TC-005-02: Successful Login with User ID (Sunny Day)
+ - TC-005-03: Invalid Password (Rainy Day)
+ - TC-005-04: User Not Found (Rainy Day)
+ - TC-005-05: Empty Required Fields (Rainy Day)
+ - TC-005-06: Account Locked (Rainy Day)
+ - TC-005-07: Email Not Verified (Rainy Day)
+ - TC-005-08: SQL Injection Attempt (Rainy Day)
+ - TC-005-09: Database Connection Error (Rainy Day)
+ - TC-005-10: Multiple Failed Login Attempts (Rainy Day)
 
-**Status:** ✅ All 18 test cases are already in the document and complete!
+**Status:** All 18 test cases are already in the document and complete!
 
 ---
 
-## 📝 HOW TO INSERT DIAGRAMS
+## HOW TO INSERT DIAGRAMS
 
 ### **Option 1: In Markdown (for GitHub)**
 Replace the placeholder with:
@@ -167,7 +167,7 @@ Replace the placeholder with:
 
 ---
 
-## 📂 DIAGRAM FILE LOCATIONS
+## DIAGRAM FILE LOCATIONS
 
 All diagrams are located in:
 **Base Path:** `C:\Users\alewi\OneDrive\Desktop\MenuMap\Deliverable2_Design\UML_Diagrams\Diagrams_Only\`
@@ -175,26 +175,26 @@ All diagrams are located in:
 ### **Your Required Diagrams:**
 
 1. **Package_MM_Clent_MM_Client_Class_Dia.PNG** (Note: typo "Clent")
-   - For: Figure 5.1 - Presentation Layer
+ - For: Figure 5.1 - Presentation Layer
 
 2. **Package_MM_Logic_MM_Logic_Class_Dia.PNG**
-   - For: Figure 5.2 - Business Logic Layer
+ - For: Figure 5.2 - Business Logic Layer
 
 3. **Package_MM_DataStore_MM_Data_Store_Dia.PNG**
-   - For: Figure 5.3 - Data Access Layer
+ - For: Figure 5.3 - Data Access Layer
 
 4. **Model_Static_Model_Static_Menu_Map_3_Tier.PNG**
-   - For: Figure 5.4 - 3-Tier Architecture
+ - For: Figure 5.4 - 3-Tier Architecture
 
 5. **UC-001-Browse_Restaurant_Menus_Sequence.PNG**
-   - For: Figure 6.1 - UC-001 Sequence Diagram
+ - For: Figure 6.1 - UC-001 Sequence Diagram
 
 6. **UC-005-User_Login.PNG**
-   - For: Figure 6.2 - UC-005 Sequence Diagram
+ - For: Figure 6.2 - UC-005 Sequence Diagram
 
 ---
 
-## ✅ CHECKLIST
+## CHECKLIST
 
 ### **Diagrams to Add:**
 - [ ] Figure 5.1: Presentation Layer Class Diagram
@@ -212,9 +212,9 @@ All diagrams are located in:
 
 ---
 
-## 🎯 SUMMARY
+## SUMMARY
 
-**Your Test Cases:** ✅ Already complete in Chapter 7, Section 7.1.3
+**Your Test Cases:** Already complete in Chapter 7, Section 7.1.3
 - UC-001: 8 test cases (lines ~434-498)
 - UC-005: 10 test cases (lines ~500-580)
 

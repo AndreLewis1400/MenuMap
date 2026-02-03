@@ -1,9 +1,9 @@
 # Chapter 6: Detailed Design
 ## MenuMap Final Systems Document
 
-**Author:** Andre Lewis (Team Lead)  
-**Date:** December 2024  
-**Status:** Final - Ready for Document Integration  
+**Author:** Andre Lewis (Team Lead) 
+**Date:** December 2024 
+**Status:** Final - Ready for Document Integration 
 **Support:** Alfonso Oramas (Class Diagrams for Section 6.4)
 
 ---
@@ -254,32 +254,32 @@ This section provides detailed class diagrams showing all classes with their att
 
 **MenuController Class**:
 - **Attributes**: 
-  - `menuService: MenuService`
-  - `restaurantService: RestaurantService`
+ - `menuService: MenuService`
+ - `restaurantService: RestaurantService`
 - **Methods**: 
-  - `viewMenu(restaurantId: int): MenuDTO`
-  - `searchRestaurants(query: String): List<RestaurantDTO>`
-  - `filterMenuItems(category: String): List<MenuItemDTO>`
-  - `handleError(error: Exception): void`
+ - `viewMenu(restaurantId: int): MenuDTO`
+ - `searchRestaurants(query: String): List<RestaurantDTO>`
+ - `filterMenuItems(category: String): List<MenuItemDTO>`
+ - `handleError(error: Exception): void`
 
 **UserController Class**:
 - **Attributes**: 
-  - `userService: UserService`
-  - `sessionManager: SessionManager`
+ - `userService: UserService`
+ - `sessionManager: SessionManager`
 - **Methods**: 
-  - `login(email: String, password: String): SessionDTO`
-  - `register(userData: UserRegistrationDTO): UserDTO`
-  - `logout(sessionId: String): void`
-  - `getUserProfile(userId: String): UserProfileDTO`
+ - `login(email: String, password: String): SessionDTO`
+ - `register(userData: UserRegistrationDTO): UserDTO`
+ - `logout(sessionId: String): void`
+ - `getUserProfile(userId: String): UserProfileDTO`
 
 **RestaurantController Class**:
 - **Attributes**: 
-  - `restaurantService: RestaurantService`
-  - `menuService: MenuService`
+ - `restaurantService: RestaurantService`
+ - `menuService: MenuService`
 - **Methods**: 
-  - `getRestaurantDetails(restaurantId: int): RestaurantDTO`
-  - `updateRestaurantInfo(restaurantId: int, data: RestaurantUpdateDTO): void`
-  - `getRestaurantList(): List<RestaurantDTO>`
+ - `getRestaurantDetails(restaurantId: int): RestaurantDTO`
+ - `updateRestaurantInfo(restaurantId: int, data: RestaurantUpdateDTO): void`
+ - `getRestaurantList(): List<RestaurantDTO>`
 
 **Reference Diagram:** `Package_MM_Client_MM_Client_Class_Dia.PNG` (See Appendix D)
 
@@ -287,43 +287,43 @@ This section provides detailed class diagrams showing all classes with their att
 
 **MenuService Class**:
 - **Attributes**: 
-  - `menuDAO: MenuDAO`
-  - `restaurantDAO: RestaurantDAO`
-  - `cacheManager: CacheManager`
+ - `menuDAO: MenuDAO`
+ - `restaurantDAO: RestaurantDAO`
+ - `cacheManager: CacheManager`
 - **Methods**: 
-  - `getMenuByRestaurantId(restaurantId: int): MenuDTO`
-  - `validateMenuData(menuData: MenuItemDTO): boolean`
-  - `applyMenuFilters(items: List<MenuItem>, category: String): List<MenuItem>`
-  - `searchMenuItems(query: String): List<MenuItemDTO>`
+ - `getMenuByRestaurantId(restaurantId: int): MenuDTO`
+ - `validateMenuData(menuData: MenuItemDTO): boolean`
+ - `applyMenuFilters(items: List<MenuItem>, category: String): List<MenuItem>`
+ - `searchMenuItems(query: String): List<MenuItemDTO>`
 
 **UserService Class**:
 - **Attributes**: 
-  - `userDAO: UserDAO`
-  - `passwordHasher: PasswordHasher`
-  - `sessionManager: SessionManager`
+ - `userDAO: UserDAO`
+ - `passwordHasher: PasswordHasher`
+ - `sessionManager: SessionManager`
 - **Methods**: 
-  - `authenticateUser(email: String, password: String): UserDTO`
-  - `createUser(userData: UserRegistrationDTO): UserDTO`
-  - `hashPassword(password: String): String`
-  - `validateUserInput(data: UserRegistrationDTO): ValidationResult`
+ - `authenticateUser(email: String, password: String): UserDTO`
+ - `createUser(userData: UserRegistrationDTO): UserDTO`
+ - `hashPassword(password: String): String`
+ - `validateUserInput(data: UserRegistrationDTO): ValidationResult`
 
 **RestaurantService Class**:
 - **Attributes**: 
-  - `restaurantDAO: RestaurantDAO`
-  - `menuDAO: MenuDAO`
+ - `restaurantDAO: RestaurantDAO`
+ - `menuDAO: MenuDAO`
 - **Methods**: 
-  - `getRestaurantById(id: int): RestaurantDTO`
-  - `validateRestaurantData(data: RestaurantDTO): boolean`
-  - `processRestaurantUpdate(data: RestaurantUpdateDTO): void`
+ - `getRestaurantById(id: int): RestaurantDTO`
+ - `validateRestaurantData(data: RestaurantDTO): boolean`
+ - `processRestaurantUpdate(data: RestaurantUpdateDTO): void`
 
 **VerificationService Class**:
 - **Attributes**: 
-  - `menuDAO: MenuDAO`
-  - `verificationDAO: VerificationDAO`
+ - `menuDAO: MenuDAO`
+ - `verificationDAO: VerificationDAO`
 - **Methods**: 
-  - `verifyMenu(menuId: int): VerificationResult`
-  - `checkMenuAccuracy(menuData: MenuDTO): boolean`
-  - `flagInconsistencies(menuData: MenuDTO): List<String>`
+ - `verifyMenu(menuId: int): VerificationResult`
+ - `checkMenuAccuracy(menuData: MenuDTO): boolean`
+ - `flagInconsistencies(menuData: MenuDTO): List<String>`
 
 **Reference Diagram:** `Package_MM_Logic_MM_Logic_Class_Dia.PNG` (See Appendix D)
 
@@ -331,57 +331,57 @@ This section provides detailed class diagrams showing all classes with their att
 
 **MenuDAO Class**:
 - **Attributes**: 
-  - `databaseConnection: DatabaseConnection`
-  - `cacheManager: CacheManager`
+ - `databaseConnection: DatabaseConnection`
+ - `cacheManager: CacheManager`
 - **Methods**: 
-  - `findMenuByRestaurantId(restaurantId: int): Menu`
-  - `saveMenu(menuData: Menu): void`
-  - `updateMenu(menuId: int, menuData: Menu): void`
-  - `deleteMenu(menuId: int): void`
-  - `searchMenuItems(query: String): List<MenuItem>`
+ - `findMenuByRestaurantId(restaurantId: int): Menu`
+ - `saveMenu(menuData: Menu): void`
+ - `updateMenu(menuId: int, menuData: Menu): void`
+ - `deleteMenu(menuId: int): void`
+ - `searchMenuItems(query: String): List<MenuItem>`
 
 **UserDAO Class**:
 - **Attributes**: 
-  - `databaseConnection: DatabaseConnection`
-  - `cacheManager: CacheManager`
+ - `databaseConnection: DatabaseConnection`
+ - `cacheManager: CacheManager`
 - **Methods**: 
-  - `findUserByEmail(email: String): User`
-  - `findUserById(userId: String): User`
-  - `saveUser(userData: User): void`
-  - `updateUser(userId: String, userData: User): void`
-  - `deleteUser(userId: String): void`
+ - `findUserByEmail(email: String): User`
+ - `findUserById(userId: String): User`
+ - `saveUser(userData: User): void`
+ - `updateUser(userId: String, userData: User): void`
+ - `deleteUser(userId: String): void`
 
 **RestaurantDAO Class**:
 - **Attributes**: 
-  - `databaseConnection: DatabaseConnection`
-  - `cacheManager: CacheManager`
+ - `databaseConnection: DatabaseConnection`
+ - `cacheManager: CacheManager`
 - **Methods**: 
-  - `findRestaurantById(id: int): Restaurant`
-  - `findRestaurantsByName(name: String): List<Restaurant>`
-  - `saveRestaurant(data: Restaurant): void`
-  - `updateRestaurant(id: int, data: Restaurant): void`
-  - `deleteRestaurant(id: int): void`
+ - `findRestaurantById(id: int): Restaurant`
+ - `findRestaurantsByName(name: String): List<Restaurant>`
+ - `saveRestaurant(data: Restaurant): void`
+ - `updateRestaurant(id: int, data: Restaurant): void`
+ - `deleteRestaurant(id: int): void`
 
 **DatabaseConnection Class**:
 - **Attributes**: 
-  - `connectionPool: ConnectionPool`
-  - `transactionManager: TransactionManager`
+ - `connectionPool: ConnectionPool`
+ - `transactionManager: TransactionManager`
 - **Methods**: 
-  - `getConnection(): Connection`
-  - `executeQuery(sql: String, params: Object[]): ResultSet`
-  - `executeTransaction(operations: List<Operation>): void`
-  - `closeConnection(): void`
+ - `getConnection(): Connection`
+ - `executeQuery(sql: String, params: Object[]): ResultSet`
+ - `executeTransaction(operations: List<Operation>): void`
+ - `closeConnection(): void`
 
 **CacheManager Class**:
 - **Attributes**: 
-  - `redisClient: RedisClient`
-  - `memoryCache: MemoryCache`
+ - `redisClient: RedisClient`
+ - `memoryCache: MemoryCache`
 - **Methods**: 
-  - `get(key: String): Object`
-  - `set(key: String, value: Object, ttl: int): void`
-  - `delete(key: String): void`
-  - `clear(): void`
-  - `invalidate(pattern: String): void`
+ - `get(key: String): Object`
+ - `set(key: String, value: Object, ttl: int): void`
+ - `delete(key: String): void`
+ - `clear(): void`
+ - `invalidate(pattern: String): void`
 
 **Reference Diagram:** `Package_MM_DataStore_MM_Data_Store_Dia.PNG` (See Appendix D)
 

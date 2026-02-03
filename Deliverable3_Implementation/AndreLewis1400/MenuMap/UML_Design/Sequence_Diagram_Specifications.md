@@ -63,14 +63,14 @@ WebInterface → SpamProtection: analyzeContent(content)
 SpamProtection → Database: checkBlacklist()
 SpamProtection → SpamProtection: calculateSpamScore()
 alt [Spam Score > Threshold]
-    SpamProtection → Database: flagAsSpam()
-    SpamProtection → Administrator: sendSpamAlert()
-    SpamProtection → WebInterface: return blocked
-    WebInterface → User: Display blocked message
+ SpamProtection → Database: flagAsSpam()
+ SpamProtection → Administrator: sendSpamAlert()
+ SpamProtection → WebInterface: return blocked
+ WebInterface → User: Display blocked message
 else [Spam Score < Threshold]
-    SpamProtection → Database: storeContent()
-    SpamProtection → WebInterface: return approved
-    WebInterface → User: Display success message
+ SpamProtection → Database: storeContent()
+ SpamProtection → WebInterface: return approved
+ WebInterface → User: Display success message
 end
 ```
 
@@ -126,15 +126,15 @@ User → WebInterface: Add to favorites
 WebInterface → FavoriteService: addFavorite(userID, itemID)
 FavoriteService → Database: checkExistingFavorite()
 alt [Favorite exists]
-    FavoriteService → WebInterface: return alreadyExists
+ FavoriteService → WebInterface: return alreadyExists
 else [New favorite]
-    FavoriteService → Database: createFavorite()
-    FavoriteService → WebInterface: return success
+ FavoriteService → Database: createFavorite()
+ FavoriteService → WebInterface: return success
 end
 WebInterface → User: Display updated favorites
 ```
 
-## 📐 **Layout Guidelines for Each Diagram:**
+## **Layout Guidelines for Each Diagram:**
 
 ### **Vertical Layout:**
 - **Actors**: Left side, stick figures

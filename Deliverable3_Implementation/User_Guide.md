@@ -4,7 +4,7 @@
 
 ---
 
-## 📖 Table of Contents
+## Table of Contents
 
 1. [Introduction](#introduction)
 2. [Getting Started](#getting-started)
@@ -39,11 +39,11 @@ MenuMap provides the following key features:
 1. Navigate to the MenuMap homepage
 2. Click on "Register" or "Sign Up"
 3. Fill in the registration form:
-   - Email address
-   - Password (must meet complexity requirements)
-   - Confirm password
-   - First name
-   - Last name
+ - Email address
+ - Password (must meet complexity requirements)
+ - Confirm password
+ - First name
+ - Last name
 4. Click "Create Account"
 5. Check your email for verification link
 6. Click the verification link to activate your account
@@ -132,11 +132,11 @@ Your password must:
 **Steps:**
 1. Click "Register" on the homepage
 2. Fill in all required fields:
-   - Email (must be valid email format)
-   - Password (must meet requirements)
-   - Confirm password (must match)
-   - First name
-   - Last name
+ - Email (must be valid email format)
+ - Password (must meet requirements)
+ - Confirm password (must match)
+ - First name
+ - Last name
 3. Review and accept terms of service
 4. Click "Create Account"
 5. Check email for verification link
@@ -197,11 +197,11 @@ Your password must:
 2. Navigate to "My Restaurant" or "Menu Management"
 3. Click "Add Menu Item"
 4. Fill in item details:
-   - Item name
-   - Description
-   - Price
-   - Category
-   - Availability status
+ - Item name
+ - Description
+ - Price
+ - Category
+ - Availability status
 5. Click "Save"
 
 **Steps to Edit Menu Item:**
@@ -243,53 +243,53 @@ Your password must:
 ### Complete Workflow: Finding and Viewing a Menu
 
 1. **Access MenuMap**
-   - Open web browser
-   - Navigate to MenuMap URL
-   - Homepage loads
+ - Open web browser
+ - Navigate to MenuMap URL
+ - Homepage loads
 
 2. **Search for Restaurant**
-   - Enter restaurant name in search bar
-   - Click "Search"
-   - View search results
+ - Enter restaurant name in search bar
+ - Click "Search"
+ - View search results
 
 3. **Select Restaurant**
-   - Click on desired restaurant
-   - Restaurant page loads
+ - Click on desired restaurant
+ - Restaurant page loads
 
 4. **Browse Menu**
-   - View all menu items
-   - Use category filters if needed
-   - Read item descriptions and prices
+ - View all menu items
+ - Use category filters if needed
+ - Read item descriptions and prices
 
 5. **Optional Actions**
-   - Add restaurant to favorites
-   - Share menu with others
-   - View restaurant information
+ - Add restaurant to favorites
+ - Share menu with others
+ - View restaurant information
 
 ### Complete Workflow: Restaurant Owner Managing Menu
 
 1. **Login as Owner**
-   - Login with restaurant owner credentials
-   - Navigate to dashboard
+ - Login with restaurant owner credentials
+ - Navigate to dashboard
 
 2. **Access Menu Management**
-   - Click "Menu Management" or "My Restaurant"
-   - View current menu items
+ - Click "Menu Management" or "My Restaurant"
+ - View current menu items
 
 3. **Add New Item**
-   - Click "Add Menu Item"
-   - Fill in item details
-   - Save item
+ - Click "Add Menu Item"
+ - Fill in item details
+ - Save item
 
 4. **Update Existing Item**
-   - Find item to update
-   - Click "Edit"
-   - Modify details
-   - Save changes
+ - Find item to update
+ - Click "Edit"
+ - Modify details
+ - Save changes
 
 5. **Verify Changes**
-   - View updated menu
-   - Confirm changes are displayed correctly
+ - View updated menu
+ - Confirm changes are displayed correctly
 
 ---
 
@@ -418,8 +418,8 @@ When reporting issues, please include:
 
 ---
 
-**User's Guide Version:** 1.0  
-**Last Updated:** December 2024  
+**User's Guide Version:** 1.0 
+**Last Updated:** December 2024 
 **Team 9 - CEN 4010 Software Engineering**
 
 *For technical documentation, please refer to the Final Document.*

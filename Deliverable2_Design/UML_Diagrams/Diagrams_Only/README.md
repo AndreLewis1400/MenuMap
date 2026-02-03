@@ -7,7 +7,7 @@ This folder contains all the essential UML diagrams for the MenuMap project Deli
 ### Use Case Diagrams
 - **MenuMap_UseCase_Diagram.PNG** - Complete use case diagram showing all actors and use cases
 
-### Class Diagrams  
+### Class Diagrams 
 - **MenuMap_Class_Diagram.PNG** - System class diagram with key classes and relationships
 
 ### Sequence Diagrams
@@ -30,5 +30,5 @@ All essential UML diagrams are complete and ready for team review and project su
 
 ---
 
-*Last Updated: October 19, 2025*  
+*Last Updated: October 19, 2025* 
 *Status: Complete - Ready for Deliverable 2*

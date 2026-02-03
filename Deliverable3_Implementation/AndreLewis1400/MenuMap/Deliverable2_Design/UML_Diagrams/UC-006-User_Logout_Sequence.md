@@ -1,13 +1,13 @@
 # UC-006: User Logout Sequence Diagram
 ## CEN4010 Software Engineering - Team 9
 
-**Author:** Andre Lewis (Software Architecture & Design Lead)  
-**Date:** October 19, 2025  
+**Author:** Andre Lewis (Software Architecture & Design Lead) 
+**Date:** October 19, 2025 
 **Version:** 1.0
 
 ---
 
-## 🎯 Use Case: UC-006 - User Logout
+## Use Case: UC-006 - User Logout
 
 ### **Use Case Description**
 A logged-in user wants to securely log out of the MenuMap application and end their session.
@@ -27,7 +27,7 @@ A logged-in user wants to securely log out of the MenuMap application and end th
 
 ---
 
-## 🎯 **Lifelines (Participants) - Command Pattern Implementation**
+## **Lifelines (Participants) - Command Pattern Implementation**
 
 ```
 User | LogoutForm | API | Logout_CMD | UserManager_CMD | UserRepository | Database
@@ -45,7 +45,7 @@ User | LogoutForm | API | Logout_CMD | UserManager_CMD | UserRepository | Databa
 
 ---
 
-## 🔄 Sequence Flow - Command Pattern
+## Sequence Flow - Command Pattern
 
 ```
 User -> LogoutForm: Click "Logout" button
@@ -66,7 +66,7 @@ LogoutForm -> User: redirect to Login page
 
 ---
 
-## 📋 Detailed Steps
+## Detailed Steps
 
 ### **Step 1: User Initiates Logout**
 - User clicks the "Logout" button in the web interface
@@ -105,7 +105,7 @@ LogoutForm -> User: redirect to Login page
 
 ---
 
-## 🔒 Security Considerations
+## Security Considerations
 
 ### **Session Management**
 - **Session Invalidation**: Server-side session is completely invalidated
@@ -119,7 +119,7 @@ LogoutForm -> User: redirect to Login page
 
 ---
 
-## 🎯 Business Rules
+## Business Rules
 
 ### **Logout Requirements**
 1. **User Authentication**: User must be authenticated to logout
@@ -129,7 +129,7 @@ LogoutForm -> User: redirect to Login page
 
 ---
 
-## 📊 Performance Considerations
+## Performance Considerations
 
 ### **Response Time**
 - **Logout Processing**: < 200ms for logout completion

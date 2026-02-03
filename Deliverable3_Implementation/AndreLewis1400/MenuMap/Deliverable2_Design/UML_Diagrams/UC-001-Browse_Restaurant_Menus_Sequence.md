@@ -1,13 +1,13 @@
 # UC-001: Browse Restaurant Menus - Sequence Diagram
 ## MenuMap Application - Team 9
 
-**Use Case:** UC-001: Browse Restaurant Menus  
-**Complexity:** Medium  
-**Priority:** Core functionality  
+**Use Case:** UC-001: Browse Restaurant Menus 
+**Complexity:** Medium 
+**Priority:** Core functionality 
 
 ---
 
-## 🎯 **Lifelines (Participants) - 3-Tier Architecture**
+## **Lifelines (Participants) - 3-Tier Architecture**
 
 ```
 User | WebInterface | MenuManager | MenuRepository | Database
@@ -20,7 +20,7 @@ User | WebInterface | MenuManager | MenuRepository | Database
 
 ---
 
-## 📋 **Message Flow (Step by Step) - Corrected for 3-Tier**
+## **Message Flow (Step by Step) - Corrected for 3-Tier**
 
 ### **Phase 1: Menu Search**
 ```
@@ -52,29 +52,29 @@ User | WebInterface | MenuManager | MenuRepository | Database
 
 ---
 
-## 🔄 **Alternative Flows (Alt Frames)**
+## **Alternative Flows (Alt Frames)**
 
 ### **Alt Frame 1: No Results Found**
 ```
 alt No Results Found
-    Database -> MenuRepository: return emptyList
-    MenuRepository -> MenuManager: return emptyList
-    MenuManager -> WebInterface: return noResults
-    WebInterface -> User: display "No results found"
+ Database -> MenuRepository: return emptyList
+ MenuRepository -> MenuManager: return emptyList
+ MenuManager -> WebInterface: return noResults
+ WebInterface -> User: display "No results found"
 ```
 
 ### **Alt Frame 2: Menu Unavailable**
 ```
 alt Menu Unavailable
-    Database -> MenuRepository: return error
-    MenuRepository -> MenuManager: return error
-    MenuManager -> WebInterface: return menuUnavailable
-    WebInterface -> User: display "Menu unavailable"
+ Database -> MenuRepository: return error
+ MenuRepository -> MenuManager: return error
+ MenuManager -> WebInterface: return menuUnavailable
+ WebInterface -> User: display "Menu unavailable"
 ```
 
 ---
 
-## 🎨 **Visual Layout in Papyrus**
+## **Visual Layout in Papyrus**
 
 ### **Lifeline Order (Left to Right):**
 ```
@@ -93,7 +93,7 @@ User | WebInterface | MenuManager | MenuRepository | Database
 
 ---
 
-## ✅ **Validation Checklist**
+## **Validation Checklist**
 
 - [ ] All 6 lifelines created
 - [ ] 14 main flow messages added

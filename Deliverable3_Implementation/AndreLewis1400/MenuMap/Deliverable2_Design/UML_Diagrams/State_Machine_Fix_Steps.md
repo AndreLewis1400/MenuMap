@@ -1,12 +1,12 @@
 # State Machine Diagram - Step-by-Step Fix Guide
 
-## 🎯 Quick Reference: What Your Diagram Should Look Like
+## Quick Reference: What Your Diagram Should Look Like
 
 Based on the example you showed, here's exactly what to fix:
 
 ---
 
-## ✅ **STEP 1: Check Initial State**
+## **STEP 1: Check Initial State**
 
 **What to do:**
 1. Open your state machine diagram in Papyrus
@@ -19,7 +19,7 @@ Based on the example you showed, here's exactly what to fix:
 
 ---
 
-## ✅ **STEP 2: Fix Transition Labels (CRITICAL)**
+## **STEP 2: Fix Transition Labels (CRITICAL)**
 Í
 **Format for ALL transitions:** `event[guard]/action`
 
@@ -112,7 +112,7 @@ login(userid, pwd)[valid(userid, pwd)]/loggedIn
 
 ---
 
-## ✅ **STEP 3: Add Self-Transitions (If Missing)**
+## **STEP 3: Add Self-Transitions (If Missing)**
 
 **Self-transitions are critical for error handling!**
 
@@ -124,14 +124,14 @@ login(userid, pwd)[valid(userid, pwd)]/loggedIn
 ### **Required Self-Transitions:**
 
 1. **Ready → Ready** (Failed Login)
-   - Label: `login(username, password)[!valid(username, password)]/print(errmsg)`
+ - Label: `login(username, password)[!valid(username, password)]/print(errmsg)`
 
 2. **Registering → Registering** (Failed Registration)
-   - Label: `submitRegistration()[!validRegistrationData()]/print(validationErrors)`
+ - Label: `submitRegistration()[!validRegistrationData()]/print(validationErrors)`
 
 ---
 
-## ✅ **STEP 4: Fix "null" Labels**
+## **STEP 4: Fix "null" Labels**
 
 **Problem:** Transitions showing "null" instead of proper labels
 
@@ -145,7 +145,7 @@ login(userid, pwd)[valid(userid, pwd)]/loggedIn
 
 ---
 
-## ✅ **STEP 5: Verify States Exist**
+## **STEP 5: Verify States Exist**
 
 **Required States:**
 - [ ] **Initial** (black circle)
@@ -158,29 +158,29 @@ login(userid, pwd)[valid(userid, pwd)]/loggedIn
 
 ---
 
-## ✅ **STEP 6: Verify Transition Format**
+## **STEP 6: Verify Transition Format**
 
 **Correct Format Examples:**
 ```
-✅ login(username, password)[valid(username, password)]/loggedIn
-✅ logout()
-✅ register()
-✅ manageMenu()[role == RestaurantOwner]
-✅ login(username, password)[!valid(username, password)]/print(errmsg)
+ login(username, password)[valid(username, password)]/loggedIn
+ logout()
+ register()
+ manageMenu()[role == RestaurantOwner]
+ login(username, password)[!valid(username, password)]/print(errmsg)
 ```
 
 **Incorrect Format Examples:**
 ```
-❌ login (missing parameters)
-❌ [valid] (no event)
-❌ loggedIn (should be /loggedIn as action)
-❌ login[valid]/loggedIn (missing parentheses)
-❌ login (username, password) (spaces around parentheses)
+ login (missing parameters)
+ [valid] (no event)
+ loggedIn (should be /loggedIn as action)
+ login[valid]/loggedIn (missing parentheses)
+ login (username, password) (spaces around parentheses)
 ```
 
 ---
 
-## 🔧 **Common Papyrus Issues & Fixes**
+## **Common Papyrus Issues & Fixes**
 
 ### **Issue 1: Can't see transition labels**
 - **Fix:** Zoom in or adjust label position
@@ -202,7 +202,7 @@ login(userid, pwd)[valid(userid, pwd)]/loggedIn
 
 ---
 
-## 📋 **Final Checklist**
+## **Final Checklist**
 
 Before exporting, verify:
 
@@ -211,8 +211,8 @@ Before exporting, verify:
 - [ ] All transitions have proper labels (no "null")
 - [ ] Format is `event[guard]/action` (or `event` if no guard/action)
 - [ ] Self-transitions exist for:
-  - Ready → Ready (failed login)
-  - Registering → Registering (failed registration)
+ - Ready → Ready (failed login)
+ - Registering → Registering (failed registration)
 - [ ] Role-based guard exists: `[role == RestaurantOwner]` on LoggedIn → MenuManagement
 - [ ] Actions are prefixed with `/` (e.g., `/loggedIn`, `/print(errmsg)`)
 - [ ] Guards are in square brackets (e.g., `[valid(username, password)]`)
@@ -220,21 +220,21 @@ Before exporting, verify:
 
 ---
 
-## 🎨 **Visual Layout (Recommended)**
+## **Visual Layout (Recommended)**
 
 ```
-        [Registering]          [BrowseMenus]
-              ↓                      ↓
-        [Ready] ←→ [LoggedIn] → [ManageFavorites]
-              ↑                      ↓
-        [MenuManagement]
+ [Registering] [BrowseMenus]
+ ↓ ↓
+ [Ready] ←→ [LoggedIn] → [ManageFavorites]
+ ↑ ↓
+ [MenuManagement]
 ```
 
 **Initial state** should be at the top, pointing to **Ready**.
 
 ---
 
-## 📤 **After Fixing**
+## **After Fixing**
 
 1. **Save** your Papyrus diagram
 2. **Export as PNG** (Right-click diagram → Export → Image)
@@ -243,7 +243,7 @@ Before exporting, verify:
 
 ---
 
-## 💡 **Quick Tips**
+## **Quick Tips**
 
 - **Format consistency:** All transitions should follow the same format pattern
 - **Self-transitions:** Use for error handling (failed login, failed registration)
